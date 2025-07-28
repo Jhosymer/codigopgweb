@@ -1,0 +1,124 @@
+[06-Dec-2023 17:19:25 UTC] PHP Parse error:  syntax error, unexpected '84' (T_LNUMBER) in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 60
+[26-Aug-2024 11:48:20 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:18 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:28 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:42 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:43 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:46 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[26-Aug-2024 16:08:47 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:17:18 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:17:28 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:17:33 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:17:36 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:17:47 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:36:23 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 08:52:59 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 09:15:35 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 09:15:40 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[27-Aug-2024 09:15:45 America/Caracas] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:928
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Dompdf.php(890): Dompdf\Adapter\CPDF->output('')
+#1 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(1615): Dompdf\Dompdf->output('', 'S')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/librerias/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 928
+[03-Apr-2025 08:38:09 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php:83
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(83): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 83
+[03-Apr-2025 08:40:48 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_m.id_marca' in 'on clause' in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php:86
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(86): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 86
+[03-Apr-2025 12:43:34 UTC] PHP Parse error:  syntax error, unexpected identifier "BY" in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 85
+[03-Apr-2025 08:44:08 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_m.id_marca' in 'on clause' in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php:86
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(86): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 86
+[03-Apr-2025 08:44:11 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_m.id_marca' in 'on clause' in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php:86
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php(86): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/filtro/filtro_descarga.php on line 86

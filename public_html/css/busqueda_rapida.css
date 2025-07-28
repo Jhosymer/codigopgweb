@@ -1,0 +1,247 @@
+
+/****-busqueda**/
+/**** nuevo buscar*/
+
+.bus_none{
+ display: none;
+    
+    }
+
+.buscar{
+    position: absolute;
+    padding: 13px;
+    
+    }
+    .buscar input{
+        width: 0px;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 14px;
+        color: black;
+        outline: none;
+        border: 1px solid #FFFFFF;
+        border-radius: 30px;
+        transition: all 0.6s ease;
+    }
+    .btn{
+        width: 45px;
+        height: 44px;
+        line-height: 55px;
+        position: absolute;
+        top: 11px;
+        right: 11px;
+         background-color: #E2001A; 
+        /*background-color: rgba(226, 0, 26, 0.9);*/
+        line-height: 45px;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .buscar:hover input{
+width: 240px;
+    
+    
+    }
+    .buscar input:focus{
+    
+        width: 240px;
+    }
+    /****fin nuevo*/
+
+
+
+  
+/***-*/
+
+
+.buscar_apli select  { 
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border: 1px solid  #ffffff;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    background-color: #FFFFFF;
+
+    }
+
+    .buscar_apli{
+    position: absolute;
+    padding: 13px;
+    left: 50px;
+    z-index: -1;
+    
+    }
+
+    .buscar_apli:hover select {
+    width: 180px;
+}
+
+select:focus{ outline: none;}
+
+.buscar_apli::after{
+	content:"\025be";
+	display:table-cell;
+	text-align:center;
+    width: 47px;
+    height: 44px;
+    line-height: 40px;
+	background-color: #E2001A;
+	position:absolute;
+	top:12px;
+	right:9px;	
+	pointer-events: none;
+    border-radius: 50%;
+    font-size: 35px;
+}
+
+.lupa{ margin-top: 6px;}
+
+@media (max-width:1690px){
+.buscar:hover input{
+        width: 170px;
+            }
+            .buscar input:focus{
+            
+                width: 170px;
+            }
+
+            .buscar_apli:hover select {
+                width: 125px;
+            }
+       }
+
+
+@media (max-width:1400px){
+.menu__links {
+
+    width: 95%;
+    }
+       }
+
+
+@media only screen and (max-width: 1450px) and (min-width: 1398px)  {
+    .buscar:hover input{
+        width: 200px;
+            }
+            .buscar input:focus{
+            
+                width: 200px;
+            }
+
+            .buscar_apli:hover select {
+                width: 140px;
+            }
+
+}
+
+
+@media only screen and (max-width: 1400px) and (min-width: 1300px)  {
+    
+
+    .buscar_apli:hover select {
+        width: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 1299px) and (min-width: 1200px)  {
+    
+
+    .buscar_apli:hover select {
+        width: 78px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1397px) and (min-width: 1200px)  {
+    .buscar:hover input{
+        width: 112px;
+            }
+            .buscar input:focus{
+            
+                width: 130px;
+            }
+}
+
+@media only screen and (max-width: 1190px) and (min-width: 967px)  {
+     .buscar:hover input{
+        width: 115px;
+            }
+
+    .buscar_apli:hover select {
+        width:60px;
+    }
+
+}
+@media (max-width:968px){
+
+    .buscar_g{
+        display: none;
+    } 
+    .buscar:hover input {
+        width: 170px;
+    } 
+    .bus_none{
+        display: block;
+           
+           }
+
+   
+
+}
+
+
+@media (max-width:400px){
+
+    .buscar {
+        padding: 9px;
+    }
+.btn {
+width: 49px;
+height: 52px;
+top: 8px;
+right: 6px;
+}
+.bus_none {
+    display: block;
+    position: absolute;
+    z-index: 1;
+   
+}
+
+.buscar:hover input {
+    width: 280px;
+}
+.buscar input {
+height: 50px;
+}
+
+.buscar_apli::after
+    {
+    width: 49px;
+    height: 52px;
+    top: 8px;
+    right: 6px;
+}
+
+
+.buscar_apli:hover select {
+    width: 230px;
+}
+
+.buscar_apli select {
+    height: 50px;
+}
+
+.buscar_apli {
+    padding: 9px;
+}
+}

@@ -1,0 +1,115 @@
+<?php 
+    /* -----ARCHIVO PARA GUARDAR UN REGISTRO EN AIRE AUTOMOTRIZ-------- */
+    date_default_timezone_set('America/Caracas');
+    session_start();
+    
+    include_once('./../conexion/conexion.php');
+    
+    //Si se ha enviado un formulario con el campo código
+    if( isset( $_POST['codigo'] ) ){
+        $codigo = $_POST['codigo'];
+
+        //Se ejecuta la funcion, que devolverá el numero de filtros
+        //que no esten eliminados que contengas ese código
+        //Parametro $codigo (String): El codigo que se va a comprobar.
+        //Parametro $base_de_datos (object): Es el objeto que tiene la conexión a la base de datos
+        include_once('./../plantillas/comprobar_existencia_filtro.php');
+        $numeroFiltros = comprobarExistenciaFiltro($codigo, $base_de_datos);
+
+        //Si no existe filtros con ese código se creará
+        if( $numeroFiltros == 0 ){
+            $descripcion = "";
+            $fecha = date("d-m-y"); 
+            $sincronizado = date("Ymd");
+            $id_tipo = $_POST['tipo'];
+
+            //Verificá si se escogio un tipo o se dejo la opción N/D (que no tiene).
+            if( $id_tipo == 'N/D' ){
+                $tipo = 'N/D';
+                $id_tipo = null;
+            }
+            else {
+                //Si se seleccionó se busca en la base de datos y se guarda el id y el tipo
+                $seleccionado = $base_de_datos->prepare("SELECT id, tipo
+                                                            FROM tipos
+                                                            WHERE id = :id_tipo"); 
+                $seleccionado->bindParam(':id_tipo', $id_tipo, PDO::PARAM_INT);                                        
+                $seleccionado->execute();
+                $seleccionado_tipo = $seleccionado->fetch();
+                $tipo = $seleccionado_tipo['tipo'];
+                $id_tipo = $seleccionado_tipo['id'];
+            }
+
+            // Se guardan los elementos enviados por el formulario
+            $filtracion = ( $_POST['filtracion'] == '' ) ? null : $_POST['filtracion'];
+            $codigo = $_POST['codigo'];
+            $diametro_ext = $_POST['diametroext'];
+            $diametro_int = $_POST['diametroint'];
+            $altura = $_POST['altura'];
+            $diametro_emp_ext = $_POST['diametroempext'];
+            $diametro_emp_int = $_POST['diametroempint'];
+            $espesor_emp = $_POST['espesoremp'];
+            $valvula_al = $_POST['valvulaal'];
+            $apertura = ( $_POST['apertura'] == '') ? 'N/D' : $_POST['apertura'];
+            $valvula_ad = $_POST['valvulaad'];
+            $und_empaque = ( $_POST['und_empaque'] == '') ? 0 : $_POST['und_empaque'];
+            $detalle1 = ( $_POST['detalle1'] == '') ? 'N/D' : $_POST['detalle1'];
+            $detalle2 = ( $_POST['detalle2'] == '') ? 'N/D' : $_POST['detalle2'];
+
+            //Se eliminan los caracteres especiales y espacios, para la variable $codigo_buscar.
+            $caracteres_a_reemplazar = ['-'," ","_"];
+            $codigo_buscar = str_replace($caracteres_a_reemplazar,'',$codigo);
+                
+            //Componente que guarda en un arreglo $imagen las imagenes que se enviaron del formulario
+            //Estan ordenados las imagenes en el arreglo (0 => imagen, 1 => imagen1, 2 => imagen2, 3 => imagen3)
+            include_once('./../componentes/galeria_update.php');
+
+            //Busca el id del ultimo filtro y le suma 1. Ese sera el valor del $id_codigo
+            $sql = "SELECT MAX(id) FROM filtro_codificacion";
+            $seleccionado = $base_de_datos->prepare($sql);
+            $seleccionado->execute();
+            $seleccionado->setFetchMode(PDO::FETCH_ASSOC);
+            $id_codigo = $seleccionado->fetch();
+            $max_id_codigo = $id_codigo['MAX(id)'] + 1;
+
+            //Datos a guardar en la tabla de sellado
+            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $diametro_ext, $diametro_int, $altura, $diametro_emp_ext, $diametro_emp_int, $espesor_emp, $valvula_al, $apertura, $valvula_ad, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3]];
+            //Datos a guardar en la tabla de filtro codificación
+            $argumentos_filtro_codificacion = [$max_id_codigo, $codigo, $codigo_buscar, $id_tipo, $filtracion, $descripcion, $und_empaque, $fecha, $sincronizado];
+
+            try {
+                //Se crearan los registros en la tabla de aire automotriz y de filtro codificación.
+                //En caso de que falle alguna subida, se cancelara todo
+                $base_de_datos->beginTransaction();
+
+                $sql = "INSERT INTO espec_sellado (id_codigo, codigo, codigo_buscar, tipo, diametroext, diametroint, altura, diametroempext, diametroempint, espesoremp, valvulaal, apertura, valvulaad, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $seleccionado = $base_de_datos->prepare($sql);
+                $seleccionado->execute($argumentos);
+
+                $sql = "INSERT INTO filtro_codificacion (id, clase, codigo, codigo_buscar, id_tipo, filtracion, descripcion, precio, und_empaque, fecha_actualiza, sincronizado, deleted_at, updated_at) VALUES (?, 'sellado', ?, ?, ?, ?, ?, 0, ?, ?, ?, null, null)";
+                $seleccionado = $base_de_datos->prepare($sql);
+                $seleccionado->execute($argumentos_filtro_codificacion);
+            
+                //Si todo va bien
+                $base_de_datos->commit();
+
+                $_SESSION['nuevo'] = true;
+                header("location: espec_sellado.php");
+            }
+            catch(PDOException $exception){
+                //En case de que suceda algún error
+                $base_de_datos->rollback();
+                $_SESSION['error'] = true;
+                header("location: ./nuevo.php");
+            }
+        }
+        //Si ya existe filtro, te regresa y da una alerta
+        else {
+            $_SESSION['yaExistencia'] = true;
+            header("location: ./nuevo.php"); 
+        }
+    }
+    //Si no se ha enviado un formulario con el campo código
+    else {
+        header("location: ./nuevo.php");
+    }

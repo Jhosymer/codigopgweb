@@ -1,0 +1,223 @@
+.wrapper_videos {
+    width: 100%;
+ 
+}
+
+.home {
+    display: flex;
+    gap: 100px;
+   
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.about__Texto_home {
+   display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 70% 30%;
+    align-items: end;
+}
+.video_home
+{
+    position: relative;
+    width: 100%;
+    height:79vh;;
+    max-width: 2000px;
+    max-height: 800px;
+    object-fit: fill;
+    transition: all 300ms linear;
+    z-index: 1;
+       
+    }
+
+
+.lista {
+  list-style-type: decimal;
+}
+.lista li {
+
+
+  margin-left: 20px;
+  padding: 0 4px;
+}
+
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+    background-color: rgb(197, 198, 198);
+
+    max-width: 2000px;
+}
+
+.div_img_logo{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.div_video_aire{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.flexbox-container > .div_img_logo {
+	width: 30%;
+
+}
+
+.flexbox-container > .div_video_aire {
+	width: 70%;
+
+	
+  
+}
+
+.logo_rr {
+    width: 70%;
+    
+
+}
+.div_txt_v_aire{
+    padding: 10px;
+}
+
+.tituli_ro_logo {
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(1.5em + 1.5vw);
+    line-height: 1.5em;
+    letter-spacing: 0.2vw;
+    text-align: center;
+ 
+}
+
+
+.subtitl_negro_logo {
+    font-family: Oswald;
+    font-size: calc(1.2em + 1.2vw);
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.video_seccion {
+
+    max-width: 1080px;
+    max-height: 720px;
+    position: relative;
+   
+}
+
+.home_img {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+}
+
+
+@media (max-width:1520px){
+
+.flexbox-container {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div_txt_v_aire {
+     padding: 0px; 
+ 
+    margin: 0 auto;
+}
+
+
+}
+
+
+@media (max-width:1094px){
+
+
+.video_seccion {
+  
+   height: 385px;
+}
+}
+
+@media (max-width:968px){
+ 
+
+.video_seccion {
+ 
+    max-width: 800px;
+    height: 410px;
+
+   
+}
+.ver_mas {
+    
+    font-size: 15px;
+  
+}
+}
+
+@media (max-width:900px){
+
+    .tituli_ro_logo {
+        font-size: calc(1em + 1vw);
+       
+    }
+    .subtitl_negro_logo {
+        font-size: calc(0.8em + 0.8vw);
+    
+    }
+    
+    }
+
+@media (max-width:789px){
+.video_seccion {
+    max-width: 500px;
+    height: 360px;
+}
+
+.tituli_ro_logo {
+    font-size: calc(1em + 1vw);
+   
+}
+.subtitl_negro_logo {
+    font-size: calc(0.7em + 0.7vw);
+
+}
+
+}
+
+@media (max-width:600px){
+.video_seccion {
+    height: 221px;
+}
+
+
+
+}
+@media (max-width:500px){
+
+
+
+.video_seccion {
+    width: 100%;
+    height: auto;
+}
+
+.subtitl_negro_logo {
+    font-size: calc(0.6em + 0.6vw);
+
+}
+}
+

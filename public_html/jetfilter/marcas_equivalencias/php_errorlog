@@ -1,0 +1,130 @@
+[31-Mar-2025 11:38:31 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:39:39 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:39:51 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:40:25 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:40:35 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:41:41 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:41:47 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 11:41:51 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "sincronizado", expecting "]" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 10
+[31-Mar-2025 07:57:24 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 07:58:33 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 11:58:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 11:58:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 11:58:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 08:00:15 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:01:53 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:01:56 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:02:22 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:02:40 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:03:20 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:28
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 28
+[31-Mar-2025 08:05:03 America/Caracas] PHP Warning:  Undefined array key "mostar" in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 11
+[31-Mar-2025 08:05:03 America/Caracas] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php:11) in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/crear_marca_eq.php on line 17
+[31-Mar-2025 13:36:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:37:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:38:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:42:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:43:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:43:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:46:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:46:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:48:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 13:50:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 14:47:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 14:47:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61
+[31-Mar-2025 14:47:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mostar' in 'where clause' in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php:61
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/marcas_equivalencias/plantilla_marca_equivalencia.php on line 61

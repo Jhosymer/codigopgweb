@@ -1,0 +1,10 @@
+[12-May-2023 12:53:48 America/Caracas] PHP Parse error:  syntax error, unexpected '$rann' (T_VARIABLE) in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/slider_productos.php on line 42
+[12-May-2023 17:01:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpheader() in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 3
+[12-May-2023 17:10:02 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 8
+[12-May-2023 17:11:43 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 8
+[12-May-2023 17:12:02 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 32
+[12-May-2023 17:12:46 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 9
+[12-May-2023 17:14:05 UTC] PHP Parse error:  syntax error, unexpected 'include' (T_INCLUDE), expecting ';' or ',' in /home/customer/www/webtest.webfiltros.com/public_html/nuevos_productos/nuevo_productos.php on line 8

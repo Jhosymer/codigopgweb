@@ -1,0 +1,36 @@
+[20-May-2024 19:15:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111
+[20-May-2024 19:15:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111
+[20-May-2024 19:15:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111
+[20-May-2024 19:15:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111
+[20-May-2024 19:15:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111
+[20-May-2024 19:15:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC
+                             LIMIT 0, 10' at line 6 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:111
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(111): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 111

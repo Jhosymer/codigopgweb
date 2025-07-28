@@ -1,0 +1,177 @@
+.color_f{
+    background: rgb(244,244,244);
+background: radial-gradient(circle, rgba(244,244,244,1) 100%);
+}
+.div_logo{
+
+   display:grid;
+   gap:1rem;
+   grid-auto-rows:15rem;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+
+}
+
+.div_img_logo{
+
+   
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 33% 33% 33%; 
+    align-items: center;
+    justify-items: start;
+    padding: 2em;
+    gap: 2em;
+}
+
+
+
+
+
+.div_rojo{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 75%;
+    background: #E2001A;
+    border:10px solid #FFFFFF
+
+}
+.div_rojo_fb{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 100%;
+    background: #E2001A;
+    border:10px solid #FFFFFF
+
+}
+.div_blanco{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 75%;
+    background: #ffffffd2;
+    border:10px solid #FFFFFF
+
+}
+.div_negro{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 75%;
+    background: #000;
+    border:10px solid #FFFFFF
+
+}
+.div_amarillo{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 100%;
+    background: #FCDD0D;
+    border:10px solid #FFFFFF
+
+}
+.div_azul{
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    height: 100%;
+    background:#384896 ;
+    border:10px solid #FFFFFF
+
+}
+.div_img{
+    max-width: 550px;
+
+}
+
+.img_ej{
+
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border:15px solid #FFFFFF;
+
+}
+
+.div_logo img{
+    width: auto;
+    height: auto;
+    padding: 1.5em 0em;
+}
+
+
+.bt_desc_log{
+text-decoration: none;
+margin:  20px 30px;
+background-color: #E2001A;
+padding: 10px 20px;
+border-radius: 10px;
+color:#fff;
+font-size: 20px;
+box-shadow: 5px 5px 5px #000;
+
+}
+.bt_desc_log:hover {
+    background-color: #E2001Ac8;
+    color:#fff;
+    box-shadow: 5px 4px 6px #dcdde1;
+
+}
+
+.text__des_logo {
+    font-size: calc(0.8em + 0.8vw);
+    line-height: 1.4em;
+    padding: 0.7em;
+    margin: 1em 10em 0em 6em;
+    text-align: center;
+}
+.title_descarg_logo {
+    font-family: Oswald;
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+    margin: 1em 0em 1em 1em;
+  
+}
+
+@media screen and (max-width: 1300px){
+.text__des_logo {
+    margin: 1.5em 4em 0em 2em;
+}}
+
+@media screen and (max-width: 968px){
+    
+.div_img_logo{
+
+   
+    grid-template-columns: 50% 50%; 
+    gap: 1em;
+
+    }}
+
+    @media screen and (max-width: 600px){
+    
+        .div_img_logo{
+        
+           
+            grid-template-columns: 1fr; 
+            gap: 1em;
+        
+            }}

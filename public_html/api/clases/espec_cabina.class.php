@@ -1,0 +1,57 @@
+<?php
+
+    require_once "conexion/conexion.php";
+    require_once "respuestas.class.php";
+   // echo "hola desde espec_cabina.class.php<br>";
+
+   
+    class espec_cabina extends conexion{
+       
+        private $table  ="espec_cabina";
+        private $id     ="";
+        private $codigo ="";
+
+        // funciones GET
+        public function listarespec_cabina(){
+            $_respuestas = new respuestas;
+            $query = "SELECT ec.*, fc.filtracion, fc.und_empaque, fc.codigo_barra FROM " . $this->table . " ec LEFT JOIN filtro_codificacion fc ON ec.id_codigo = fc.id WHERE ec.deleted_at IS NULL";
+            $datos=parent::obtenerDatos($query);
+            return($datos);
+        }
+        public function listarespec_cabinaId($id){
+            $_respuestas = new respuestas;
+            $query ="SELECT * FROM " . $this->table . " where id='$id'";
+            $datos=parent::obtenerDatos($query);
+            return($datos);
+        }
+
+        public function listarespec_cabinaCodigo($codigo){
+            $_respuestas = new respuestas;
+            $query ="SELECT * FROM " . $this->table . " where codigo like '%$codigo%'";
+            $datos=parent::obtenerDatos($query);
+            return($datos);
+        }
+         
+        public function listarespec_cabinaTotal(){
+            $_respuestas = new respuestas;
+            $query ="SELECT count(*) FROM " . $this->table ;
+            $datos=parent::obtenerDatos($query);
+            return($datos);
+        }
+        // funciones post para insertar datos (insert)
+
+        // funciones put para modificar datos (update)
+
+        // funciones delete para eliminar datos (delete)
+
+    }
+
+
+
+
+
+
+
+
+
+?>

@@ -1,0 +1,8 @@
+[06-Jul-2023 15:44:11 UTC] PHP Parse error:  syntax error, unexpected '"</p>"' (T_CONSTANT_ENCAPSED_STRING) in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 35
+[06-Jul-2023 15:48:27 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 35
+[06-Jul-2023 15:55:21 UTC] PHP Parse error:  syntax error, unexpected '.', expecting ')' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 39
+[06-Jul-2023 16:11:47 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 36
+[06-Jul-2023 16:12:28 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 36
+[06-Jul-2023 16:13:06 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 36
+[06-Jul-2023 16:13:27 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 36
+[06-Jul-2023 16:13:53 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/customer/www/webtest.webfiltros.com/public_html/correo.php on line 36

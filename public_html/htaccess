@@ -1,0 +1,8 @@
+SetEnv PHPRC /home/customer/www/webfiltros.com/public_html/php.ini
+
+#caché dinámica desactivar
+<IfModule mod_headers.c>
+Header set Cache-Control “max-age=0,no-store”
+</IfModule>
+
+

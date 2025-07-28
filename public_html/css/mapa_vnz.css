@@ -1,0 +1,103 @@
+
+/**estilo del mapa*/
+.mapadiv{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    }
+
+    .mapadiv path:not(.mapadiv_seleccionado) {
+        fill:#ffffff;
+        stroke: #000000;
+        stroke-width: 2px;
+    } .mapadiv :hover{
+        fill:rgb(227, 227, 227);
+    }
+    .mapadiv path:hover{
+        fill:rgb(227, 227, 227);
+    }
+    
+   /**para seleccionar pintar el cuadro seleccionado segun su id**/ 
+    .mapadiv_seleccionado{
+        fill: rgb(227, 227, 227);
+    }
+    
+  .title_distr {
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(0.8em + 0.8vw);
+    line-height: 1.5em;
+}
+      
+   
+    /*estilo del abault principal*/
+     .grid_d_vnz{
+        
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+   padding-top: 10px;
+    width: 100%;
+    position: relative;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+}
+
+.distri_over {
+    overflow-y: auto;
+    margin: 1.5em 12.5%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1em;
+}
+.grid_distribuidor{
+    
+    display: grid;
+    width: 90%;
+    margin: 0;
+    gap: 2em;
+    margin: 0 auto;
+    grid-template-columns: 50% 50%;
+}
+
+.nombre_distri{
+   
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(0.7em + 0.7vw);
+    line-height: 1.5em;
+    margin: 0em 0em 0em 0.3em;
+   
+}
+.n_nombre_distri{
+   
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(0.55em + 0.55vw);
+    line-height: 1.5em;
+    margin: 0;
+    letter-spacing: 0.07vw;
+   
+}
+.info_distri{
+
+    font-size: calc(0.45em + 0.45vw);
+    line-height:2em;
+    text-align: left;
+   
+}
+
+@media (max-width:968px){
+    .grid_d_vnz {
+       
+        grid-template-columns: 100%;
+        
+    }
+}
+
+@media (max-width:600px){
+    .grid_distribuidor {
+      
+        grid-template-columns: 100%;
+}
+}

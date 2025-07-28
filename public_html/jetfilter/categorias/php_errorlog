@@ -1,0 +1,4 @@
+[29-May-2023 08:16:05 America/Caracas] PHP Fatal error:  Uncaught Error: Call to undefined function alerta_ya_existe() in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/categorias/nuevo.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/categorias/nuevo.php on line 37

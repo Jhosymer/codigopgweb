@@ -1,0 +1,15 @@
+[05-Sep-2023 19:13:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php:40
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php(40): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php on line 40
+[05-Sep-2023 19:16:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php:40
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php(40): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php on line 40
+[05-Sep-2023 19:16:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php:40
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php(40): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/detalle/crear_distribuidor.php on line 40

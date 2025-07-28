@@ -1,0 +1,79 @@
+/* Estilos para el modal emergente (pop-up) */
+.custom-modal {
+    display: none; /* Oculto por defecto, JS lo muestra */
+    position: fixed;
+    z-index: 1050; /* Un z-index alto, similar a los modales de Bootstrap */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Oculta barras de desplazamiento en el modal principal */
+    background-color:rgb(156 154 154 / 78%); /* Fondo gris semi-transparente */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.custom-modal-dialog {
+    position: relative; /* Agregado para que el botón se posicione respecto a este contenedor */
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animación para que el modal aparezca suavemente */
+@keyframes modalFadeIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-close-btn {
+    color: #fff;
+    position: absolute;
+     top: 5px;    /* un poco más cerca de la imagen */
+    right: 5px;  /* un poco más cerca de la imagen */
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 35px; /* Centra la "X" verticalmente */
+    text-align: center;
+    z-index: 1051; /* Asegura que la "X" esté por encima del contenido del modal */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    color: #f44336;
+    background-color: rgba(0, 0, 0, 0.7); /* Ligeramente más oscuro al pasar el ratón */
+    text-decoration: none;
+    outline: none; /* Elimina el contorno al enfocar */
+}
+
+#imagenEmergente {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh; /* Mejor usar el 90% de la altura del viewport */
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+.image-link-wrapper { /* Nueva clase para el 'a' que envuelve la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

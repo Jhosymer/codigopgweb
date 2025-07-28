@@ -1,0 +1,10 @@
+[26-Apr-2023 11:53:44 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php:27
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php(27): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php on line 27
+[05-May-2023 09:43:43 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php:27
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php(27): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/vehiculos/crear_vehiculo.php on line 27

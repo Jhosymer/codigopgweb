@@ -1,0 +1,4 @@
+[04-May-2023 09:14:47 America/Caracas] PHP Fatal error:  Uncaught Error: Call to undefined function alerta_error() in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/aplicacion_comercial/editar.php:99
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/aplicacion_comercial/editar.php on line 99

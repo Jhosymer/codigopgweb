@@ -1,0 +1,21 @@
+# Ignorar imágenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+
+# Ignorar videos
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+
+# Carpetas específicas (ajusta según tu proyecto)
+assets/images/
+assets/videos/
+public_html/jetfilter/img/
+public_html/documentos/

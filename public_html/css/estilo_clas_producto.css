@@ -1,0 +1,121 @@
+.about_fitros_productos {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    justify-items: start;
+    gap: 1em;
+}
+
+.grid_productos_tabla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: start;
+    justify-items: start;
+    gap: 2em;
+}
+
+.grid_productos {
+    display: grid;
+    width: 95%;
+    grid-template-columns: 1fr;
+    padding: 1em 1em 0em 1em;
+}
+
+.nombre_prod {
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+    margin: 1em 0em 1.5em 0.3em;
+    font-weight: normal;
+}
+.titulo_prod {
+font-family: Oswald;
+    font-size: calc(0.7em + 0.7vw);
+    line-height: 1.5em;
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+.clase2 a{
+  color: #1A171B;
+  text-decoration:none;
+} 
+
+.clase3 a{
+  color: #E2001A;
+  text-decoration:none;
+}
+
+.div_img_pro{
+    width: 220px;
+
+}
+
+.img_prod{
+    max-width: 70%;
+
+}
+.contenedor_prod{
+
+width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+table.pro {
+    background-color: #FFF;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: calc(0.45em + 0.45vw);
+}
+thead.pro {
+    background-color: #E2001A;
+    color: white;
+    border: 1px solid #fff;
+}
+tr.pro, td.pro {
+    border-top: 0.5px solid #CCCCCC;
+    padding: 0.5em;
+    border: 1px solid #CCC;
+}
+tr.pro, td.pro {
+    border-top: 0.5px solid #CCCCCC;
+    padding: 0.5em;
+    border: 1px solid #CCC;
+}
+
+.tabla_prod{
+    margin-left: 1em;
+    width: 90%;
+    margin-block: 5px;
+    margin-top: 20px;
+}
+
+@media all and (max-width: 968px) {
+      
+      .div_img_pro{
+             width: 180px;
+
+        }
+    .grid_productos {
+        width: 70%;
+        }
+     .img_prod {
+          max-width: 40%;
+           }
+
+      .grid_productos_tabla {
+        width: 220px;
+        grid-template-columns: 1fr;
+         gap: 1em;
+   
+        }
+
+   }
+
+
+@media all and (max-width: 500px) {
+   table.pro {
+    width: 70%;
+     } }

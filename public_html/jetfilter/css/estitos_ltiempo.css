@@ -1,0 +1,364 @@
+.titulos_jet{
+  font-family: Oswald;
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+    }
+
+ .center{
+   text-align: center;
+    }
+
+  .sub_ti {
+    color: #E2001A;
+    font-family: Oswald;
+    font-size: calc(0.8em + 0.8vw);
+    line-height: 1.5em;
+  
+}
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.titulo_linea {
+font-size: calc(1.2em + 1.2vw);
+line-height: 1.4em;
+padding: 0.5em;
+text-align: left;
+color: #E2001A;
+margin: 0em 0em 0em 7em;
+
+}
+
+.lina_tt {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.lina_tt:hover,
+.lina_tt.selected {
+    color: #E2001A;
+  }
+/*
+h1,h2,h4,h5,h6 {
+  text-align: center;
+  color: #000;
+  text-shadow: #E2001A 1px 1px 2px;
+  margin-bottom: 5px;
+}*/
+  .title_time {
+    font-size: 18px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 14px;
+  }
+.sociales {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img_lt{
+
+  width:256px;
+   height:256px;
+
+}
+  #timeline {
+    
+    width: 50%;
+    height: AUTO;
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+    background: url(../img/images/dot.gif) left 75px repeat-x;
+}
+  
+    #dates {
+      width: 800px;
+      height: 60px;
+      overflow: hidden;
+      margin-block: 30px;
+      
+    }
+      #dates li {
+     
+    list-style: none;
+    float: left;
+    width: 150px;
+    height: 58px;
+    font-size: 25px;
+    text-align: center;
+    background: url(../img/images/biggerdot.png) center bottom no-repeat;
+      }
+      #dates .lina_tt {
+        font-family: Oswald;
+        line-height: 38px;
+        padding-bottom: 10px;
+         cursor: pointer;
+      }
+      #dates .selected {
+        font-size: calc(1em + 1vw);
+       
+      }
+    
+    #issues {
+      width: 800px;
+      height: 350px;
+      overflow: hidden;
+    } 
+      #issues li {
+        width: 800px;
+        height: 350px;
+        list-style: none;
+        float: left;
+      }
+        #issues li.selected img {
+          -webkit-transform: scale(1.1,1.1);
+          transform: scale(1.1,1.1);
+        }
+        #issues li img {
+          float: left;
+          margin: 35px 50px 20px 50px;
+          background: transparent;
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
+          zoom: 1;
+          -webkit-transition: all 2s ease-in-out;
+          transition: all 2s ease-in-out;
+          -webkit-transform: scale(0.7,0.7);
+          transform: scale(0.7,0.7);
+        }
+        #issues li .title_time {
+        color: #E2001A;
+        margin: 30px 0px 40px 0;
+        text-shadow: #000 1px 1px 2px;
+        font-family: Oswald;
+        font-size: calc(1.3em + 1.3vw);
+        line-height: 0.7em;
+        letter-spacing: 0.2vw;
+        font-weight: 800;
+        display: block;
+        
+        }
+        #issues li p {
+          margin-right: 15%;
+          margin-left: 20%;
+          font-weight: normal;
+          font-size: calc(0.4em + 0.4vw);
+          line-height: 1.5em;
+          text-align: left;
+       
+        }
+    
+    #grad_left,
+    #grad_right {
+      width: 100px;
+      height: 350px;
+      position: absolute;
+      top: 0;
+    }
+    
+    
+    #next,
+    #prev {
+      position: absolute;
+      top: 0;
+      font-size: 70px;
+      top: 250px;
+      width: 22px;
+      height: 38px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+      #next:hover,
+      #prev:hover {
+        background-position: 0 -76px;
+      }
+      #next {
+        right: 0;
+        background-image: url('../img/images/next.png');
+      }
+      #prev {
+        left: 0;
+        background-image: url('../img/images/prev.png');
+      }
+        #next.disabled,
+        #prev.disabled {
+          opacity: 0.2;
+        }
+        @media (max-width:1600px){
+          #timeline {
+            width: 60%;
+        }
+
+        #issues li p {
+        
+          font-size: calc(0.45em + 0.45vw);
+      }
+
+      #issues li .title_time {
+        margin: 30px 50px 40px 0;
+    }
+    .titulo_linea {
+      margin: 0em 0em 0em 6em;
+  }
+  }
+
+    @media (max-width:1466px){
+
+      .img_lt {
+        width: 180px;
+        height: 180px;
+    }
+
+    #issues li p {
+      margin-right: 20%;
+  }
+  #next, #prev {
+    top: 230px;
+}
+}
+
+@media (max-width:1280px){
+
+  .titulo_linea {
+    margin: 0em 0em 0em 3.5em;
+}
+  #timeline {
+    width: 70%;
+}
+
+#next, #prev {
+  top: 220px;
+}
+}
+
+@media (max-width:1100px){
+
+  #issues li .title_time {
+    margin: 30px 180px 40px 0;
+}
+#issues li p {
+  margin-right: 30%;
+}
+}
+ @media (max-width:968px){
+  #timeline {
+    width: 80%;
+
+  }
+  #issues li .title_time {
+    margin: 30px 230px 40px 0;
+}
+#issues li p {
+  margin-right: 35%;
+  font-size: calc(0.5em + 0.5vw);
+}
+
+#next, #prev {
+
+  top: 220px;
+}
+
+.titulo_linea {
+  margin: 0em 0em 0em 2em;
+}
+}
+
+@media (max-width: 740px){
+#issues li p {
+    margin-right: 40%;
+    font-size: calc(0.6em + 0.6vw);
+}
+
+#issues li .title_time {
+  margin: 30px 300px 40px 0;
+}
+}
+
+@media (max-width: 685px) {
+.img_lt {
+    width: 150px;
+    height: 150px;
+}
+#issues li p {
+  margin-right: 48%;
+}
+#issues li .title_time {
+  margin: 20px 350px 30px 0;
+}
+
+
+#dates li {
+  font-size: 20px;
+}
+}
+@media (max-width: 600px) {
+  #issues li .title_time {
+    margin: 20px 420px 30px 0;
+}
+
+.img_lt {
+  width: 130px;
+  height: 130px;
+}
+#issues li img {
+margin: 35px 20px 20px 50px;
+}
+#issues li p {
+  margin-right: 55%;
+}
+#next, #prev {
+  top: 200px;
+}
+#dates li {
+  width: 120px;
+}
+}
+
+@media (max-width: 500px){
+#issues li .title_time {
+    margin: 20px 500px 30px 0;
+}
+#issues li p {
+  margin-right: 60%;
+  line-height: 1.1em;
+  text-align: left;
+}
+
+}
+
+@media (max-width: 455px){
+  
+#issues li img {
+    margin: 10px 50px 10px 50px;
+}
+  .img_lt {
+    width: 190px;
+    height: 190px;
+}
+#issues li .title_time {
+  margin: 120px 500px 30px 0;
+}
+
+#issues li p {
+  margin-right: 70%;
+  margin-left: 10%;
+  font-size: calc(0.7em + 0.7vw);
+  line-height: 1.4em;
+}
+#next, #prev {
+  top: 310px;
+}
+#dates li {
+ 
+  width: 100px;
+}
+}

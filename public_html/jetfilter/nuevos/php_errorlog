@@ -1,0 +1,52 @@
+[09-Mar-2023 13:21:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:21:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:21:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:30:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:46:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 14:33:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[09-Mar-2023 15:03:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/update.php on line 190
+[09-Mar-2023 15:04:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/update.php on line 190
+[09-Mar-2023 17:58:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[09-Mar-2023 17:58:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[06-Jul-2023 13:38:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[06-Jul-2023 13:43:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158

@@ -1,0 +1,96 @@
+ /*about de  descarga informacion descarga*/
+ .about_infor_descarga{
+       padding-top: 20px;
+    text-align: left;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+  }
+  /*espacios  de catalago por descarga de 2 filas */
+.about_descarga_co{
+   width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2em;
+   
+  }
+  
+  /*espacio por aplicacion de 1 filas 
+*/
+.about_descarg_f{
+    margin-left: 2em;
+      text-align: left;
+      line-height: 1;
+      max-width: 90%;
+  }
+
+  .h3descarga {
+    color: #666464de;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+     font-size: calc(0.6em + 0.6vw);
+    line-height: 1.2em;
+    margin: 1em 0em 1em 0em;
+    
+}
+.h3des { color: #666464de; }
+.h3des:hover { 
+  color:  #E2001A; 
+}
+
+.imgdes{
+  width: 5%;
+}
+
+embed{
+  width: 100%;
+  height: 500px;
+}
+.title_descarg{
+font-family: Oswald;
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+    margin: 1em 0em 1em 1em;
+      color:  #E2001A; 
+}
+.title_documento{
+font-family: Oswald;
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+    margin: 1em 0em 1em 0em;
+      color:  #E2001A; 
+}
+.infor_descarga{
+    font-family: Oswald;
+    font-size: calc(0.7em + 0.7vw);
+    line-height: 1.2em;
+    margin: 0em 0em 1em 1.4em;
+}
+.if_if_des{
+
+   font-size: calc(0.6em + 0.6vw);
+    line-height: 1.2em;
+    margin: 1em 0em 1em 0em;
+    }
+@media screen and (max-width: 767px) {
+    .about_descarga_co{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 10px;
+       
+      }
+      embed{
+        width: 100%;
+        height: 350px;
+      }
+
+      .imgdes{
+        width: 7%;
+      }
+}

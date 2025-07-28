@@ -1,0 +1,341 @@
+.about_tabla_edi{
+    text-align: left;
+    justify-content: end;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    padding: 20px;
+    display: block;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+    align-items: end;
+    align-content: space-around;
+    justify-items: stretch;
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgb(255 255 255 / 98%);
+    border-radius: 10px;
+}
+
+.about_tabla_editar{
+    width: 100%;
+    max-width: 2000px;
+    padding: 20px;
+    display: flex;
+    align-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgb(255 255 255 / 98%);
+    border-radius: 10px;
+}
+
+
+.about_tabla_espe{
+    text-align: left;
+    justify-content: end;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.es_tabla {
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgb(255 255 255 / 98%);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: start;
+   
+}
+
+.marca_nueva{
+    margin-left: 25%;
+}
+
+.editar_pro {
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgb(255 255 255 / 98%);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9em;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    width: 1750px;
+    max-width: 2000px;
+}
+
+.about-if_tabla_esp {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 95% 5%;
+    row-gap: 40px;
+    background-color: #ddd;
+    align-items: center;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.979);
+    border-radius: 10px;
+}
+
+.about_boton {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 20px 20px 20px 20px 20px;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;  
+}
+
+.tex_tablas {
+    text-align: center;
+    line-height: 2;
+    max-width: 100%;
+}
+
+.tex_tablas_excel {
+    text-align: center;
+    line-height: 2;
+    max-width: 300px;
+    margin-top: 2.5em;
+}
+
+.del{
+    background-image:url('../img/svg/eliminar.svg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    height:30px;
+    width:30px;
+    background-position:center;
+    background-color: #E2001A;
+}
+
+.pdf{
+    background-image:url('../img/svg/pdf.svg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    height:30px;
+    width:30px;
+    background-position:center;
+    background-color: #E2001A;
+}
+
+.ver{
+    background-image:url('../img/svg/search.svg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    height:30px;
+    width:30px;
+    background-position:center;
+    background-color: #E2001A;
+}
+
+.edi{
+    background-image:url('../img/svg/edit_modify_icon-icons.com_72390.svg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    height:30px;
+    width:30px;
+    background-position:center;
+    background-color: #E2001A; 
+}
+
+.foto{
+    background-image:url('../img/svg/image-add.svg');
+    background-repeat:no-repeat;
+    height:30px;
+    width:30px;
+    background-position:center;
+    background-color: #E2001A;   
+}
+
+.del:hover, .ver:hover, .edi:hover, .foto:hover{
+    cursor: pointer;
+    background-color: #E2001A8c;
+}
+
+.tabla_ver{
+    background-color: #FFF;
+     text-align: left;
+     border-collapse: collapse;
+     width: 400px;
+}
+
+.tabla_edi{
+    background-color: #FFF;
+    text-align: left;
+    border-collapse: collapse;
+    width: 460px;
+}
+
+
+table{
+   background-color: #FFF;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+ 
+ }
+
+ th, td {
+    padding: 15px;
+    font-size:0.9em;
+ }
+
+ thead{
+    background-color:#ffffff;
+    border-bottom: solid 3px ;
+    color: #000000;
+ }
+
+table tbody tr:nth-child(even){
+    background:#ddd;
+ }
+ tr:hover td{
+    background:rgb(179, 176, 176);
+    color: #FFF;
+ }
+ 
+ tr:hover  .b_td,.b_td{
+    background:#fff;
+    color: #FFF;
+ }
+ 
+.links {
+    display: flex;
+}
+
+.links a {
+    text-decoration: none;
+    color: #E2001A;
+    background-color: #ffffff;
+    padding: 0.75em;
+    border-radius: 5px;
+    border: 1px solid #E2001A8c;
+}
+
+.links p {
+    text-decoration: none;
+    color: #fff;
+    background-color: #E2001A;
+    padding: 0.75em;
+    border: 1px solid #E2001A;
+    border-radius: 5px;
+}
+
+.links a:active {
+    color: #fff;
+    background-color: #ffffff;
+}
+
+.del:hover, .ver:hover, .edi:hover, .foto:hover{
+    cursor: pointer;
+    background-color: #E2001A8c;
+}
+
+
+/*busca*/
+.mostar_textbox
+{
+border: 1px solid #E2001A8c;
+font-size: 18px;
+font-family: Arial, Verdana;
+padding-left: 7px;
+padding-right: 7px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-o-border-radius: 4px;
+width: 100px;
+
+}
+
+.textbox
+{
+border: 1px solid #E2001A8c;
+font-size: 18px;
+font-family: Arial, Verdana;
+padding-left: 7px;
+padding-right: 7px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-o-border-radius: 4px;
+width: 250px;
+margin: 20px 30px;
+}
+
+.textbox::placeholder { color: #dddddd; }
+
+.textbox:focus{
+  border: 2px solid #E2001A;
+  outline: 0 none;
+}
+
+.selectdis {
+    width: 100%;
+    font-size: 9pt;
+    margin: 2px;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.inline{
+    display:inline;
+    }
+
+/*fin buscar*/
+
+@media (max-width:1200px){
+
+    th, td {
+        padding: 7px;
+        font-size:0.7em;
+    }
+  
+    .about_boton {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 10px,10px);
+    }
+
+}
+
+.textbox:focus, .mostar_textbox:focus{
+    border: 2px solid #E2001A;
+    outline: 0 none;
+  }
+
+  .mostar_textbox
+{
+border: 1px solid #E2001A8c;
+font-size: 18px;
+font-family: Arial, Verdana;
+padding-left: 7px;
+padding-right: 7px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-o-border-radius: 4px;
+width: 100px;
+
+}

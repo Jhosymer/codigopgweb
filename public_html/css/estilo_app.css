@@ -1,0 +1,550 @@
+ .mi-position-relative {
+  position: relative;
+}
+
+.mi-color-block {
+  position: absolute;
+  top: 74%;
+  width: 205%;
+  height: 40%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: flex-start; /* alinea contenido a la izquierda */
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.mi-rojo {
+  background-color: #E2001A;
+  left: -15%;
+}
+
+.mi-gris-oscuro {
+  background-color: #3d3d3d;
+  right: -15%;
+}
+
+.mi-texto-bloque {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* Nuevas clases para texto y botones dentro de bloques */
+
+.mi-texto-rojo-linea {
+  margin-left: 60%;
+  font-family: "Panton-BoldItalic", sans-serif;
+  text-align: center;
+}
+
+.mi-boton-rojo-linea {
+  margin-left: 210%;
+  width: 150px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.mi-texto-gris {
+  margin-left: 5%;
+  font-family: "Panton-BoldItalic", sans-serif;
+  text-align: center;
+}
+
+.mi-boton-gris {
+  margin-left: 25%;
+  width: 150px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.parrafo {
+    font-family: "Panton-Regular" !important;
+    font-size: calc(0.7em + 0.7vw);
+    line-height: 1.4em;
+    text-align: justify;
+}
+/* Estilos generales para imágenes de botón */
+.mi-img-boton {
+  width: 150px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+.titulo_app {
+   color: #E2001A;
+   font-family: "Panton-BoldItalic";
+   font-size: calc(1.4em + 1.4vw);
+   line-height: 1.5em;
+   font-weight: 100;
+   text-transform: uppercase;
+}
+
+/* Clases para layout tipo Bootstrap (simplificado) */
+
+.mi-container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mi-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  margin-top: 3rem;
+}
+
+.mi-row {
+  display: flex;
+  //flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.mi-col-3,
+.mi-col-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .titulo_Panton-BoldItalic, .titulo_SFPRODISPLAYREGULAR {
+  
+    font-size: calc(1em + 1vw);
+   
+}
+  .mi-col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .mi-col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.mi-img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mi-text-center {
+  text-align: center !important;
+}
+
+.mi-p-4 {
+  padding: 1.5rem !important;
+}
+
+.mi-p-md-5 {
+  padding: 3rem !important;
+}
+
+.mi-mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mi-mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.titulo_Panton-BoldItalic {
+    font-family: "Panton-BoldItalic";
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+}
+
+.titulo_SFPRODISPLAYREGULAR{
+    font-family: "SFPRODISPLAYREGULAR";
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+}
+.gris {
+    background-color: rgb(227 227 227);
+}
+
+.solo-escritorio {
+  display: block;
+}
+ .solo-movil {
+    display: none;
+  }
+/* Responsive: Ajustes para pantallas pequeñas */
+
+@media (max-width: 1300px) {
+.mi-boton-gris {
+    margin-left: 15%;
+}
+.mi-boton-rojo-linea {
+    margin-left: 208%;
+}
+}
+
+@media (max-width: 1140px) {
+.mi-boton-gris {
+    margin-left: 13%;
+}
+.mi-boton-rojo-linea {
+    margin-left: 194%;
+}
+}
+@media (max-width: 1070px) {
+.mi-boton-rojo-linea {
+    margin-left: 180%;
+}
+}
+@media (max-width: 1020px) {
+ .mi-boton-rojo-linea {
+    margin-left: 210%;
+ }
+ .mi-boton-gris {
+    margin-left: 20%;
+ }
+ .mi-img-boton {
+    width: 125px;
+ }
+}
+
+@media (max-width: 1000px) {
+.mi-boton-rojo-linea {
+    margin-left: 200%;
+}
+}
+@media (max-width: 910px) {
+ .mi-boton-rojo-linea {
+    margin-left: 150%;
+ }
+ .mi-boton-gris {
+    margin-left: 5%;
+ }
+ .img-boton {
+    width: 120px;
+ 
+}
+}
+
+@media (max-width: 890px) {
+  .mi-boton-rojo-linea {
+    margin-left: 230%;
+ }
+ .mi-boton-gris {
+    margin-left: 25%;
+ }
+ .mi-img-boton {
+    width: 100px;
+   
+}
+
+}
+
+@media (max-width: 788px) {
+  .mi-boton-rojo-linea {
+    margin-left: 200%;
+ }
+ 
+
+}
+
+
+@media (max-width: 776px) {
+
+
+    .mi-color-block {
+        width: 150%;
+    }
+
+
+.mi-gris-oscuro {
+    right: -2%;
+}
+
+.mi-rojo {
+    left: -2%;
+}
+.mi-texto-rojo-linea {
+    margin-left: 55%;
+}
+.mi-boton-rojo-linea {
+        margin-left: 160%;
+    }
+
+.mi-boton-gris {
+        margin-left: 20%;
+    }
+    .mi-img-fluid {
+    max-width: 80%;
+}
+    .mi-img-fluid_reponsive {
+        right: -25%;
+    }
+
+    .titulo_app {
+    font-size: calc(1.2em + 1.2vw);
+   
+}
+}
+
+
+
+@media (max-width: 770px) {
+.mi-texto-rojo-linea {
+        margin-left: 55%;
+    }
+    
+        .mi-boton-rojo-linea {
+        margin-left: 170%;
+    }
+    .mi-boton-gris {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 720px) {
+
+    
+        .mi-boton-rojo-linea {
+        margin-left: 160%;
+    }
+   
+}
+
+
+@media (max-width: 680px) {
+
+         .mi-texto-rojo-linea {
+        margin-left: 54%;
+    }
+
+        .mi-boton-rojo-linea {
+        margin-left: 145%;
+    }
+
+    .mi-boton-gris {
+        margin-left: 15%;
+    }
+   
+}
+
+@media (min-width: 646px) and (max-width: 654px) {
+     .mi-texto-rojo-linea {
+        margin-left: 52%;
+    }
+    .mi-boton-rojo-linea {
+        margin-left: 130%;
+    }
+    .mi-texto-gris {
+    margin-left: 0%;
+    }
+    .mi-boton-gris {
+        margin-left: 8%;
+    }
+
+}
+
+@media (max-width: 647px) {
+.mi-img-fluid {
+        max-width: 90%;
+    }
+
+        .mi-texto-rojo-linea {
+        margin-left: 57%;
+    }
+
+        .mi-boton-rojo-linea {
+        margin-left: 140%;
+    }
+
+    .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+    font-size: calc(0.9em + 0.9vw);
+   
+}
+    .mi-boton-gris {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 636px) {
+.mi-p-md-5,.mi-p-4 {
+  padding: 0rem !important;
+}
+.mi-gris-oscuro, .mi-rojo {
+        right: -2%;
+        left: -0%;
+    }
+    .mi-img-boton {
+        width: 150px;
+    }
+.mi-row{
+  margin-right: -5px;
+    margin-left: -5px;
+    flex-direction: column;
+}
+    .mi-boton-gris {
+        margin-left: 20%;
+    }
+
+    .mi-color-block {
+        width: 100%;
+    }
+
+   
+        .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        font-size: calc(1.4em + 1.4vw);
+    }
+        .mi-boton-rojo-linea {
+        margin-left: 220%;
+    }
+
+        .mi-img-fluid {
+        max-width: 50%;
+    }
+
+    .mi-col-6 {
+    margin-top: 50px;
+    margin-block: 40px;
+}
+
+   .mi-col         {
+    margin-block: 70px;
+}
+    .titulo_app {
+        font-size: calc(1.4em + 1.4vw);
+    }
+.mi-img-fluid_reponsive {
+        right: -50%;
+    }
+
+    .solo-escritorio {
+    display: none;
+  }
+
+    
+
+   .solo-movil {
+    display: block;
+  }
+}
+@media (max-width: 618px) {
+    .mi-boton-rojo-linea {
+        margin-left: 210%;
+    }
+}
+@media (max-width: 600px) {
+       .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        font-size: calc(1.4em + 1.4vw);
+    }
+
+    .parrafo {
+    font-size: calc(0.9em + 0.9vw);
+    }
+    .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        font-size: calc(1.6em + 1.6vw);
+    }
+        .mi-img-boton {
+        width: 150px;
+    }
+    .mi-img-boton {
+        width: 170px;
+    }
+
+    .mi-img-fluid {
+        max-width: 40%;
+    }
+        .mi-boton-rojo-linea {
+        margin-left: 185%;
+    }
+   
+}
+@media (max-width: 585px) {
+  .mi-boton-rojo-linea {
+        margin-left: 205%;
+    }
+
+    .mi-img-boton {
+        width: 150px;
+    }
+}
+
+@media (max-width: 556px) {
+    .mi-boton-rojo-linea  {
+         margin-left: 195%;
+    }
+}
+
+@media (max-width: 540px) {
+    .mi-boton-rojo-linea  {
+         margin-left: 180%;
+    }
+}
+
+@media (max-width: 500px) {
+    .mi-boton-rojo-linea  {
+         margin-left: 170%;
+    }
+}
+
+@media (max-width: 470px) {
+
+        .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        font-size: calc(1.2em + 1.2vw);
+    }
+       .mi-boton-rojo-linea {
+        margin-left: 180%;
+    }
+
+.mi-img-boton {
+        width: 124px;
+    }
+            .mi-img-fluid {
+        max-width: 45%;
+    }
+        .mi-img-fluid_reponsive {
+        right: -55%;
+    }
+
+    .mi-boton-gris {
+        margin-left: 15%;
+    }
+
+
+}
+
+@media (max-width: 430px) {
+    .mi-boton-rojo-linea {
+        margin-left: 160%;
+    }
+}
+
+@media (max-width: 430px) {
+    .mi-boton-rojo-linea {
+        margin-left: 145%;
+    }
+}
+@media (min-width: 376px) and (max-width: 426px) {
+    .mi-boton-rojo-linea {
+        margin-left: 160%;
+    }
+}
+
+@media (max-width: 380px) {
+    .mi-boton-rojo-linea {
+        margin-left: 143%;
+    }
+    .mi-boton-gris {
+        margin-left: 10%;
+    }
+}
+
