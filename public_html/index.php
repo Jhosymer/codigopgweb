@@ -1,66 +1,35 @@
-<?php
+<?php 
+$loc = "./";
+$title = "WEBFiltros";
+$description="Filtros diseñados para todo tipo de vehículos desde livianos y SUV hasta carga pesada, equipo fuera de carretera y maquinaria agrícola. ¡protege tus equipos con nuestros filtros!";
+include("./web/header.php");
 
-include("./web/arriba.php");
+include("index/banner_videos.php");?>
+
+        <div class="container p-4 p-md-5 mb-2" >
+      
+          <?php
+          include("./index/texto_web.html");
+         
+          ?>
+
+        </div>
+          
+      
+        <?php 
+            include("./index/nano.html");
+            include("./index/video_aire.php");
+            include("./index/aire.html");
+            include("./index/combustible.html");
+            include("./index/aceite.html");
+            include("./index/fluidos.html");
+            include("./index/app.html");
+           // include("./robot_chat.php");
+           // include("./index/alerta_emergente.php");
+
+  include("./web/footer.php");
+
+
+        
 ?>
 
-
-<header>
-<title>WEBFiltros</title>
-<meta name="description" content="Filtros diseñados para todo tipo de vehículos desde livianos y SUV hasta carga pesada, equipo fuera de carretera y maquinaria agrícola. ¡protege tus equipos con nuestros filtros!">
-
-
-    <section class="header">
-     
-<div class="wrapper">
-   
-     <video src="./img/heder/Camion_WEB.mp4" class="slide1 imagen"  id="slide1" autoplay  muted   oncontextmenu="return false" onkeydown="return false"></video>
-     <video src="./img/heder/caja.mp4" class="slide2 imagen"  id="slide2" autoplay  muted oncontextmenu="return false" onkeydown="return false"></video>
-    <video src="./img/heder/www_LogoWEB.mp4" class="slide3" id="slide3"  autoplay  muted oncontextmenu="return false" onkeydown="return false"></video>
-    </div>
- 
-
-  </header>
-  <section class="home">
- <div>
- <?php
-include("./index/texto_web.html");
-?>
-</div><div >
-<?php
-include("./index/nano.html");
-include("./index/video_aire.php");?>
-</div><div>
-<?php
-include("./index/texto_aire.html");?>
-</div><div>
-<?php
-include("./index/combustible_video.html");?>
-</div><div>
-<?php
-include("./index/combustible.html");?>
-</div><div>
-<?php
-include("./index/aceite_video.html");?>
-</div><div>
-<?php
-include("./index/aceite.html");?>
-</div><div>
-<?php
-include("./index/fluidos_videos.html");?>
-</div><div>
-<?php
-include("./index/fluidos.html");?>
-</div><div>
-<?php
-
-include("./index/android.html");
-?>
-</div>
-</section >
-
-
-
-<?php
-include("./index/alerta_emergente.php");
-include("./web/abajo_d.php");
-?>

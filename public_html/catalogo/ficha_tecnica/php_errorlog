@@ -1,0 +1,32 @@
+[09-Oct-2025 15:38:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:1) in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 10
+[09-Oct-2025 15:39:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:1) in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 10
+[09-Oct-2025 15:39:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:1) in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 10
+[09-Oct-2025 11:46:22 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 40
+[09-Oct-2025 11:46:22 America/Caracas] PHP Warning:  file_get_contents(./../../images/fichas-filtros/web/.jpg): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 107
+[09-Oct-2025 11:46:22 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 142
+[09-Oct-2025 11:48:30 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 39
+[09-Oct-2025 11:48:30 America/Caracas] PHP Warning:  file_get_contents(./../../images/fichas-filtros/web/.jpg): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 106
+[09-Oct-2025 11:48:30 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 141
+[09-Oct-2025 15:28:01 America/Caracas] PHP Warning:  require_once(./../../vendor/autoload.php): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[09-Oct-2025 15:28:01 America/Caracas] PHP Fatal error:  Uncaught Error: Failed opening required './../../vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[09-Oct-2025 18:31:27 America/Caracas] PHP Warning:  require_once(./../../vendor/autoload.php): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[09-Oct-2025 18:31:27 America/Caracas] PHP Fatal error:  Uncaught Error: Failed opening required './../../vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[09-Oct-2025 22:59:26 America/Caracas] PHP Warning:  require_once(./../../vendor/autoload.php): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[09-Oct-2025 22:59:26 America/Caracas] PHP Fatal error:  Uncaught Error: Failed opening required './../../vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[10-Oct-2025 06:06:30 America/Caracas] PHP Warning:  require_once(./../../vendor/autoload.php): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[10-Oct-2025 06:06:30 America/Caracas] PHP Fatal error:  Uncaught Error: Failed opening required './../../vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 28
+[10-Oct-2025 07:18:38 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 53
+[10-Oct-2025 07:18:38 America/Caracas] PHP Warning:  file_get_contents(./../../images/fichas-filtros/web/.jpg): Failed to open stream: No such file or directory in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 123
+[10-Oct-2025 07:18:38 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/customer/www/webfiltros.com/public_html/catalogo/ficha_tecnica/filtro_descarga.php on line 153

@@ -3,12 +3,15 @@
         "normal": "permanent_marker_normal_6e193ca4a56ae01fef2a207583c96950"
     },
     "roboto": {
-        "500": "roboto_500_5774d6fb05eba3d096525f821dbe4137"
+        "500": "roboto_500_8f5bb1c0a2da892dcb7cba57cb4a086a",
+        "300": "\/home\/customer\/www\/webfiltros.com\/public_html\/librerias\/dompdf\/vendor\/dompdf\/dompdf\/lib\/fonts\/roboto_300_23de689f4f2d0e3705d63b73cab5ed4c",
+        "normal": "C:\\laragon\\www\\nueva\\librerias\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_normal_af56b6975b0f09866f89c02a03b6e898",
+        "bold": "\/home\/customer\/www\/webfiltros.com\/public_html\/librerias\/dompdf\/vendor\/dompdf\/dompdf\/lib\/fonts\/roboto_bold_0e1177c9ffa4690c3cbe09820770580c"
     },
     "libre barcode 128": {
         "normal": "libre_barcode_128_normal_0b5f91046a4f5d5394f0c612b32c94f9"
     },
     "libre barcode 128 text": {
-        "normal": "libre_barcode_128_text_normal_362a12b148929e3b901531d531059bc5"
+        "normal": "libre_barcode_128_text_normal_9173d595b034978d5e2d377da62ca800"
     }
 }

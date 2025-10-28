@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         var valorCambiado = "id="+$(this).val();
         $.ajax({
             data: valorCambiado,
-            url: './../ajax_busquedas/ajax_aplicacion.php',
+            url: './../../ajax_busquedas/ajax_aplicacion.php',
             type: 'POST',
             success: function(response){
                 $('#lista2').css("display", "block");

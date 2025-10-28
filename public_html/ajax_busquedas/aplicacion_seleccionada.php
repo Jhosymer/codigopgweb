@@ -1,6 +1,6 @@
 <?php 
     if( isset($_POST['id_tipo']) ){
-        include("./../../conexion.php");
+        include("./../config/conexion.php");
         include('./../funciones/codigo_existe_en_especificaciones.php');
 
         $id_tipo = $_POST['id_tipo'];
@@ -20,10 +20,10 @@
         $motor = $row['motor'];
         $año = $row['ano'];
         $cilindrada = $row['cilindrada'];
-        $cadena = $cadena . '<table class="vehiculo_seleccionado">';
-        $cadena = $cadena . '<thead class="equivalencias">';
+        $cadena = $cadena . '<table class="table table-borderless table-custom table-equivalencias">';
+        $cadena = $cadena . '<thead class="text-uppercase">';
         $cadena = $cadena . '<tr>';
-        $cadena = $cadena . '<td class="equivalencias tilt_blanco" colspan="2">Vehiculo</td>';
+        $cadena = $cadena . '<th class="header-negro" colspan="2">Vehiculo</th>';
         $cadena = $cadena . '</tr>';
         $cadena = $cadena . '</thead>';
         $cadena = $cadena . '<tbody>';
@@ -43,8 +43,8 @@
         $cadena = $cadena . '<td>Cilindrada:</td>';
         $cadena = $cadena . "<td>$cilindrada</td>";
         $cadena = $cadena . '</tr>';
-        $cadena .= "</tbody></table><table class='vehiculo_seleccionado'>";
-        $cadena .= '<thead><tr><td class="codigos tilt_blanco" colspan="2">Filtros</td></tr></thead>';
+        $cadena .= "</tbody></table><table class='table table-sm table-borderless table-custom table-codigos-web'>";
+        $cadena .= '<thead class=="text-uppercase"><tr><th  colspan="2">Filtros</th></tr></thead>';
 
         $sql = "SELECT id, aplicacion, codigo FROM aplicacion
                         WHERE ( id_tipo = :id_tipo ) and ( id_marca = :id_marca ) and ( id_vehiculo = :id_vehiculo ) and ( deleted_at is null )";
@@ -60,7 +60,7 @@
             $clase = json_decode(queTablaCodigo($codigo, $base_de_datos));
             $cadena .= "<tr>";
             $cadena .= "<td>" . $row2['aplicacion'] . ":</td>";
-            $cadena .= "<td><a href='./../filtro/filtro.php?codigo=$codigo&clase=$clase&codigoVehiculo=$id' class='link'>" . $codigo . "</a></td>";
+            $cadena .= "<td><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=$clase&codigoVehiculo=$id' class='link'>" . $codigo . "</a></td>";
             $cadena .= "</tr>";
         }
         $cadena = $cadena . '</table>';

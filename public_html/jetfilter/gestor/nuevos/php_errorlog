@@ -1,0 +1,75 @@
+[09-Mar-2023 13:21:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:21:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:21:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:30:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 13:46:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:37
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(37): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 37
+[09-Mar-2023 14:33:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[09-Mar-2023 15:03:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/update.php on line 190
+[09-Mar-2023 15:04:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/update.php on line 190
+[09-Mar-2023 17:58:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[09-Mar-2023 17:58:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[06-Jul-2023 13:38:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[06-Jul-2023 13:43:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_especificacion' cannot be null in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php:158
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php(158): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/nuevos/crear_nuevos.php on line 158
+[09-Oct-2025 13:58:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( codigo = 'w-17356' ) AND ((imagen IS NOT NULL AND imagen != '') OR (imag' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php:54
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php(54): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 54
+[09-Oct-2025 13:59:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( codigo = 'w-17356' ) AND ((imagen IS NOT NULL AND imagen != '') OR (imag' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php:54
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php(54): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 54
+[09-Oct-2025 14:03:14 UTC] PHP Parse error:  Unmatched '}' in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 17
+[09-Oct-2025 14:05:15 UTC] PHP Parse error:  Unmatched '}' in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 17
+[09-Oct-2025 14:06:18 UTC] PHP Parse error:  Unmatched '}' in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 17
+[09-Oct-2025 14:11:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/crear_nuevos.php on line 22
+[13-Oct-2025 19:22:59 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 113
+[13-Oct-2025 19:23:03 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 113
+[13-Oct-2025 19:23:20 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 114
+[13-Oct-2025 19:23:22 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 114
+[13-Oct-2025 19:23:54 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 117
+[13-Oct-2025 19:23:57 UTC] PHP Parse error:  syntax error, unexpected token "*" in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/nuevos/update.php on line 117

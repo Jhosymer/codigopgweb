@@ -1,6 +1,6 @@
 <?php 
     if( isset($_POST['id_marca']) && isset($_POST['id_aplicacion']) ){
-        include("./../../conexion.php");
+        include("./../config/conexion.php");
 
         $columnas = ['id_vehiculo','modelo', 'cilindrada', 'ano'];
         $campo = isset( $_POST['campo'] ) ? $_POST['campo'] : null;
@@ -146,7 +146,7 @@
 
             for($i = $numeroInicio; $i <= $numeroFinal; $i++){
                 if($page == $i){
-                    $output['paginacion'] .= "<p>" . $i ." </p>";
+                    $output['paginacion'] .= "<p class='linksp'>" . $i ." </p>";
                 }
             }
             if($page != $totalPaginas){

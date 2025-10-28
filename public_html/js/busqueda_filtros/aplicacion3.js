@@ -6,7 +6,7 @@ function getAplicacion3(aplicacion, marca, vehiculo){
             'pagina': paginaActual,
             'regreso': 1,
         },
-        url: './../ajax_busquedas/ajax_marca.php',
+        url: './../../ajax_busquedas/ajax_marca.php',
         dataType: 'json',
         type: 'POST',
         success: function(response2){
@@ -31,7 +31,7 @@ function getAplicacion3(aplicacion, marca, vehiculo){
                         id: aplicacion,
                         id_marca: marca,
                      },
-                    url: './../ajax_busquedas/ajax_aplicacion.php',
+                    url: './../../ajax_busquedas/ajax_aplicacion.php',
                     type: 'POST',
                     success: function(responseFinal){
                         document.getElementById('lista2').innerHTML = "";
@@ -48,7 +48,7 @@ function getAplicacion3(aplicacion, marca, vehiculo){
                         'id_tipo': aplicacion,
                         'id_marca': marca,
                     },
-                    url: "./../ajax_busquedas/aplicacion_seleccionada.php",
+                    url: "./../../ajax_busquedas/aplicacion_seleccionada.php",
                     type: "POST",
                     dataType: 'json',
                     success: function (response){

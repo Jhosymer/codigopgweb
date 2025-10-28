@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 'id_aplicacion': $('#lista1').val(),
                 'pagina': paginaActual,
             },
-            url: './../ajax_busquedas/ajax_marca.php',
+            url: './../../ajax_busquedas/ajax_marca.php',
             dataType: 'json',
             type: 'POST',
             success: function(response2){

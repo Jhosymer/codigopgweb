@@ -1,4 +1,0 @@
-[09-Jun-2023 15:07:46 America/Caracas] PHP Fatal error:  Uncaught Error: Call to undefined function alerta_lmite() in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/espec_distribuidor.php:59
-Stack trace:
-#0 {main}
-  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/distribuidoras_venezuela/espec_distribuidor.php on line 59

@@ -2,7 +2,7 @@
 
     if ( isset($_POST['estado']) ) {
         
-        include_once('./../../conexion.php');
+        include_once('./../config/conexion.php');
 
         /*------------RECIBIR EL ESTADO--------------*/ 
         $est = ( $_POST['estado'] != "" ) ? htmlspecialchars( $_POST['estado'] ) : '';
@@ -38,7 +38,7 @@
         $total = $seleccionado->fetch();
         $numFilasTotales = $total['cantidad'];
 
-        $sql = "SELECT d_e.id as id, d.nombre as nombre, d.email as email, d.email2 as email2, d_e.direccion as direccion, d_e.ciudad as ciudad, d_e.estado as estado, d.telefono as telefono, d.telefono2 as telefono2, d.instagram as instagram,  d.video_instagram as video_instagram, d.twitter as twitter, d.facebook as facebook, d_e.principal as principal, d_e.id_padre as id_padre
+        $sql = "SELECT d_e.id as id, d.nombre as nombre, d.email as email,  d.direcmaps as direcmaps , d.email2 as email2, d_e.direccion as direccion, d_e.ciudad as ciudad, d_e.estado as estado, d.telefono as telefono, d.telefono2 as telefono2, d.instagram as instagram,  d.video_instagram as video_instagram, d.twitter as twitter, d.facebook as facebook, d_e.principal as principal, d_e.id_padre as id_padre
                         FROM distribuidoras as d
                         JOIN distribuidora_estado as d_e ON d.id = d_e.id_distribuidora
                         $where
@@ -62,6 +62,7 @@
             $twitter = $row['twitter'];
             $instagram = $row['instagram'];
             $video_instagram = $row['video_instagram'];
+            $direcmaps = $row['direcmaps'];
             
 
             if( $principal == 0 ){
@@ -89,30 +90,62 @@
                 }
                 $distribuidoras_secun = substr_replace($distribuidoras_secun, "", -2);
 
-                $output['distribuidoras'] .= "<div>"; 
-                $output['distribuidoras'] .= "<h2 class='n_nombre_distri' id='nombre_distribuidor'>$nombre</h2>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Correo: </b> $email / $email2</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Teléfono: </b> $telefono / $telefono2</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>Direccion Principal: </b> $direccion, Estado $estado, $ciudad</p>";
+                $output['distribuidoras'] .= "<div class='col-12 col-md-6 col-lg-6 mb-5'>";
+                $output['distribuidoras'] .= "<div class='card h-100 shadow-lg'>"; // Card con sombra grande
+                $output['distribuidoras'] .= "<div class='card-body'>"; // Contenido principal del card 
+                // Título del distribuidor
+                $output['distribuidoras'] .= "<h5 class='subtito_ms rojoweb' id='nombre_distribuidor'>$nombre</h5>";
+
+                 // Información del distribuidor
+                 $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Correo: </b> $email";
+                  
+                 if ($email2 != null) {
+                    $output['distribuidoras'] .= " / $email2</p>";
+                } else {
+                    $output['distribuidoras'] .= "</p>";
+
+                }
+
+                 $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Teléfono: </b> $telefono";
+
+                 if ($telefono2 != null) {
+                    $output['distribuidoras'] .= " / $telefono2</p>";
+                } else {
+                    $output['distribuidoras'] .= "</p>";
+
+                }
+                 $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>Dirección Principal: </b> $direccion, Estado $estado, $ciudad</p>";
+
                 if( $distribuidora_secundarias->rowCount() > 0 ){
-                    $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>Distribuye a: </b> $distribuidoras_secun </p>";
+                    $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>Distribuye a: </b> $distribuidoras_secun </p>";
                 }
-                 $output['distribuidoras'] .= "<div class='flex_distr'>";
-                if( $facebook != null ){
-                    $output['distribuidoras'] .= "<a href='$facebook' target='_blank' class='redes_distr face'></a>";
+                // Redes sociales
+                $output['distribuidoras'] .= "<div class='d-flex redes-container justify-content-start mt-3'>";
+                if ($facebook != null) {
+                    $output['distribuidoras'] .= "<a href='$facebook' class='btn redes_distr face' target='_blank'></a>";
                 }
-                if( $twitter != null ){
-                    $output['distribuidoras'] .= "<a href='$twitter' target='_blank'  class='redes_distr twi'></a>";
+                if ($twitter != null) {
+                    $output['distribuidoras'] .= "<a href='$twitter' class='btn redes_distr twi' target='_blank'></a>";
                 }
-                if( $instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$instagram' target='_blank'   class='redes_distr inst'></a>";
+                if ($instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$instagram' class='btn redes_distr inst' target='_blank'></a>";
                 }
-                   if( $video_instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$video_instagram' target='_blank'   class='redes_distr video_inst'></a>";
+                if ($video_instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$video_instagram' class='btn redes_distr video_inst' target='_blank'></a>";
                 }
-    
-                $output['distribuidoras'] .= "</div>";
-                $output['distribuidoras'] .= "</div>";
+                $output['distribuidoras'] .= "</div>"; // Fin de las redes sociales
+
+                if ($direcmaps != null) {
+                    $output['distribuidoras'] .= "<div class='text-center mt-5 mb-3'>";
+                    $output['distribuidoras'] .= "<a href='$direcmaps' target='_blank' class='btn btn-icon-gris d-inline-flex align-items-center shadow-sm'>";
+                    $output['distribuidoras'] .= "<i class='bx bx-map me-2' style='color: #e2001a;'></i> Ver en Google Maps";
+                    $output['distribuidoras'] .= "</a>";
+                    $output['distribuidoras'] .= "</div>";
+                }
+                
+                $output['distribuidoras'] .= "</div>"; // Fin del card-body
+                $output['distribuidoras'] .= "</div>"; // Fin del card
+                $output['distribuidoras'] .= "</div>"; // Fin de la columna
             }
             else if( $principal == 1 ){
                 $ciudad = $row['ciudad'];
@@ -123,6 +156,7 @@
                 $twitter = $row['twitter'];
                 $instagram = $row['instagram'];
                 $video_instagram = $row['video_instagram'];
+                $direcmaps = $row['direcmaps'];
 
                 $sql = "SELECT estado FROM distribuidora_estado WHERE id_padre = :id_padre and deleted_at is null ";
                 $distribuidora_secundarias = $base_de_datos->prepare($sql);
@@ -136,29 +170,60 @@
                 }
                 $distribuidoras_secun = substr_replace($distribuidoras_secun, "", -2);
 
-                $output['distribuidoras'] .= "<div>"; 
-                $output['distribuidoras'] .= "<h2 class='n_nombre_distri' id='nombre_distribuidor'>$nombre</h2>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Correo: </b> $email / $email2</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Teléfono: </b> $telefono / $telefono2 </p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>Direccion Principal: </b> $direccion, Estado $estado, $ciudad</p>";
+                $output['distribuidoras'] .= "<div class='col-12 col-md-6 col-lg-6 mb-5'>";
+                $output['distribuidoras'] .= "<div class='card h-100 shadow-lg'>"; // Card con sombra grande
+                $output['distribuidoras'] .= "<div class='card-body'>"; // Contenido principal del card 
+                // Título del distribuidor
+                $output['distribuidoras'] .= "<h5 class='subtito_ms rojoweb' id='nombre_distribuidor'>$nombre</h5>";
+
+                 // Información del distribuidor
+                 $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Correo: </b> $email";
+                  
+                 if ($email2 != null) {
+                    $output['distribuidoras'] .= " / $email2</p>";
+                } else {
+                    $output['distribuidoras'] .= "</p>";
+
+                }
+
+                 $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Teléfono: </b> $telefono";
+
+                 if ($telefono2 != null) {
+                    $output['distribuidoras'] .= " / $telefono2</p>";
+                } else {
+                    $output['distribuidoras'] .= "</p>";
+
+                }
+                 $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>Dirección Principal: </b> $direccion, Estado $estado, $ciudad</p>";
+
                 if( $distribuidora_secundarias->rowCount() > 0 ){
-                    $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>Distribuye a: </b> $distribuidoras_secun </p>";
+                    $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>Distribuye a: </b> $distribuidoras_secun </p>";
                 }
-                $output['distribuidoras'] .= "<div class='flex_distr'>";
-                if( $facebook != null ){
-                    $output['distribuidoras'] .= "<a href='$facebook' target='_blank' class='redes_distr face'></a>";
+                // Redes sociales
+                $output['distribuidoras'] .= "<div class='d-flex redes-container justify-content-start mt-3'>";
+                if ($facebook != null) {
+                    $output['distribuidoras'] .= "<a href='$facebook' class='btn redes_distr face' target='_blank'></a>";
                 }
-                if( $twitter != null ){
-                    $output['distribuidoras'] .= "<a href='$twitter' target='_blank'  class='redes_distr twi'></a>";
+                if ($twitter != null) {
+                    $output['distribuidoras'] .= "<a href='$twitter' class='btn redes_distr twi' target='_blank'></a>";
                 }
-                if( $instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$instagram' target='_blank'   class='redes_distr inst'></a>";
+                if ($instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$instagram' class='btn redes_distr inst' target='_blank'></a>";
                 }
-                    if( $video_instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$video_instagram' target='_blank'   class='redes_distr video_inst'></a>";
+                if ($video_instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$video_instagram' class='btn redes_distr video_inst' target='_blank'></a>";
                 }
-                $output['distribuidoras'] .= "</div>";
-                $output['distribuidoras'] .= "</div>";
+                $output['distribuidoras'] .= "</div>"; // Fin de las redes sociales
+                if ($direcmaps != null) {
+                    $output['distribuidoras'] .= "<div class='text-center mt-5 mb-3'>";
+                    $output['distribuidoras'] .= "<a href='$direcmaps' target='_blank' class='btn btn-icon-gris d-inline-flex align-items-center shadow-sm'>";
+                    $output['distribuidoras'] .= "<i class='bx bx-map me-2' style='color: #e2001a;'></i> Ver en Google Maps";
+                    $output['distribuidoras'] .= "</a>";
+                    $output['distribuidoras'] .= "</div>";
+                }
+                $output['distribuidoras'] .= "</div>"; // Fin del card-body
+                $output['distribuidoras'] .= "</div>"; // Fin del card
+                $output['distribuidoras'] .= "</div>"; // Fin de la columna
             }
             else if( $principal == 2 ){
                 $ciudad = $row['ciudad'];
@@ -168,28 +233,62 @@
                 $twitter = $row['twitter'];
                 $instagram = $row['instagram'];
                 $video_instagram = $row['video_instagram'];
+                $direcmaps = $row['direcmaps'];
 
-                $output['distribuidoras'] .= "<div>"; 
-                $output['distribuidoras'] .= "<h2 class='n_nombre_distri' id='nombre_distribuidor'>$nombre</h2>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Correo: </b> $email / $email2</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='telefono_distribuidor'><b>Teléfono: </b> $telefono / $telefono2</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>Direccion Principal: </b> $direccion, Estado $estado, $ciudad</p>";
-                $output['distribuidoras'] .= "<p class='info_distri' id='direccion_distribuidor'><b>COBERTURA NACIONAL</b> </p>";
-                 $output['distribuidoras'] .= "<div class='flex_distr'>";
-                if( $facebook != null ){
-                    $output['distribuidoras'] .= "<a href='$facebook' class='redes_distr face'></a>";
+                $output['distribuidoras'] .= "<div class='col-12 col-md-6 col-lg-6 mb-5'>";
+                $output['distribuidoras'] .= "<div class='card h-100 shadow-lg'>"; // Card con sombra grande
+                $output['distribuidoras'] .= "<div class='card-body'>"; // Contenido principal del card
+                
+                // Título del distribuidor
+                $output['distribuidoras'] .= "<h5 class='subtito_ms rojoweb' id='nombre_distribuidor'>$nombre</h5>";
+                
+                // Información del distribuidor
+                $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Correo: </b> $email";
+                  
+                if ($email2 != null) {
+                   $output['distribuidoras'] .= " / $email2</p>";
+               } else {
+                   $output['distribuidoras'] .= "</p>";
+
+               }
+
+                $output['distribuidoras'] .= "<p class='card-text' id='telefono_distribuidor'><b>Teléfono: </b> $telefono";
+
+                if ($telefono2 != null) {
+                   $output['distribuidoras'] .= " / $telefono2</p>";
+               } else {
+                   $output['distribuidoras'] .= "</p>";
+
+               }
+                $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>Dirección Principal: </b> $direccion, Estado $estado, $ciudad</p>";
+                $output['distribuidoras'] .= "<p class='card-text' id='direccion_distribuidor'><b>COBERTURA NACIONAL</b></p>";
+                
+                // Redes sociales
+                $output['distribuidoras'] .= "<div class='d-flex redes-container justify-content-start mt-3'>";
+                if ($facebook != null) {
+                    $output['distribuidoras'] .= "<a href='$facebook' class='btn redes_distr face' target='_blank'></a>";
                 }
-                if( $twitter != null ){
-                    $output['distribuidoras'] .= "<a href='$twitter' class='redes_distr twi'></a>";
+                if ($twitter != null) {
+                    $output['distribuidoras'] .= "<a href='$twitter' class='btn redes_distr twi' target='_blank'></a>";
                 }
-                if( $instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$instagram'  class='redes_distr inst'></a>";
+                if ($instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$instagram' class='btn redes_distr inst' target='_blank'></a>";
                 }
-                  if( $video_instagram != null ){
-                    $output['distribuidoras'] .= "<a href='$video_instagram' target='_blank'   class='redes_distr video_inst'></a>";
+                if ($video_instagram != null) {
+                    $output['distribuidoras'] .= "<a href='$video_instagram' class='btn redes_distr video_inst' target='_blank'></a>";
                 }
-                $output['distribuidoras'] .= "</div>";
-                 $output['distribuidoras'] .= "</div>";
+                $output['distribuidoras'] .= "</div>"; // Fin de las redes sociales
+                
+                if ($direcmaps != null) {
+                    $output['distribuidoras'] .= "<div class='text-center mt-5 mb-3'>";
+                    $output['distribuidoras'] .= "<a href='$direcmaps' target='_blank' class='btn btn-icon-gris d-inline-flex align-items-center shadow-sm'>";
+                    $output['distribuidoras'] .= "<i class='bx bx-map me-2' style='color: #e2001a;'></i> Ver en Google Maps";
+                    $output['distribuidoras'] .= "</a>";
+                    $output['distribuidoras'] .= "</div>";
+                }
+                $output['distribuidoras'] .= "</div>"; // Fin del card-body
+                $output['distribuidoras'] .= "</div>"; // Fin del card
+                $output['distribuidoras'] .= "</div>"; // Fin de la columna
             }
         }
 
@@ -218,7 +317,7 @@
 
             for($i = $numeroInicio; $i <= $numeroFinal; $i++){
                 if($page == $i){
-                    $output['paginacion'] .= "<p>" . $i ." </p>";
+                    $output['paginacion'] .= "<p class='linksp'>" . $i ." </p>";
                 }
             }
             if($page != $totalPaginas){

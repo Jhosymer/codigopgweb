@@ -1,0 +1,173 @@
+
+
+
+ 
+ body {
+    font-family: "Roboto-Light" !important;
+   
+ 
+ }
+ .dataTables_wrapper .dataTables_paginate .paginate_button {
+
+    padding: 0.3em 0.3em !important;
+    text-decoration: none;
+ }
+
+ .wrapper_md {
+    align-items: stretch;
+    background: linear-gradient(184deg, rgba(255, 255, 255, 1) 10%, rgba(226, 0, 26, 1) 35%);
+    display: flex;
+    width: 100%;
+}
+
+.sidebar_md, .sidebar-content_md {
+    background: linear-gradient(184deg, rgba(255, 255, 255, 1) 10%, rgba(226, 0, 26, 1) 35%);
+    transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+}
+.sidebar-header_md {
+    background: transparent;
+    color: #dc3545;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem 0.375rem;
+}
+
+.sidebar-link_md, a.sidebar-link_md {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 1) 0%, rgb(226 0 26 / 19%) 1%);
+    color: #fff !important;;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: 0.625rem 1.625rem;
+    position: relative;
+    text-decoration: none;
+    transition: background .1s ease-in-out;
+}
+
+.sidebar-link_md:hover , a.sidebar-link_md:hover {
+    background: linear-gradient(156deg, rgba(255, 255, 255, 1) 8%, rgba(226, 0, 26, 1) 35%);
+    border-left: 3px solid transparent;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.activ{
+    background: linear-gradient(156deg, rgba(255, 255, 255, 1) 8%, rgba(226, 0, 26, 1) 35%);
+    border-left: 3px solid transparent;
+    color: #fff !important;
+    text-decoration: none;
+
+}
+
+.nav.collapsed {
+    width: 400px;
+   /*margin-left: -260px;-*/
+}
+
+.li_busqueda{
+    position: absolute;
+    z-index: 1;
+}
+
+.gris {
+    box-shadow: inset 0 0 0 9999px rgb(0 0 0 / 19%);
+  }
+
+  /* estilo cliente para colores de a*/
+.nav-flag, .nav-icon {
+    color: #6c757d !important;
+
+}
+.dropdown-item {
+
+    color: var(--bs-dropdown-link-color) !important;
+}
+
+.btn-danger,.btn-danger.disabled,.btn-danger.focus,.btn-danger.hover:not(:disabled):not(.disabled),.btn-danger:disabled,.btn-danger:focus,.btn-danger:hover:not(:disabled):not(.disabled),.btn-dark,.btn-dark.disabled,.btn-dark.focus,.btn-dark.hover:not(:disabled):not(.disabled),.btn-dark:disabled,.btn-dark:focus,.btn-dark:hover:not(:disabled):not(.disabled),.btn-info,.btn-info.disabled,.btn-info.focus,.btn-info.hover:not(:disabled):not(.disabled),.btn-info:disabled,.btn-info:focus,.btn-info:hover:not(:disabled):not(.disabled),.btn-light,.btn-light.disabled,.btn-light.focus,.btn-light.hover:not(:disabled):not(.disabled),.btn-light:disabled,.btn-light:focus,.btn-light:hover:not(:disabled):not(.disabled),.btn-primary,.btn-primary.disabled,.btn-primary.focus,.btn-primary.hover:not(:disabled):not(.disabled),.btn-primary:disabled,.btn-primary:focus,.btn-primary:hover:not(:disabled):not(.disabled),.btn-secondary,.btn-secondary.disabled,.btn-secondary.focus,.btn-secondary.hover:not(:disabled):not(.disabled),.btn-secondary:disabled,.btn-secondary:focus,.btn-secondary:hover:not(:disabled):not(.disabled),.btn-success,.btn-success.disabled,.btn-success.focus,.btn-success.hover:not(:disabled):not(.disabled),.btn-success:disabled,.btn-success:focus,.btn-success:hover:not(:disabled):not(.disabled),.btn-warning,.btn-warning.disabled,.btn-warning.focus,.btn-warning.hover:not(:disabled):not(.disabled),.btn-warning:disabled,.btn-warning:focus,.btn-warning:hover:not(:disabled):not(.disabled),.show>.btn-danger.dropdown-toggle,.show>.btn-dark.dropdown-toggle,.show>.btn-info.dropdown-toggle,.show>.btn-light.dropdown-toggle,.show>.btn-primary.dropdown-toggle,.show>.btn-secondary.dropdown-toggle,.show>.btn-success.dropdown-toggle,.show>.btn-warning.dropdown-toggle {
+    color: #fff !important;
+}
+
+.active>.page-link, .page-link.active {
+ 
+    color: var(--bs-pagination-active-color) !important;
+}
+
+.disabled>.page-link, .page-link.disabled {
+    color: var(--bs-pagination-disabled-color) !important;
+}
+
+.page-link {
+    color: var(--bs-pagination-color)!important;
+}
+
+/* fin estilo cliente para colores de a*/
+
+  .inavi{
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .2rem;
+    color: #495057;
+    display: block;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .3rem .85rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+
+  }
+
+  .a {
+    color: inherit; /* Mantiene el color del texto padre */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.a:hover {
+    color: #E2001A; /* Cambia el color a rojo al pasar el cursor */
+    text-decoration: none; /* Asegura que no haya subrayado */
+}
+
+.alertotal{
+    width: 200px; 
+    text-align: right;
+     margin-right: 0; 
+     float: right;
+
+   }
+
+
+ 
+.list-group-item {
+    cursor: pointer;
+}
+
+
+.list-group-item:hover:not(.active) {
+    background-color: #e2e6ea; 
+}
+
+
+.list-group-item.active {
+    background-color: #007bff; 
+    color: white; 
+}
+
+.list-scrollable {
+    max-height: 300px; /* Altura máxima para la lista */
+    overflow-y: auto;  /* Habilita el scroll vertical */
+    padding-right: 15px; /* Espacio para que el texto no se pegue al scroll */
+}
+
+.swal-small {
+  width: 400px !important; /* Adjust the width of the alert */
+}
+
+.swal2-title-small {
+  font-size: 1.2em !important; /* Adjust the font size of the title */
+}
+
+.swal2-html-small {
+  font-size: 0.9em !important; /* Adjust the font size of the message */
+}

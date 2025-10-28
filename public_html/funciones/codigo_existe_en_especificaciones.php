@@ -1,5 +1,6 @@
 <?php
-    include('./../../conexion.php');
+
+    include('./../config/conexion.php');
     function queTablaCodigo( $codigo, $base_de_datos ){
         $tablas = ['espec_aireautomotriz', 'espec_aireindustrial', 'espec_combustiblelinea', 'espec_elemento', 'espec_panel', 'espec_sellado', 'espec_fluidos', 'espec_cabina'];
         $k = 0;

@@ -1,90 +1,101 @@
 .nano_prod {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .imagen-centro {
 
-    display: block;     
-               
+    display: block;
+
 }
+
 .video-nano {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
 }
+
 .video-nano iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Cambiado a 90% para que ocupe el 90% del contenedor */
     height: 100%;
+    margin: auto; /* Centra el iframe dentro del contenedor */
 }
+
 .resaltar_texto_nano {
-/*color: #E2001A;*/
-background: #CA0319;
-background: linear-gradient(to right, #CA0319 8%, #E9263B 24%, #CA0319 34%, #E9263B 58%, #CA0319 67%, #E9263B 80%, #CA0319 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    /*color: #E2001A;*/
+    background: #CA0319;
+    background: linear-gradient(to right, #CA0319 8%, #E9263B 24%, #CA0319 34%, #E9263B 58%, #CA0319 67%, #E9263B 80%, #CA0319 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.imagen-centro_nano  {
+
+.imagen-centro_nano {
     display: flex;
     justify-content: space-between;
     align-items: center;
-                
+
 }
 
 .imagen-centro_nano .img_flex {
     width: 100%;
     height: auto;
 }
+
 /*.text_nano_mas{
     font-size: calc(0.701em + 0.701vw);
 }*/
-.Panton-Light{
-    font-family:"Panton-Light"
-}
-.imagen-centro_nano .text__parafos_nano {
-    width: 90%;
+
+
+.imagen-centro_nano {
+    width: 100%;
     padding-left: 20px;
 }
 
 .imagen-block {
-        margin-top: 0%;
-        
-    }
+    margin-top: 0%;
+
+}
+
 /* Hack para Firefox */
 @-moz-document url-prefix() {
     .nano_prod {
-        display: block; /* Cambia a block o cualquier otro valor que necesites */
+        display: block;
+        /* Cambia a block o cualquier otro valor que necesites */
     }
 
     .imagen-block {
         margin-top: -10%;
-        
+
     }
 }
 
 .container_nano {
     width: 100%;
-   /* max-width: 2000px;*/
+    /* max-width: 2000px;*/
     margin: 0 auto;
     overflow: hidden;
 }
-.black{
+
+.black {
     background-color: #000000;
 }
 
 
 
-.grey{
+.grey {
     background-color: #dfdee3;
 }
-.text-white{
-    color : #ffffff;
+
+.text-white {
+    color: #ffffff;
 }
+
 .container_detalles_nano {
     width: 100%;
     height: auto;
@@ -96,303 +107,344 @@ background: linear-gradient(to right, #CA0319 8%, #E9263B 24%, #CA0319 34%, #E92
     font-size: calc(1.5em + 1.5vw);
     line-height: 1.4em;
     padding: 0.7em;
-    text-align: center; /* Cambiado de justify a center */
+    text-align: center;
+    /* Cambiado de justify a center */
     color: #ffffff;
 }
 
 
-.titulo_nano_ro {
-    font-family: "Panton-Bold";
-    /*font-weight: 400;*/
-    font-size: calc(1.0em + 1.0vw);
-    line-height: 1.4em;
-    padding: 0.7em;
-  
-    color: #E2001A;
-}
-.regular{
-    font-family: "Panton-Regular";
+
+
+.regular {
+    font-family: "Roboto-Light";
 
 }
-.bold{
-    font-family: "Panton-Bold";
+
+.bold {
+    font-family: "Roboto-Bold";
 
 }
-.italic{
-    font-family: "Panton-BlackItalic";
+
+.italic {
+    font-family: "Roboto-BlackItalic";
 }
 
 
 
 .imagen_cuadro {
-    display: flex;               
-    justify-content: space-between; 
-    align-items: stretch;       
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 
 
 .filtro_nano_cuadro {
-    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del cuadro */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    width: 100%;
+    /* Asegura que la imagen ocupe el 100% del ancho del cuadro */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     padding: 5%;
-    margin-top: 10px; /* Espacio entre el texto y la imagen */
+    margin-top: 10px;
+    /* Espacio entre el texto y la imagen */
 }
+
 .filtro_nano {
-    max-width: 70%;            /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto;               /* Mantiene la proporción de la imagen */
+    max-width: 70%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
     margin-top: -5%;
 }
 
 .banner_img {
-    width: 100%;               /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
-    height: auto;              /* Mantiene la proporción de la imagen */
-    display: block;            /* Elimina el espacio en la parte inferior de la imagen */
-    object-fit: cover;         /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    width: 100%;
+    /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Elimina el espacio en la parte inferior de la imagen */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
 }
 
-.text__parafos_nano {
-    font-family: "Panton-Regular";
-    font-size: calc(0.7em + 0.7vw);
-    line-height: 1.4em;
-    padding: 0.7em;
-    margin: 0; /* Elimina el margen por defecto */
-    text-align: left; /* Centra el texto */
-}
+
 
 
 
 .container {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto;    /* Centra el contenedor horizontalmente */
-    padding: 20px;     /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
+    max-width: 1200px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
 }
 
 .img_flex {
-    max-width: 100%;      /* La imagen no excederá el ancho del contenedor */
-    height: auto;         /* Mantiene la proporción de la imagen */
-    object-fit: contain; 
-    padding: 5%; /* Asegura que la imagen se ajuste sin distorsionarse */
+    max-width: 100%;
+    /* La imagen no excederá el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    padding: 5%;
+    /* Asegura que la imagen se ajuste sin distorsionarse */
 }
 
 
-.grey_a, .grey_b {
-    width: 48%; /* Ancho de cada cuadro */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde delgado */
-    border-radius: 5px; /* Bordes redondeados */
-    display: flex; /* Permite que el contenido interno se alinee */
-    flex-direction: column; /* Alinea el texto y la imagen en columna */
-    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
-    align-items: center; /* Centra el contenido horizontalmente */
+.grey_a,
+.grey_b {
+    width: 48%;
+    /* Ancho de cada cuadro */
+    padding: 20px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Borde delgado */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    display: flex;
+    /* Permite que el contenido interno se alinee */
+    flex-direction: column;
+    /* Alinea el texto y la imagen en columna */
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho total */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
 }
 
 .grey_a {
-    background-color: #5a5a5a; /* Color gris claro */
+    background-color: #5a5a5a;
+    /* Color gris claro */
 }
 
 .grey_b {
-    background-color: #939393; /* Color gris más oscuro */
+    background-color: #939393;
+    /* Color gris más oscuro */
 }
 
 .ul_nano {
-    list-style-type: disc; /* Establece el estilo de la lista como puntos */
-    padding-left: 20px; /* Espaciado a la izquierda para la lista */
-    margin: 0; /* Elimina el margen por defecto */
+    list-style-type: disc;
+    /* Establece el estilo de la lista como puntos */
+    padding-left: 20px;
+    /* Espaciado a la izquierda para la lista */
+    margin: 0;
+    /* Elimina el margen por defecto */
 }
 
 .ul_nano li {
-    margin-bottom: 5px; /* Añade un margen inferior entre los elementos de la lista */
+    margin-bottom: 5px;
+    /* Añade un margen inferior entre los elementos de la lista */
 }
 
 .ul_nano li::marker {
-    font-size: 0.8em; /* Reduce el tamaño de los puntos */
-    color: #000; /* Cambia el color de los puntos si es necesario */
+    font-size: 0.8em;
+    /* Reduce el tamaño de los puntos */
+    color: #000;
+    /* Cambia el color de los puntos si es necesario */
 }
 
-.justify{
+.justify {
     text-align: justify;
 }
 
-.cuadro_superiror_text{
+.cuadro_superiror_text {
     margin-top: 13%
 }
- .black {
-        background-color: #000000;
-        position: relative; /* Para posicionar el texto y el botón sobre la imagen */
-        text-align: center; /* Centrar el contenido */
-    }
+
+.black {
+    background-color: #000000;
+    position: relative;
+    /* Para posicionar el texto y el botón sobre la imagen */
+    text-align: center;
+    /* Centrar el contenido */
+}
+
+.titulo_nano_home {
+    font-size: calc(1.5em + 1.5vw);
+    line-height: 1.4em;
+    padding: 0.7em;
+    color: #ffffff;
+    position: absolute;
+    /* Posicionar el texto sobre la imagen */
+    top: 15%;
+    /* Centrar verticalmente */
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajustar el centro */
+    white-space: nowrap;
+}
+
+.banner_img {
+    width: 100%;
+    /* Ajustar la imagen al contenedor */
+    height: auto;
+    /* Mantener la proporción */
+}
+
+.boton_descubrir {
+    position: absolute;
+    text-decoration: none;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #E2001A;
+    color: #ffffff  !important;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-size: calc(0.8em + 0.8vw);
+    font-family: "Roboto-Bold";
+}
+
+
+
+
+@media (max-width: 880px) {
+
     .titulo_nano_home {
-        font-size: calc(1.5em + 1.5vw);
-        line-height: 1.4em;
-        padding: 0.7em;
-        color: #ffffff;
-        position: absolute; /* Posicionar el texto sobre la imagen */
-        top: 15%; /* Centrar verticalmente */
-        left: 50%; /* Centrar horizontalmente */
-        transform: translate(-50%, -50%); /* Ajustar el centro */
-         white-space: nowrap;
-    }
-    .banner_img {
-        width: 100%; /* Ajustar la imagen al contenedor */
-        height: auto; /* Mantener la proporción */
-    }
-   .boton_descubrir {
-    position: absolute; /* Posicionar el botón sobre la imagen */
-    bottom: 10%; /* Ajustar la posición desde la parte inferior */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%); /* Ajustar el centro */
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: #E2001A; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    border: none; /* Sin borde */
-    //border-radius: 5px; /* Aumentar el redondeo de las esquinas */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
-    font-size: calc(0.8em + 0.8vw); /* Tamaño de fuente */
-    font-family: "Panton-Bold";
-}
-
-
-    
-      
-     
-             @media (max-width: 880px) {
-        
-     .titulo_nano_home {
         font-size: calc(1.2em + 1.2vw);
-        top: 15%; /* Centrar verticalmente */
-      
+        top: 15%;
+        /* Centrar verticalmente */
+
     }
-    
-     
-          
- @media (max-width: 550px) {
- .titulo_nano_home {
+}
+
+
+
+@media (max-width: 550px) {
+    .titulo_nano_home {
         font-size: calc(1em + 1vw);
-        top: 15%; /* Centrar verticalmente */
-      
+        top: 15%;
+        /* Centrar verticalmente */
+
 
     }
 
-  
-        .black {
-            padding-bottom: 70px; /* Aumentar el espacio en la parte inferior */
-        }
-      
- 
 
-             }
+    .black {
+        padding-bottom: 70px;
+        /* Aumentar el espacio en la parte inferior */
+    }
 
-               @media (max-width: 430px) {
- .titulo_nano_home {
+
+
+}
+
+@media (max-width: 430px) {
+    .titulo_nano_home {
         font-size: calc(0.8em + 0.8vw);
-        top: 10%; /* Centrar verticalmente */
-      
+        top: 10%;
+        /* Centrar verticalmente */
+
     }
 
-        
-             }
 
-                 @media (max-width:395px) {
-                      .titulo_nano_home {
+}
+
+@media (max-width:395px) {
+    .titulo_nano_home {
         font-size: calc(0.8em + 0.8vw);
-      
-      
+
+
     }
 
 
-        
-             }
-
-@media (max-width:1851px){
-    .cuadro_superiror_text{
-    margin-top: 6%
-    
-}
-}
-@media (max-width:1319px){
-    .cuadro_superiror_text{
-    margin-top: 11%
-    
-}
-
-}
-@media (max-width:1130px){
-    .cuadro_superiror_text{
-    margin-top: 6%
-    
-}
 
 }
 
-@media (max-width:905px){
-    .cuadro_superiror_text{
-    margin-top: 12%
-    
-}
-.img_flex {
-    max-width: 60%;
-   
+@media (max-width:1851px) {
+    .cuadro_superiror_text {
+        margin-top: 6%
+    }
 }
 
-}
-@media (max-width:814px){
-    .cuadro_superiror_text{
-    margin-top: 8%
-    
-}
-
-
-}
-@media (max-width:747px){
-    .cuadro_superiror_text{
-    margin-top: 16%
-    
-}
-
-}
-
-@media (max-width:615px){
-    .cuadro_superiror_text{
-    margin-top: 28%
-    
-}
-
-}
-
-@media (max-width:586px){
-
-
-    .imagen-centro, .imagen_cuadro, .imagen-centro_nano {
- 
-    flex-direction: column;
+@media (max-width:1319px) {
+    .cuadro_superiror_text {
+        margin-top: 11%
     }
 
-    .grey_a, .grey_b {
+}
+
+@media (max-width:1130px) {
+    .cuadro_superiror_text {
+        margin-top: 6%
+    }
+
+}
+
+@media (max-width:905px) {
+    .cuadro_superiror_text {
+        margin-top: 12%
+    }
+
+    .img_flex {
+        max-width: 60%;
+
+    }
+
+}
+
+@media (max-width:814px) {
+    .cuadro_superiror_text {
+        margin-top: 8%
+    }
+
+
+}
+
+@media (max-width:747px) {
+    .cuadro_superiror_text {
+        margin-top: 16%
+    }
+
+}
+
+@media (max-width:615px) {
+    .cuadro_superiror_text {
+        margin-top: 28%
+    }
+
+}
+
+@media (max-width:586px) {
+
+
+    .imagen-centro,
+    .imagen_cuadro,
+    .imagen-centro_nano {
+
+        flex-direction: column;
+    }
+
+    .grey_a,
+    .grey_b {
         width: 100%;
     }
+
     .filtro_nano {
-    max-width: 100%;
+        max-width: 100%;
     }
-    .imagen-centro_nano .img_flex, .imagen-centro_nano .text__parafos_nano {
-    width: 100%;
-    
-}
+
+    .imagen-centro_nano .img_flex,
+    .imagen-centro_nano  {
+        width: 100%;
+
+    }
 
 
     .img_flex {
-    max-width: 90%;
-   
+        max-width: 90%;
+
+    }
+
+
+    .cuadro_superiror_text {
+        margin-top: 0%
+    }
 }
-
-
-    .cuadro_superiror_text{
-    margin-top: 0%
-    
-}
-}
-
-

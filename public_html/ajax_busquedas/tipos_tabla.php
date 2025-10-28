@@ -1,6 +1,7 @@
 <?php 
+
     if( $_POST['categoria'] ){
-        include("./../../conexion.php");
+        include("./../config/conexion.php");
 
         //Recoges los valores a recibir
         $categoria = $_POST['categoria'];
@@ -109,7 +110,7 @@
 
                 $output['data'] .= "<tr>";
                 $output['data'] .= "<td class='pro' id='$tip' >";
-                $output['data'] .= "<a onclick='pulsarTipo(`$tip`)' style='cursor: pointer;' >$tip</a>";
+                $output['data'] .= "<a onclick='pulsarTipo(`$tip`)' style='cursor: pointer;' class='a_web'>$tip</a>";
                 $output['data'] .= "</td>";
                 $output['data'] .= "<td class='pro'>$cantidad</td>";
                 $output['data'] .= "</tr>";
@@ -119,41 +120,39 @@
             $output['data'] .= "<tr> Sin Resultados </td>";
         }
 
-        $output['paginacion'] = "";
+       $output['paginacion'] = "";
 
-        $numeroInicio = 1;
-        if($output['totalFiltro'] > 0){
-            $totalPaginas = ceil($output['totalFiltro'] / $limit);
+if ($output['totalFiltro'] > 0) {
+    $totalPaginas = ceil($output['totalFiltro'] / $limit);
 
-            if(($page - 4) > 1){
-                $numeroInicio = $page - 3;
-            }
-            
-            $numeroFinal = $numeroInicio + 7;
-            
-            $numeroFinal = $numeroInicio + 7;
-            
-            if($numeroFinal > $totalPaginas){
-                $numeroFinal = $totalPaginas;
-            }
+    // Enlace para ir a la primera página ('Primero')
+    if ($page != 1) {
+        $output['paginacion'] .= "<a onclick='cambiarPagina(1)' style='cursor: pointer;'>Primero</a>";
+    }
 
-            $output['paginacion'] .= "";
-            if($page != 1){
-                $output['paginacion'] .= "<a onclick='cambiarPagina(1)'  style='cursor: pointer;'>Primero</a>"; 
-            }
-            for($i = $numeroInicio; $i <= $numeroFinal; $i++){
-                if($page == $i){
-                $output['paginacion'] .= "<p>" . $i ." </p>";
-                }
-                else{
-                    $output['paginacion'] .= "<a onclick='cambiarPagina($i)'  style='cursor: pointer;'>".$i."</a>";
-                }
-            }
-            if($page != $totalPaginas){
-                $output['paginacion'] .= "<a onclick='cambiarPagina($totalPaginas)'  style='cursor: pointer;'>Último</a>"; 
-            }
-        }
+    // Enlace para ir a la página anterior ('<')
+    if ($page > 1) {
+        $prevPage = $page - 1;
+        $output['paginacion'] .= "<a onclick='cambiarPagina($prevPage)' style='cursor: pointer;'><</a>";
+    }
+
+    // Muestra el número de la página actual
+    $output['paginacion'] .= "<p class='linksp'>" . $page . " </p>";
+
+    // Enlace para ir a la página siguiente ('>')
+    if ($page < $totalPaginas) {
+        $nextPage = $page + 1;
+        $output['paginacion'] .= "<a onclick='cambiarPagina($nextPage)' style='cursor: pointer;'>></a>";
+    }
+
+    // Enlace para ir a la última página ('Último')
+    if ($page != $totalPaginas) {
+        $output['paginacion'] .= "<a onclick='cambiarPagina($totalPaginas)' style='cursor: pointer;'>Último</a>";
+    }
+}
 
         echo json_encode( $output );
     }
 ?>
+
+

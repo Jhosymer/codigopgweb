@@ -1,0 +1,5 @@
+[05-Aug-2025 14:42:44 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter2/gestor/pedido/crud.php:87
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter2/gestor/pedido/crud.php(87): mysqli_real_escape_string(NULL, '1')
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter2/gestor/pedido/crud.php on line 87

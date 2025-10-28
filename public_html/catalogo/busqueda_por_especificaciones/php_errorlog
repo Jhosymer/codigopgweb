@@ -1,0 +1,12 @@
+[07-Oct-2025 14:44:09 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_especificaciones/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 14:48:53 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_especificaciones/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7

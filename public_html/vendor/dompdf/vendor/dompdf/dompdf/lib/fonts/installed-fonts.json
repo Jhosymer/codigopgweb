@@ -1,0 +1,14 @@
+{
+    "permanent marker": {
+        "normal": "permanent_marker_normal_6e193ca4a56ae01fef2a207583c96950"
+    },
+    "roboto": {
+        "500": "roboto_500_5774d6fb05eba3d096525f821dbe4137"
+    },
+    "libre barcode 128": {
+        "normal": "libre_barcode_128_normal_0b5f91046a4f5d5394f0c612b32c94f9"
+    },
+    "libre barcode 128 text": {
+        "normal": "libre_barcode_128_text_normal_362a12b148929e3b901531d531059bc5"
+    }
+}

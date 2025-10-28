@@ -1,0 +1,111 @@
+[07-Oct-2025 14:37:50 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 14:37:54 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 14:44:07 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 14:48:51 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 15:02:20 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/index.php(6): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php on line 7
+[07-Oct-2025 19:05:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:05:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:05:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:05:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:05:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:10:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:11:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:14:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:17:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:18:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:18:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:21:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 360
+[07-Oct-2025 19:21:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 360
+[07-Oct-2025 19:21:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 360
+[07-Oct-2025 19:24:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:24:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[07-Oct-2025 19:24:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[08-Oct-2025 11:24:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[08-Oct-2025 11:26:15 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/customer/www/webtest.webfiltros.com/public_html/web/header.php on line 38
+[08-Oct-2025 11:27:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[08-Oct-2025 11:28:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/busqueda_codigos.php on line 359
+[08-Oct-2025 13:25:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php on line 28
+[08-Oct-2025 13:27:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php on line 28
+[08-Oct-2025 13:29:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php on line 28
+[08-Oct-2025 13:32:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimiento.php on line 28
+[08-Oct-2025 13:36:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:38:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:40:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:41:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:44:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:44:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:45:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 13:45:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 17:08:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 17:13:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28
+[08-Oct-2025 17:16:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::send() in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/catalogo/busqueda_por_codigo/crear_requerimientos.php on line 28

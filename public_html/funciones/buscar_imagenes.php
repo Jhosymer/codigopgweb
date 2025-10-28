@@ -1,25 +1,23 @@
 <?php
     function buscar_imagenes($linea, $base_de_datos, $codigo){
         switch ($linea):
-            case "Aire automotriz":
+            case "Aire Automotriz":
 
                 $coincidencias = $base_de_datos->prepare("SELECT count(*) FROM espec_aireautomotriz WHERE codigo= :codigo and deleted_at is null");
                 $coincidencias->bindParam(":codigo", $codigo, PDO::PARAM_STR);
                 $coincidencias->execute();
-                $num_rows_aire_automotriz = $coincidencias->fetch();
+                $num_rows_aire_industrial = $coincidencias->fetch();
 
-                if($num_rows_aire_automotriz['count(*)'] > 0){
-                    $seleccionado = $base_de_datos->prepare("SELECT imagen, imagen1, imagen2, imagen3 FROM espec_aireautomotriz 
-                                                                            WHERE codigo= :codigo and deleted_at is null");
+                if($num_rows_aire_industrial['count(*)'] > 0){
+                    $seleccionado = $base_de_datos->prepare("SELECT imagen, imagen1, imagen2, imagen3 FROM espec_aireautomotriz
+                                                                                WHERE codigo= :codigo and deleted_at is null");
                     $seleccionado->bindParam(":codigo", $codigo, PDO::PARAM_STR);
                     $seleccionado->execute();
                     $imagenes = $seleccionado->fetch(PDO::FETCH_ASSOC);
-                }
-                else {
-                    header("location: nuevo.php?codigo_error=true");
+                    return $imagenes;
                 }
                 break;
-            case "Aire industrial":
+            case "Aire Industrial":
 
                 $coincidencias = $base_de_datos->prepare("SELECT count(*) FROM espec_aireindustrial WHERE codigo= :codigo and deleted_at is null");
                 $coincidencias->bindParam(":codigo", $codigo, PDO::PARAM_STR);

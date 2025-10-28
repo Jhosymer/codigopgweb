@@ -1,7 +1,7 @@
 <?php 
 
 if( isset($_POST['especificacion']) ){
-    include("./../../conexion.php");
+    include("./../config/conexion.php");
     include('./../funciones/codigo_existe_en_especificaciones.php');
 
     $output = $_POST;
@@ -139,7 +139,7 @@ if( isset($_POST['especificacion']) ){
                 $altura = $row['altura'];
         
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=aireautomotriz&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=aireautomotriz&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroext1 -- $diametroext2</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroint1 -- $diametroint2</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
@@ -156,7 +156,7 @@ if( isset($_POST['especificacion']) ){
                 $altura = $row['altura'];
         
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=aireindustrial&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=aireindustrial&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroext1 -- $diametroext2</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroint1 -- $diametroint2</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
@@ -172,7 +172,7 @@ if( isset($_POST['especificacion']) ){
                 $altura = $row['altura'];
     
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=combustiblelinea&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=combustiblelinea&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroext</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
                 $output['data'] .= "<td class='busqueda_apli'>Entrada: $entrada <br /> Salida: $salida</td>";
@@ -188,7 +188,7 @@ if( isset($_POST['especificacion']) ){
                 $altura = $row['altura'];
     
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=elemento&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=elemento&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroext</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroint1 -- $diametroint2</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
@@ -203,7 +203,7 @@ if( isset($_POST['especificacion']) ){
                 $altura = $row['altura'];
     
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=panel&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=panel&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$largo</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$ancho</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
@@ -224,7 +224,7 @@ if( isset($_POST['especificacion']) ){
                 $valvulaad = $row['valvulaad'];
     
                 $output['data'] .= "<tr>";
-                $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=sellado&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=sellado&esp=1' style='cursor: pointer'>$codigo </a></td>";
                 $output['data'] .= "<td class='busqueda_apli'>$tipo <br /> $diametroint </td>";
                 $output['data'] .= "<td class='busqueda_apli'>$diametroext</td>";
                 $output['data'] .= "<td class='busqueda_apli'>$altura</td>";
@@ -251,7 +251,7 @@ if( isset($_POST['especificacion']) ){
                     $detalle2 = $row['detalle2'];
         
                     $output['data'] .= "<tr>";
-                    $output['data'] .= "<td class='busqueda_apli'><a href='./../filtro/filtro.php?codigo=$codigo&clase=fluidos&esp=1' style='cursor: pointer'>$codigo </a></td>";
+                    $output['data'] .= "<td class='busqueda_apli'><a href='./../ficha_tecnica/index.php?codigo=$codigo&clase=fluidos&esp=1' style='cursor: pointer'>$codigo </a></td>";
                     $output['data'] .= "<td class='busqueda_apli'>$detalle1 </td>";
                     $output['data'] .= "<td class='busqueda_apli'>$detalle2</td>";
                     $output['data'] .= "</tr>";
@@ -285,7 +285,7 @@ if( isset($_POST['especificacion']) ){
 
             for($i = $numeroInicio; $i <= $numeroFinal; $i++){
                 if($page == $i){
-                    $output['paginacion'] .= "<p>" . $i ." </p>";
+                    $output['paginacion'] .= "<p class='linksp'>" . $i ." </p>";
                 }
             }
             if($page != $totalPaginas){

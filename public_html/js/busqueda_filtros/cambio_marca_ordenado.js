@@ -93,7 +93,7 @@ function orden(orden_modelo = 0, orden_cilindrada = 0, orden_ano = 0){
         $('#igual_ano').css("display","none");
     }
 
-    fetch("./../ajax_busquedas/ajax_marca.php", {
+    fetch("./../../ajax_busquedas/ajax_marca.php", {
         method: 'POST',
         body: formData,
     })

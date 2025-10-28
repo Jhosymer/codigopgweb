@@ -1,5 +1,4 @@
 <?php
-//echo "Hola desde conexion <br>";
 class conexion {
     private $server;
     private $user;
@@ -22,7 +21,6 @@ class conexion {
             echo "algo va mal con la conexion";
             die();
         }
-
     }
 
     private function datosConexion(){
@@ -40,8 +38,6 @@ class conexion {
         return $array;
     }
 
-
-
     public function obtenerDatos($sqlstr){
         $results = $this->conexion->query($sqlstr);
         $resultArray = array();
@@ -49,34 +45,58 @@ class conexion {
             $resultArray[] = $key;
         }
         return $this->convertirUTF8($resultArray);
-
     }
 
+    // Nuevo método para consultas preparadas con parámetros
+    public function obtenerDatosPreparada($sqlstr, $params, $types) {
+        $stmt = $this->conexion->prepare($sqlstr);
+        if ($stmt === false) {
+            error_log("Error en prepare: " . $this->conexion->error);
+            return false;
+        }
 
+        if ($params && $types) {
+            $stmt->bind_param($types, ...$params);
+        }
+
+        if (!$stmt->execute()) {
+            error_log("Error en execute: " . $stmt->error);
+            return false;
+        }
+
+        $result = $stmt->get_result();
+        if ($result === false) {
+            error_log("Error en get_result: " . $stmt->error);
+            return false;
+        }
+
+        $resultArray = [];
+        while ($row = $result->fetch_assoc()) {
+            $resultArray[] = $row;
+        }
+
+        $stmt->close();
+
+        return $this->convertirUTF8($resultArray);
+    }
 
     public function nonQuery($sqlstr){
         $results = $this->conexion->query($sqlstr);
         return $this->conexion->affected_rows;
     }
 
-
-    //INSERT 
     public function nonQueryId($sqlstr){
         $results = $this->conexion->query($sqlstr);
-         $filas = $this->conexion->affected_rows;
-         if($filas >= 1){
+        $filas = $this->conexion->affected_rows;
+        if($filas >= 1){
             return $this->conexion->insert_id;
-         }else{
-             return 0;
-         }
+        }else{
+            return 0;
+        }
     }
-     
-    //encriptar
 
     protected function encriptar($string){
         return md5($string);
     }
-
 }
-
 ?>

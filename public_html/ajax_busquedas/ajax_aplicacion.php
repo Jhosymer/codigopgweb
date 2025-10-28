@@ -1,6 +1,6 @@
 <?php 
     if( isset($_POST['id']) ){
-        include("./../../conexion.php");
+        include("./../config/conexion.php");
 
         $id_aplicacion = isset( $_POST['id'] ) ? $_POST['id'] : null;
         $id_marca = isset( $_POST['id_marca'] ) ? $_POST['id_marca'] : null;
@@ -40,7 +40,7 @@
                 if($row['id_marca'] == $id_marca){
                     $cadena= $cadena . '<option value=';
                     $cadena= $cadena . $row['id_marca'];
-                    $cadena= $cadena . ' selected>';
+                    $cadena= $cadena . ' selected >';
                     $cadena= $cadena . $row['marca'];
                     $cadena= $cadena . '</option>';
                 }

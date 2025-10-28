@@ -39,7 +39,7 @@
 
 .mi-texto-rojo-linea {
   margin-left: 60%;
-  font-family: "Panton-BoldItalic", sans-serif;
+  font-family: "Roboto-BoldItalic", sans-serif;
   text-align: center;
 }
 
@@ -52,7 +52,7 @@
 
 .mi-texto-gris {
   margin-left: 5%;
-  font-family: "Panton-BoldItalic", sans-serif;
+  font-family: "Roboto-BoldItalic", sans-serif;
   text-align: center;
 }
 
@@ -63,12 +63,7 @@
   margin-top: 0.5rem;
 }
 
-.parrafo {
-    font-family: "Panton-Regular" !important;
-    font-size: calc(0.7em + 0.7vw);
-    line-height: 1.4em;
-    text-align: justify;
-}
+
 /* Estilos generales para imágenes de botón */
 .mi-img-boton {
   width: 150px;
@@ -77,13 +72,23 @@
 }
 .titulo_app {
    color: #E2001A;
-   font-family: "Panton-BoldItalic";
+   font-family: "Roboto-BoldItalic";
    font-size: calc(1.4em + 1.4vw);
    line-height: 1.5em;
    font-weight: 100;
    text-transform: uppercase;
 }
+.titulo_Roboto-BoldItalic {
+    font-family: "Roboto-BoldItalic";
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+}
 
+.titulo_SFPRODISPLAYREGULAR{
+    font-family: "SFPRODISPLAYREGULAR";
+    font-size: calc(1em + 1vw);
+    line-height: 1.5em;
+}
 /* Clases para layout tipo Bootstrap (simplificado) */
 
 .mi-container-fluid {
@@ -106,7 +111,7 @@
 
 .mi-row {
   display: flex;
-  //flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -120,7 +125,7 @@
 }
 
 @media (min-width: 768px) {
-  .titulo_Panton-BoldItalic, .titulo_SFPRODISPLAYREGULAR {
+  .titulo_Roboto-BoldItalic, .titulo_SFPRODISPLAYREGULAR {
   
     font-size: calc(1em + 1vw);
    
@@ -161,8 +166,8 @@
   margin-top: 0.5rem !important;
 }
 
-.titulo_Panton-BoldItalic {
-    font-family: "Panton-BoldItalic";
+.titulo_Roboto-BoldItalic {
+    font-family: "Roboto-BoldItalic";
     font-size: calc(1em + 1vw);
     line-height: 1.5em;
 }
@@ -367,7 +372,7 @@
         margin-left: 140%;
     }
 
-    .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+    .titulo_SFPRODISPLAYREGULAR, .titulo_Roboto-BoldItalic {
     font-size: calc(0.9em + 0.9vw);
    
 }
@@ -401,7 +406,7 @@
     }
 
    
-        .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        .titulo_SFPRODISPLAYREGULAR, .titulo_Roboto-BoldItalic {
         font-size: calc(1.4em + 1.4vw);
     }
         .mi-boton-rojo-linea {
@@ -443,14 +448,12 @@
     }
 }
 @media (max-width: 600px) {
-       .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+       .titulo_SFPRODISPLAYREGULAR, .titulo_Roboto-BoldItalic {
         font-size: calc(1.4em + 1.4vw);
     }
 
-    .parrafo {
-    font-size: calc(0.9em + 0.9vw);
-    }
-    .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+   
+    .titulo_SFPRODISPLAYREGULAR, .titulo_Roboto-BoldItalic {
         font-size: calc(1.6em + 1.6vw);
     }
         .mi-img-boton {
@@ -498,7 +501,7 @@
 
 @media (max-width: 470px) {
 
-        .titulo_SFPRODISPLAYREGULAR, .titulo_Panton-BoldItalic {
+        .titulo_SFPRODISPLAYREGULAR, .titulo_Roboto-BoldItalic {
         font-size: calc(1.2em + 1.2vw);
     }
        .mi-boton-rojo-linea {

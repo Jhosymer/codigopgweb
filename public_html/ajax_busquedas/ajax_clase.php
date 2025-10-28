@@ -1,6 +1,6 @@
 <?php 
     if( isset($_POST['especificacion']) ){
-        include("./../../conexion.php");
+        include("./../config/conexion.php");
 
         $especificacion = $_POST['especificacion'];
 

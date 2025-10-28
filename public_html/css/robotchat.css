@@ -1,0 +1,247 @@
+/* Botón del chatbot */
+#chatbot-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #E2001A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px; /* Posición desde la parte inferior */
+    right: 20px; /* Posición desde la derecha */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Imagen del ícono */
+#chatbot-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Imagen del avatar en el encabezado */
+#chat-header-avatar {
+    width: 50px; /* Tamaño más grande del avatar */
+    height: 50px;
+    border-radius: 50%; /* Mantiene la forma circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+/* Ventana del chatbot */
+/* Ventana del chatbot */
+#chatbot-window {
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla en dispositivos pequeños */
+    max-width: 400px; /* Máximo ancho en pantallas grandes */
+    height: 70%; /* Ocupa el 70% de la altura de la pantalla */
+    max-height: 600px; /* Máxima altura en pantallas grandes */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 30px;
+    right: 1%; /* Margen derecho relativo */
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Ocultar ventana del chatbot inicialmente */
+.hidden {
+    display: none !important;
+}
+
+/* Encabezado del chatbot */
+#chat-header {
+    background-color: #E2001A;
+    color: white;
+    padding: 10px;
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    text-align: left; /* Alinea el contenido a la izquierda */
+    font-family: "Roboto-Bold";
+}
+
+/* Botón minimizar */
+#minimize-btn {
+    position: absolute;
+    top: 15px; /* Baja el botón un poco */
+    right: 15px; /* Se despega un poco más de la derecha */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Cuerpo del chatbot */
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Eliminar scroll aquí */
+    font-family: "Roboto-Light" !important;
+}
+
+/* Contenedor de mensajes */
+#messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Habilitar el scroll vertical */
+    scroll-behavior: smooth; /* Suavizar el desplazamiento */
+    max-height: 100%; /* Asegurar que ocupe todo el espacio disponible */
+}
+
+/* Ocultar scroll adicional */
+#messages::-webkit-scrollbar {
+    display: none; /* Ocultar el scrollbar en navegadores basados en WebKit */
+}
+
+#messages {
+    -ms-overflow-style: none; /* Ocultar el scrollbar en Internet Explorer y Edge */
+    scrollbar-width: none; /* Ocultar el scrollbar en Firefox */
+}
+
+/* Estilo de los mensajes */
+.message {
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+/* Estilo de los mensajes del bot */
+.bot-message {
+   
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px 12px 12px;
+    position: relative;
+    clear: both;
+    max-width: 242px;
+    margin-bottom: 8px;
+    background-color: #eff5fc;
+    border: 1px solid #c4c9ce;
+    box-shadow: 0 1px 2px rgba(65, 67, 70, .2), 0 4px 8px rgba(127, 141, 158, .2);
+    border-radius: 0 12px 12px 12px;
+}
+
+/* Punta triangular para los mensajes del bot */
+
+
+/* Estilo de los mensajes del usuario */
+.user-message {
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 12px 12px 16px;
+    float: right;
+    position: relative;
+    max-width: 222px;
+    clear: both;
+    margin: 8px 0;
+    margin-left: auto;
+    background: #fff;
+    border: 1px solid #E2001A;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(65, 67, 70, .2), 0 4px 8px rgba(127, 141, 158, .2);
+    border-radius: 12px 0 12px 12px;
+}
+
+
+
+/* Pie del chatbot */
+#chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#user-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-btn {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #E2001A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo general del formulario */
+
+
+.bot-message label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.bot-message input,
+.bot-message textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.bot-message textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    #chatbot-window {
+        width: 95%;
+        height: 80%;
+        bottom: 20px;
+        right: 2.5%;
+    }
+
+    #chat-header {
+        font-size: 16px;
+    }
+
+    #user-input {
+        font-size: 14px;
+    }
+
+    #send-btn {
+        font-size: 14px;
+    }
+
+    .bot-message input,
+    .bot-message textarea {
+        font-size: 12px;
+    }
+
+    .bot-message button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

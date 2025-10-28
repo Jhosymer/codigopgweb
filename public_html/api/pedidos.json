@@ -1,0 +1,87 @@
+[
+    {
+        "CardCode": "C-J311592210",
+        "PedidoWeb": "1",
+        "DocDueDate": "2025-06-17",
+        "DocumentLines": [
+            {
+                "ItemCode": "WCA-4",
+                "Quantity": 250,
+                "Price": 240
+            },
+            {
+                "ItemCode": "WCA-226",
+                "Quantity": 15,
+                "Price": 2485
+            }
+        ]
+    },
+    {
+        "CardCode": "C-J311592210",
+        "PedidoWeb": "2",
+        "DocDueDate": "2025-06-17",
+        "DocumentLines": [
+            {
+                "ItemCode": "WCA-148",
+                "Quantity": 15,
+                "Price": 420
+            },
+            {
+                "ItemCode": "W-8",
+                "Quantity": 2,
+                "Price": 5
+            },
+            {
+                "ItemCode": "WCA-226",
+                "Quantity": 15,
+                "Price": 2485
+            },
+            {
+                "ItemCode": "WCA-4",
+                "Quantity": 2,
+                "Price": 240
+            }
+        ]
+    },
+    {
+        "CardCode": "C-J003108103-1",
+        "PedidoWeb": "4",
+        "DocDueDate": "2025-07-01",
+        "DocumentLines": [
+            {
+                "ItemCode": "W-8",
+                "Quantity": 3,
+                "Price": 5
+            },
+            {
+                "ItemCode": "WCA-4",
+                "Quantity": 1,
+                "Price": 240
+            }
+        ]
+    },
+    {
+        "CardCode": "C-J311592210",
+        "PedidoWeb": "5",
+        "DocDueDate": "2025-07-31",
+        "DocumentLines": [
+            {
+                "ItemCode": "WCA-4",
+                "Quantity": 10,
+                "Price": 240
+            }
+        ]
+    },
+    {
+        "CardCode": "C-J003108103-1",
+        "PedidoWeb": "6",
+        "DocDueDate": "2025-08-01",
+        "DocumentLines": [
+            {
+                "ItemCode": "W-8",
+                "Quantity": 10,
+                "Price": 2
+            }
+        ]
+    }
+]

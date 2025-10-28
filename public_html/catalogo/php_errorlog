@@ -1,0 +1,35 @@
+[07-Oct-2025 14:37:55 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:39:28 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:44:00 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:48:46 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:48:53 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:49:00 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24
+[07-Oct-2025 14:51:30 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php:24
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/catalogo/index.php(59): include()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/catalogo/slider_productos.php on line 24

@@ -1,581 +1,882 @@
-@font-face{
-  font-family: "OpenSans-Regular";
-  src: url('./../fonts/OpenSans-Regular.ttf');
-  font-display: swap;
-
-}
-
-@font-face{
-font-family: "Oswald";
-src: url('./../fonts/Oswald-Regular.ttf');
-font-display: swap;
-
-}
-
-@font-face{
-  font-family: "Panton-Regular";
-  src: url('./../fonts/Panton-Regular_0.otf') format('opentype'); /* Especifica el formato */
-  font-display: swap; 
-  }
-
-  @font-face{
-    font-family: "Panton-Bold";
-    src: url('./../fonts/Panton-Bold.otf') format('opentype'); /* Especifica el formato */
-    font-display: swap; 
-    }
-    
-    @font-face{
-      font-family: "Panton-BlackItalic";
-      src: url('./../fonts/Panton-BlackItalic.otf') format('opentype'); /* Especifica el formato */
-      font-display: swap; 
-      }
-     @font-face{
-      font-family: "Panton-Light";
-      src: url('./../fonts/Panton-Light.otf') format('opentype'); /* Especifica el formato */
-      font-display: swap; 
-      }
-
-        @font-face {
-   font-family: "Panton-BoldItalic";
-   src: url('./../fonts/Panton-BoldItalic.otf') format('opentype');
-   /* Especifica el formato */
-   font-display: swap;
-}
-
- @font-face {
-   font-family: "SFPRODISPLAYREGULAR";
-   src: url('./../fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
-   /* Especifica el formato */
-   font-display: swap;
-}
-
-
-strong {
-    display: inline-block; /* Permite aplicar márgenes y padding */
-    margin: 0; /* Ajusta el margen según sea necesario */
-    padding: 0; /* Ajusta el padding según sea necesario */
-}
-
 body {
-  font-family: OpenSans-Regular;
-  font-weight: 400;
-  color: #1A171B;
-  background-color: #ffffff;
-  line-height: 21px;
-  margin: 0;
- 
-}
-
-
-.icon{
-  max-width: 40px;
-}
-
-img .icon{
-  max-width: 30px;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #E2001A;
-}
-
-.black {
-    text-decoration: none;
-    color: #1A171B;
-}
-.detalle {
-  padding-top: 20px;
-  text-align: left;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 100%;
-  row-gap: 20px;
-}
-/*instrucciones */
-
-  .about__img_instruccion {
-    display: grid;
-    width: 100%;
-    margin: 0 auto;
-    grid-template-columns: 70% 30%;
-    align-items: center;
-}
-
-.informacion {
-  font-size: calc(0.7em + 0.7vw);
-  line-height: 1.5em;
-  margin-right: 2em;
-  margin-left: 4em;
-  padding: 1em;
-  text-align: left;
-    
- }
- .informacion_li {
-  margin-bottom: 1em;
-  margin-left: 3em;
-}
-.div_img_instruccion
-{
-  max-width: 250px;
-}
-
-.img_instruccion
-{
-width: 100%;
-}
-
-.text__titulo_instruccion
-{
-
-  font-size: calc(0.9em + 0.9vw);
-  line-height: 1.4em;
-  padding: 0.7em;
-  margin: 0em 0em 0em 4.5em;
-  letter-spacing: 0.05vw;
-  }
-  
-/**/
-.container-all{
-  position: relative;
- /* max-width: 350px;*/
-  width: 70%;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.slide{
-  display: flex;
-  transform: translate3d(0, 0, 0);
-  transition: all 600ms;
-  animation-name: autoplay;
-  animation-duration: 10s;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-
-.item-slide {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  flex-grow: 0;
-  max-width: 100%;
-  cursor: pointer;
-}
-
-.pagination{
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.pagination-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #CCCCCC;
-  width: 10px;
-  height: 10px;
-  border-radius: 4px;
-  overflow: hidden;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 0 5px;
-  transition: all 300ms;
-
-}
-
-.pagination-item:hover {
-  transform: scale(2);
-}
-
-.pagination-item img {
-  display: inline-block;
-  max-width: none;
-  height: 100%;
-  transform: scale(1);
-  opacity: 0;
-  transition: all 300ms;
-}
-
-.pagination-item:hover img {
-  opacity: 1;
-  transform: scale(1);
-}
-
-input[id="1"]:checked ~ .slide{
-  animation: none;
-  transform: translate3d(0, 0, 0);
-}
-
-input[id="1"]:checked ~ .pagination .pagination-item[for="1"] 
-{
-  background: #fff;
-}
-
-input[id="2"]:checked ~ .slide{
-  animation: none;
-  transform: translate3d(calc(-100% * 1 ), 0, 0);
-}
-
-input[id="2"]:checked ~ .pagination .pagination-item[for="2"] 
-{
-  background: #fff;
-}
-input[id="3"]:checked ~ .slide{
-  animation: none;
-  transform: translate3d(calc(-100% * 2 ), 0, 0);
-}
-
-input[id="3"]:checked ~ .pagination .pagination-item[for="3"] 
-{
-  background: #fff;
-}
-
-@keyframes  autoplay{
-  
-  33%{
-    transform: translate3d(calc(-100% * 0 ), 0, 0);
-  }
-
-    66%{
-    transform: translate3d(calc(-100% * 1 ), 0, 0);
-  }
-
-  100%{
-    transform: translate3d(calc(-100% * 2 ), 0, 0);
-  }
-}
-
-/** ligthbox zoom*/
-
-.ligthbox img {
-  max-width:48%;
-}
-
-.ligthbox{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background: rgba(0 0 0 / 60%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
- .vermas_lightbox img {
-  max-width: 8%;
-    color: #fff;
-    position: absolute;
-    bottom: 20px;
-    right: 400px;
-    cursor: pointer;
-}
-/* about*/
-.about {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 0;
-  display: grid;
-  grid-template-columns: 40% 55%;
-  row-gap: 20px;
-  
-}
-
-
-.about_img {
-  text-align: left;
-  max-width: 60%;
-
-}
-
-
-.volver{
-  display: inline-block;
-  margin: 20Px;
-  background: #E2001A;
-  color: #fff;
-  text-decoration: none;
-  padding:7px 15px  ;
-  border-radius: 10px;
-
-  
-}
-.about_tex{
-  text-align: left;
-  line-height: 1.5;
-  max-width: 90%;
-}
-@media screen and (max-width: 1354px) {
-.vermas_lightbox img {
-    max-width: 10%;
-    color: #fff;
-    position: absolute;
-    bottom: 140px;
-    right: 320px;
-    cursor: pointer;
-}
-@media screen and (max-width: 1300px) {
-
-.informacion {
-  margin-left: 0em;
-}
-
-.text__titulo_instruccion{
-
-  margin: 0em 0em 0em 1.5em
-}
-}
-}
-@media screen and (max-width: 1200px) {
-
-  .vermas_lightbox img {
+   font-family: "Roboto-Light" !important;
+   font-weight: 500 !important;
+   color: #1A171B !important;
+   background-color: #ffffff !important;
+   line-height: 21px !important;
+   margin: 0 !important;
    
-    bottom: 180px;
-    right: 250px;
- }
-/*tabla especificaciones */
-table.esp{
-  background-color: white ;
-  text-align: left;
-  border-collapse: collapse;
-  width: 80%;
-  }
-  
-  td.esp {
-  border-top: 0.5pt solid #CCCCCC;
-  padding: 7px;
-  
-  }
 
-  .emp{
-    background-color: #525151;
-    color: white;
-    }
-/*tabla aplicacion*//*
-table.apli{
-
-    background-color: #FFF ;
-  text-align: left;
-  border-collapse: collapse;
-  width: 105%;
-  }
-
-thead.apli,td.otra_esp{
-    background-color: #E2001A;
-    color: white;
-    }
-
-th.apli , td.apli{
-    border-top: 0.5pt solid #CCCCCC;
-  padding: 7px;
-
-  
-  }*/
-
-  /*tabla equivalencias */
-
-  table.eq{
-    background-color: #E0E0E0 ;
-  text-align: left;
-  border-collapse: collapse;
-  width: 80%;
-  }
-
-  thead.eq{
-    background-color: #808080;
-    color: white;
-    padding: 7px;
 }
-  
-  th.eq, td .eq, td {
-  padding: 10px;
 
-  }
-
-
-  
+@font-face {
+   font-family: "Roboto-Light";
+   src: url('./../fonts/Roboto-Light.ttf');
+   /* Especifica el formato */
+   font-display: swap;
 }
 
 
 
-
-
-@media all and (max-width: 968px) {
-  .vermas_lightbox img {
-    width: 15%;
-    bottom: 30px;
-    right: 60px;
+@font-face {
+   font-family: "Roboto-SemiBold";
+   src: url('./../fonts/Roboto-SemiBold.ttf');
+   /* Especifica el formato */
+   font-display: swap;
 }
 
-  .div_img_instruccion {
-    max-width: 180px;
-  }
-
-.about {
-  width: 70%;
-  max-width: 968px;
-  margin: auto;
-  padding: 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 30px;
-  
+@font-face {
+   font-family: "Roboto-Bold";
+   src: url('./../fonts/Roboto-Bold.ttf');
+   /* Especifica el formato */
+   font-display: swap;
 }
 
-  /*IMAGEN ZOOM*/
-
-  .ligthbox img {
-  max-width:90%;
+@font-face {
+   font-family: "Roboto-Black";
+   src: url('./../fonts/Roboto-Black.ttf');
+   /* Especifica el formato */
+   font-display: swap;
 }
+
+@font-face {
+   font-family: "Roboto-Light";
+   src: url('./../fonts/Roboto-Light.ttf');
+   /* Especifica el formato */
+   font-display: swap;
 }
 
-/*tabla especificaciones */
-table.esp{
-  background-color: white;
-  text-align: left;
-  border-collapse: collapse;
-  width: 100%;
-  }
-  
-  td.esp {
-  border-top: 0.5pt solid #CCCCCC;
-  padding: 7px;
-  
-  }
-  .emp{
-    background-color: #525151;
-    color: white;
-    }
+@font-face {
+   font-family: "Roboto-BlackItalic";
+   src: url('./../fonts/Roboto-BlackItalic.ttf');
+   /* Especifica el formato */
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto-BoldItalic";
+   src: url('./../fonts/Roboto-BoldItalic.ttf');
+   /* Especifica el formato */
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto-SemiBold";
+   src: url('./../fonts/Roboto-SemiBold.ttf');
+   /* Especifica el formato */
+   font-display: swap;
+}
+@font-face {
+   font-family: "Libre Barcode 128 Text";
+   src: url('./../fonts/LibreBarcode128Text-Regular.ttf');
+   /* Especifica el formato */
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "SFPRODISPLAYREGULAR";
+   src: url('./../fonts/SFPRODISPLAYREGULAR.OTF'); 
+   font-display: swap; 
+}
 
 
-/*tabla aplicacion*/
-table.apli{
+.Roboto-Light{
+   font-family: "Roboto-Light";
+}
+.a_web{
+   text-decoration: none !important;
+   color: #E2001A !important;
+}
 
-    background-color: #FFF ;
-  text-align: left;
-  border-collapse: collapse;
-  width: 90%;
-  font-size: calc(0.5em + 0.5vw);
-  }
-
-  thead.apli,td.otra_esp{
-    background-color: #E2001A;
-    color: white;
-    }
-
-th.apli , td.apli{
-    border-top: 0.5pt solid #CCCCCC;
-  padding: 0.3em;
-
-  
-  }
-
-  .apli_cili{
-    border-top: 0.5pt solid #CCCCCC;
-  padding: 0.3em 1.5em;
-  color: #E2001A;
-
-  
-  }
+.a_link {
+   text-decoration: none !important;
+   color: #E2001A;
+}
 
 
-  /*tabla equivalencias */
 
-  table.eq{
-    background-color: #E0E0E0 ;
-  text-align: left;
-  border-collapse: collapse;
-  width: 90%;
-  font-size: calc(0.5em + 0.5vw);
-  }
+.link-hover {
+   transition:  0.3s; /* Añade una transición suave */
+}
 
-  thead.eq{
-    background-color: #808080;
-    color: white;
-    padding: 7px;
+.link-hover:hover {
+   background-color: #9E0012;
+   color: white !important;
+}
+
+.link-hover:hover p {
+   margin-top: 0 !important;
+   margin-left: 0 !important;
+}
+
+
+.titulo {
+   font-family: "Roboto-Black";
+   font-size: calc(1em + 1vw);
+   line-height: 1.5em;
+}
+
+.titulo_bold {
+   font-family: "Roboto-Bold";
+   font-size: calc(1em + 1vw);
+   line-height: 1.5em;
+}
+
+.Roboto-Bold {
+   font-family: "Roboto-Bold";
+
+}
+.Roboto-Black {
+   font-family: "Roboto-Black";
+
+}
+
+.subtito {
+   font-family: "Roboto-Bold";
+   font-size: calc(1em + 1vw);
+   line-height: 1.5em;
+}
+
+.titulo_app {
+   color: #E2001A;
+   font-family: "Roboto-BoldItalic";
+   font-size: calc(1.4em + 1.4vw);
+   line-height: 1.5em;
+}
+
+.titulo_Roboto-BoldItalic {
+   
+   font-family: "Roboto-BoldItalic";
+   font-size: calc(1.2em + 1.2vw);
+   line-height: 1.5em;
+}
+
+.titulo-ms {
+   font-family: "Roboto-Black";
+   font-size: calc(0.7em + 0.7vw);
+   line-height: 1.5em;
+}
+.titulo_bold_ms {
+   font-family: "Roboto-Bold";
+  font-size: calc(0.7em + 0.7vw);
+   line-height: 1.5em;
+}
+
+.subtito_md {
+   font-family: "Roboto-Bold";
+   font-size: calc(0.8em + 0.8vw);
+   line-height: 1.5em;
+}
+
+.subtito_ms {
+   font-family: "Roboto-Bold";
+   font-size: calc(0.6em + 0.6vw);
+   line-height: 1.5em;
+}
+
+.barra {
+     font-family: 'Libre Barcode 128 Text';
+     font-size: calc(1.2em + 1.2vw);
+
+   
+}
+
+.rojoweb {
+   color: #E2001A !important;
+}
+
+.custom-img {
+   max-width: 70%;
+   height: auto;
+   /* Mantiene la proporción de la imagen */
+}
+
+.icon-img {
+   max-width: 50%;
+   height: auto;
+   /* Mantiene la proporción de la imagen */
+   margin-bottom: 10px;
+   /* Reduce el espacio entre la imagen y el botón */
+}
+
+.parrafo {
+   font-size: calc(0.7em + 0.7vw);
+   line-height: 1.4em;
+   text-align: justify;
+}
+
+.parrafo_md {
+   font-size: calc(0.5em + 0.5vw);
+   line-height: 1.4em;
+   
+}
+
+.parrafo_ms {
+   font-size: calc(0.45em + 0.45vw);
+   line-height: 1.2em;
+   margin-bottom: 0.4rem !important;
+
+}
+ .form-control:focus {
+            border-color: #E2001A !important;
+            box-shadow: 0 0 0 0.2rem rgba(226, 0, 26, 0.25) !important;
+   }
+
+   .form-select:focus {
+       border-color: #E2001A !important;
+       box-shadow: 0 0 0 0.2rem rgba(226, 0, 26, 0.25)!important;
+   }
+
+    .form-select {
+       background-color: #fff !important;
+       color: #000 !important;
+   }
+
+
+/* ESTILOS PARA EL EFECTO HOVER *//*
+
+.dropdown-item i {
+  color: #e2001a;
+}
+
+/* Estilo para el SVG (el ícono de la 'X') */
+.dropdown-item svg {
+  width: 1.25rem; 
+  height: 1.25rem;
+  fill: #e2001a;
+}
+.mt-10{
+    margin-top: 6rem !important;
+}
+
+
+
+/* Efecto HOVER: fondo rojo y todo el contenido en blanco */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e2001a;
+  color: #ffffff !important;
+}
+
+/* Regla para que los íconos de Boxicons se pongan blancos en hover */
+.dropdown-menu .dropdown-item:hover i {
+  color: #ffffff !important;
+}
+
+/* Regla para que el SVG se ponga blanco en hover */
+.dropdown-menu .dropdown-item:hover svg {
+  fill: #ffffff; /* Cambia el relleno del SVG a blanco */
 }
   
-  th.eq, td .eq, td {
-  padding: 0.5em;
+/*boton*/
+.btn-icon {
+   background-color: #E2001A;
+   color: #fff !important;
+   padding: 10px 20px;
+   border: none;
+   text-decoration: none;
+   font-size: calc(0.6em + 0.6vw);
+   
+   transition: all 0.3s ease;
+   font-family: "Roboto-Bold";
+}
 
-  }
+.btn-icon:hover {
+  background-color: #c90017; 
+  color: #ffffff;
+  border-color: #c90017;
+}
 
-  @media screen and (max-width: 600px) {
-
-    .about {
-    width: 70%;
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 30px;
-    align-items: center;
-      justify-content: center;
+/*boton formulario */
+.btn_rweb_form {
+       background-color: #E2001A;
+    color: #fff !important;
+    padding: 5px 10px;
+    border: none;
+    text-decoration: none;
+    font-size: calc(0.5em + 0.6vw);
     
+    transition: all 0.3s ease;
+    font-family: "Roboto-Bold";
+    }
+
+    .btn_borde_rweb_form {
+    background-color: #fff; /* Fondo blanco para botones no seleccionados */
+    color: #E2001A; /* Texto rojo para botones no seleccionados */
+    padding: 5px 10px;
+    border: 1px solid #E2001A; /* Borde rojo para botones no seleccionados */
+    text-decoration: none;
+    font-size: calc(0.5em + 0.6vw);
+   
+    transition: all 0.3s ease;
+    font-family: "Roboto-Bold";
+    }
+
+   .btn_borde_rweb_form:hover {
+    background-color: #E2001A; /* Fondo rojo para botones seleccionados */
+    color: #fff; /* Texto blanco para botones seleccionados */
+}
+
+/* boton  ficha tecnica imprimir y compartir */
+.btn-share {
+    background-color: #E2001A;
+    color: #fff !important;
+    padding: 0.75rem 1.25rem; /* Padding para pantallas de escritorio */
+    border: none;
+    text-decoration: none;
+    font-size: calc(0.5em + 0.6vw);
+    transition: all 0.3s ease;
+    font-family: "Roboto-Bold";
+}
+
+.btn-share:hover {
+    background-color: #c90017; 
+    color: #ffffff;
+    border-color: #c90017;
+}
+
+
+
+
+a.btn-icon-gris {
+   background-color: #d3d3d4 !important;
+   /* Color de fondo del botón */
+   color: #E2001A !important;
+   /* Color del texto */
+   border: none;
+   /* Sin bordes */
+   padding: 10px 15px;
+   /* Espaciado interno */
+   border-radius: 5px;
+   /* Bordes redondeados */
+   text-decoration: none;
+   /* Quitar subrayado */
+   transition: background-color 0.3s ease;
+   /* Efecto de transición */
+   font-family: "Roboto-Bold";
+
+}
+
+/* Hover para el botón */
+a.btn-icon-gris:hover {
+   background-color: #c0c0c0 !important;
+   /* Color más oscuro al pasar el mouse */
+}
+
+.gris {
+   background-color: rgb(227 227 227);
+}
+
+
+
+.ul_app {
+   font-size: calc(0.6em + 0.6vw);
+   line-height: 1.6em;
+   list-style: none;
+   font-family: "Roboto-SemiBold";
+   padding: 0;
+}
+
+.ul_app .li_app {
+   position: relative;
+   /* Necesario para posicionar el pseudo-elemento */
+   padding-left: 30px;
+   /* Espacio para el punto */
+}
+
+.ul_app .li_app::before {
+   content: "\2022";
+   /* Punto personalizado */
+   color: #E2001A;
+   /* Color del punto */
+   font-size: 25px;
+   /* Tamaño del punto */
+   font-weight: bold;
+   position: absolute;
+   /* Posiciona el punto de forma absoluta */
+   left: 0;
+   /* Alinea el punto al inicio del contenedor */
+   top: 0;
+   /* Alinea el punto con el texto */
+}
+
+
+.ul {
+   font-size: calc(0.7em + 0.7vw);
+   line-height: 1.6em;
+   text-align: justify;
+   list-style: none;
+   padding: 0;
+}
+
+.ul .li {
+   position: relative;
+   /* Necesario para posicionar el pseudo-elemento */
+   padding-left: 30px;
+   /* Espacio para el punto */
+}
+
+.ul .li::before {
+   content: "\2022";
+   /* Punto personalizado */
+   color: #E2001A;
+   /* Color del punto */
+   font-size: 25px;
+   /* Tamaño del punto */
+   font-weight: bold;
+   top: 0;
+   /* Alinea el punto con el texto */
+}
+
+ol {
+   margin-left: 1.5em;
+   /* Espacio a la izquierda para la lista */
+}
+
+ol li {
+   margin-bottom: 0.5em;
+   /* Separación entre elementos */
+}
+
+.img-fluid-app {
+   object-fit: cover;
+   /* Hace que la imagen se recorte para llenar el contenedor */
+   height: 60%;
+   /* Asegura que ocupe toda la altura del contenedor */
+   width: 60%;
+   /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+footer {
+   background-color: rgb(157, 158, 158) !important;
+}
+
+.redes {
+   background-repeat: no-repeat;
+   background-size: 30px;
+   height: 45px;
+   width: 45px;
+   background-position: center;
+   background-color: rgba(114, 114, 113);
+   border-radius: 3rem;
+}
+
+
+
+#paginacion {
+   justify-content: center;
+}
+
+
+.header_img {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+}
+
+.redes_distr {
+   background-repeat: no-repeat;
+   background-size: 20px;
+   height: 35px;
+   width: 35px;
+   background-position: center;
+   background-color: #E2001A !important;
+   border-radius: 3rem;
+}
+
+.redes-container {
+   gap: 15px;
+   /* Espacio entre los elementos */
+}
+
+.face {
+   background-image: url(./../img/svg/facebook.svg);
+}
+
+.twi {
+   background-image: url(./../img/svg/twitter.svg);
+}
+
+.inst {
+   background-image: url(./../img/svg/instagram.svg);
+}
+
+.video_inst {
+   background-image: url(./../img/svg/video_instagram.svg);
+}
+
+.linktree {
+   background-image: url(./../img/svg/linktree-seeklogo.svg);
+}
+.resaltar {
+    background-color: #FF9;
+}
+
+
+.card {
+   border: 10px solid #FFFFFF !important;
+   box-shadow: 0 8px 16px 5px rgba(0, 0, 0, 0.2);
+   transition: box-shadow 0.3s ease;
+}
+
+
+
+
+div.card.card_img_vehi {
+   border: 0px solid #FFFFFF !important;
+}
+
+.img-padding {
+   padding: 15px;
+   /* Espacio interno alrededor de la imagen */
+   box-sizing: border-box;
+   /* Asegura que el padding no afecte el tamaño total del elemento */
+}
+
+
+.card-img {
+   border: 1px solid #ddd;
+   /* Borde del card */
+   border-radius: 8px;
+   /* Bordes redondeados */
+   overflow: hidden;
+   /* Asegura que la imagen no se desborde */
+}
+
+.card-img-top {
+   object-fit: cover;
+   /* Ajusta la imagen sin deformarla */
+   height: 100%;
+   /* Ajusta la altura al contenedor */
+   max-height: 300px;
+   /* Altura máxima opcional */
+}
+.card-header-web{
+   background-color: #E2001A !important;
+   color: white !important;
+}
+.div_amarillo {
+   background: #FCDD0D !important;
+   border-radius: 20px !important;
+}
+
+.div_azul {
+   background: #384896 !important;
+   border-radius: 20px !important;
+}
+
+.div_rojo {
+   background: #E2001A !important;
+   border-radius: 20px !important;
+
+}
+
+.div_gris {
+   background: #E9E4E1 !important;
+   border-radius: 20px !important;
+}
+
+.bor_car {
+   border-radius: 20px !important;
+}
+
+.list-unstyled li {
+   margin-bottom: 0.5em;
+   /* Separación entre elementos */
+}
+
+.li-icon {
+   font-weight: bold;
+   /* Negrita */
+   font-size: 1.5em;
+   /* Tamaño más grande */
+   margin-right: 0.5em;
+   /* Espacio entre el guion y el texto */
+}
+
+.video_soporte {
+   width: 100% !important;
+   height: auto !important;
+}
+
+.tablaver{
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+        --bs-table-bg: transparent !important;
+   
+    }
+
+      /* Estilos de tabla generales */
+.table-custom thead th {
+    padding: 0.5rem 1rem;
+    color: white;
+    font-family: "Roboto-Bold";
+}
+
+.table-codigos-web  {
+     width: 100% !important;
+   height: auto !important;
+   
+}
+
+.table-custom tbody tr td {
+    border-bottom: 1px solid #f0f0f0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos específicos para la tabla de Códigos WEB */
+.table-codigos-web thead th {
+    background-color: #e2001a;
+}
+
+.table-codigos-web tbody a {
+    color: #e2001a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos específicos para la tabla de Códigos de Otros Fabricantes */
+.table-equivalencias thead th:first-child {
+    background-color: #000;
+}
+
+.header-negro {
+    background-color: #000 !important;
+}
+
+.table-equivalencias thead th:last-child {
+    background-color: #e2001a;
+}
+
+.table-equivalencias tbody span {
+    color: #e2001a;
+}
+
+.table-equivalencias tbody a {
+    color: #e2001a;
+    text-decoration: none;
+}
+
+
+
+.table-header-custom-eq th {
+        background-color: #808080 !important;
+        color: white !important;
+        font-family: "Roboto-Bold";
+      }
+      .table-body-custom-eq td {
+        background-color: #E0E0E0 !important;
+      }
+      .custom-table {
+        border: none;
+      }
+    /* catalogo */
+      
+    .fond_nuevo_p {
+    background-position: center;
+    background-image: url(./../img/lineas/fondo_np.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*codigo de barra */
+.barcode-cell svg {
+    width: 100% !important;
+    height: auto;
+}
+
+
+/* botones producto */
+ .card-hover-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    .card-hover-effect:hover {
+        transform: translateY(-5px);
+      
+    }
+    .card-produ,
+    .card-produ * {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
+    }
+
+    .card-produ:hover,
+    .card-produ.active {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        background-color: #E2001A !important;
+        border-color: #E2001A !important;
+        color: #ffffff !important;
+    }
+
+    .card-produ:hover h5,
+    .card-produ.active h5,
+    .card-produ:hover small,
+    .card-produ.active small,
+    .card-produ:hover a,
+    .card-produ.active a {
+        color: #ffffff !important;
+    }
+
+
+/* Estilos generales para los botones */
+.btn-custom {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    color: #E2001A;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+.btn-light-custom {
+    background-color: #ffffff !important;
+    border-color: #e0e0e0 !important;
+    color: #E2001A !important;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.btn-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #E2001A !important;
+    border-color: #E2001A !important;
+    color: #ffffff !important;
+}
+
+/* Estilos para el ícono y el título */
+.icon-custom {
+    font-size: 3rem;
+    /* Aquí estaba el problema. El color debe cambiar en el estado hover */
+    color: #E2001A;
+}
+.card-title-custom {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.btn-custom:hover .card-title-custom,
+.btn-custom:hover .icon-custom {
+    color: #ffffff !important;
+}
+
+/* Estilos para la etiqueta <small> */
+.btn-custom .text-muted {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+.btn-custom:hover .text-muted {
+    color: #ffffff !important;
+}
+
+/* Estilos del carrusel y los botones de navegación */
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+    position: relative;
+}
+
+/* Ocultamos los botones nativos de Splide para usar los tuyos */
+.splide__arrows {
+    display: none;
+}
+
+/* Estilos de los botones del carrusel, ahora con Boxicons */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: auto !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
+    z-index: 10 !important;
+}
+.carousel-control-prev {
+    left: -50px !important; /* Posición del botón izquierdo */
+}
+.carousel-control-next {
+    right: -50px !important; /* Posición del botón derecho */
+}
+/* Ocultamos los íconos por defecto de Bootstrap */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+/* Estilos para los íconos de Boxicons */
+.carousel-control-prev .bx,
+.carousel-control-next .bx {
+    font-size: 3rem !important;
+    color: #E2001A !important;
+    transition: color 0.3s ease !important;
+}
+/* Efecto hover en los íconos */
+.carousel-control-prev:hover .bx,
+.carousel-control-next:hover .bx {
+    color: #c90000;
+}
+
+
+
+@media (max-width:1000px) {
+   .img-fluid-app {
+      height: 90%;
+      width: 90%;
+   }
+}
+
+@media (max-width: 768px) {
+ 
+  .table-codigos-web {
+    font-size: 0.7rem; 
   }
+
   
-    /*IMAGEN ZOOM*/
-  
-    .ligthbox img {
-    max-width:90%;
-  }
-  .about__img_instruccion {
-    grid-template-columns: 100%;
-    align-items: center;
-    justify-items: center;
-  
+  .table-codigos-web .link {
+    font-size: 0.7rem;
+    line-height: 1.2;
   }
 
-  .div_img_instruccion {
-    max-width: 120px;
+    .btn-share {
+        padding: 0.5rem 0.8rem; /* Padding más pequeño para móviles */
+        font-size: 1rem; /* Opcional: ajustar el tamaño de la fuente para que quepa mejor */
+        /* Asegurarse de que el botón sea un cuadrado perfecto en móviles */
+        width: 3rem; /* o el valor que necesites */
+        height: 3rem;
+        padding: 0; /* Remover el padding para centrar el icono */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 772px) {
+.parrafo_md {
+   font-size: calc(0.6em + 0.6vw);
+   
+   
+}
+   .custom-img {
+      max-width: 100%;
+      /*  max-width: 50%;*/
+   }
+
+   .icon-img {
+      max-width: 100%;
+   }
+
+   .parrafo_ms {
+      font-size: calc(0.6em + 0.6vw);
+
+   }
+
+   .subtito_ms {
+      font-size: calc(0.7em + 0.7vw);
+
+   }
+
 }
 
-.text__titulo_instruccion {
-    margin: 0em 0em 0em 0.5em;
-}
-  }
-@media all and (max-width: 700px) {
+@media (max-width:600px) {
 
-  .vermas_lightbox img {
-    width: 20%;
-    bottom: 150px;
-    right: 60px;
-}
+
+   .img-fluid-app {
+      height: 100%;
+      width: 100%;
+   }
 }
 
-@media (max-width: 600px){
-.vermas_lightbox img {
-    width: 25%;
-    bottom: 180px;
-    right: 70px;
-}
-}
-@media (max-width: 450px){
-.vermas_lightbox img {
-    bottom: 250px;
-    }
-    }
-
-    @media (max-width:380px){
-.vermas_lightbox img {
-    bottom: 130px;
-    }
-    }

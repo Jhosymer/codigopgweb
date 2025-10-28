@@ -11,7 +11,7 @@ function getData(pagina){
             'pagina': pagina,
         },
         dataType: 'json',
-        url: "./../ajax_busquedas/ajax_marca.php",
+        url: "./../../ajax_busquedas/ajax_marca.php",
         type: 'POST',
         success: function(response2){
                 $('#resultado').html(response2.datos);

@@ -1,0 +1,16 @@
+[15-Oct-2025 08:13:36 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 34
+[15-Oct-2025 08:18:23 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 34
+[15-Oct-2025 08:23:39 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 34
+[15-Oct-2025 08:28:21 America/Caracas] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 34

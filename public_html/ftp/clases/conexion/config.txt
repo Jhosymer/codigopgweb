@@ -1,0 +1,9 @@
+{
+    "conexion":{
+        "server" : "localhost",
+        "user" : "webfiltr_admin",
+        "password" : "123abc*1",
+        "database" : "webfiltr_webfiltros",
+        "port": "3306"
+    }
+}

@@ -5,7 +5,7 @@ function getFiltro(codigo){
 
     formData = new FormData();
     formData.append('codigo', codigo);
-    fetch("./../ajax_busquedas/filtro_seleccionado.php", {
+    fetch("./../../ajax_busquedas/filtro_seleccionado.php", {
         method: 'POST',
         body: formData,
     })

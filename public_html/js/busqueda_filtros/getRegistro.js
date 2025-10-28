@@ -7,7 +7,7 @@ function getRegistro(id_vehiculo,id_tipo,id_marca){
             'id_tipo': id_tipo,
             'id_marca': id_marca,
         },
-        url: "./../ajax_busquedas/aplicacion_seleccionada.php",
+        url: "./../../ajax_busquedas/aplicacion_seleccionada.php",
         type: "POST",
         dataType: 'json',
         success: function (response){

@@ -1,0 +1,6 @@
+[09-Jun-2023 14:58:47 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.fluidos' doesn't exist in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/fluidos/editar.php:58
+Stack trace:
+#0 /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/fluidos/editar.php(58): PDOStatement->execute()
+#1 {main}
+  thrown in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/fluidos/editar.php on line 58
+[14-Aug-2025 11:53:49 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter2/gestor/index/footer.php on line 5

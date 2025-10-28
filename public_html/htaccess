@@ -5,4 +5,17 @@ SetEnv PHPRC /home/customer/www/webfiltros.com/public_html/php.ini
 Header set Cache-Control “max-age=0,no-store”
 </IfModule>
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^api/ - [L]
+</IfModule>
+
+<Directory "/api/">
+    Order Allow,Deny
+    Allow from all
+</Directory>
+
+RewriteEngine On
+RewriteCond %{QUERY_STRING} codigo=([^&]+) [NC]
+RewriteRule ^filtro/filtro\.php$ https://webfiltros.com/catalogo/busqueda_por_codigo/index.php?codigo=%1 [R=301,L]
 

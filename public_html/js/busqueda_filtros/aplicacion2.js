@@ -6,7 +6,7 @@ function getAplicacion2(aplicacion, marca){
             'pagina': paginaActual,
             'regreso': 1,
         },
-        url: './../ajax_busquedas/ajax_marca.php',
+        url: './../../ajax_busquedas/ajax_marca.php',
         dataType: 'json',
         type: 'POST',
         success: function(response2){
@@ -33,7 +33,7 @@ function getAplicacion2(aplicacion, marca){
                         id: aplicacion,
                         id_marca: marca,
                      },
-                    url: './../ajax_busquedas/ajax_aplicacion.php',
+                    url: './../../ajax_busquedas/ajax_aplicacion.php',
                     type: 'POST',
                 success: function(responseFinal){
                     document.getElementById('texto').value = "";

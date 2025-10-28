@@ -1,0 +1,361 @@
+[19-Aug-2025 18:37:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:37:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:37:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:37:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:41:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:42:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:42:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:42:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[19-Aug-2025 18:42:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND act_sap = 'Y') OR (codigo LIKE ? AND act_sap = 'Y') 
+        ORDER BY id AS' at line 2 in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:12
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(12): PDO->prepare('SELECT id, codi...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 12
+[01-Sep-2025 17:32:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[01-Sep-2025 17:33:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php:18
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busquedas_nombre.php on line 18
+[07-Oct-2025 14:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:39:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[07-Oct-2025 14:41:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'webfiltr_webfiltros.filtro_nano' doesn't exist in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php:23
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23

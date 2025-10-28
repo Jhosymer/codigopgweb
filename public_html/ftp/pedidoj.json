@@ -1,0 +1,47 @@
+[
+    {
+        "CardCode": "C-J311592210",
+        "DocDueDate": "2025-06-17",
+        "DocumentLines": [
+            {
+                "ItemCode": "WCH-155",
+                "Quantity": 250,
+                "Price": 240
+            },
+            {
+                "ItemCode": "WCA-226",
+                "Quantity": 15,
+                "Price": 2485
+            }
+        ],
+        "procesado": false
+    },
+    {
+        "CardCode": "C-J311592210",
+        "DocDueDate": "2025-06-17",
+        "DocumentLines": [
+            {
+                "ItemCode": "WPS-3409",
+                "Quantity": 15,
+                "Price": 420
+            },
+            {
+                "ItemCode": "WCH-155",
+                "Quantity": 2,
+                "Price": 5
+            },
+            {
+                "ItemCode": "WCA-226",
+                "Quantity": 15,
+                "Price": 2485
+            },
+            {
+                "ItemCode": "WRA-7139",
+                "Quantity": 2,
+                "Price": 240
+            }
+        ],
+        "procesado": false
+    }
+    
+]

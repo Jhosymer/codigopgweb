@@ -10,7 +10,7 @@
     enlaceImagen.href = urlRedireccion;
 
     // Define la ruta de la imagen que se mostrará
-    var rutaImagen = "img/app/App_App_Store.png"; // ¡REEMPLAZA con la ruta de tu imagen!
+    var rutaImagen = "./img/app/App_App_Store.png"; // ¡REEMPLAZA con la ruta de tu imagen!
     imagenEmergente.src = rutaImagen;
 
     // Mostrar el modal al cargar la página

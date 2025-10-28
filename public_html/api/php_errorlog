@@ -1,68 +1,8 @@
-[18-Oct-2024 10:28:15 CST6CDT] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php:2
+[05-Aug-2025 15:40:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/Filtros_codificacion.php:2
 Stack trace:
 #0 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php on line 2
-[18-Oct-2024 10:28:21 CST6CDT] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php:2
+  thrown in /home/customer/www/webfiltros.com/public_html/api/Filtros_codificacion.php on line 2
+[05-Aug-2025 15:40:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/Filtros_codificacion.php:2
 Stack trace:
 #0 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php on line 2
-[18-Oct-2024 10:28:27 CST6CDT] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php:2
-Stack trace:
-#0 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php on line 2
-[18-Oct-2024 10:28:30 CST6CDT] PHP Fatal error:  Uncaught Error: Failed opening required 'clases/respuestas.class.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php:2
-Stack trace:
-#0 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/aplicacion_agricola.php on line 2
-[24-Oct-2024 12:45:54 CST6CDT] PHP Parse error:  syntax error, unexpected identifier "SELECT" in /home/customer/www/webfiltros.com/public_html/api/clases/Filtros_codificacion.class.php on line 23
-[29-Jan-2025 14:51:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd.video_instagram AS distribuidora_video_instagram,
-            GROUP_CONCAT(CA' at line 14 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('\r\n             ...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/distribuidor.class.php(49): conexion->obtenerDatos('\r\n             ...')
-#2 /home/customer/www/webfiltros.com/public_html/api/distribuidor.php(18): distribuidor->listardistribuidor()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
-[29-Jan-2025 14:51:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd.video_instagram AS distribuidora_video_instagram,
-            GROUP_CONCAT(CA' at line 14 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('\r\n             ...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/distribuidor.class.php(49): conexion->obtenerDatos('\r\n             ...')
-#2 /home/customer/www/webfiltros.com/public_html/api/distribuidor.php(18): distribuidor->listardistribuidor()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
-[29-Jan-2025 14:52:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd.video_instagram AS distribuidora_video_instagram,
-            GROUP_CONCAT(CA' at line 14 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('\r\n             ...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/distribuidor.class.php(49): conexion->obtenerDatos('\r\n             ...')
-#2 /home/customer/www/webfiltros.com/public_html/api/distribuidor.php(18): distribuidor->listardistribuidor()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
-[31-Mar-2025 12:54:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mostrar
-            FROM filtro_equivalencia AS filtro_equivalencia 
-        ' at line 1 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('SELECT filtro_e...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/filtro_equivalencia.class.php(22): conexion->obtenerDatos('SELECT filtro_e...')
-#2 /home/customer/www/webfiltros.com/public_html/api/filtro_equivalencia.php(19): filtro_equivalencia->listarfiltro_equivalencia()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
-[31-Mar-2025 12:54:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mostrar
-            FROM filtro_equivalencia AS filtro_equivalencia 
-        ' at line 1 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('SELECT filtro_e...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/filtro_equivalencia.class.php(22): conexion->obtenerDatos('SELECT filtro_e...')
-#2 /home/customer/www/webfiltros.com/public_html/api/filtro_equivalencia.php(19): filtro_equivalencia->listarfiltro_equivalencia()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
-[31-Mar-2025 12:54:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.mostrar
-            FROM filtro_equivalencia AS filtro_equivalencia 
-        ' at line 1 in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php:46
-Stack trace:
-#0 /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php(46): mysqli->query('SELECT filtro_e...')
-#1 /home/customer/www/webfiltros.com/public_html/api/clases/filtro_equivalencia.class.php(22): conexion->obtenerDatos('SELECT filtro_e...')
-#2 /home/customer/www/webfiltros.com/public_html/api/filtro_equivalencia.php(19): filtro_equivalencia->listarfiltro_equivalencia()
-#3 {main}
-  thrown in /home/customer/www/webfiltros.com/public_html/api/clases/conexion/conexion.php on line 46
+  thrown in /home/customer/www/webfiltros.com/public_html/api/Filtros_codificacion.php on line 2
