@@ -64,7 +64,9 @@
                         <th>Filtración</th>
                         <th>Diámetro Exterior</th>
                         <th>Altura</th>
+                        <th>Rosaca Entrada</th>
                         <th>Entrada</th>
+                        <th>Rosaca Salida</th>
                         <th>Salida</th>
                         <th>Und Empaque</th>
                          <th>Codigo de Barra</th>

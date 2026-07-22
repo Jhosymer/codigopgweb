@@ -1,0 +1,38 @@
+Array
+(
+    [POST] => Array
+        (
+            [accion] => crear
+            [id] => 1783513967222
+            [id_user] => 34
+            [id_tp_soporte] => 1
+            [id_producto] => 611
+            [asunto] => Producto deteriorado en Recepcion
+            [detalle] => prueba
+            [stado] => A
+            [anexo] => 1783513960120.jpg
+            [ruta_completa_anexo] => E:\jhoselyn\Documents/Webapp/soporte/1783513960120.jpg
+            [anexo_r] => 
+            [fecha_creado] => 2026-07-08
+            [visto_admin] => N
+            [visto_cliente] => S
+            [nombre_soporte] => Soporte técnico
+            [edit] => agg
+            [codigo] => W-8
+        )
+
+    [FILES] => Array
+        (
+            [archivo] => Array
+                (
+                    [name] => 1783513960120.jpg
+                    [full_path] => 1783513960120.jpg
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpxQz1Wr
+                    [error] => 0
+                    [size] => 481845
+                )
+
+        )
+
+)

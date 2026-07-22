@@ -1,19 +1,11 @@
 <?php
-/* 
-    Archivo utilizado para llenar las tablas de especificaciones
+/* Archivo utilizado para llenar las tablas de especificaciones
     Recibe el número de la página (Int), cantidad de registros (Int), nombre de la tabla (Str)
     y el campo de busqueda (Str).
     Solo el nombre de la tabla es obligatorio
-
-    Devuelve un arreglo llamado $output 
-    $output['datos'] -> Devuelve el codigo HTML para la tabla
-    $output['totalRegistros'] -> Devuelve el número total de registros, sin tomar en cuenta el valor del campo de busqueda
-    $output['totalFiltro'] -> Devuelve el número de registros, tomando en cuenta el valor del campo de busqueda
-    $output['paginacion'] -> Devuelve el codigo HTML para la paginación de la tabla
 */
 
 include '../../../config/conexion.php';
-
 
 /*
     Las tablas dentro de la lista serán validas
@@ -41,7 +33,7 @@ switch($tabla){
         break;
     case 'espec_combustiblelinea':
         $apodo = "e_c";
-        $columnas = ["e_c.id", "e_c.id_codigo", "e_c.codigo", "e_c.codigo_buscar", "e_c.tipo", 'f_c.filtracion', "e_c.diametroext", "e_c.altura", "e_c.entrada", "e_c.salida", 'f_c.und_empaque', 'f_c.codigo_barra', "e_c.detalle1", "e_c.detalle2",  "e_c.deleted_at"];
+        $columnas = ["e_c.id", "e_c.id_codigo", "e_c.codigo", "e_c.codigo_buscar", "e_c.tipo", 'f_c.filtracion', "e_c.diametroext", "e_c.altura", "r_ent.codigo as rosca_entrada", "e_c.entrada", "p_ent.codigo as pulgada_entrada",  "r_sal.codigo as rosca_salida",  "e_c.salida", "p_sal.codigo as pulgada_salida", 'f_c.und_empaque', 'f_c.codigo_barra', "e_c.detalle1", "e_c.detalle2",  "e_c.deleted_at"];
         break;
     case 'espec_elemento':
         $apodo = "e_e";
@@ -49,21 +41,17 @@ switch($tabla){
         break;
     case 'espec_fluidos':
         $apodo = "e_f";
-        $columnas = ["e_f.id", "e_f.id_codigo", "e_f.codigo", "e_f.codigo_buscar", "e_f.tipo",'f_c.und_empaque', 'f_c.codigo_barra', "e_f.detalle1", "e_f.detalle2", "e_f.deleted_at"];
+        $columnas = ["e_f.id", "e_f.id_codigo", "e_f.codigo", "e_f.codigo_buscar", "e_f.tipo", "e_f.etilenglicol", 'f_c.und_empaque', 'f_c.codigo_barra', "e_f.detalle1", "e_f.detalle2", "e_f.deleted_at"];
         break;
     case 'espec_panel':
-        $apodo = "e_p";
-        $columnas = ["e_p.id", "e_p.id_codigo", "e_p.codigo", "e_p.codigo_buscar", "e_p.tipo", 'f_c.filtracion', "e_p.largo", "e_p.ancho", "e_p.altura", 'f_c.und_empaque', 'f_c.codigo_barra', "e_p.detalle1", "e_p.detalle2", "e_p.deleted_at"];
-        break;
-
     case 'espec_cabina':
         $apodo = "e_p";
         $columnas = ["e_p.id", "e_p.id_codigo", "e_p.codigo", "e_p.codigo_buscar", "e_p.tipo", 'f_c.filtracion', "e_p.largo", "e_p.ancho", "e_p.altura", 'f_c.und_empaque', 'f_c.codigo_barra', "e_p.detalle1", "e_p.detalle2", "e_p.deleted_at"];
-    break;
-    
+        break;
     case 'espec_sellado':
         $apodo = "e_s";
-        $columnas = ["e_s.id", "e_s.id_codigo", "e_s.codigo", "e_s.codigo_buscar", "e_s.tipo", 'f_c.filtracion', "e_s.diametroext", "e_s.diametroint", "e_s.altura", "e_s.diametroempext", "e_s.diametroempint", "e_s.espesoremp", "e_s.valvulaal", "e_s.apertura", "e_s.valvulaad", 'f_c.und_empaque', 'f_c.codigo_barra', "e_s.detalle1", "e_s.detalle2", "e_s.deleted_at"];
+        // Se agrega r.codigo as rosca para obtener el nombre de la rosca
+        $columnas = ["e_s.id", "e_s.id_codigo", "e_s.codigo", "e_s.codigo_buscar", "e_s.tipo", 'f_c.filtracion',  "e_s.altura", "r.codigo as rosca", "e_s.diametroint", "e_s.diametroext", "e_s.diametroempext",  "e_s.diametroempint", "e_s.espesoremp", "e_s.valvulaal", "e_s.apertura", "e_s.valvulaad", 'f_c.und_empaque', 'f_c.codigo_barra', "e_s.detalle1", "e_s.detalle2", "e_s.deleted_at"];
         break;
 }
 
@@ -76,13 +64,12 @@ $where = "";
 if($campo != null){
     $where = "WHERE (";
     $contador = count($columnas);
-    //SE HACE UN CICLO A TODAS LAS COLUMNAS PARA COMPROBAR SI EL CAMPO 
-    //TIENE UNA SEMENJANZA CON EL VALOR DE LA COLUMNA
     for($i = 0; $i < $contador; $i++){
-        $where .= $columnas[$i] . " " . "LIKE :campo OR";
-        $where .= " ";
+        // Limpiamos el alias para que el LIKE no de error
+        $colReal = (strpos($columnas[$i], ' as ') !== false) ? explode(' as ', $columnas[$i])[0] : $columnas[$i];
+        $where .= $colReal . " LIKE :campo OR ";
     }
-    $where = substr_replace($where, "", -3);
+    $where = substr($where, 0, -4);
     $where .= ") and ( $apodo.deleted_at is null ) and ( f_c.deleted_at is null )";
 }
 else {
@@ -95,47 +82,42 @@ $page = isset( $_POST['pagina']) ? htmlspecialchars($_POST['pagina']) : 1;
 $inicio = $limit * ($page - 1);
 $sLimit = "LIMIT $inicio, $limit";
 
-/*
-    Se busca la cantidad de registros totales (No se toma en cuenta el valor del campo, en caso de haber)
-*/ 
-$sql = "SELECT " . implode(',', $columnas) ."
-                FROM $tabla as $apodo
-                JOIN filtro_codificacion as f_c ON f_c.id = $apodo.id_codigo
-                WHERE ( $apodo.deleted_at is null ) and ( f_c.deleted_at is null )";
-                
-$busqueda =  $base_de_datos->prepare($sql);
-$busqueda->setFetchMode(PDO::FETCH_ASSOC);
-$busqueda->execute();
-
-$filas_totales = $busqueda->rowCount();
-
-/*
-    Se busca la cantidad de registros filtrado (Se toma en cuenta el valor del campo, en caso de haber)
-*/ 
-$sql = "SELECT " . implode(",", $columnas) . " 
-                FROM $tabla as $apodo
-                JOIN filtro_codificacion as f_c ON f_c.id = $apodo.id_codigo
-                $where";         
-$busqueda =  $base_de_datos->prepare($sql);
-if( $campo != null ){
-    $busqueda->bindParam(':campo', $campo_busqueda, PDO::PARAM_STR);
+// JOIN condicional para la tabla de roscas
+$joinRosca = "";
+if ($tabla == 'espec_sellado') {
+    $joinRosca = "LEFT JOIN roscas as r ON r.id = $apodo.id_rosca";
+} else if ($tabla == 'espec_combustiblelinea') {
+    $joinRosca = "LEFT JOIN roscas as r_ent ON r_ent.id = $apodo.id_rosca_entrada 
+                  LEFT JOIN roscas as r_sal ON r_sal.id = $apodo.id_rosca_salida
+                  LEFT JOIN pulgadas as p_ent ON p_ent.id = $apodo.id_pulgada_entrada 
+                  LEFT JOIN pulgadas as p_sal ON p_sal.id = $apodo.id_pulgada_salida";
 }
-$busqueda->setFetchMode(PDO::FETCH_ASSOC);
-$busqueda->execute();
-
-$filas_filtradas = $busqueda->rowCount();
 
 /*
-    Se buscan los valores de las columnas de la tabla que se selecciono
+    Se busca la cantidad de registros totales filtrados
+*/ 
+$sql_count = "SELECT COUNT(*) FROM $tabla as $apodo 
+              JOIN filtro_codificacion as f_c ON f_c.id = $apodo.id_codigo 
+              $joinRosca $where";
+$res_count = $base_de_datos->prepare($sql_count);
+if( $campo != null ) $res_count->bindParam(':campo', $campo_busqueda, PDO::PARAM_STR);
+$res_count->execute();
+$filas_filtradas = $res_count->fetchColumn();
+
+// Para total sin filtro (opcional según tu lógica original)
+$filas_totales = $filas_filtradas; 
+
+/*
+    Se buscan los valores de las columnas
 */
 $sql = "SELECT " . implode(",", $columnas) . " 
-                FROM $tabla as $apodo
-                JOIN filtro_codificacion as f_c ON f_c.id = $apodo.id_codigo
-                $where $sLimit";
-$busqueda =  $base_de_datos->prepare($sql);
-if( $campo != null ){
-    $busqueda->bindParam(':campo', $campo_busqueda, PDO::PARAM_STR);
-}
+        FROM $tabla as $apodo
+        JOIN filtro_codificacion as f_c ON f_c.id = $apodo.id_codigo
+        $joinRosca
+        $where $sLimit";
+
+$busqueda = $base_de_datos->prepare($sql);
+if( $campo != null ) $busqueda->bindParam(':campo', $campo_busqueda, PDO::PARAM_STR);
 $busqueda->setFetchMode(PDO::FETCH_BOTH);
 $busqueda->execute();
 
@@ -146,178 +128,110 @@ $output['totalFiltro'] = $filas_filtradas;
 $output['data'] = "";
 
 /*--------------------CICLO DE LLENADO DE LA TABLA---------------------*/
-$j = 0;
+$j = $inicio;
 if($filas_filtradas > 0){
     while( $row = $busqueda->fetch() ){
-        $j = $j + 1;
+        $j++;
         $id = $row['id'];
         $codigo = $row['codigo'];
         $id_codigo = $row['id_codigo'];
-        $id_tipo = $row['tipo'];
+        
         $output['data'] .= "<tr>";
-        //Se crea el ciclo para colocar las columnas de la tabla
+        
         for($i = 0; $i < (count($columnas) - 1); $i++){
-            //En caso de ser valvulaal se colocará SI o NO (Ni 1, ni 0)
-            if( $columnas[$i] == 'valvulaal' ){
-                if( $row[$i] == 1 ){
-                    $output['data'] .= "<td>SI</td>";
-                }
-                else {
-                    $output['data'] .= "<td>NO</td>";
-                }
-            }
-            //Mismo caso en valvulaad se colocará SI o NO (Ni 1, ni 0)
-            else if( $columnas[$i] == 'valvulaad' ){
-                if( $row[$i] == 1 ){
-                    $output['data'] .= "<td>SI</td>";
-                }
-                else {
-                    $output['data'] .= "<td>NO</td>";
-                }
-            }
-            //En caso de no existir valor de filtración, no se colocará
-            else if( $columnas[$i] == 'f_c.filtracion' ){
-                if( $row[$i] != null && $row[$i] != '' ){
-                    $output['data'] .= "<td>". $row[$i] . "</td>";
-                }
-                else {
-                    $output['data'] .= "<td>No tiene</td>";
-                }
-            }
-            //En caso de no existir valor de unidades de empaque, no se colocará
-            else if( $columnas[$i] == 'f_c.und_empaque' ){
-                if( $row[$i] != null && $row[$i] != 0 && $row[$i] != '' ){
-                    $output['data'] .= "<td>". $row[$i] . "</td>";
-                }
-                else {
-                    $output['data'] .= "<td>No tiene</td>";
-                }
             
-                
+            // Caso: Válvulas (sí/NO)
+            if( strpos($columnas[$i], 'valvulaal') !== false || strpos($columnas[$i], 'valvulaad') !== false ){
+                $output['data'] .= "<td>" . ($row[$i] == 1 ? "sí" : "NO") . "</td>";
             }
-
-            else if( $columnas[$i] == 'f_c.codigo_barra' ){
-                if( $row[$i] != null && $row[$i] != 0 ){
-                    $output['data'] .= "<td>". $row[$i] . "</td>";
-                }
-                else {
-                    $output['data'] .= "<td></td>";
-                }
-            
-                
+            // Caso: Filtración o Unidades
+            else if( strpos($columnas[$i], 'f_c.filtracion') !== false || strpos($columnas[$i], 'f_c.und_empaque') !== false ){
+                $output['data'] .= "<td>" . (!empty($row[$i]) ? $row[$i] : "No tiene") . "</td>";
             }
+            // Caso: Código de Barras
+            else if( strpos($columnas[$i], 'f_c.codigo_barra') !== false ){
+                $output['data'] .= "<td>" . (!empty($row[$i]) ? $row[$i] : "") . "</td>";
+            }
+            else if( strpos($columnas[$i], 'as rosca_entrada') !== false || strpos($columnas[$i], 'as rosca_salida') !== false ){
+    // Si el valor existe en el row, lo muestra; de lo contrario, muestra N/D (No Definido)
+    $valor_rosca = (!empty($row[$i])) ? $row[$i] : "N/A";
+    $output['data'] .= "<td>" . $valor_rosca . "</td>";
+}
 
-            
+ else if( strpos($columnas[$i], 'as pulgada_entrada') !== false || strpos($columnas[$i], 'as pulgada_salida') !== false ){
+    // Si el valor existe en el row, lo muestra; de lo contrario, muestra N/D (No Definido)
+    $valor_rosca = (!empty($row[$i])) ? $row[$i] : "N/A";
+    $output['data'] .= "<td>" . $valor_rosca . "</td>";
+}
 
-            //En caso de no existir valor de apertura, no se colocará
-            else if( $columnas[$i] == 'apertura' && $row[$i] == null ){
+// Caso: Rosca única (Para la tabla de Sellado)
+else if( strpos($columnas[$i], 'as rosca') !== false ){
+    $output['data'] .= "<td>" . (!empty($row[$i]) ? $row[$i] : "N/A") . "</td>";
+}
+else if( strpos($columnas[$i], 'e_s.diametroint') !== false ){
+    // Verificamos si es null, vacío o 0 (ya que en base de datos de medidas el 0 suele ser equivalente a no tener)
+    $valor_diametro = ($row[$i] === null || $row[$i] === "" || $row[$i] == 0) ? "N/A" : $row[$i];
+    $output['data'] .= "<td>" . $valor_diametro . "</td>";
+}
+            // Caso: Apertura
+            else if( strpos($columnas[$i], 'apertura') !== false && $row[$i] == null ){
                 $output['data'] .= "<td>No tiene</td>";
             }
-            //No se colocará nada si es id_codigo
-            else if( $columnas[$i] == 'e_s.id_codigo' || $columnas[$i] == 'e_p.id_codigo' || $columnas[$i] == 'e_a.id_codigo' || $columnas[$i] == 'e_e.id_codigo' || $columnas[$i] == 'e_f.id_codigo' || $columnas[$i] == 'e_c.id_codigo' ){
-
+            // Caso: Rosca (Aquí es donde se muestra el código de la rosca)
+            
+            // Caso: Ocultar IDs de códigos internos
+            else if( strpos($columnas[$i], '.id_codigo') !== false ){
+                // Se salta el ID
             }
-            //Por defecto se colocará el valor de la columna
+            // Por defecto
             else {
                 $output['data'] .= "<td>". $row[$i] . "</td>";
             }
-
-           
         }
-        //Botones de Acciones
+
+        // Botones de Acciones
         $output['data'] .= '<td>
-                     <div class="d-flex">
-                        <form action="eliminar.php" id="formulario-eliminar-'.$j.'" method="POST" name="formu" class="formulario-eliminar">
+            <div class="d-flex">
+                <form action="ver.php" method="POST">
+                    <input value="'.$id.'" name="id" type="hidden" />
+                    <input value="'.$id_codigo.'" name="id_codigo" type="hidden" />
+                    <button type="submit" class="btn_rweb_form me-2"><i class="bx bx-search"></i></button>
+                </form>
+                <form action="editar.php" method="POST">
+                    <input value="'.$id.'" name="id" type="hidden" />
+                    <button type="submit" class="btn_rweb_form me-2"><i class="bx bx-edit"></i></button>
+                </form>
+                <form action="editar_imagenes.php" method="POST">
+                    <input value="'.$id.'" name="id" type="hidden" /><input value="'.$codigo.'" name="codigo" type="hidden" />
+                    <button type="submit" class="btn_rweb_form me-2"><i class="bx bx-image"></i></button>
+                </form>
+                <form action="eliminar.php" id="formulario-eliminar-'.$j.'" method="POST" name="formu" class="formulario-eliminar">
                             <input value="'.$row['id'].'" name="id" type="hidden" />
                             <input value="'.$row['id_codigo'].'" name="id_codigo" type="hidden" />
                             <button type="button" name="btnEliminar" class="btn_rweb_form me-2" onclick="eliminado(event, \''.$j.'\')">
                                 <i class="bx bx-trash"></i>
                             </button>
                         </form>
-
-                      
-
-                        </form>
-                  
-                    <form action="ver.php" method="POST">
-                        <input value="'.$row['id'].'" name="id" type="hidden" />
-                        <input value="'.$row['id_codigo'].'" name="id_codigo" type="hidden" />
-                        <button type="submit" class="btn_rweb_form me-2" name="btnVer" ><i class="bx bx-search"></i></button>
-                    </form>
-                
-                
-                    <form action="editar.php" method="POST">
-                        <input value="'.$id.'" name="id" type="hidden" />
-                        <button type="submit" class="btn_rweb_form me-2" name="btnEditar" ><i class="bx bx-edit"></i></button>
-                    </form>
-               
-                    
-                        <form action="editar_imagenes.php" method="POST">
-                            <input value="'. $id. '" name="id" type="hidden" />
-                            <input value="'. $codigo. '" name="codigo" type="hidden" />
-                            <button type="submit" class="btn_rweb_form me-2" name="btnimg">
-                                        <i class="bx bx-image"></i>
-                                    </button>
-                        </form>
-                 
-
-                     
-                        <form action="editar_pdf.php" method="POST">
-                           <input value="'. $id. '" name="id" type="hidden" />
-                            <input value="'. $codigo. '" name="codigo" type="hidden" />
-                             <input value="'. $id_codigo. '" name="idcodigo" type="hidden" />
-                            <button type="submit" class="btn_rweb_form" name="btnpdf">
-                                        <i class="bx bx-file"></i>
-                                    </button>
-                        </form>
-                    </div>
-        </td>';
-        $output['data'] .= "</tr>";
+            </div>
+        </td></tr>';
     }
-} 
-else {
-    $output['data'] .= "<tr>";
-    $output['data'] .= "<td>Sin resultados</td>";
-    $output['data'] .= "</tr>";
+} else {
+    $output['data'] .= "<tr><td colspan='100%'>Sin resultados</td></tr>";
 }
 
-/*--------------------SE HACE LA PAGINACIÓN---------------------*/
+/*--------------------PAGINACIÓN---------------------*/
 $output['paginacion'] = "";
-
-$numeroInicio = 1;
 if($output['totalFiltro'] > 0){
     $totalPaginas = ceil($output['totalFiltro'] / $limit);
+    $numeroInicio = max(1, $page - 3);
+    $numeroFinal = min($totalPaginas, $numeroInicio + 7);
 
-    if(($page - 4) > 1){
-        $numeroInicio = $page - 3;
-    }
-    
-    $numeroFinal = $numeroInicio + 7;
-    
-    if($numeroFinal > $totalPaginas){
-        $numeroFinal = $totalPaginas;
-    }
-
-
-
-    if($page != 1){
-        $output['paginacion'] .= "<button class='btn_borde_rweb_form' onclick='getData(1)'><<</button>"; 
-    }
+    if($page != 1) $output['paginacion'] .= "<button class='btn_borde_rweb_form' onclick='getData(1)'><<</button>"; 
     for($i = $numeroInicio; $i <= $numeroFinal; $i++){
-        if($page == $i){
-            // Botón seleccionado
-            $output['paginacion'] .= "<button class='btn_rweb_form'>".$i."</button>";
-        }
-        else{
-            // Botón no seleccionado
-            $output['paginacion'] .= "<button class='btn_borde_rweb_form' onclick='getData($i)'>".$i."</button>";
-        }
+        $clase = ($page == $i) ? 'btn_rweb_form' : 'btn_borde_rweb_form';
+        $output['paginacion'] .= "<button class='$clase' onclick='getData($i)'>$i</button>";
     }
-    if($page != $totalPaginas){
-        $output['paginacion'] .= "<button class='btn_borde_rweb_form' onclick='getData($totalPaginas)'>>></button>"; 
-    }
-
+    if($page != $totalPaginas) $output['paginacion'] .= "<button class='btn_borde_rweb_form' onclick='getData($totalPaginas)'>>></button>"; 
 }
-
 
 echo json_encode($output);

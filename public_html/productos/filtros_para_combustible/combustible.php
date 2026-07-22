@@ -173,7 +173,8 @@ while( $fila = $categorias_selec->fetch() ){
                             <td class="pro sort_filtro asc">
                                 Codigo
                             </td>
-                            <td class="pro sort_filtro asc">Rosca (mm)</td>
+                            <td class="pro sort_filtro asc">Rosca</td>
+                            <td class="pro sort_filtro asc">ø int (mm)</td>
                             <td class="pro sort_filtro asc" >ø ext (mm)</td>
                             <td class="pro sort_filtro asc" >Altura (mm)</td>
                             <td class="pro sort_filtro asc" >Empacadura (mm)</td>

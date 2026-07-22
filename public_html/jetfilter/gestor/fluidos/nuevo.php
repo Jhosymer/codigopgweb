@@ -35,7 +35,7 @@
             <h1 class="titulo">Crear Producto y Especificaciones Fluidoss</h1>
         </div>
 
-       <a href="./fluidos.php"  class="btn-icon me-4" >Atrás</a>
+       <a href="./espec_fluidos.php"  class="btn-icon me-4" >Atrás</a>
     </div>
 
     <div class="stats-progress progress mb-5" style="height:3px"></div>

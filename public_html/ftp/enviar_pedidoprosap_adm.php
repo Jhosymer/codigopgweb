@@ -21,7 +21,7 @@ $PATH_BASE = './../';
 
 $json_path = 'pedidopro.json'; 
 $pedidos_cargados = []; // Array que contendrá los datos de la DB
-$json_map_by_id = []; // Nuevo array para mapear datos del JSON
+$json_map_by_id = []; // array para mapear datos del JSON
 
 if (file_exists($json_path)) {
     $json_content = file_get_contents($json_path);
@@ -70,7 +70,9 @@ if (file_exists($json_path)) {
         }
     }
 }
+//SOLO CONTINUAR SI HAY PEDIDOS CARGADOS DE LA DB
 
+if (!empty($pedidos_cargados)) {
 
 // ----------------------------------------------------
 // 2. CONFIGURACIÓN DEL EMAIL
@@ -91,7 +93,7 @@ try {
     
     $destinatarios_notificacion = [];
 }
-$email_remitente = 'jhoselynmercado@webfiltros.com'; 
+$email_remitente = 'pedidosweb@webfiltros.com'; 
 
 // Destinatarios internos 
 /*$destinatarios_notificacion = [
@@ -107,7 +109,7 @@ try {
     $mail->isSMTP();
     $mail->Host = 'mail.webfiltros.com';
     $mail->SMTPAuth  = true; $mail->Username  = $email_remitente; 
-    $mail->Password  = 'jhsmer2022*'; $mail->SMTPSecure = 'ssl'; $mail->Port = 465; 
+    $mail->Password  = '1234facil'; $mail->SMTPSecure = 'ssl'; $mail->Port = 465; 
 
     $mail->setFrom($email_remitente, 'WebFiltros Pedidos'); 
 
@@ -121,13 +123,13 @@ try {
 
     foreach ($pedidos_cargados as $pedido) {
         
-        // 🔑 LÓGICA RIF: Eliminar "C-" si el RIF comienza con esa secuencia
+        // Eliminar: "C-" si el RIF comienza con esa secuencia
         $rif_final = htmlspecialchars($pedido['rif_cliente'] ?? 'N/A');
         if (strpos($rif_final, 'C-') === 0) {
             $rif_final = substr($rif_final, 2); // Remueve los primeros 2 caracteres ("C-")
         }
 
-        // 🔑 LÓGICA PEDIDO FINAL: Prioridad: sap_doc (DB) -> doc_entry (JSON) -> pedido_id (DB)
+        // Prioridad: sap_doc (DB) -> doc_entry (JSON) -> pedido_id (DB)
         $numero_pedido_final = htmlspecialchars($pedido['sap_doc'] ?? ''); // Intenta con p.na_pedido
 
         if (empty($numero_pedido_final) && isset($pedido['pedido_id'])) {
@@ -227,4 +229,7 @@ try {
    // header('Location: ./../../index.php?pag=pedido_admin');
     exit; 
 }
+}
+
+
 ?>

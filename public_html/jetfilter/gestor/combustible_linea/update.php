@@ -75,13 +75,27 @@
             $codigo = $_POST['codigo'];
             $diametro_exterior = $_POST['diametro_ext'];
             $altura = $_POST['altura'];
-            $entrada = $_POST['entrada'];
-            $salida = $_POST['salida'];
+          
             $und_empaque = ( $_POST['und_empaque'] == '' ) ? 0 : $_POST['und_empaque'];
             $detalle1 = ( $_POST['detalle1'] == '' ) ? 'N/D': $_POST['detalle1'];
             $detalle2 = ( $_POST['detalle2'] == '' ) ? 'N/D': $_POST['detalle2'];
             $codigo_barra = $_POST['codigo_barra'];
 
+      
+                             
+                             
+ // Entrada
+$tipo_entrada_usuario = $_POST['sw_entrada'];
+// Si es 'rosca', toma el valor del select. Si es 'pulgada', toma el otro select.
+$id_rosca_entrada   = ($tipo_entrada_usuario == 'rosca')   ? ($_POST['id_rosca_entrada']   ?: null) : null;
+$id_pulgada_entrada = ($tipo_entrada_usuario == 'pulgada') ? ($_POST['id_pulgada_entrada'] ?: null) : null;
+$entrada            = ($tipo_entrada_usuario == 'mm')      ? ($_POST['entrada']            ?: 0)    : 0;
+
+// Salida
+$tipo_salida_usuario  = $_POST['sw_salida'];
+$id_rosca_salida   = ($tipo_salida_usuario == 'rosca')   ? ($_POST['id_rosca_salida']   ?: null) : null;
+$id_pulgada_salida = ($tipo_salida_usuario == 'pulgada') ? ($_POST['id_pulgada_salida'] ?: null) : null;
+$salida            = ($tipo_salida_usuario == 'mm')      ? ($_POST['salida']            ?: 0)    : 0;
             //Se eliminan los caracteres especiales y espacios, para la variable $codigo_buscar.
             $caracteres_a_reemplazar = ['-'," ","_"];
             $codigo_buscar = str_replace($caracteres_a_reemplazar,'',$codigo);
@@ -91,8 +105,8 @@
             include_once('./../componentes/galeria_update.php');
 
             //Datos a guardar en la tabla de combustible en linea
-            $argumentos = [$codigo, $codigo_buscar, $tipo, $diametro_exterior, $altura, $entrada, $salida, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $fecha_updated, $id];
-            //Datos a guardar en la tabla de filtro codificación
+           // IMPORTANTE: El orden aquí DEBE ser el mismo que en tu sentencia SQL
+            $argumentos = [$codigo, $codigo_buscar, $tipo, $diametro_exterior, $altura, $entrada, $salida, $id_rosca_entrada, $id_pulgada_entrada, $id_rosca_salida, $id_pulgada_salida,$detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2],  $imagen[3], $fecha_updated, $id];
             $argumentos_filtro_codificacion = [$codigo, $codigo_buscar, $codigo_barra, $id_tipo, $filtracion, $und_empaque, $fecha_actualiza, $sincronizado, $fecha_updated, $id_codigo];
             
             try {
@@ -114,8 +128,11 @@
                     $equivalencia_update->execute();
                 }
 
-                $actualizando = $base_de_datos->prepare("UPDATE espec_combustiblelinea SET codigo = ?, codigo_buscar = ?, tipo = ?, diametroext = ?, altura = ?, entrada = ?, salida = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?, imagen3 = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");
+                $sql = "UPDATE espec_combustiblelinea SET codigo = ?, codigo_buscar = ?, tipo = ?, diametroext = ?, altura = ?,entrada = ?, salida = ?, id_rosca_entrada = ?, id_pulgada_entrada = ?, id_rosca_salida = ?, id_pulgada_salida = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?,imagen3 = ?,  updated_at = ? WHERE id = ?";
+
+                $actualizando = $base_de_datos->prepare($sql);
                 $actualizando->execute($argumentos);
+               
 
                 $actualizando = $base_de_datos->prepare("UPDATE filtro_codificacion SET codigo = ?, codigo_buscar = ?, codigo_barra = ?, id_tipo = ?, filtracion = ?, und_empaque = ?, fecha_actualiza = ?, sincronizado = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");
                 $actualizando->execute($argumentos_filtro_codificacion);

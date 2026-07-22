@@ -104,7 +104,19 @@ width: 90%;
 .a_calidad{
     text-decoration: none !important;
     color: #000 !important;
-    cursor: pointer;  
+    color: inherit;       /* Mantiene tu color original */
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sub_titulo_cali:hover .a_calidad {
+    color: #dc3545; /* O el color rojo de tu marca */
+    transform: translateX(5px); /* Pequeño movimiento a la derecha */
+}
+
+.sub_titulo_cali:hover .img_cal {
+    filter: brightness(1.2); /* Brillo al icono al pasar el mouse */
 }
 .sub_titulo_cali {
 

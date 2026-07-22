@@ -1,7 +1,7 @@
 </main>
 <footer>
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center mb-3">
            
             <a href="<?php echo $loc; ?>distribuidores/" class="btn-icon">DONDE COMPRAR</a>
 
@@ -10,6 +10,12 @@
 
           
             <a href="<?php echo $loc; ?>contacto/" class="btn-icon">CONTÁCTANOS</a>
+        </div>
+
+        <div class="text-center pt-3 pb-2 border-top border-secondary-subtle my-2">
+            <p class="text-white small mb-0">
+                © <?php echo date('Y'); ?> <strong>Jet-Filter, C.A.</strong> Todos los derechos reservados. | RIF: J-00059322-1
+            </p>
         </div>
     </div>
 </footer>

@@ -59,6 +59,7 @@
                         <th>Código</th>
                         <th>Código Buscar</th>
                         <th>Tipo</th>
+                        <th>Etilenglicol %</th>
                         <th>Und Empaque</th>
                         <th>Codigo de Barra</th>
                         <th>Detalle 1</th>

@@ -5,7 +5,7 @@
             <img src="<?php echo $loc?>img/heder/relojarena.png?t=<?php echo $rann?>" class="img-icon-jf me-3" alt="Misión" />
             <div>
                 <h2 class="titulo_bold">RESEÑA HISTÓRICA</h2>
-                <hp class="titulo-ms mt-3">Fundada en Caracas el 08 de octubre de 1965</hp>
+                <hp class="subtito_md mt-3">Fundada en Caracas el 08 de octubre de 1965</hp>
                 
                 <p class="parrafo mt-5">Tres jóvenes empresarios venezolanos, teniendo como ubicación “La Pastora” Caracas Venezuela con un espacio físico de 100 m2 . Luego de dos años y debido a su notable crecimiento, pasó a radicarse en el edificio “Lemar” en la Yaguara - Caracas con un espacio físico de 400 m. Pasado cinco años de importante labor y crecimiento presentado, se trasladan al Conjunto Industrial “Bernardino Mosquera” - Caracas, con un espacio físico de 1.200 m2.</p>
 

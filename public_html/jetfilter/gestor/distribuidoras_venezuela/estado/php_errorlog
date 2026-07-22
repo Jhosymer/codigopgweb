@@ -1,0 +1,10 @@
+[05-Nov-2025 19:45:11 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php:76
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php(76): array_unique(NULL)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php on line 76
+[05-Nov-2025 19:46:00 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php:76
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php(76): array_unique(NULL)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/distribuidoras_venezuela/estado/update_estados.php on line 76

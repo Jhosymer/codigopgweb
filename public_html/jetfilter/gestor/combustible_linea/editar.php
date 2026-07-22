@@ -26,7 +26,7 @@
     alerta_codigo_existe();
 
     //Guarda los datos del filtro
-    $seleccionado = $base_de_datos->prepare("SELECT e_c.id_codigo, e_c.codigo, e_c.tipo, f_c.id_tipo, f_c.filtracion, e_c.diametroext, e_c.altura, e_c.entrada, e_c.salida, f_c.und_empaque, e_c.detalle1, e_c.detalle2
+    $seleccionado = $base_de_datos->prepare("SELECT e_c.id_codigo, e_c.codigo, e_c.tipo, f_c.id_tipo, f_c.filtracion, e_c.diametroext, e_c.altura, e_c.entrada, e_c.salida, f_c.und_empaque, e_c.detalle1, e_c.detalle2, e_c.id_rosca_entrada, e_c.id_rosca_salida, e_c.id_pulgada_entrada, e_c.id_pulgada_salida
                                                 FROM espec_combustiblelinea as e_c
                                                 JOIN filtro_codificacion as f_c ON f_c.id = e_c.id_codigo
                                                 WHERE e_c.id = :id");
@@ -58,7 +58,14 @@
         $und_empaque = $combustible['und_empaque'];
         $detalle1 = ( $combustible['detalle1'] == '' ) ? 'N/D' : $combustible['detalle1'];
         $detalle2 = ( $combustible['detalle2'] == '' ) ? 'N/D' : $combustible['detalle2'];
+        $id_rosca_entrada_actual = $combustible['id_rosca_entrada'];
+        $id_rosca_salida_actual = $combustible['id_rosca_salida'];
+        $id_pulgada_entrada_actual = $combustible['id_pulgada_entrada'];
+        $id_pulgada_salida_actual = $combustible['id_pulgada_salida'];
     }
+
+    $sw_entrada_init = ($id_rosca_entrada_actual > 0) ? 'si' : 'no';
+    $sw_salida_init = ($id_rosca_salida_actual > 0) ? 'si' : 'no';
 
     $codigoActual = htmlspecialchars($codigo);
 
@@ -87,6 +94,16 @@
 
     //Todos los tipos de filtraciones
     $filtraciones = ['Ultrafino', 'Fino', 'Estándar', 'Grueso'];
+
+
+    $query_roscas = $base_de_datos->prepare("SELECT id, codigo FROM roscas WHERE deleted_at IS NULL ORDER BY codigo ASC");
+$query_roscas->execute();
+$lista_roscas = $query_roscas->fetchAll(PDO::FETCH_ASSOC);
+
+$query_pulgadas = $base_de_datos->prepare("SELECT id, codigo FROM pulgadas WHERE deleted_at IS NULL ORDER BY codigo ASC");
+$query_pulgadas->execute();
+$lista_pulgadas = $query_pulgadas->fetchAll(PDO::FETCH_ASSOC); // Corregido
+    
 ?>
 
 
@@ -190,27 +207,108 @@
                     <tr>
                         <th>Diámetro Exterior:</th>
                         <td> 
-                            <input class="form-control" type="number" value="<?php echo $diametro_exterior ?>" name="diametro_ext" id="diametro_ext" min="0" step=".01" required />
+                            <input class="form-control" type="number" value="<?php echo $diametro_exterior ?>" name="diametro_ext" id="diametro_ext" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required />
                         </td>  
                     </tr>
                     <tr>
                         <th>Altura:</th>
                         <td> 
-                            <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" required />
+                            <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required />
                         </td>  
                     </tr>
-                    <tr>
-                        <th>Entrada:</th>
-                        <td> 
-                            <input class="form-control" type="number" value="<?php echo $entrada ?>" name="entrada" id="entrada" min="0" step=".01" required />
-                        </td>  
-                    </tr>
-                    <tr>
-                        <th>Salida:</th>
-                        <td> 
-                            <input class="form-control" type="number" value="<?php echo $salida ?>" name="salida" id="salida" min="0" step=".01" required />
-                        </td>  
-                    </tr>
+                    <?php
+                    $tipo_entrada_init = ($id_rosca_entrada_actual > 0) ? 'rosca' : (($id_pulgada_entrada_actual > 0) ? 'pulgada' : 'mm');
+                    $tipo_salida_init = ($id_rosca_salida_actual > 0) ? 'rosca' : (($id_pulgada_salida_actual > 0) ? 'pulgada' : 'mm');
+                    ?>
+<tr>
+    <th>Tipo de Entrada</th>
+    <td>
+        <select id="sw_entrada" name="sw_entrada" class="form-select" onchange="toggleEntrada()">
+            <option value="rosca" <?php echo ($tipo_entrada_init == 'rosca') ? 'selected' : ''; ?>>Rosca</option>
+            <option value="mm" <?php echo ($tipo_entrada_init == 'mm') ? 'selected' : ''; ?>>Diámetro (MM)</option>
+            <option value="pulgada" <?php echo ($tipo_entrada_init == 'pulgada') ? 'selected' : ''; ?>>Pulgada</option>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_entrada_rosca" style="<?php echo ($tipo_entrada_init == 'rosca') ? '' : 'display:none;'; ?>">
+    <th>Rosca Entrada:</th>
+    <td>
+        <select name="id_rosca_entrada" class="form-select">
+            <option value="0">Seleccione una rosca</option>
+            <?php foreach($lista_roscas as $rosca): ?>
+                <option value="<?php echo $rosca['id']; ?>" <?php echo ($rosca['id'] == $id_rosca_entrada_actual) ? 'selected' : ''; ?>>
+                    <?php echo $rosca['codigo']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_entrada_mm" style="<?php echo ($tipo_entrada_init == 'mm') ? '' : 'display:none;'; ?>">
+    <th>Entrada (MM):</th>
+    <td><input type="number" name="entrada" value="<?php echo $entrada; ?>" step=".01" class="form-control"></td>
+</tr>
+
+<tr id="fila_entrada_pulgada" style="<?php echo ($tipo_entrada_init == 'pulgada') ? '' : 'display:none;'; ?>">
+    <th>Entrada (Pulgada):</th>
+    <td>
+        <select name="id_pulgada_entrada" class="form-select">
+            <option value="0">Seleccione una medida</option>
+            <?php foreach($lista_pulgadas as $p): ?>
+                <option value="<?php echo $p['id']; ?>" <?php echo ($p['id'] == $id_pulgada_entrada_actual) ? 'selected' : ''; ?>>
+                    <?php echo $p['codigo']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <th>Tipo Salida</th>
+    <td>
+        <select id="sw_salida" name="sw_salida" class="form-select" onchange="toggleSalida()">
+            <option value="rosca" <?php echo ($tipo_salida_init == 'rosca') ? 'selected' : ''; ?>>Rosca</option>
+            <option value="mm" <?php echo ($tipo_salida_init == 'mm') ? 'selected' : ''; ?>>Diámetro (MM)</option>
+            <option value="pulgada" <?php echo ($tipo_salida_init == 'pulgada') ? 'selected' : ''; ?>>Pulgada</option>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_salida_rosca" style="<?php echo ($tipo_salida_init == 'rosca') ? '' : 'display:none;'; ?>">
+    <th>Rosca Salida:</th>
+    <td>
+        <select name="id_rosca_salida" class="form-select">
+            <option value="0">Seleccione una rosca</option>
+            <?php foreach($lista_roscas as $rosca): ?>
+                <option value="<?php echo $rosca['id']; ?>" <?php echo ($rosca['id'] == $id_rosca_salida_actual) ? 'selected' : ''; ?>>
+                    <?php echo $rosca['codigo']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_salida_mm" style="<?php echo ($tipo_salida_init == 'mm') ? '' : 'display:none;'; ?>">
+    <th>Salida (MM):</th>
+    <td>
+        <input type="number" name="salida" value="<?php echo $salida; ?>" step=".01" class="form-control" onblur="this.value = parseFloat(this.value).toFixed(2)">
+    </td>
+</tr>
+
+<tr id="fila_salida_pulgada" style="<?php echo ($tipo_salida_init == 'pulgada') ? '' : 'display:none;'; ?>">
+    <th>Salida (Pulgada):</th>
+    <td>
+        <select name="id_pulgada_salida" class="form-select">
+            <option value="0">Seleccione una medida</option>
+            <?php foreach($lista_pulgadas as $p): ?>
+                <option value="<?php echo $p['id']; ?>" <?php echo ($p['id'] == $id_pulgada_salida_actual) ? 'selected' : ''; ?>>
+                    <?php echo $p['codigo']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
                     <tr>
                         <th>Unidades de Empaque: (Opcional)</th>
                         <td>
@@ -263,3 +361,63 @@
     <script src="./../js/funciones/evento_tecla_empaque.js" ></script> <!-- Detecta que se pulso una tecla en unidades de empaque -->
     <script src="./../js/funciones/filterInteger.js"></script> <!-- Funcion para verificar que el valor ingresado es entero -->
     <script src="./../js/funciones/filter.js"></script> <!-- Funcion para verificar que el valor ingresado es entero positivo -->
+
+   <script>
+function toggleEntrada() {
+    let tipo = document.getElementById('sw_entrada').value;
+    
+    // Ocultar todas las filas
+    let filas = ['fila_entrada_rosca', 'fila_entrada_mm', 'fila_entrada_pulgada'];
+    filas.forEach(id => {
+        let el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+
+    // LIMPIEZA SEGURA: Solo limpiar si el elemento existe en el DOM
+    if (tipo !== 'rosca') {
+        let el = document.querySelector('select[name="id_rosca_entrada"]');
+        if (el) el.value = "0";
+    }
+    if (tipo !== 'mm') {
+        let el = document.querySelector('input[name="entrada"]');
+        if (el) el.value = "0.00";
+    }
+    if (tipo !== 'pulgada') {
+        let el = document.querySelector('select[name="id_pulgada_entrada"]');
+        if (el) el.value = "0";
+    }
+
+    // Mostrar solo la seleccionada
+    let mostrar = document.getElementById('fila_entrada_' + tipo);
+    if (mostrar) mostrar.style.display = 'table-row';
+}
+
+function toggleSalida() {
+    let tipo = document.getElementById('sw_salida').value;
+    
+    // Ocultar todas
+    let filas = ['fila_salida_rosca', 'fila_salida_mm', 'fila_salida_pulgada'];
+    filas.forEach(id => {
+        let el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+
+    // LIMPIEZA SEGURA
+    if (tipo !== 'rosca') {
+        let el = document.querySelector('select[name="id_rosca_salida"]');
+        if (el) el.value = "0";
+    }
+    if (tipo !== 'mm') {
+        let el = document.querySelector('input[name="salida"]');
+        if (el) el.value = "0.00";
+    }
+    if (tipo !== 'pulgada') {
+        let el = document.querySelector('select[name="id_pulgada_salida"]');
+        if (el) el.value = "0";
+    }
+
+    // Mostrar solo la seleccionada
+    let mostrar = document.getElementById('fila_salida_' + tipo);
+    if (mostrar) mostrar.style.display = 'table-row';
+}
+</script>

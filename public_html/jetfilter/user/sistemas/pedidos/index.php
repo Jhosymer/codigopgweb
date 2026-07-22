@@ -21,6 +21,7 @@ $id_users = $_SESSION['id'];
 $nbcerrar = "Guardar";
 $colorbtvolvecerre = "btn btn-primary";
 
+
 if (isset($_GET['id_lista_pedido'])) {
     $id = $_GET['id_lista_pedido'];
     $nb = "Actualizar Linea.";

@@ -94,19 +94,19 @@
                   <tr>
                      <th>Largo:</th>
                      <td>
-                        <input type="number"  class="form-control" id="largo" name="largo" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="largo" name="largo" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Ancho:</th>
                      <td>
-                        <input type="number"   class="form-control" id="ancho" name="ancho" min="0" step=".01" required>
+                        <input type="number"   class="form-control" id="ancho" name="ancho" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Altura:</th>
                      <td>
-                        <input type="number" class="form-control"  id="altura" name="altura" min="0" step=".01" required>
+                        <input type="number" class="form-control"  id="altura" name="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>

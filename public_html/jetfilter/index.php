@@ -46,8 +46,9 @@ include("./index/rese_histotorica.php");
     include("./index/Morfologia.php");
 
       include("./index/linea_tiempo.php");
+      
 
-      include("./index/calidad.html");
+
 
       
 

@@ -1,0 +1,38 @@
+[
+    {
+        "id_pago": "11384",
+        "num_pago": "11360",
+        "rif": "C-J295561245",
+        "nombre_cliente": "FILTROS Y REPUESTOS L.C.  C.A",
+        "fecha_pago": "2026-07-21",
+        "moneda": "USD",
+        "tasa_cambio": "737.23000000",
+        "comentarios": "ABONO TOTAL FT 18507 PROVINCIAL BS FILTROS LC",
+        "total_usd": 2000.005968,
+        "total_bs": 1474464.4,
+        "DocumentosPagados": [
+            {
+                "num_documento": "18507",
+                "num_control": "33782",
+                "fecha_factura": "2026-05-25",
+                "comprobante_retencion": null,
+                "tipo": "Factura",
+                "plazo": "1",
+                "monto_retencion": 0,
+                "monto_usd": 1876.962757,
+                "monto_bs": 995737.58
+            },
+            {
+                "num_documento": "18535",
+                "num_control": "33819",
+                "fecha_factura": "2026-05-27",
+                "comprobante_retencion": null,
+                "tipo": "Factura",
+                "plazo": "1",
+                "monto_retencion": 0,
+                "monto_usd": 123.043211,
+                "monto_bs": 66448.64
+            }
+        ]
+    }
+]

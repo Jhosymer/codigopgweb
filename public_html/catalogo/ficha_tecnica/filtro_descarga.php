@@ -28,14 +28,35 @@ if( !isset($_GET['codigo']) ){
     require_once('./../../vendor/autoload.php'); 
      use Picqer\Barcode\BarcodeGeneratorPNG; 
 
-    function generate_barcode_base64($data) {
-    // Usamos el generador para el formato PNG, que es compatible con Dompdf.
+    function calcular_checksum_ean13($codigo) {
+    $codigo = preg_replace('/\D/', '', $codigo);
+    $codigo = str_pad(substr($codigo, 0, 12), 12, '0', STR_PAD_LEFT);
+    $suma_impar = 0;
+    $suma_par = 0;
+    for ($i = 0; $i < 12; $i++) {
+        $digito = intval($codigo[$i]);
+        if ($i % 2 == 0) {
+            $suma_impar += $digito;
+        } else {
+            $suma_par += $digito * 3;
+        }
+    }
+    $total = $suma_impar + $suma_par;
+    $checksum = ($total % 10 == 0) ? 0 : (10 - $total % 10);
+    return $codigo . $checksum;
+}
+function generate_barcode_base64($data) {
     $generator = new BarcodeGeneratorPNG();
-    // Generamos el código 39 (Code39)
-    $barcode_image = $generator->getBarcode($data, $generator::TYPE_CODE_39); 
-    // Codificamos la imagen binaria a Base64 para insertar directamente en el HTML
+    
+    $barWidth = 1; 
+    
+    // Usaremos una altura de 80px. El texto numérico se ubicará en la parte inferior de estos 80px.
+    $height = 80; 
+    
+    // **Corregido:** Revertimos a TYPE_EAN_13 que es la constante correcta.
+    $barcode_image = $generator->getBarcode($data, $generator::TYPE_EAN_13, $barWidth, $height); 
+    
     $base64 = base64_encode($barcode_image);
-
     return 'data:image/png;base64,' . $base64;
 }
     try {
@@ -54,7 +75,18 @@ if( !isset($_GET['codigo']) ){
     $barra= $filtro['codigo_barra'];
     $idtipo= $filtro['id_tipo'];
 
-     $barra_base64 = ($barra != null && $barra != "") ? generate_barcode_base64(strtoupper($barra)) : null;
+     $barra_ean13 = ($barra != null && $barra != "") ? calcular_checksum_ean13($barra) : null;
+$barra_base64 = ($barra_ean13 != null) ? generate_barcode_base64($barra_ean13) : null;
+
+$barra_formateada = null;
+if ($barra_ean13 !== null && strlen($barra_ean13) == 13) {
+    // Formato: [0] [706384] [21380] [6]
+    $barra_formateada = 
+        substr($barra_ean13, 0, 1) . ' ' . // Primer dígito
+        substr($barra_ean13, 1, 6) . ' ' . // Dígitos del 2 al 7 (izquierda)
+        substr($barra_ean13, 7, 5) . ' ' . // Dígitos del 8 al 12 (derecha)
+        substr($barra_ean13, 12, 1);     // Último dígito (checksum)
+}
 
 
       switch($clase){
@@ -65,7 +97,11 @@ if( !isset($_GET['codigo']) ){
             $sql = 'SELECT * FROM espec_aireindustrial WHERE ( codigo = :codigo ) and ( deleted_at is null )';
             break;
         case 'combustiblelinea':
-            $sql = 'SELECT * FROM espec_combustiblelinea WHERE ( codigo = :codigo ) and ( deleted_at is null )';
+            $sql = 'SELECT e.*, r_e.codigo as nombre_rosca_entrada, r_s.codigo as nombre_rosca_salida 
+            FROM espec_combustiblelinea as e
+            LEFT JOIN roscas as r_e ON e.id_rosca_entrada = r_e.id
+            LEFT JOIN roscas as r_s ON e.id_rosca_salida = r_s.id
+            WHERE ( e.codigo = :codigo ) and ( e.deleted_at is null )';
             break;
         case 'elemento':
             $sql = 'SELECT * FROM espec_elemento WHERE ( codigo = :codigo ) and ( deleted_at is null )';
@@ -80,7 +116,10 @@ if( !isset($_GET['codigo']) ){
             $sql = 'SELECT * FROM espec_cabina WHERE ( codigo = :codigo ) and ( deleted_at is null )';
             break;
         case 'sellado':
-            $sql = 'SELECT * FROM espec_sellado WHERE ( codigo = :codigo ) and ( deleted_at is null )';
+            $sql = 'SELECT e_s.*, r.codigo as nombre_rosca 
+            FROM espec_sellado as e_s
+            LEFT JOIN roscas as r ON e_s.id_rosca = r.id
+            WHERE ( e_s.codigo = :codigo ) and ( e_s.deleted_at is null )';
             break;
     }
     $seleccionado = $base_de_datos->prepare($sql);
@@ -118,7 +157,17 @@ if( !isset($_GET['codigo']) ){
 
     $imagen = $especificaciones['imagen'];
 
-    $path = "./../../images/fichas-filtros/web/$imagen.jpg";
+
+   $path_producto = "./../../images/fichas-filtros/web/$imagen.jpg";
+   $path_no_imagen = "./../../images/fichas-filtros/web/noimagen.jpg";
+
+    if (file_exists($path_producto)) {
+        $path_final = $path_producto;
+    } else {
+        $path_final = $path_no_imagen;
+    }
+
+    $path = $path_final; 
     $type = pathinfo($path, PATHINFO_EXTENSION);
     $data = file_get_contents($path);
     $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
@@ -150,7 +199,7 @@ if( !isset($_GET['codigo']) ){
     $seleccionado->setFetchMode(PDO::FETCH_ASSOC);
     $seleccionado->execute();
     $tipo = $seleccionado->fetch();
-    $categoria_id = $tipo['categoria_id'];
+    $categoria_id = $tipo['categoria_id'] ?? 'NULL';
 
     $sql = "SELECT * FROM categorias WHERE id = :categoria_id";
     $seleccionado = $base_de_datos->prepare($sql);
@@ -158,8 +207,8 @@ if( !isset($_GET['codigo']) ){
     $seleccionado->setFetchMode(PDO::FETCH_ASSOC);
     $seleccionado->execute();
     $categoria = $seleccionado->fetch();
-    $categoria_nom = $categoria['categoria'];
-    $producto_id =$categoria['producto_id'];
+    $categoria_nom = $categoria['categoria'] ?? 'N/D';
+    $producto_id =$categoria['producto_id'] ?? 'N/D';
 
 
     $sql = "SELECT * FROM productos WHERE id = :producto_id";
@@ -168,7 +217,7 @@ if( !isset($_GET['codigo']) ){
     $seleccionado->setFetchMode(PDO::FETCH_ASSOC);
     $seleccionado->execute();
     $producto = $seleccionado->fetch();
-    $filtrar = $producto['nombre'];
+    $filtrar = $producto['nombre'] ?? 'N/D';
 
 
    
@@ -878,14 +927,31 @@ $base64_qr_tc = $base64_qr_tc_final;
                                             <td>Altura:</td>
                                             <td><?php echo number_format( $especificaciones['altura'],2,",","."); ?> mm</td>
                                         </tr>
-                                        <tr>
-                                            <td>Entrada:</td>
-                                            <td><?php echo number_format( $especificaciones['entrada'],2,",","."); ?> mm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Salida:</td>
-                                            <td><?php echo number_format( $especificaciones['salida'],2,",","."); ?> mm</td>
-                                        </tr>
+                                          <tr>
+                                                <td>Entrada:</td>
+                                                <td>
+                                                    <?php 
+                                                    if (!empty($especificaciones['nombre_rosca_entrada'])) {
+                                                        echo $especificaciones['nombre_rosca_entrada'];
+                                                    } else {
+                                                        echo number_format($especificaciones['entrada'], 2, ",", ".") . " mm";
+                                                    }
+                                                    ?>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Salida:</td>
+                                                <td>
+                                                    <?php 
+                                                    if (!empty($especificaciones['nombre_rosca_salida'])) {
+                                                        echo $especificaciones['nombre_rosca_salida'];
+                                                    } else {
+                                                        echo number_format($especificaciones['salida'], 2, ",", ".") . " mm";
+                                                    }
+                                                    ?>
+                                                </td>
+                                            </tr>
                                         <?php
                                             if ( $especificaciones['detalle1'] != null && $especificaciones['detalle1']!= "N/D" ) {
                                         ?>
@@ -1536,8 +1602,19 @@ $base64_qr_tc = $base64_qr_tc_final;
                                             <td><?php echo number_format( $especificaciones['diametroext'],2,",","."); ?> mm</td>
                                         </tr>
                                         <tr>
-                                            <td>Rosca:</td>
-                                            <td><?php echo $especificaciones['diametroint']; ?></td>
+                                            <?php 
+                                            
+                                            if (!empty($especificaciones['nombre_rosca'])) {
+                                                $etiqueta = "Rosca:";
+                                                $valor_mostrar = $especificaciones['nombre_rosca'];
+                                            } else {
+                                                $etiqueta = "ø int1:";
+                                                $valor_mostrar = $especificaciones['diametroint'] . " mm";
+                                            }
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $etiqueta; ?></td>
+                                            <td><?php echo $valor_mostrar; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Altura:</td>
@@ -1626,18 +1703,18 @@ $base64_qr_tc = $base64_qr_tc_final;
                                                     </td>
                                                     
                                                     <td style="width: 60%; text-align: center; padding: 5px 5px 2px 5px; ">
-                                                        
-                                                        <img 
-                                                            src="<?php echo $barra_base64; ?>" 
-                                                            alt="Barcode" 
-                                                            
-                                                            style="width: 150px; height: 30px; display: block; margin: 0 auto 0 auto;"
-                                                        >
-                                                        
-                                                        <p style="font-size: 14px; margin-top: 0px; margin-bottom: 0px; text-align: center; line-height: 1.1em;">
-                                                            <?php echo $barra; ?>
-                                                        </p>
-                                                    </td>
+
+    <img
+        src="<?php echo $barra_base64; ?>"
+        alt="Barcode"
+        style="width: 200px; height: 50px; display: block; margin: 0 auto 0 auto;"
+    >
+                                         
+    <p style="font-size: 12px; margin-top: 0px; margin-bottom: 0px; text-align: center; line-height: 1.1em; letter-spacing: 0.5px;">
+        <?php echo $barra_formateada; ?>
+    </p>
+
+</td>
                                                 </tr>
                                             <?php
                                             }

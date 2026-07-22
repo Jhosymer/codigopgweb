@@ -1,4 +1,4 @@
-<option	value="">Seleccione una opcion</option>
+
 <?php
 
 $wsqli="select * from tipo_soporte";

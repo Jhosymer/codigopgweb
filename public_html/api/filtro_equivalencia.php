@@ -1,69 +1,58 @@
 <?php
 require_once 'clases/respuestas.class.php';
 require_once 'clases/filtro_equivalencia.class.php';
-header('Access-Control-Allow-Origin: *');
 
-// Desactivar la caché
-header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
-header("Pragma: no-cache"); // HTTP 1.0
-header("Expires: 0"); // Proxies
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json; charset=utf-8');
+
+// Configuración de caché (6 horas = 21600 segundos)
+$cacheFile = 'sync/cache_filtro_equivalencia.json';
+$cacheTime = 21600;
 
 $_respuestas = new respuestas;
 $_filtro_equivalencia = new filtro_equivalencia;
 
+// Obtener token flexible (token o Token)
+$token_recibido = $_GET['token'] ?? $_GET['Token'] ?? '';
+
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
-    // Validar token
-   /* if (!isset($_GET['token']) || $_GET['token'] !== 'Hlcbdep22') {
-        header('Content-Type: application/json');
-        http_response_code(401); // Unauthorized
+    // 1. Validar token
+    if ($token_recibido !== 'Hlcbdep22') {
+        http_response_code(401);
         echo json_encode(['error' => 'Token inválido o no proporcionado']);
-        exit; // Detener ejecución si no hay token válido
-    }*/
-
-    // Si el token es válido, continuar con la lógica existente
-    if ((count($_GET) == 1 && isset($_GET['token'])) || empty($_GET)) {
-        $listaDefiltro_equivalencia = $_filtro_equivalencia->listarfiltro_equivalencia();
-        header("Content-Type: application/json");
-        echo json_encode($listaDefiltro_equivalencia);
-        http_response_code(200);
-    }
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $listaDefiltro_equivalencia = $_filtro_equivalencia->listarfiltro_equivalenciaId($id);
-        header("Content-Type: application/json");
-        echo json_encode($listaDefiltro_equivalencia);
-        http_response_code(200);
-    }
-    if (isset($_GET['codigo'])) {
-        $codigo = $_GET['codigo'];
-        $listaDefiltro_equivalencia = $_filtro_equivalencia->listarfiltro_equivalenciaCodigo($codigo);
-        header("Content-Type: application/json");
-        echo json_encode($listaDefiltro_equivalencia);
-        http_response_code(200);
-    }
-    if (isset($_GET['total'])) {
-        $listaDefiltro_equivalencia = $_filtro_equivalencia->listarfiltro_equivalenciaTotal();
-        header("Content-Type: application/json");
-        echo json_encode($listaDefiltro_equivalencia);
-        http_response_code(200);
+        exit;
     }
 
-} else if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // 2. Verificar caché (Solo para la petición general de lista)
+    $esPeticionGeneral = (count($_GET) <= 2 && !isset($_GET['id']) && !isset($_GET['codigo']) && !isset($_GET['total']));
 
-    // Aquí puedes agregar lógica para POST si la necesitas
+    if ($esPeticionGeneral) {
+        if (file_exists($cacheFile) && (time() - filemtime($cacheFile) < $cacheTime)) {
+            echo file_get_contents($cacheFile);
+            exit;
+        }
+    }
 
-} else if ($_SERVER['REQUEST_METHOD'] == "PUT") {
-
-    // Aquí puedes agregar lógica para PUT si la necesitas
-
-} else if ($_SERVER['REQUEST_METHOD'] == "DELETE") {
-
-    // Aquí puedes agregar lógica para DELETE si la necesitas
+    // 3. Ejecutar lógica y guardar en caché si es petición general
+    if ($esPeticionGeneral) {
+        $lista = $_filtro_equivalencia->listarfiltro_equivalencia();
+        file_put_contents($cacheFile, json_encode($lista, JSON_UNESCAPED_UNICODE));
+        echo json_encode($lista, JSON_UNESCAPED_UNICODE);
+        http_response_code(200);
+    } 
+    elseif (isset($_GET['id'])) {
+        echo json_encode($_filtro_equivalencia->listarfiltro_equivalenciaId($_GET['id']), JSON_UNESCAPED_UNICODE);
+    } 
+    elseif (isset($_GET['codigo'])) {
+        echo json_encode($_filtro_equivalencia->listarfiltro_equivalenciaCodigo($_GET['codigo']), JSON_UNESCAPED_UNICODE);
+    } 
+    elseif (isset($_GET['total'])) {
+        echo json_encode($_filtro_equivalencia->listarfiltro_equivalenciaTotal(), JSON_UNESCAPED_UNICODE);
+    }
 
 } else {
     header('Content-Type: application/json');
-    $datosArray = $_respuestas->error_405();
-    echo json_encode($datosArray);
+    echo json_encode($_respuestas->error_405(), JSON_UNESCAPED_UNICODE);
 }
 ?>

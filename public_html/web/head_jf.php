@@ -48,6 +48,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         echo '<link rel="stylesheet" href="'.$loc.'css/estilosjetfilter_index.css?t='.$rann.'">';
          echo '<link rel="stylesheet" href="'.$loc.'css/estitos_ltiempo.css?t='.$rann.'">';
     }
+
+        $rutas_login = [
+    '/jetfilter/login/',
+    '/jetfilter/login/index.php',
+    '/jetfilter/login/?fallo=true',
+    '/jetfilter/login/?fallo=captcha' // Nueva condición agregada
+];
 ?>
     <link rel="stylesheet" href="<?php echo $loc; ?>vendor/bootstrap/css/bootstrap.min.css?t=<?php echo $rann?>">
     <link rel="stylesheet" href="<?php echo $loc; ?>vendor/boxicons/css/boxicons.min.css?t=<?php echo $rann?>">
@@ -59,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <header>
      <nav class="menu">
 
-        <?php if ($current_page === '/jetfilter/login/' || $current_page === '/jetfilter/login/index.php' ) { ?>
+        <?php if (in_array($current_page, $rutas_login)) { ?>
 
             <a href="./../"><img src="<?php echo $locj; ?>jetfilter/img/logojbn.png" class="logo" alt="logo"> </a>
 
@@ -76,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              <section class="menu__container">
            
 
-            <ul class="menu__links menu__links--show">
+            <ul class="menu__links">
             
                 <li class="menu__item ">
                         <a href="<?php echo $loc; ?>" class="menu__link">Inicio</a>
@@ -91,8 +98,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </li>
 
                     <li class="menu__item">
-                        <a href="#calidad" class="menu__link">Calidad</a>
+                        <a href="#calidad" class="menu__link">Políticas de Calidad</a>
                     </li>
+                    <li class="menu__item">
+                        <a href="#seguridad" class="menu__link">Política de Seguridad</a>
+                    </li>
+                    
 
                     <li class="menu__item">
                         <a href="./login/" class="menu__link">Gestión</a>

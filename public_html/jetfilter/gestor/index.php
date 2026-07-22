@@ -5,10 +5,10 @@
      require_once("./index/header.php");
      require_once("./../../config/conexion.php");
    
-    $wsqli_ticket = "SELECT COUNT(*) AS total FROM `ticket_soporte` WHERE stado = 'A'";
+    $wsqli_ticket = "SELECT COUNT(*) AS total FROM `ticket_soporte` WHERE visto_admin = 'N'";
     $stmt = $base_de_datos->query($wsqli_ticket);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $total_ticket = $row['total']; // Almacenar el total en una variable
+    $total_ticket = $row['total'];  // Almacenar el total en una variable
 
     $wsqli = "SELECT COUNT(*) AS total FROM `pedidos` WHERE (na_pedido = '' OR na_pedido IS NULL)";
     $stmt = $base_de_datos->query($wsqli);
@@ -137,7 +137,60 @@ if (in_array(7, $permisos_usuario)) { ?>
                 </div>
             </div>
 <?php
-} if (in_array(4, $permisos_usuario)) { ?>
+} if (in_array(10, $permisos_usuario)) { ?>
+            <div class="col-xl-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                       <h5 class="Roboto-Bold rojoweb">Facturas</h5>
+                        <div class="d-flex"> 
+                            <div class="mb-3">
+                              <p class="card-text"><span class="Roboto-Bold"></span> Facturas Sincronizadas</p>
+                            </div> 
+
+                            <div class="mb-3 ms-auto">
+                                <div class=" d-inline-block p-2 rounded" style="background-color: #E2001A; border-radius: 10px;">
+                                    <i class='bx bx-receipt  text-white' style="font-size:30px;"></i>
+                                </div>
+                            </div> 
+                        </div>
+                            
+                        <div class="stats-progress progress mb-2" style="height:3px"></div>
+                        
+                        <a href="./factura/" class="text-decoration-none text-black d-flex justify-content-end mt-2">
+                            <p class="Roboto-Bold">Ver Facturas</p>
+                            <i class='bx bx-right-arrow-alt' style="font-size:20px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<?php
+}  if (in_array(10, $permisos_usuario) || in_array(3, $permisos_usuario)) { ?>
+            <div class="col-xl-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                       <h5 class="Roboto-Bold rojoweb">Backorders</h5>
+                        <div class="d-flex"> 
+                            <div class="mb-3">
+                              <p class="card-text">Backorders de Venta </p>
+                            </div> 
+
+                            <div class="mb-3 ms-auto">
+                                <div class=" d-inline-block p-2 rounded" style="background-color: #E2001A; border-radius: 10px;">
+                                    <i class='bx bx-time-five fs-3 text-white' style="font-size:30px;"></i>
+                                </div>
+                            </div> 
+                        </div>
+                            
+                        <div class="stats-progress progress mb-2" style="height:3px"></div>
+                        
+                        <a href="./backorder/" class="text-decoration-none text-black d-flex justify-content-end mt-2">
+                            <p class="Roboto-Bold">Ver Backorders</p>
+                            <i class='bx bx-right-arrow-alt' style="font-size:20px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<?php } if (in_array(4, $permisos_usuario)) { ?>
 
             <div class="col-xl-3 col-md-6 mb-5">
                 <div class="card">
@@ -145,7 +198,7 @@ if (in_array(7, $permisos_usuario)) { ?>
                        <h5 class="Roboto-Bold rojoweb">Ticket Soporte</h5>
                         <div class="d-flex"> 
                             <div class="mb-3">
-                              <p class="card-text"><span class="Roboto-Bold"> <?php echo $total_ticket; ?></span> Ticket Abierto(s)</p>
+                              <p class="card-text"><span class="Roboto-Bold"> <?php echo $total_ticket; ?></span> Ticket Nuevos(s)</p>
                             </div> 
 
                             <div class="mb-3 ms-auto">

@@ -35,6 +35,8 @@
             $fecha_updated = date("Y-m-d H:i:s"); 
             $fecha_actualiza = date("d-m-y");
 
+            $id_rosca = (isset($_POST['id_rosca']) && $_POST['id_rosca'] != '') ? $_POST['id_rosca'] : null;
+
             $seleccionado = $base_de_datos->prepare("SELECT imagen, imagen1, imagen2, imagen3 
                                                     FROM espec_sellado 
                                                     WHERE id = :id"); 
@@ -73,7 +75,7 @@
             $filtracion = ( $_POST['filtracion'] == '' ) ? null : $_POST['filtracion'];
             $codigo = $_POST['codigo'];
             $diametro_ext = $_POST['diametro_ext'];
-            $diametro_int = $_POST['diametro_int'];
+            $diametro_int = (isset($_POST['diametro_int']) && $_POST['diametro_int'] != '') ? $_POST['diametro_int'] : null;
             $altura = $_POST['altura'];
             $diametro_emp_ext = $_POST['diametroempext'];
             $diametro_emp_int = $_POST['diametroempint'];
@@ -95,7 +97,7 @@
             include_once('./../componentes/galeria_update.php');
             
             //Datos a guardar en la tabla de aire automotriz
-            $argumentos = [$codigo, $codigo_buscar, $tipo, $diametro_ext, $diametro_int, $altura, $diametro_emp_ext, $diametro_emp_int, $espesor_emp, $valvula_al, $apertura, $valvula_ad, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $fecha_updated, $id];
+            $argumentos = [$codigo, $codigo_buscar, $tipo, $diametro_ext, $diametro_int, $altura, $id_rosca, $diametro_emp_ext, $diametro_emp_int,  $espesor_emp, $valvula_al, $apertura, $valvula_ad, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $fecha_updated, $id];
             //Datos a guardar en la tabla de filtro codificación
             $argumentos_filtro_codificacion = [$codigo, $codigo_buscar, $codigo_barra, $id_tipo, $filtracion, $und_empaque, $fecha_actualiza, $sincronizado, $fecha_updated, $id_codigo];
 
@@ -118,7 +120,7 @@
                     $equivalencia_update->execute();
                 }
 
-                $actualizando = $base_de_datos->prepare("UPDATE espec_sellado SET codigo = ?, codigo_buscar = ?, tipo = ?, diametroext = ?, diametroint = ?, altura = ?, diametroempext = ?, diametroempint = ?, espesoremp = ?, valvulaal = ?, apertura = ?, valvulaad = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?, imagen3 = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");
+                $actualizando = $base_de_datos->prepare("UPDATE espec_sellado SET codigo = ?, codigo_buscar = ?, tipo = ?, diametroext = ?, diametroint = ?, altura = ?, id_rosca = ?, diametroempext = ?, diametroempint = ?, espesoremp = ?, valvulaal = ?, apertura = ?, valvulaad = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?, imagen3 = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");
                 $actualizando->execute($argumentos);
                 
                 $actualizando = $base_de_datos->prepare("UPDATE filtro_codificacion SET codigo = ?, codigo_buscar = ?,  codigo_barra = ?, id_tipo = ?, filtracion = ?, und_empaque = ?, fecha_actualiza = ?, sincronizado = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");

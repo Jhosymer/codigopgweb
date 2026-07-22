@@ -93,7 +93,18 @@ body {
    color: #E2001A;
 }
 
+ /* Estilos personalizados para el botón catcha */
+    .btn-secondary:hover {
+        background-color: #8c8c8c;
+        border-color: #8c8c8c;
+    }
+    /* Aseguramos que el badge de Google sea visible y no tape elementos críticos */
+    .grecaptcha-badge { 
+        bottom: 20px !important; 
+        right: 10px !important;
+    }
 
+    /* fin botón catcha*/
 
 .link-hover {
    transition:  0.3s; /* Añade una transición suave */

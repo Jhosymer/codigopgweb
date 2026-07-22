@@ -1,127 +1,136 @@
 <?php
-session_start(); // Iniciar la sesión
-include_once('../../../config/conexion.php'); // Incluir la conexión a la base de datos
-
-// Verificar si se ha enviado el formulario
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos del formulario
-    $ticket_id = $_POST['ticket_id'];
-    $nuevo_estado = $_POST['nuevo_estado'];
-    $detalle_revision = isset($_POST['detalle_revision']) ? $_POST['detalle_revision'] : '';
+session_start();
+include_once('../../../config/conexion.php');
+if (!$base_de_datos) {
+    die("Error: No hay conexión a la base de datos");
+}
+if (isset($_POST['id_visto'])) {
+    $id = $_POST['id_visto'];
     
-    // Manejar la subida del archivo
-    $anexo_r = null;
-    $archivo_subido = false; // Variable para verificar si se subió un archivo
-    if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] === UPLOAD_ERR_OK) {
-        $fileTmpPath = $_FILES['archivo']['tmp_name'];
-        $fileExtension = strtolower(pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION)); // Obtener la extensión del archivo
-
-        // Definir las extensiones permitidas
-        $allowedfileExtensions = array('pdf', 'jpg', 'jpeg', 'png');
-
-        // Verificar la extensión del archivo
-        if (in_array($fileExtension, $allowedfileExtensions)) {
-            // Ruta donde se guardará el archivo
-            $uploadFileDir = './../../img/soporte/revision/';
-            $fileName = $ticket_id . '.' . $fileExtension; // Renombrar el archivo solo con el ID del ticket y la extensión
-            $dest_path = $uploadFileDir . $fileName;
-
-            // Mover el archivo a la carpeta de destino
-            if(move_uploaded_file($fileTmpPath, $dest_path)) {
-                $anexo_r = $fileName; // Guardar el nombre del archivo para la base de datos
-                $archivo_subido = true; // Indicar que se subió un archivo
-            } else {
-                $_SESSION['error'] = true; // Error al mover el archivo
-                header("Location: index.php");
-                exit();
-            }
+    try {
+        // Asegúrate de que el nombre de la tabla y la columna existan EXACTAMENTE así
+        $stmt = $base_de_datos->prepare("UPDATE ticket_soporte SET visto_admin = 'S' WHERE id = :id");
+        $resultado = $stmt->execute([':id' => $id]);
+        
+        // Verifica cuántas filas fueron afectadas
+        if ($stmt->rowCount() > 0) {
+            echo "SUCCESS: Fila actualizada";
         } else {
-            $_SESSION['error'] = true; // Extensión de archivo no permitida
-            header("Location: index.php");
-            exit();
+            echo "AVISO: No se encontró el ID " . $id . " o ya estaba marcado";
         }
+    } catch (PDOException $e) {
+        echo "ERROR SQL: " . $e->getMessage();
     }
-
-    // Obtener la fecha actual en el formato deseado
-    $fecha_actual = date('Y-m-d');
-
-    // Preparar la consulta para obtener el estado actual y las fechas
-    $sql_check = "SELECT stado, fecha_revision, fecha_cerrado, anexo_r FROM ticket_soporte WHERE id = :ticket_id";
-    $stmt_check = $base_de_datos->prepare($sql_check);
-    $stmt_check->bindParam(':ticket_id', $ticket_id);
-    $stmt_check->execute();
-    $current_data = $stmt_check->fetch(PDO::FETCH_ASSOC);
-    $current_state = $current_data['stado'];
-    $current_fecha_revision = $current_data['fecha_revision'];
-    $current_fecha_cerrado = $current_data['fecha_cerrado'];
-    $current_anexo_r = $current_data['anexo_r'];
-
-    // Preparar la consulta para actualizar el estado y el detalle de revisión
-    $sql = "UPDATE ticket_soporte SET stado = :nuevo_estado, detalle_revision = :detalle_revision";
-
-    // Agregar condiciones para limpiar las fechas según el nuevo estado
-    if ($nuevo_estado == 'A') {
-        // Limpiar fecha_revision si estaba en R
-        if ($current_state == 'R') {
-            $sql .= ", fecha_revision = NULL";
-        }
-        // Limpiar fecha_cerrado si estaba en C
-        if ($current_state == 'C') {
-            $sql .= ", fecha_cerrado = NULL, fecha_revision = NULL";
-        }
-    } elseif ($nuevo_estado == 'R') {
-        // Si el estado cambia de C a R, mantener fecha_cerrado
-        if ($current_state == 'C') {
-            $sql .= ", fecha_revision = :fecha_revision, fecha_cerrado = NULL"; // Actualizar fecha_revision
-        } else {
-            $sql .= ", fecha_revision = :fecha_revision"; // Actualizar fecha_revision si no estaba en R
-        }
-    } elseif ($nuevo_estado == 'C') {
-        // Si el estado cambia a C, actualizar ambas fechas
-        $sql .= ", fecha_cerrado = :fecha_cerrado, fecha_revision = :fecha_revision"; // Actualizar ambas fechas
-    }
-
-    // Solo actualizar anexo_r si se subió un nuevo archivo
-    if ($archivo_subido) {
-        $sql .= ", anexo_r = :anexo_r"; // Solo actualizar si hay un nuevo archivo
-    } else {
-        $anexo_r = $current_anexo_r; // Mantener el valor actual de anexo_r
-    }
-
-    $sql .= " WHERE id = :ticket_id";
-    
-    $stmt = $base_de_datos->prepare($sql);
-    
-    // Vincular los parámetros
-    $stmt->bindParam(':nuevo_estado', $nuevo_estado);
-    $stmt->bindParam(':detalle_revision', $detalle_revision);
-    $stmt->bindParam(':ticket_id', $ticket_id);
-
-    // Vincular las fechas si es necesario
-    if ($nuevo_estado == 'R' && $current_state !== 'R') {
-        $stmt->bindParam(':fecha_revision', $fecha_actual);
-    } elseif ($nuevo_estado == 'C') {
-        $stmt->bindParam(':fecha_cerrado', $fecha_actual);
-        $stmt->bindParam(':fecha_revision', $fecha_actual); // También actualizar fecha_revision
-    }
-
-    // Vincular anexo_r si se subió un nuevo archivo
-    if ($archivo_subido) {
-        $stmt->bindParam(':anexo_r', $anexo_r);
-    }
-
-    // Ejecutar la consulta
-    if ($stmt->execute()) {
-        $_SESSION['actualizado'] = true; // Actualización exitosa
-    } else {
-        $_SESSION['error'] = true; // Error al actualizar el ticket
-        error_log(print_r($stmt->errorInfo(), true)); // Registrar el error
-    }
-} else {
-    $_SESSION['error'] = true; // Método de solicitud no permitido
+    exit;
 }
 
-// Redirigir a la página index.php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $ticket_id = $_POST['ticket_id'];
+    $nuevo_estado = $_POST['nuevo_estado'];
+    $detalle_revision = $_POST['detalle_revision'] ?: "Sin Detalle";
+    $fecha_actual = date('Y-m-d H:i:s');
+
+    // Datos SAP desde el formulario
+    $usar_sap = $_POST['usar_sap'] ?? 'no';
+    $asunto_sap = $_POST['asunto_sap'] ?? null;
+    $prioridad_sap = $_POST['prioridad_sap'] ?? 'Medio';
+    $tipo_sap = $_POST['tipo_problema_sap'] ?? 'Reclamos de Filtros';
+    $comentario_sap = $_POST['comentario_sap'] ?? null;
+
+    // 1. Manejar Archivo de Evidencia
+    $anexo_r = null;
+
+    if (isset($_POST['id_visto'])) {
+    $id = $_POST['id_visto'];
+    $stmt = $base_de_datos->prepare("UPDATE ticket_soporte SET visto_admin = 'S' WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    
+    // Solo enviamos una respuesta limpia
+    echo "SUCCESS";
+    exit; 
+}
+    if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] === UPLOAD_ERR_OK) {
+        $fileExtension = strtolower(pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION));
+        $allowed = array('pdf', 'jpg', 'jpeg', 'png');
+
+        if (in_array($fileExtension, $allowed)) {
+            $uploadDir = './../../img/soporte/revision/';
+            $fileName = $ticket_id . '_' . time() . '.' . $fileExtension; 
+            if(move_uploaded_file($_FILES['archivo']['tmp_name'], $uploadDir . $fileName)) {
+                $anexo_r = $fileName;
+            }
+        }
+    }
+
+    // 2. Transacción para asegurar integridad de ambas tablas
+    try {
+        $base_de_datos->beginTransaction();
+
+        // --- PARTE A: Actualizar Tabla ticket_soporte ---
+        $sql = "UPDATE ticket_soporte SET stado = :st, detalle_revision = :dt, visto_cliente = 'N'";
+        $params = [':st' => $nuevo_estado, ':dt' => $detalle_revision, ':tid' => $ticket_id];
+
+        if ($nuevo_estado == 'A') {
+            $sql .= ", fecha_revision = NULL, fecha_cerrado = NULL";
+        } elseif ($nuevo_estado == 'R') {
+            $sql .= ", fecha_revision = :f, fecha_cerrado = NULL";
+            $params[':f'] = $fecha_actual;
+        } elseif ($nuevo_estado == 'C') {
+            // Nota: Aquí validamos si ya tiene fecha de revisión previa
+            $sql .= ", fecha_revision = IFNULL(fecha_revision, :f), fecha_cerrado = :f";
+            $params[':f'] = $fecha_actual;
+        }
+
+        if ($anexo_r) {
+            $sql .= ", anexo_r = :img";
+            $params[':img'] = $anexo_r;
+        }
+
+        $sql .= " WHERE id = :tid";
+        $stmt = $base_de_datos->prepare($sql);
+        $stmt->execute($params);
+
+        // --- PARTE B: Manejar Tabla tickt_soporte_sap ---
+        if ($usar_sap === 'si') {
+            // Verificar si ya existe en la tabla SAP
+            $checkSap = $base_de_datos->prepare("SELECT id FROM tickt_soporte_sap WHERE id_soporte = ?");
+            $checkSap->execute([$ticket_id]);
+            
+            if ($checkSap->rowCount() > 0) {
+                // Actualizar Registro SAP existente
+                $sqlSap = "UPDATE tickt_soporte_sap SET 
+                            asunto = :asu, 
+                            prioridad = :pri, 
+                            tipo = :tip, 
+                            comentario_interno = :com 
+                           WHERE id_soporte = :tid";
+            } else {
+                // Insertar Nuevo Registro SAP (num_tick_sap nace vacío por defecto en la DB)
+                $sqlSap = "INSERT INTO tickt_soporte_sap (id_soporte, asunto, prioridad, tipo, comentario_interno) 
+                           VALUES (:tid, :asu, :pri, :tip, :com)";
+            }
+            
+            $stmtSap = $base_de_datos->prepare($sqlSap);
+            $stmtSap->execute([
+                ':asu' => $asunto_sap,
+                ':pri' => $prioridad_sap,
+                ':tip' => $tipo_sap,
+                ':com' => $comentario_sap,
+                ':tid' => $ticket_id
+            ]);
+        }
+
+        $base_de_datos->commit();
+        $_SESSION['actualizado'] = true;
+
+    } catch (Exception $e) {
+        $base_de_datos->rollBack();
+        $_SESSION['error'] = true;
+        // Opcional: registrar el error para debugging
+        // error_log($e->getMessage());
+    }
+}
+
 header("Location: index.php");
 exit();
 ?>

@@ -190,7 +190,7 @@
                         <tr>
                             <th>Diámetro Exterior 1: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $diametro_exterior1 ?>" name="diametro_ext1" id="diametro_ext1" min="0" step=".01" required />
+                                <input class="form-control" type="number" value="<?php echo $diametro_exterior1 ?>" name="diametro_ext1" id="diametro_ext1" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required />
                             </td>  
                         </tr>
                         <tr>
@@ -202,13 +202,13 @@
                         <tr>
                             <th>Diámetro Interior 2: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $diametro_int2 ?>" name="diametro_int2" id="diametro_int2" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $diametro_int2 ?>" name="diametro_int2" id="diametro_int2" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
                             <th>Altura: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>

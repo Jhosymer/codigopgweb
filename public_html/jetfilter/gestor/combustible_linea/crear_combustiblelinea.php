@@ -39,14 +39,22 @@
                 $tipo = $seleccionado_tipo['tipo'];
                 $id_tipo = $seleccionado_tipo['id'];
             }
-
+            
             // Se guardan los elementos enviados por el formulario
+
+            $entrada = !empty($_POST['entrada']) ? $_POST['entrada'] : 0;
+            $id_rosca_entrada = !empty($_POST['id_rosca_entrada']) ? $_POST['id_rosca_entrada'] : null;
+            $id_pulgada_entrada = !empty($_POST['id_pulgada_entrada']) ? $_POST['id_pulgada_entrada'] : null;
+
+            // --- LÓGICA PARA SALIDA (Según tu tabla) ---
+            $salida = !empty($_POST['salida']) ? $_POST['salida'] : 0;
+            $id_rosca_salida = !empty($_POST['id_rosca_salida']) ? $_POST['id_rosca_salida'] : null;
+            $id_pulgada_salida = !empty($_POST['id_pulgada_salida']) ? $_POST['id_pulgada_salida'] : null;
             $filtracion = ( $_POST['filtracion'] == '' ) ? null : $_POST['filtracion'];
             $und_empaque = ( $_POST['und_empaque'] == '' ) ? 0 : $_POST['und_empaque'];
             $codigo = $_POST['codigo'];
             $diametro_ext = $_POST['diametro_ext'];
-            $entrada = $_POST['entrada'];
-            $salida = $_POST['salida'];
+          
             $altura = $_POST['altura'];
             $detalle1 = ( $_POST['detalle1'] == '' ) ? 'N/D' : $_POST['detalle1'];
             $detalle2 = ( $_POST['detalle2'] == '' ) ? 'N/D' : $_POST['detalle2'];
@@ -69,7 +77,7 @@
             $max_id_codigo = $id_codigo['MAX(id)'] + 1;
 
             //Datos a guardar en la tabla de combustible en linea
-            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $diametro_ext, $altura, $entrada, $salida, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3]];
+            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $diametro_ext, $altura, $entrada, $salida, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $id_rosca_entrada, $id_rosca_salida, $id_pulgada_entrada, $id_pulgada_salida ];
             //Datos a guardar en la tabla de filtro codificación
             $argumentos_filtro_codificacion = [$max_id_codigo, $codigo, $codigo_buscar, $id_tipo, $filtracion, $descripcion, $und_empaque, $fecha, $codigobarra, $sincronizado];
 
@@ -78,7 +86,7 @@
                 //En caso de que falle alguna subida, se cancelara todo
                 $base_de_datos->beginTransaction();
 
-                $sql = "INSERT INTO espec_combustiblelinea (id_codigo, codigo, codigo_buscar, tipo, diametroext, altura, entrada, salida, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO espec_combustiblelinea (id_codigo, codigo, codigo_buscar, tipo, diametroext, altura, entrada, salida, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3, id_rosca_entrada, id_rosca_salida, id_pulgada_entrada, id_pulgada_salida) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?, ?, ?, ?)";
                 $seleccionado = $base_de_datos->prepare($sql);
                 $seleccionado->execute($argumentos);
 

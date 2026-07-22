@@ -14,3 +14,46 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 34
+[02-Mar-2026 14:16:53 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:16:55 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:17:04 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:17:05 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:17:05 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:17:07 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:17:07 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "idPrincipal", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 173
+[02-Mar-2026 14:31:13 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 226
+[02-Mar-2026 14:32:05 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 226
+[02-Mar-2026 14:37:08 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 226
+[02-Mar-2026 14:38:09 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 226
+[09-Mar-2026 15:47:40 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable or "${" or "{$" in /home/customer/www/webfiltros.com/public_html/actualizarbd/facturassap.php on line 128
+[10-Mar-2026 05:22:17 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/customer/www/webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'webfiltr_admin', Object(SensitiveParameterValue))
+#1 /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php(12): include_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/config/conexion.php on line 7
+[10-Mar-2026 05:22:17 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/customer/www/webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'webfiltr_admin', Object(SensitiveParameterValue))
+#1 /home/customer/www/webfiltros.com/public_html/actualizarbd/facturassap.php(10): require_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/config/conexion.php on line 7
+[10-Mar-2026 09:22:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/customer/www/webfiltros.com/public_html/config/conexion.php:7
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/config/conexion.php(7): PDO->__construct('mysql:host=loca...', 'webfiltr_admin', Object(SensitiveParameterValue))
+#1 /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizar_cliente.php(11): require_once('/home/customer/...')
+#2 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/config/conexion.php on line 7
+[08-May-2026 17:39:30 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 61
+[08-May-2026 17:39:32 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 61
+[08-May-2026 17:40:04 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 65
+[08-May-2026 17:40:04 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 65
+[08-May-2026 17:40:10 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 65
+[08-May-2026 17:41:07 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting ")" in /home/customer/www/webfiltros.com/public_html/actualizarbd/procesar_pagos.php on line 58
+[21-May-2026 13:47:50 UTC] PHP Parse error:  syntax error, unexpected token "}" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 123
+[21-May-2026 13:48:49 UTC] PHP Parse error:  syntax error, unexpected token "}" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 123
+[21-May-2026 13:48:56 UTC] PHP Parse error:  syntax error, unexpected token "}" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 123
+[21-May-2026 13:49:49 UTC] PHP Parse error:  syntax error, unexpected token "else" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 121
+[21-May-2026 13:50:39 UTC] PHP Parse error:  syntax error, unexpected token "else" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 121
+[21-May-2026 13:52:30 UTC] PHP Parse error:  syntax error, unexpected token "else" in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 121
+[29-May-2026 13:12:45 America/Caracas] PHP Deprecated:  unlink(): Passing null to parameter #1 ($filename) of type string is deprecated in /home/customer/www/webfiltros.com/public_html/actualizarbd/actualizarbdweb.php on line 117

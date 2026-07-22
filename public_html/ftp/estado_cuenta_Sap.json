@@ -1,0 +1,3170 @@
+[
+    {
+        "cliente": "FELIX JOSE MARTIN BONILLA",
+        "rif": "C-V198274140",
+        "movimientos": [
+            {
+                "fecha": "04\/02\/2026",
+                "documento": "17494",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V198274140",
+                "moneda": "USD",
+                "monto": 2132.4628,
+                "saldo": 1199.9731
+            }
+        ]
+    },
+    {
+        "cliente": "REPUESTOS RECTITODO, C.A",
+        "rif": "C-J309241753",
+        "movimientos": [
+            {
+                "fecha": "16\/03\/2026",
+                "documento": "17865",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 871.208,
+                "saldo": 204.3652
+            },
+            {
+                "fecha": "17\/04\/2026",
+                "documento": "18118",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 637.676,
+                "saldo": 637.676
+            },
+            {
+                "fecha": "27\/04\/2026",
+                "documento": "18206",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 511.056,
+                "saldo": 511.056
+            },
+            {
+                "fecha": "27\/04\/2026",
+                "documento": "18207",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 1186.0784,
+                "saldo": 1186.0784
+            },
+            {
+                "fecha": "30\/04\/2026",
+                "documento": "18265",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 394.004,
+                "saldo": 394.004
+            },
+            {
+                "fecha": "15\/05\/2026",
+                "documento": "18405",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 593.736,
+                "saldo": 593.736
+            },
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18451",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 1151.176,
+                "saldo": 1151.176
+            },
+            {
+                "fecha": "22\/05\/2026",
+                "documento": "18477",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 660.088,
+                "saldo": 660.088
+            },
+            {
+                "fecha": "13\/07\/2026",
+                "documento": "18913",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 1237.2048,
+                "saldo": 1237.2048
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18917",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 3160.248,
+                "saldo": 3160.248
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18962",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 222.976,
+                "saldo": 222.976
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18959",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J309241753",
+                "moneda": "USD",
+                "monto": 1204.32,
+                "saldo": 1204.32
+            }
+        ]
+    },
+    {
+        "cliente": "FILTROIL CORP, C.A",
+        "rif": "C-J003108103-1",
+        "movimientos": [
+            {
+                "fecha": "19\/03\/2026",
+                "documento": "17899",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J003108103-1",
+                "moneda": "USD",
+                "monto": 4514.65178,
+                "saldo": 4047.618842
+            }
+        ]
+    },
+    {
+        "cliente": "DISTRIBUIDORA LAS PALMERAS S.A. (DISPASA)",
+        "rif": "C-J302316944",
+        "movimientos": [
+            {
+                "fecha": "08\/05\/2026",
+                "documento": "18336",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J302316944",
+                "moneda": "USD",
+                "monto": 1650.3552,
+                "saldo": 879.864361
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "11258",
+                "fuente": "RC",
+                "detalle": "ABONO TOTAL FT 18336 MERCANTL BS DISPASA",
+                "moneda": "USD",
+                "monto": -880.006409,
+                "saldo": -880.006409
+            }
+        ]
+    },
+    {
+        "cliente": "LUBRY CENTER, C.A.",
+        "rif": "C-J305715610",
+        "movimientos": [
+            {
+                "fecha": "12\/05\/2026",
+                "documento": "18359",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4666.817376,
+                "saldo": 1362.156876
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18687",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 1321.040448,
+                "saldo": 355.661201
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18686",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4268.83392,
+                "saldo": 1149.298
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18685",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 3349.665072,
+                "saldo": 901.8318
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18682",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4041.83208,
+                "saldo": 1088.187
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18716",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 1706.3826,
+                "saldo": 459.412498
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18784",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4727.954088,
+                "saldo": 1616.438702
+            },
+            {
+                "fecha": "01\/07\/2026",
+                "documento": "18821",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 1281.230496,
+                "saldo": 1247.741094
+            },
+            {
+                "fecha": "01\/07\/2026",
+                "documento": "18820",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 3234.577944,
+                "saldo": 3110.171102
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18865",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 5822.002368,
+                "saldo": 5598.079198
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18864",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4493.185632,
+                "saldo": 4320.370802
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18863",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 2997.004608,
+                "saldo": 2881.735199
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18862",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 7813.892736,
+                "saldo": 7513.3584
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18861",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 5845.41828,
+                "saldo": 5620.594502
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18869",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 2048.877792,
+                "saldo": 1970.0748
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18868",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 4514.947632,
+                "saldo": 4341.295799
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18867",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 5213.614224,
+                "saldo": 5013.090602
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18866",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 10064.15124,
+                "saldo": 9677.0685
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18934",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 2976.345216,
+                "saldo": 2861.870338
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8547",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -901.8256
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8546",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -1088.1936
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18993",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": 716.521104,
+                "saldo": 716.521104
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8548",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -1149.304
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8549",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -355.6592
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8550",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -459.4096
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8551",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J305715610",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -1272.908
+            }
+        ]
+    },
+    {
+        "cliente": "DISTRIBUIDORA PRASAN, C.A",
+        "rif": "C-J315451867",
+        "movimientos": [
+            {
+                "fecha": "12\/05\/2026",
+                "documento": "18352",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 6332.13672,
+                "saldo": 187.05072
+            },
+            {
+                "fecha": "12\/05\/2026",
+                "documento": "18353",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 5229.397264,
+                "saldo": 306.720064
+            },
+            {
+                "fecha": "12\/05\/2026",
+                "documento": "18354",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4422.195856,
+                "saldo": 259.377456
+            },
+            {
+                "fecha": "29\/05\/2026",
+                "documento": "18568",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 388.5024,
+                "saldo": 25.3976
+            },
+            {
+                "fecha": "29\/05\/2026",
+                "documento": "18569",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 10040.784,
+                "saldo": 588.9328
+            },
+            {
+                "fecha": "29\/05\/2026",
+                "documento": "18570",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 3842.3424,
+                "saldo": 225.3772
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18626",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 2475.096,
+                "saldo": 2475.096
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18627",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 7012.6368,
+                "saldo": 7012.6368
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18628",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 3359.1792,
+                "saldo": 3359.1792
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18629",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 1853.9456,
+                "saldo": 1853.9456
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18630",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 2879.136,
+                "saldo": 2879.136
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18631",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 3194.776,
+                "saldo": 3194.776
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18632",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 2207.088,
+                "saldo": 2207.088
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18777",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4290.406224,
+                "saldo": 4290.406224
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18778",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4388.643168,
+                "saldo": 4388.643168
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18779",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4595.13444,
+                "saldo": 4595.13444
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18783",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 2813.94672,
+                "saldo": 2813.94672
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18782",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4176.553056,
+                "saldo": 4176.553056
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18781",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4969.106688,
+                "saldo": 4969.106688
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18780",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 5453.986408,
+                "saldo": 5453.986408
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18919",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4308.140928,
+                "saldo": 4308.140928
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18920",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 2056.74144,
+                "saldo": 2056.74144
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18921",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 7986.06432,
+                "saldo": 7986.06432
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18922",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 1701.684192,
+                "saldo": 1701.684192
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18923",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4157.66832,
+                "saldo": 4157.66832
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18924",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 5724.73824,
+                "saldo": 5724.73824
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18925",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 4023.054048,
+                "saldo": 4023.054048
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18926",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J315451867",
+                "moneda": "USD",
+                "monto": 9306.02868,
+                "saldo": 9306.02868
+            }
+        ]
+    },
+    {
+        "cliente": "SUMINISTROS COR, C.A.",
+        "rif": "C-J406792209",
+        "movimientos": [
+            {
+                "fecha": "13\/05\/2026",
+                "documento": "18367",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J406792209",
+                "moneda": "USD",
+                "monto": 9346.15032,
+                "saldo": 5986.683006
+            }
+        ]
+    },
+    {
+        "cliente": "INVERSIONES DUQUE CACERES, C.A",
+        "rif": "C-J407832573",
+        "movimientos": [
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18447",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J407832573",
+                "moneda": "USD",
+                "monto": 2477.852,
+                "saldo": 2477.852
+            },
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18443",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J407832573",
+                "moneda": "USD",
+                "monto": 5214.0192,
+                "saldo": 2428.843672
+            },
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18444",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J407832573",
+                "moneda": "USD",
+                "monto": 3415.5472,
+                "saldo": 3415.5472
+            },
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18445",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J407832573",
+                "moneda": "USD",
+                "monto": 5595.3456,
+                "saldo": 5595.3456
+            },
+            {
+                "fecha": "20\/05\/2026",
+                "documento": "18446",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J407832573",
+                "moneda": "USD",
+                "monto": 1711.5072,
+                "saldo": 1711.5072
+            }
+        ]
+    },
+    {
+        "cliente": "MUNDO FILTROS C.A.",
+        "rif": "C-J503064404",
+        "movimientos": [
+            {
+                "fecha": "21\/05\/2026",
+                "documento": "18462",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J503064404",
+                "moneda": "USD",
+                "monto": 4976.418096,
+                "saldo": 9.5e-5
+            },
+            {
+                "fecha": "25\/06\/2026",
+                "documento": "18796",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J503064404",
+                "moneda": "USD",
+                "monto": 357.29856,
+                "saldo": 357.29856
+            },
+            {
+                "fecha": "25\/06\/2026",
+                "documento": "18793",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J503064404",
+                "moneda": "USD",
+                "monto": 2480.883996,
+                "saldo": 2480.883996
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18870",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J503064404",
+                "moneda": "USD",
+                "monto": 1958.216184,
+                "saldo": 1958.216184
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18995",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J503064404",
+                "moneda": "USD",
+                "monto": 1385.189988,
+                "saldo": 1385.189988
+            }
+        ]
+    },
+    {
+        "cliente": "LUBRICANTES LA BARRACA C.A",
+        "rif": "C-J075074025",
+        "movimientos": [
+            {
+                "fecha": "26\/05\/2026",
+                "documento": "18522",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 3145.3344,
+                "saldo": 3024.359992
+            },
+            {
+                "fecha": "04\/06\/2026",
+                "documento": "18616",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2812.975464,
+                "saldo": 2704.784097
+            },
+            {
+                "fecha": "16\/06\/2026",
+                "documento": "18709",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 989.15544,
+                "saldo": 989.15544
+            },
+            {
+                "fecha": "16\/06\/2026",
+                "documento": "18710",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2241.58272,
+                "saldo": 2241.58272
+            },
+            {
+                "fecha": "16\/06\/2026",
+                "documento": "18711",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2916.746352,
+                "saldo": 2916.746352
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18715",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 1095.93432,
+                "saldo": 1095.93432
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18714",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2777.45988,
+                "saldo": 2777.45988
+            },
+            {
+                "fecha": "23\/06\/2026",
+                "documento": "18785",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 1055.16684,
+                "saldo": 1055.16684
+            },
+            {
+                "fecha": "29\/06\/2026",
+                "documento": "18816",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 4248.609768,
+                "saldo": 4248.609768
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18856",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 993.65292,
+                "saldo": 993.65292
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18855",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2797.509936,
+                "saldo": 2797.509936
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18854",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2326.183704,
+                "saldo": 2326.183704
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18853",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 3979.312272,
+                "saldo": 3979.312272
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18881",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 1962.671256,
+                "saldo": 1962.671256
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18935",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 1960.80456,
+                "saldo": 1960.80456
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18936",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 1551.77568,
+                "saldo": 1551.77568
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18937",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 2656.598568,
+                "saldo": 2656.598568
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18938",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J075074025",
+                "moneda": "USD",
+                "monto": 546.506688,
+                "saldo": 546.506688
+            }
+        ]
+    },
+    {
+        "cliente": "JOSE ENRIQUE RODRIGUEZ SUAREZ",
+        "rif": "C-V128771049",
+        "movimientos": [
+            {
+                "fecha": "26\/05\/2026",
+                "documento": "18531",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 1419.492,
+                "saldo": 1419.492
+            },
+            {
+                "fecha": "26\/05\/2026",
+                "documento": "18530",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 1536.9768,
+                "saldo": 1536.9768
+            },
+            {
+                "fecha": "26\/05\/2026",
+                "documento": "18529",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 809.216,
+                "saldo": 40.467895
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18811",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 854.4096,
+                "saldo": 854.4096
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18812",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 1547.556,
+                "saldo": 1547.556
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18813",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 593.978,
+                "saldo": 593.978
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18814",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V128771049",
+                "moneda": "USD",
+                "monto": 1238.5204,
+                "saldo": 1238.5204
+            }
+        ]
+    },
+    {
+        "cliente": "DCM CENTRO, C.A.",
+        "rif": "C-J404346309",
+        "movimientos": [
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18541",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 2466.79524,
+                "saldo": 2466.79524
+            },
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18540",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 2083.290768,
+                "saldo": 1342.870125
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18624",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 3147.384864,
+                "saldo": 3147.384864
+            },
+            {
+                "fecha": "10\/06\/2026",
+                "documento": "18656",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 777.299952,
+                "saldo": 777.299952
+            },
+            {
+                "fecha": "22\/06\/2026",
+                "documento": "18774",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 2338.73796,
+                "saldo": 2338.73796
+            },
+            {
+                "fecha": "22\/06\/2026",
+                "documento": "18773",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 2048.993856,
+                "saldo": 2048.993856
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18826",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 1637.546976,
+                "saldo": 1637.546976
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18929",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 507.257712,
+                "saldo": 507.257712
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18989",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 1398.871032,
+                "saldo": 1398.871032
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18988",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J404346309",
+                "moneda": "USD",
+                "monto": 635.59548,
+                "saldo": 635.59548
+            }
+        ]
+    },
+    {
+        "cliente": "FILTROS Y REPUESTOS L.C.  C.A",
+        "rif": "C-J295561245",
+        "movimientos": [
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18536",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5103.15552,
+                "saldo": 4399.271997
+            },
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18535",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 2060.29224,
+                "saldo": 1937.249029
+            },
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18534",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 6979.749696,
+                "saldo": 6017.025591
+            },
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18533",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 3803.460432,
+                "saldo": 3278.845194
+            },
+            {
+                "fecha": "27\/05\/2026",
+                "documento": "18532",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5934.15516,
+                "saldo": 5115.651007
+            },
+            {
+                "fecha": "28\/05\/2026",
+                "documento": "18547",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 1243.985856,
+                "saldo": 1072.401614
+            },
+            {
+                "fecha": "28\/05\/2026",
+                "documento": "18543",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 1409.77584,
+                "saldo": 1215.323994
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18642",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 4452.31548,
+                "saldo": 4452.31548
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18643",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 6125.75004,
+                "saldo": 6125.75004
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18644",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 4467.0411,
+                "saldo": 4467.0411
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18645",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 4348.685952,
+                "saldo": 4348.685952
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18646",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5689.202832,
+                "saldo": 5689.202832
+            },
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "18647",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 1619.49456,
+                "saldo": 1619.49456
+            },
+            {
+                "fecha": "10\/06\/2026",
+                "documento": "18657",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 2618.873304,
+                "saldo": 2618.873304
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18824",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 3519.69288,
+                "saldo": 3398.32416
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18823",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 7657.225308,
+                "saldo": 7657.225308
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18822",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5438.2308,
+                "saldo": 5250.705599
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18860",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 6214.308732,
+                "saldo": 6214.308732
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18878",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5675.933592,
+                "saldo": 5480.211747
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "11274",
+                "fuente": "RC",
+                "detalle": "ABONO TOTAL FT 18506 BANESCO BS FILTROS LC",
+                "moneda": "USD",
+                "monto": -777.213839,
+                "saldo": -87.993594
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18892",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 2471.20716,
+                "saldo": 2385.993121
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18928",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 3646.12824,
+                "saldo": 3520.399753
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19008",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 5811.236688,
+                "saldo": 5811.236688
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19007",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J295561245",
+                "moneda": "USD",
+                "monto": 4836.433008,
+                "saldo": 4836.433008
+            }
+        ]
+    },
+    {
+        "cliente": "KEN YERY CIFUENTES DELGADO  (DISTRIBUCIONES KYM CIFUENTES)",
+        "rif": "C-V140994096",
+        "movimientos": [
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18621",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 2202.3702,
+                "saldo": 616.6602
+            },
+            {
+                "fecha": "05\/06\/2026",
+                "documento": "18622",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 904.368828,
+                "saldo": 253.218828
+            },
+            {
+                "fecha": "11\/06\/2026",
+                "documento": "18671",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 1667.145156,
+                "saldo": 466.795156
+            },
+            {
+                "fecha": "11\/06\/2026",
+                "documento": "18672",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 2805.117336,
+                "saldo": 2805.117336
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18690",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 954.824304,
+                "saldo": 267.034304
+            },
+            {
+                "fecha": "19\/06\/2026",
+                "documento": "18746",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 3036.757272,
+                "saldo": 3036.757272
+            },
+            {
+                "fecha": "19\/06\/2026",
+                "documento": "18747",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 1048.280748,
+                "saldo": 1048.280748
+            },
+            {
+                "fecha": "19\/06\/2026",
+                "documento": "18749",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 1498.431624,
+                "saldo": 1498.431624
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18800",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 891.8979,
+                "saldo": 891.8979
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18803",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 968.611368,
+                "saldo": 968.611368
+            },
+            {
+                "fecha": "03\/07\/2026",
+                "documento": "18848",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 2672.489664,
+                "saldo": 2672.489664
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18899",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 1386.193272,
+                "saldo": 1386.193272
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18898",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 814.27824,
+                "saldo": 814.27824
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18891",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 3560.04,
+                "saldo": 3560.04
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18961",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 601.9704,
+                "saldo": 601.9704
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18960",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 1764.301884,
+                "saldo": 1764.301884
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18954",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 2180.168496,
+                "saldo": 2180.168496
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18953",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-V140994096",
+                "moneda": "USD",
+                "monto": 565.463808,
+                "saldo": 565.463808
+            }
+        ]
+    },
+    {
+        "cliente": "MAKROPETROL, C.A",
+        "rif": "C-J406252719",
+        "movimientos": [
+            {
+                "fecha": "09\/06\/2026",
+                "documento": "11069",
+                "fuente": "RC",
+                "detalle": "ABONO CTA MERCANTIL BS MAKROPETROL",
+                "moneda": "USD",
+                "monto": -25000,
+                "saldo": -9687.547412
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18883",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J406252719",
+                "moneda": "USD",
+                "monto": 3163.365271,
+                "saldo": 3163.365271
+            }
+        ]
+    },
+    {
+        "cliente": "PARTES REPUESTOS FILTROS, C.A",
+        "rif": "C-J312069503",
+        "movimientos": [
+            {
+                "fecha": "10\/06\/2026",
+                "documento": "18666",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J312069503",
+                "moneda": "USD",
+                "monto": 2248.37,
+                "saldo": 1977.683838
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18911",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J312069503",
+                "moneda": "USD",
+                "monto": 2282.474,
+                "saldo": 2282.474
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18910",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J312069503",
+                "moneda": "USD",
+                "monto": 1174.1288,
+                "saldo": 1174.1288
+            },
+            {
+                "fecha": "13\/07\/2026",
+                "documento": "18912",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J312069503",
+                "moneda": "USD",
+                "monto": 1791.7128,
+                "saldo": 1791.7128
+            }
+        ]
+    },
+    {
+        "cliente": "SAVELCA FILTROS C A",
+        "rif": "C-J299661880",
+        "movimientos": [
+            {
+                "fecha": "10\/06\/2026",
+                "documento": "18661",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 2101.280688,
+                "saldo": 544.75232
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18717",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 504.414144,
+                "saldo": 504.414144
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18718",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 1696.072248,
+                "saldo": 252.581668
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18719",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 724.413456,
+                "saldo": 696.553886
+            },
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18721",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 1356.59472,
+                "saldo": 1304.414002
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18909",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 2606.516952,
+                "saldo": 2503.758508
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18908",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 1743.097512,
+                "saldo": 1674.379115
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18907",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 2957.078592,
+                "saldo": 2840.491643
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18958",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J299661880",
+                "moneda": "USD",
+                "monto": 718.8714,
+                "saldo": 718.8714
+            }
+        ]
+    },
+    {
+        "cliente": "FILTROS INTERNACIONAL CA",
+        "rif": "C-J305862850",
+        "movimientos": [
+            {
+                "fecha": "10\/06\/2026",
+                "documento": "18668",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 11947.44681,
+                "saldo": 2659.991275
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18702",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 5183.727744,
+                "saldo": 5183.727744
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18703",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6527.806896,
+                "saldo": 6527.806896
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18704",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6212.27724,
+                "saldo": 6212.27724
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18705",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 5325.59664,
+                "saldo": 5325.59664
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18706",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 5985.966948,
+                "saldo": 5985.966948
+            },
+            {
+                "fecha": "15\/06\/2026",
+                "documento": "18707",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 3760.113801,
+                "saldo": 3760.113801
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18738",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 956.760527,
+                "saldo": 956.760527
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18739",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 3167.990093,
+                "saldo": 121.850093
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18740",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6997.444397,
+                "saldo": 6997.444397
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18741",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 5013.990431,
+                "saldo": 5013.990431
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18742",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6094.022532,
+                "saldo": 6094.022532
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18834",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 8947.222877,
+                "saldo": 8947.222877
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18829",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6994.037145,
+                "saldo": 268.997145
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18828",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 7639.6736,
+                "saldo": 293.8336
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18827",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 7601.379552,
+                "saldo": 7601.379552
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18849",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 9757.970539,
+                "saldo": 9757.970539
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18850",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 4746.562049,
+                "saldo": 4746.562049
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18851",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 11356.531617,
+                "saldo": 11356.531617
+            },
+            {
+                "fecha": "06\/07\/2026",
+                "documento": "18852",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 3251.039688,
+                "saldo": 3251.039688
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "11271",
+                "fuente": "RC",
+                "detalle": "ABONO CTA BANESCO PANAMA FILTROS INTERNACIONAL",
+                "moneda": "USD",
+                "monto": -3500,
+                "saldo": -1319.67
+            },
+            {
+                "fecha": "12\/07\/2026",
+                "documento": "11270",
+                "fuente": "RC",
+                "detalle": "ABONO CTA  BINC  NEST SERVICES LTD (USDT) FILTROS INTERNACIONAL",
+                "moneda": "USD",
+                "monto": -2800,
+                "saldo": -2800
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18918",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 8453.658782,
+                "saldo": 8453.658782
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18927",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 10364.5152,
+                "saldo": 10364.5152
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "11353",
+                "fuente": "RC",
+                "detalle": "ABONO CTA BANESCO PANAMA REF=FT26201Z FILTROS INTERNACIONAL",
+                "moneda": "USD",
+                "monto": -100,
+                "saldo": -100
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "11354",
+                "fuente": "RC",
+                "detalle": "ABONO CTA  BINC  NEST SERVICES LTD (USDT) FILTROS INTERNACIONAL",
+                "moneda": "USD",
+                "monto": -2800,
+                "saldo": -2800
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "11355",
+                "fuente": "RC",
+                "detalle": "ABONO CTA  BINC  NEST SERVICES LTD (USDT) FILTROS INTERNACIONAL",
+                "moneda": "USD",
+                "monto": -720.36,
+                "saldo": -720.36
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18975",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 1373.114496,
+                "saldo": 1373.114496
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18976",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 8877.207269,
+                "saldo": 8877.207269
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18977",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6194.552816,
+                "saldo": 6194.552816
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18978",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6322.13375,
+                "saldo": 6322.13375
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18979",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 3537.534,
+                "saldo": 3537.534
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18980",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 5373.229305,
+                "saldo": 5373.229305
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18981",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 12168.703482,
+                "saldo": 12168.703482
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18992",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 6295.860343,
+                "saldo": 242.340343
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18994",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 7925.73926,
+                "saldo": 7925.73926
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18999",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305862850",
+                "moneda": "USD",
+                "monto": 1390.261017,
+                "saldo": 1390.261017
+            }
+        ]
+    },
+    {
+        "cliente": "R & R IMPORT, C.A",
+        "rif": "C-J307188057",
+        "movimientos": [
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18693",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 1013.799696,
+                "saldo": 38.78417
+            },
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "18694",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 3488.767776,
+                "saldo": 133.747838
+            },
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18732",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 4802.660616,
+                "saldo": 4802.660616
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18902",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 4083.344304,
+                "saldo": 4083.344304
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18903",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 2343.854448,
+                "saldo": 2343.854448
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18905",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J307188057",
+                "moneda": "USD",
+                "monto": 2221.426272,
+                "saldo": 2221.426272
+            }
+        ]
+    },
+    {
+        "cliente": "FILTROS RAMIREZ C.A.",
+        "rif": "C-J305480605",
+        "movimientos": [
+            {
+                "fecha": "12\/06\/2026",
+                "documento": "11007",
+                "fuente": "RC",
+                "detalle": "ABONO TOTAL FT 18669 BANESCO BS REF=53422419 FILTROS RAMIREZ",
+                "moneda": "USD",
+                "monto": -2216.409707,
+                "saldo": -146.970867
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18859",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 481.6656,
+                "saldo": 1.2e-5
+            },
+            {
+                "fecha": "13\/07\/2026",
+                "documento": "18916",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 2251.660944,
+                "saldo": 2165.0586
+            },
+            {
+                "fecha": "13\/07\/2026",
+                "documento": "18915",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 1714.226592,
+                "saldo": 1648.294801
+            },
+            {
+                "fecha": "14\/07\/2026",
+                "documento": "18930",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 804.787776,
+                "saldo": 773.834405
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18982",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 2172.485952,
+                "saldo": 2172.485952
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18983",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 1827.775872,
+                "saldo": 1827.775872
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18984",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 2027.173824,
+                "saldo": 2027.173824
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18985",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 1068.36912,
+                "saldo": 1068.36912
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18987",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 83.914272,
+                "saldo": 83.914272
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18991",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305480605",
+                "moneda": "USD",
+                "monto": 330.7824,
+                "saldo": 330.7824
+            }
+        ]
+    },
+    {
+        "cliente": "DISTRIBUIDORA SIRCAR'S, C.A",
+        "rif": "C-J317048830",
+        "movimientos": [
+            {
+                "fecha": "17\/06\/2026",
+                "documento": "18720",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 619.2498,
+                "saldo": 619.2498
+            },
+            {
+                "fecha": "22\/06\/2026",
+                "documento": "18771",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 575.812848,
+                "saldo": 575.812848
+            },
+            {
+                "fecha": "22\/06\/2026",
+                "documento": "18770",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 851.368128,
+                "saldo": 851.368128
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18799",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 892.648224,
+                "saldo": 523.698624
+            },
+            {
+                "fecha": "07\/07\/2026",
+                "documento": "18858",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 1037.90232,
+                "saldo": 1037.90232
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18880",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 808.511496,
+                "saldo": 808.511496
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18882",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 648.31416,
+                "saldo": 648.31416
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18893",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 758.23644,
+                "saldo": 758.23644
+            },
+            {
+                "fecha": "13\/07\/2026",
+                "documento": "18914",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 808.995096,
+                "saldo": 808.995096
+            },
+            {
+                "fecha": "16\/07\/2026",
+                "documento": "18950",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 1248.984048,
+                "saldo": 1248.984048
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18986",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J317048830",
+                "moneda": "USD",
+                "monto": 902.503992,
+                "saldo": 902.503992
+            }
+        ]
+    },
+    {
+        "cliente": "BEVAL C.A.",
+        "rif": "C-J311592210",
+        "movimientos": [
+            {
+                "fecha": "18\/06\/2026",
+                "documento": "18737",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 410.170176,
+                "saldo": 9.965997
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18791",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1422.89628,
+                "saldo": 1368.16628
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18790",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2415.157206,
+                "saldo": 2322.267206
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18789",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2821.573872,
+                "saldo": 2713.053872
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18788",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2862.305372,
+                "saldo": 2752.215372
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18787",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2951.804644,
+                "saldo": 2838.274644
+            },
+            {
+                "fecha": "24\/06\/2026",
+                "documento": "18786",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1820.184126,
+                "saldo": 1750.174126
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18797",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 441.0432,
+                "saldo": 424.0832
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18798",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1305.302169,
+                "saldo": 1255.102186
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18840",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2666.513915,
+                "saldo": 2563.953915
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18839",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2943.280904,
+                "saldo": 2830.080904
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18838",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 5095.943124,
+                "saldo": 4899.943124
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18837",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1298.572392,
+                "saldo": 1248.622392
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18836",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2543.2524,
+                "saldo": 2445.4324
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18835",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 6721.386946,
+                "saldo": 6462.876946
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18875",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 3193.853794,
+                "saldo": 3071.013794
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18874",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 495.754222,
+                "saldo": 476.684222
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18873",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1504.76976,
+                "saldo": 1446.87976
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18872",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1590.289584,
+                "saldo": 1529.129584
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18876",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 3311.30592,
+                "saldo": 3183.94592
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18877",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2890.689984,
+                "saldo": 2779.509995
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18943",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2284.507056,
+                "saldo": 2284.507056
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18942",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1990.11072,
+                "saldo": 1990.11072
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18941",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 4756.623057,
+                "saldo": 4756.623057
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18940",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 4478.724057,
+                "saldo": 4478.724057
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18939",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2092.083777,
+                "saldo": 2092.083777
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "8552",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -1225.5748
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19009",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 267.86604,
+                "saldo": 267.86604
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19006",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1410.409728,
+                "saldo": 1410.409728
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19005",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 1393.029144,
+                "saldo": 1393.029144
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19004",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2779.065432,
+                "saldo": 2779.065432
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19003",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 2537.004288,
+                "saldo": 2537.004288
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19002",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 3634.915565,
+                "saldo": 3634.915565
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19001",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 4215.602327,
+                "saldo": 4215.602327
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "19000",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J311592210",
+                "moneda": "USD",
+                "monto": 232.128,
+                "saldo": 232.128
+            }
+        ]
+    },
+    {
+        "cliente": "BAFIL C.A.",
+        "rif": "C-J314709038",
+        "movimientos": [
+            {
+                "fecha": "19\/06\/2026",
+                "documento": "331694",
+                "fuente": "OT",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 49.5936,
+                "saldo": 49.5936
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18833",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 1084.52136,
+                "saldo": 1042.809001
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18832",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 1542.142368,
+                "saldo": 1482.829201
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18831",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 1598.44308,
+                "saldo": 1536.964498
+            },
+            {
+                "fecha": "02\/07\/2026",
+                "documento": "18830",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 1885.981968,
+                "saldo": 1813.444201
+            },
+            {
+                "fecha": "16\/07\/2026",
+                "documento": "18949",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 1534.694928,
+                "saldo": 1534.694928
+            },
+            {
+                "fecha": "16\/07\/2026",
+                "documento": "18948",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J314709038",
+                "moneda": "USD",
+                "monto": 980.953584,
+                "saldo": 980.953584
+            }
+        ]
+    },
+    {
+        "cliente": "DISTRIBUIDORA MIRAFLORES, C.A.",
+        "rif": "C-J085015019",
+        "movimientos": [
+            {
+                "fecha": "25\/06\/2026",
+                "documento": "18795",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 1321.446672,
+                "saldo": 1270.621794
+            },
+            {
+                "fecha": "25\/06\/2026",
+                "documento": "18794",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 1439.29032,
+                "saldo": 1383.933
+            },
+            {
+                "fecha": "08\/07\/2026",
+                "documento": "18871",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 1207.5492,
+                "saldo": 1161.105
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18998",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 906.179352,
+                "saldo": 906.179352
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18997",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 1680.0264,
+                "saldo": 1680.0264
+            },
+            {
+                "fecha": "22\/07\/2026",
+                "documento": "18996",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J085015019",
+                "moneda": "USD",
+                "monto": 1152.51552,
+                "saldo": 1152.51552
+            }
+        ]
+    },
+    {
+        "cliente": "CAUCHOS ROYAL MERIDA, C.R.L",
+        "rif": "C-J070059850",
+        "movimientos": [
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18809",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 166.01988,
+                "saldo": 166.01988
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18808",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 956.715552,
+                "saldo": 956.715552
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18805",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1168.155144,
+                "saldo": 1168.155144
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18804",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1258.307856,
+                "saldo": 662.813619
+            },
+            {
+                "fecha": "03\/07\/2026",
+                "documento": "18842",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 449.11932,
+                "saldo": 449.11932
+            },
+            {
+                "fecha": "03\/07\/2026",
+                "documento": "18843",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1035.116784,
+                "saldo": 1035.116784
+            },
+            {
+                "fecha": "03\/07\/2026",
+                "documento": "18844",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1112.937696,
+                "saldo": 1112.937696
+            },
+            {
+                "fecha": "03\/07\/2026",
+                "documento": "18845",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 766.912224,
+                "saldo": 766.912224
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18900",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 842.102352,
+                "saldo": 842.102352
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18901",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 254.576712,
+                "saldo": 254.576712
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18906",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1187.62488,
+                "saldo": 1187.62488
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18957",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 773.2764,
+                "saldo": 773.2764
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18956",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 375.5154,
+                "saldo": 375.5154
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18955",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070059850",
+                "moneda": "USD",
+                "monto": 1003.13148,
+                "saldo": 1003.13148
+            }
+        ]
+    },
+    {
+        "cliente": "SANTIAGO ROJAS, C.A",
+        "rif": "C-J070268310",
+        "movimientos": [
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18807",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070268310",
+                "moneda": "USD",
+                "monto": 5216.12,
+                "saldo": 5216.12
+            },
+            {
+                "fecha": "26\/06\/2026",
+                "documento": "18806",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J070268310",
+                "moneda": "USD",
+                "monto": 478.9824,
+                "saldo": 478.9824
+            }
+        ]
+    },
+    {
+        "cliente": "LUBRIGAMA, C.A",
+        "rif": "C-J411252581",
+        "movimientos": [
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18889",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 4985.05973,
+                "saldo": 4985.05973
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18888",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 5031.392858,
+                "saldo": 5031.392858
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18887",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 5775.901048,
+                "saldo": 5775.901048
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18886",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2538.721532,
+                "saldo": 2538.721532
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18885",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 4418.29232,
+                "saldo": 4418.29232
+            },
+            {
+                "fecha": "09\/07\/2026",
+                "documento": "18884",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2878.47265,
+                "saldo": 2878.47265
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18963",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2501.536203,
+                "saldo": 2501.536203
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18964",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2304.735938,
+                "saldo": 2304.735938
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18965",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 3525.938732,
+                "saldo": 3525.938732
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18966",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 1719.390009,
+                "saldo": 1719.390009
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18967",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 1730.009,
+                "saldo": 1730.009
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18968",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2527.30093,
+                "saldo": 2527.30093
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18969",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2050.992985,
+                "saldo": 2050.992985
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18970",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 1730.065584,
+                "saldo": 1730.065584
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18971",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2746.037049,
+                "saldo": 2746.037049
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18972",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 1394.577151,
+                "saldo": 1394.577151
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18973",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 4730.335983,
+                "saldo": 4730.335983
+            },
+            {
+                "fecha": "20\/07\/2026",
+                "documento": "18974",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": 2892.071749,
+                "saldo": 2892.071749
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "8545",
+                "fuente": "NC",
+                "detalle": "Notas de cr\u00e9dito clientes - C-J411252581",
+                "moneda": "USD",
+                "monto": -0,
+                "saldo": -100.981248
+            }
+        ]
+    },
+    {
+        "cliente": "CENTRO DE DISTRIBUCI\u00d3N COJEDES C.A.(CEDICO)",
+        "rif": "C-J305847789",
+        "movimientos": [
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18890",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305847789",
+                "moneda": "USD",
+                "monto": 4692.32244,
+                "saldo": 4032.915733
+            },
+            {
+                "fecha": "15\/07\/2026",
+                "documento": "18933",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305847789",
+                "moneda": "USD",
+                "monto": 553.28676,
+                "saldo": 553.28676
+            },
+            {
+                "fecha": "16\/07\/2026",
+                "documento": "18951",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305847789",
+                "moneda": "USD",
+                "monto": 473.773248,
+                "saldo": 473.773248
+            },
+            {
+                "fecha": "16\/07\/2026",
+                "documento": "18945",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305847789",
+                "moneda": "USD",
+                "monto": 1461.951816,
+                "saldo": 1461.951816
+            },
+            {
+                "fecha": "21\/07\/2026",
+                "documento": "18990",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J305847789",
+                "moneda": "USD",
+                "monto": 413.62308,
+                "saldo": 413.62308
+            }
+        ]
+    },
+    {
+        "cliente": "TAVELCA",
+        "rif": "C-J095118908",
+        "movimientos": [
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18894",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J095118908",
+                "moneda": "USD",
+                "monto": 2005.58592,
+                "saldo": 732.808001
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18895",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J095118908",
+                "moneda": "USD",
+                "monto": 4205.230848,
+                "saldo": 1132.1712
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18896",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J095118908",
+                "moneda": "USD",
+                "monto": 4744.30944,
+                "saldo": 1277.316
+            },
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18897",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J095118908",
+                "moneda": "USD",
+                "monto": 1478.75208,
+                "saldo": 398.117
+            }
+        ]
+    },
+    {
+        "cliente": "LUBRICACIONES SANTA MARTA, C.A.",
+        "rif": "C-J298497289",
+        "movimientos": [
+            {
+                "fecha": "10\/07\/2026",
+                "documento": "18904",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J298497289",
+                "moneda": "USD",
+                "monto": 3582.005856,
+                "saldo": 3582.005856
+            },
+            {
+                "fecha": "17\/07\/2026",
+                "documento": "18952",
+                "fuente": "RF",
+                "detalle": "Facturas clientes - C-J298497289",
+                "moneda": "USD",
+                "monto": 1848.89952,
+                "saldo": 1848.89952
+            }
+        ]
+    }
+]

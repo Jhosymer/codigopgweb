@@ -115,25 +115,26 @@
             <table class="table table-striped table-hover table-responsive dataTable mt-5" id="example">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Código</th>
-                        <th>Código Buscar</th>
-                        <th>Tipo</th>
-                        <th>Filtración</th>
-                        <th>Diámetro Ext</th>
-                        <th>Diámetro Int</th>
-                        <th>Altura</th>
-                        <th>Diámetro Emp Ext</th>
-                        <th>Diámetro Emp Int</th>
-                        <th>Espesor Emp</th>
-                        <th>Valvula AL</th>
-                        <th>Apertura</th>
-                        <th>Valvula AD</th>
-                        <th>Und Empaque</th>
-                        <th>Codigo de Barra</th>
-                        <th>Detalle 1</th>
-                        <th>Detalle 2</th>
-                        <th>Acciones</th>
+            <th>#</th>
+            <th>Código</th>
+            <th>Código Buscar</th>
+            <th>Tipo</th>
+            <th>Filtración</th>
+            <th>Altura</th>
+            <th>Rosca</th> 
+            <th>Diámetro Int</th> 
+            <th>Diámetro Ext</th>
+            <th>Diámetro Emp Ext</th>
+            <th>Diámetro Emp Int</th>
+            <th>Espesor Emp</th>
+            <th>Valvula AL</th>
+            <th>Apertura</th>
+            <th>Valvula AD</th>
+            <th>Und Empaque</th>
+            <th>Codigo de Barra</th>
+            <th>Detalle 1</th>
+            <th>Detalle 2</th>
+            <th>Acciones</th>
                     </tr>
                 </thead>
                <tbody class="table-group-divider" id="contenido">

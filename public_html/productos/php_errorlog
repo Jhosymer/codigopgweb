@@ -1,0 +1,8 @@
+[29-Apr-2026 19:40:22 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 60
+[29-Apr-2026 19:40:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'filtero.id_codigo
+                       
+                       JOIN categori' at line 3 in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php:101
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php(101): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/productos/filtro_tabla.php on line 101

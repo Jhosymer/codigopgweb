@@ -24,6 +24,7 @@ include("index/banner_videos.php");?>
             include("./index/aceite.html");
             include("./index/fluidos.html");
             include("./index/app.html");
+           // include("./arbol_navidad.php");
            // include("./robot_chat.php");
            // include("./index/alerta_emergente.php");
 

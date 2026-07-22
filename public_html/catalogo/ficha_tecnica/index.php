@@ -148,7 +148,7 @@ $svgX='<svg xmlns="http://www.w3.org/2000/svg" class="me-2" viewBox="0 0 640 640
                     
                     // Dibuja el código de barras en el nuevo elemento SVG
                     JsBarcode(svgElement, barcodeValue, {
-                        format: "CODE128",
+                        format: "EAN13",
                         // Ajusta estos valores para el tamaño inicial
                         width: 1.3,
                         height: 30,

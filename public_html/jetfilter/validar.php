@@ -1,61 +1,49 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// El resto de tu código...
-session_start() or die('Error iniciando gestor de variables de sesión');
+session_start();
 include_once('./../config/conexion.php');
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $recaptcha_secret = '6LdSxn8sAAAAAJtc4b2OkFyv3W-4ryUC3FD_K_hi';
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
-//Recoge el email y la contraseña introducidos en el formulario de inicio
-$email = $_POST['email'];
-$password = $_POST['password'];
+    // Llamada a Google
+    $url = "https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}";
+    $verify = @file_get_contents($url);
+    $response = json_decode($verify);
 
-try {
-    /*
-        Consulta que traiga el nombre de usuario, la contraseña, el rol y el nombre del usuario que tenga
-        el correo ingresado, en caso de que no exista te redirige afuera
-    */
-    $sql = "SELECT email, password, name, rol, id from users where email = :email";
-    if($inicio = $base_de_datos->prepare($sql)){
-        $inicio->bindParam(':email', $email, PDO::PARAM_STR);
-        $inicio->execute();
-        $mData = $inicio->fetch(PDO::FETCH_ASSOC);
+    // VALIDACIÓN DEFINITIVA
+    // Si la respuesta es exitosa Y el puntaje es muy bajo (bot), bloqueamos.
+    // Si la respuesta falla por red/dominio, permitimos el paso para no bloquear Jet Filter.
+    if ($response && $response->success && $response->score < 0.1) {
+        header('location: ./login/?fallo=captcha');
+        exit;
+    }
 
-        // Se verifica si se encontró un usuario
-        if ($mData && password_verify($password, $mData['password'])) {
-            // Si la contraseña es correcta, se asignan las variables de sesión
-            $_SESSION['email'] = $email; // Para conocer el correo
-            $_SESSION['name'] = $mData['name']; //El nombre
-            $_SESSION['rol'] = $mData['rol']; //El rol
-            $_SESSION['id'] = $mData['id'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-            //Dependiendo el rol te redirigira a una pagina diferente
-            if( $mData['rol'] == '1' ){
-                header("location: ./gestor/", true, 301);
-                exit();
-            } else if( $mData['rol'] == '2' ){
-                header("location: ./user/", true, 301);
-                exit();
-            }
+    try {
+        $sql = "SELECT email, password, name, rol, id from users where email = :email";
+        $stmt = $base_de_datos->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['email'] = $email;
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['rol'] = $user['rol'];
+            $_SESSION['id'] = $user['id'];
+
+            $path = ($user['rol'] == '1') ? "./gestor/" : "./user/";
+            header("location: $path", true, 301);
+            exit();
         } else {
-            // En caso de no ser correcta la contraseña o no encontrar el usuario, te redirigirá con una alerta de error
             header("location: ./login/?fallo=true");
             exit();
         }
-    } else {
-        $outPut=array('status' => false, 'msg'=>'Error prepare');
+    } catch (Exception $e) {
+        header("location: ./login/?error");
+        exit();
     }
 }
-catch (PDOException $ex) {
-    // Si hay un error de base de datos
-    header("location: ./login/?db_error"); // Redirige a una página de error de DB
-    exit();
-}
-catch (Exception $ex) {
-    header("location: ./login/?error");
-    exit();
-}
-
-?>

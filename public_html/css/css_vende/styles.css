@@ -171,3 +171,260 @@
 .swal2-html-small {
   font-size: 0.9em !important; /* Adjust the font size of the message */
 }
+/* Definición de colores personalizados */
+.bg-custom-primary {
+    background-color: #E2001A !important;
+}
+
+.btn-custom-primary {
+    background-color: #E2001A;
+    border-color: #E2001A;
+    color: white;
+}
+
+.btn-custom-primary:hover,
+.btn-custom-primary:focus {
+    background-color: #b30015; /* Tono más oscuro para el hover */
+    border-color: #b30015;
+    color: white;
+}
+
+  .form-control-readonly-gray {
+        background-color: #f8f9fa !important; /* light gray background */
+        border: 1px solid #ced4da !important;
+        border-radius: 0.25rem !important;
+    }
+
+    .form-control-sm {
+    
+    font-size: .9rem  !important;
+    }
+
+.alernota{
+    width: 400px;
+    text-align: right;
+    margin-right: 0;
+    float: right;
+}
+
+/*estilo de disponibilidad*/
+      
+    .search-container { max-width: 800px; margin: 30px auto; }
+        
+    /* Estilo para que el select no se vea tan ancho */
+    .input-group select { max-width: 160px; }
+    .table-container {
+        max-height: 450px;
+        overflow-y: auto;
+        position: relative;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+
+    /* Encabezado fijo y opaco */
+    .table thead th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f9fa !important; 
+        z-index: 10;
+        box-shadow: inset 0 -2px 0 #dee2e6;
+    }
+
+    /* Estilo del punto del semáforo */
+    .bxs-circle {
+        vertical-align: middle;
+    }
+
+   .tooltip-success .tooltip-inner {
+    background-color: #198754 !important;
+    color: #fff !important;
+    }
+    .tooltip-success .tooltip-arrow::before {
+        border-top-color: #198754 !important;
+    }
+
+    /* Color Amarillo */
+    .tooltip-warning .tooltip-inner {
+        background-color: #ffc107 !important;
+        color: #fff !important;
+    }
+    .tooltip-warning .tooltip-arrow::before {
+        border-top-color: #ffc107 !important;
+    }
+
+    /* Color Rojo */
+    .tooltip-danger .tooltip-inner {
+        background-color: #dc3545 !important;
+        color: #fff !important;
+    }
+
+    .tooltip-danger .tooltip-arrow::before {
+        border-top-color: #dc3545 !important;
+    }
+    
+        /* Color Azul para el Tooltip */
+    .tooltip-info .tooltip-inner {
+        background-color: #0dcaf0 !important;
+        color: #fff !important; /* Texto negro para mejor contraste con el azul claro */
+    }
+    .tooltip-info .tooltip-arrow::before {
+        border-top-color: #0dcaf0 !important;
+    }
+    .dot-status {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    /* Brillo Verde */
+    .dot-success {
+        background-color: oklch(79.2% .209 151.711);
+        box-shadow: 0 0 0 4px oklch(92.5% .084 155.995);
+    }
+
+    /* Brillo Amarillo */
+    .dot-warning {
+    background-color: oklch(85.2% .199 91.936);
+        box-shadow: 0 0 0 4px oklch(94.5% .129 101.54);
+    }
+
+    /* Brillo Rojo */
+    .dot-danger {
+    background-color: #dc3545;
+        box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.25);
+    }
+    /* Brillo Azul*/
+    .dot-info {
+    background-color: #0dcaf0; /* Color cyan de Bootstrap info */
+    box-shadow: 0 0 0 4px rgba(13, 202, 240, 0.25);
+    }
+
+        .header-custom-red, .header-custom-red th, .header-custom-red tr th {
+        background-color: #E2001A !important;
+        color: white !important;
+        border-bottom: 2px solid #b80015 !important;
+    }
+    .btn-custom-red {
+        background-color: #E2001A !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .btn-custom-red:hover {
+        background-color: #b80015 !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(226, 0, 26, 0.4) !important;
+    }
+
+    /* dashboard*/
+    .saldo-card-premium {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        border-left-width: 6px !important; /* Borde grueso */
+        padding: 1rem 1.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        min-width: 260px;
+    }
+
+     .saldo-card :hover {
+        transform: translateY(-5px);
+    
+    }
+    
+    .icon-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+
+  
+    .dashboard-card {
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 18px !important;
+        background: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+    
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1) !important;
+        border-color: #cbd5e1 !important;
+    }
+
+    .icon-shape-box {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .nav-link-custom {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: gap 0.2s;
+    }
+    .nav-link-custom:hover { gap: 8px; }
+
+
+    .text-title { color: #0f172a; font-weight: 800; }
+    .badge-pill-custom {
+        padding: 0.5em 1em;
+        font-weight: 700;
+        border-radius: 50px;
+    }
+
+    
+@media (max-width: 768px) {
+    /* 1. Forzamos el ancho del código */
+    .col-codigo {
+        width: 100% !important;
+        min-width: 150px !important;
+        padding: 5px !important;
+    }
+
+    /* 2. Ocultamos columnas que quitan mucho espacio en móvil */
+    /* Ocultamos: Ud.Emp (4ta columna) y Precio Und (7ma columna) */
+   
+
+    /* 3. Ajustamos el input de la cantidad para que no sea tan ancho */
+    .quantity {
+        width: 60px !important;
+        padding: 5px !important;
+    }
+
+     .col-nombre {
+         width: 100% !important;
+        min-width: 350px !important;
+        padding: 5px !important;
+    }
+
+    /* 4. Hacemos que la letra de la tabla sea un poco más pequeña */
+    #invoiceItem {
+        font-size: 0.85rem !important;
+    }
+
+    .col-precio{
+         width: 100% !important;
+        min-width: 100px !important;
+        padding: 5px !important;
+    }
+    .col-total{
+         width: 100% !important;
+        min-width: 150px !important;
+        padding: 5px !important;
+    }
+}

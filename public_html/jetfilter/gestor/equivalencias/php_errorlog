@@ -4,3 +4,9 @@ Stack trace:
 #0 /home/customer/www/webfiltros.com/public_html/jetfilter/equivalencias/update.php(71): PDO->prepare('')
 #1 {main}
   thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/equivalencias/update.php on line 71
+[30-Apr-2026 13:27:39 America/Caracas] PHP Deprecated:  PDO::prepare(): Passing null to parameter #1 ($query) of type string is deprecated in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/equivalencias/update.php on line 71
+[30-Apr-2026 13:27:39 America/Caracas] PHP Fatal error:  Uncaught ValueError: PDO::prepare(): Argument #1 ($query) cannot be empty in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/equivalencias/update.php:71
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/equivalencias/update.php(71): PDO->prepare('')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/gestor/equivalencias/update.php on line 71

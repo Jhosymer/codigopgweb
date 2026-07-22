@@ -44,7 +44,7 @@
             $filtracion = ( $_POST['filtracion'] == '' ) ? null : $_POST['filtracion'];
             $codigo = $_POST['codigo'];
             $diametro_ext = $_POST['diametroext'];
-            $diametro_int = $_POST['diametroint'];
+            $diametro_int = (isset($_POST['diametroint']) && $_POST['diametroint'] != '') ? $_POST['diametroint'] : null;
             $altura = $_POST['altura'];
             $diametro_emp_ext = $_POST['diametroempext'];
             $diametro_emp_int = $_POST['diametroempint'];
@@ -56,7 +56,7 @@
             $detalle1 = ( $_POST['detalle1'] == '') ? 'N/D' : $_POST['detalle1'];
             $detalle2 = ( $_POST['detalle2'] == '') ? 'N/D' : $_POST['detalle2'];
             $codigobarra = $_POST['codigobarra'];
-
+            $id_rosca = (isset($_POST['id_rosca']) && $_POST['id_rosca'] != '') ? $_POST['id_rosca'] : null;
             //Se eliminan los caracteres especiales y espacios, para la variable $codigo_buscar.
             $caracteres_a_reemplazar = ['-'," ","_"];
             $codigo_buscar = str_replace($caracteres_a_reemplazar,'',$codigo);
@@ -74,7 +74,7 @@
             $max_id_codigo = $id_codigo['MAX(id)'] + 1;
 
             //Datos a guardar en la tabla de sellado
-            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $diametro_ext, $diametro_int, $altura, $diametro_emp_ext, $diametro_emp_int, $espesor_emp, $valvula_al, $apertura, $valvula_ad, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3]];
+            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $diametro_ext, $diametro_int, $id_rosca, $altura, $diametro_emp_ext, $diametro_emp_int, $espesor_emp, $valvula_al, $apertura, $valvula_ad, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3]];
             //Datos a guardar en la tabla de filtro codificación
             $argumentos_filtro_codificacion = [$max_id_codigo, $codigo, $codigo_buscar, $id_tipo, $filtracion, $descripcion, $und_empaque, $fecha, $codigobarra, $sincronizado];
 
@@ -83,7 +83,7 @@
                 //En caso de que falle alguna subida, se cancelara todo
                 $base_de_datos->beginTransaction();
 
-                $sql = "INSERT INTO espec_sellado (id_codigo, codigo, codigo_buscar, tipo, diametroext, diametroint, altura, diametroempext, diametroempint, espesoremp, valvulaal, apertura, valvulaad, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO espec_sellado (id_codigo, codigo, codigo_buscar, tipo, diametroext, diametroint, id_rosca, altura, diametroempext, diametroempint, espesoremp, valvulaal, apertura, valvulaad, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 $seleccionado = $base_de_datos->prepare($sql);
                 $seleccionado->execute($argumentos);
 

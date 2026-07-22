@@ -32,7 +32,7 @@ $sheetData->setTitle('DatosValidacion');
 $sqlCodigos = "SELECT DISTINCT t1.codigo, t1.und_empaque, t1.descripcion, t1.precio
 FROM filtro_codificacion AS t1 
 LEFT JOIN filtro_alternativo_sap AS t2 ON t1.id = t2.id_codigo 
-WHERE (t1.act_sap = 'Y' OR t2.act_sap = 'Y') AND t1.precio != 0";
+WHERE (t1.act_sap = 'Y' OR t2.act_sap = 'Y') AND t1.precio != 0 ORDER BY t1.codigo ASC";
 $resultCodigos = $linki->query($sqlCodigos);
 
 $codigosArray = [];

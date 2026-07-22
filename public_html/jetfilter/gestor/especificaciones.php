@@ -327,6 +327,14 @@
                     <a href="./tipos/tipo.php" class="text-decoration-none text-black d-flex mt-2 link-hover">
                         <p class="Roboto-Bold">Tipo</p> 
                     </a>
+                    <hr class="my-2">
+                        <a href="./roscas/" class="text-decoration-none text-black d-flex mt-2 link-hover">
+                            <p class="Roboto-Bold">Roscas</p> 
+                        </a>
+
+                        <a href="./pulgadas/" class="text-decoration-none text-black d-flex mt-2 link-hover">
+                            <p class="Roboto-Bold">Pulgadas</p> 
+                        </a>
                 </div>
             </div>
         </div>

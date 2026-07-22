@@ -15,8 +15,35 @@ require './../../../../librerias/PHPMailer/SMTP.php';
 $PATH_BASE = './../../../../'; 
 
 $id_pedido = $_GET['id'] ?? $_POST['id'] ?? 'N/A';
-$email_cliente = $_SESSION['email'] ?? 'correo_no_encontrado@dominio.com';
-$nombre_cliente = $_SESSION['name'] ?? 'Cliente'; 
+$email_cliente = null;
+$nombre_cliente = null;
+
+// 1. Intentar obtener datos de la sesión
+if (isset($_SESSION['email']) && isset($_SESSION['name'])) {
+    $email_cliente = $_SESSION['email'];
+    $nombre_cliente = $_SESSION['name'];
+} 
+
+// 2. Si no hay sesión, consultar la base de datos
+if (!$email_cliente || !$nombre_cliente) {
+    if ($id_pedido !== 'N/A') {
+        $id_pedido_safe = $linki->real_escape_string($id_pedido);
+        
+        // Relación: pedidos.id_users = users.id
+        $sql_user = "SELECT u.email, u.name 
+                     FROM users u 
+                     INNER JOIN pedidos p ON u.id = p.id_users 
+                     WHERE p.id = '$id_pedido_safe' LIMIT 1";
+        
+        $res_user = $linki->query($sql_user);
+        
+        if ($res_user && $res_user->num_rows > 0) {
+            $fila_user = $res_user->fetch_assoc();
+            $email_cliente = $fila_user['email'];
+            $nombre_cliente = $fila_user['name'];
+        }
+    }
+}
 
 //CONSULTA A LA BASE DE DATOS
 $items_pedido = [];
@@ -62,7 +89,7 @@ if ($id_pedido !== 'N/A') {
 }
 
 // REMITENTE 
-$email_remitente = 'jhoselynmercado@webfiltros.com'; 
+$email_remitente = 'pedidosweb@webfiltros.com'; 
 
 // DESTINATARIO 
 $destinatarios_notificacion = [
@@ -78,7 +105,7 @@ try {
     $mail->Host = 'mail.webfiltros.com';
     $mail->SMTPAuth  = true;
     $mail->Username  = $email_remitente; 
-    $mail->Password  = 'jhsmer2022*'; 
+    $mail->Password  = '1234facil'; 
     $mail->SMTPSecure = 'ssl'; 
     $mail->Port = 465; 
 
@@ -120,9 +147,7 @@ try {
         $mail->Subject = 'CONFIRMACIÓN ' . htmlspecialchars($id_pedido);
         $mail->CharSet = 'UTF-8';
 
-        // ----------------------------------------------------
-        // 🚀 CUERPO DEL EMAIL CON LOS NUEVOS ESTILOS
-        // ----------------------------------------------------
+     
         $mail->Body = '
             <div style="font-family: Roboto, Tahoma, Verdana, sans-serif; font-size: 14px; color: #333;">
                 
@@ -164,13 +189,28 @@ try {
                         </td>
                     </tr>
                 </table>
+                 <p style="font-weight: bold; color: #E2001a; font-size: 80%; float: right; text-align: right;">
+                    ⚠️ Nota: 
+                    El total mostrado NO incluye descuentos ni impuestos.
+                </p>
+                <div class="row">
+       
                 
                 <div style="border-left: 5px solid #007bff; padding: 10px; background-color: #e9f5ff; margin-top: 30px; font-size: 13px;">
                     <p style="margin: 0;">Se le estará notificando la confirmación del registro de su pedido en nuestro sistema.</p>
                     <p style="margin: 5px 0 0 0;">Gracias por su confianza. </p>
                 </div>
 
-                <p style="margin: 20px 0 0 0;">Si tiene alguna pregunta, no dude en contactarnos.</p>
+                <div style="border-left: 5px solid #ffc107; padding: 10px; background-color: #fff3cd; margin-top: 30px; font-size: 13px;">
+                    <p style="margin: 0; color: #856404;">
+                        <span style="font-weight: bold; color: #856404;">⚠️ ATENCIÓN: </span> 
+                        Este es un correo electrónico de notificación automática. 
+                        <span style="font-weight: bold; color: #856404;">Por favor, no lo responda. </span>
+                    </p>
+                    <p style="margin: 5px 0 0 0; color: #856404;">
+                        Este buzón no es monitoreado y su mensaje no será leído.
+                    </p>
+                </div>
                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
                 <div style="text-align: right; font-size: 10px; color: #666;">
@@ -185,23 +225,39 @@ try {
         $mail->send();
     }
 
-    // Lógica de redirección
+    if (isset($_SESSION['email'])) {
     $_SESSION["alerta_activa"] = true;
-    $_SESSION['mensaje_alerta'] = 'Su pedido fue enviado con éxito. Se ha enviado un correo de confirmación a su email.';
+    $_SESSION['mensaje_alerta'] = 'Su pedido fue enviado con éxito.';
     $_SESSION['icono_alerta'] = 'success';
     $_SESSION['title'] = '¡Pedido Enviado!';
-    
-    header('Location: ../../index.php?pag=pedido'); 
-    exit; 
+    header('Location: ../../index.php?pag=pedido');
+    exit;
+} 
+
+// 2. SI NO HAY SESIÓN, ES LA APP (Responde JSON silencioso)
+header('Content-Type: application/json');
+echo json_encode([
+    'status' => 'success', 
+    'message' => 'Correo enviado correctamente para el pedido #' . $id_pedido
+]);
+exit;
 
 } catch (Exception $e) {
-    // Lógica de error
-    $_SESSION["alerta_activa"] = true;
-    $_SESSION['mensaje_alerta'] = "Error al enviar el pedido. El correo de confirmación no se pudo enviar. {$mail->ErrorInfo}";
-    $_SESSION['icono_alerta'] = 'error';
-    $_SESSION['title'] = 'Error de Envío';
-
-    header('Location: ../../index.php?pag=pedido');
-    exit; 
+    // Lógica de error para Web
+    if (isset($_SESSION['email'])) {
+        $_SESSION["alerta_activa"] = true;
+        $_SESSION['mensaje_alerta'] = "Error al enviar: {$mail->ErrorInfo}";
+        $_SESSION['icono_alerta'] = 'error';
+        header('Location: ../../index.php?pag=pedido');
+    } else {
+        // Lógica de error para App (JSON)
+        header('Content-Type: application/json');
+        http_response_code(500);
+        echo json_encode([
+            'status' => 'error', 
+            'message' => $mail->ErrorInfo
+        ]);
+    }
+    exit;
 }
 ?>

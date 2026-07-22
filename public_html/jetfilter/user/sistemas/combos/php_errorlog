@@ -359,3 +359,8 @@ Stack trace:
 #0 /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php(23): PDO->prepare('SELECT t1.id,  ...')
 #1 {main}
   thrown in /home/customer/www/webfiltros.com/public_html/jetfilter2/user/sistemas/combos/busqueda_codigo.php on line 23
+[23-Jun-2026 16:57:54 UTC] PHP Warning:  Undefined variable $pendiente in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/combos/verificar_producto.php on line 41
+[23-Jun-2026 16:57:57 UTC] PHP Warning:  Undefined variable $pendiente in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/combos/verificar_producto.php on line 41
+[23-Jun-2026 16:57:57 UTC] PHP Warning:  Undefined variable $pendiente in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/combos/verificar_producto.php on line 41
+[23-Jun-2026 16:57:57 UTC] PHP Warning:  Undefined variable $pendiente in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/combos/verificar_producto.php on line 41
+[23-Jun-2026 17:11:37 UTC] PHP Parse error:  syntax error, unexpected double-quote mark in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/combos/verificar_producto.php on line 33

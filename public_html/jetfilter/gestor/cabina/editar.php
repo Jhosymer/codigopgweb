@@ -185,19 +185,19 @@
                         <tr>
                             <th>Largo: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $largo ?>" name="largo" id="largo" min="0" step=".01" required />
+                                <input class="form-control" type="number" value="<?php echo $largo ?>" name="largo" id="largo" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required />
                             </td>  
                         </tr>
                         <tr>
                             <th>Ancho: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $ancho ?>" name="ancho" id="ancho" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $ancho ?>" name="ancho" id="ancho" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
                             <th>Altura: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>

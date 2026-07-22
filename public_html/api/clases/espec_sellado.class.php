@@ -8,13 +8,25 @@
     class espec_sellado extends conexion{
        
         private $table  ="espec_sellado";
+        private $table1 = "roscas"; // Tabla de roscas
         private $id     ="";
         private $codigo ="";
 
         // funciones GET
         public function listarespec_sellado(){
             $_respuestas = new respuestas;
-            $query = "SELECT ec.*, fc.filtracion, fc.und_empaque, fc.codigo_barra FROM " . $this->table . " ec LEFT JOIN filtro_codificacion fc ON ec.id_codigo = fc.id WHERE ec.deleted_at IS NULL";
+            $query = "SELECT 
+                ec.*, 
+                fc.filtracion, 
+                fc.und_empaque, 
+                fc.codigo_barra,
+                r.codigo AS rosca,
+                r.valor_nominal AS valor_nominal
+              FROM " . $this->table . " ec 
+              LEFT JOIN filtro_codificacion fc ON ec.id_codigo = fc.id 
+              -- Unión con la tabla roscas (asegúrate que $this->table1 sea 'roscas')
+              LEFT JOIN " . $this->table1 . " r ON ec.id_rosca = r.id
+              WHERE ec.deleted_at IS NULL";
             $datos=parent::obtenerDatos($query);
             return($datos);
         }

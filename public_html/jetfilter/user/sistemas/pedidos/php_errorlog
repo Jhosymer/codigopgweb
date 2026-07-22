@@ -1,0 +1,324 @@
+[06-Feb-2026 13:17:21 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:21:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:21:57 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:22:12 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:22:27 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:23:22 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[27-Feb-2026 15:23:28 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[01-Mar-2026 21:37:27 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[02-Mar-2026 20:12:18 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[02-Mar-2026 20:12:35 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[04-Mar-2026 23:31:25 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 12:16:44 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 19:01:24 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 19:45:31 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 20:51:38 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 20:51:42 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 20:51:46 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[05-Mar-2026 20:52:15 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Mar-2026 18:56:10 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[09-Mar-2026 22:26:54 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[10-Mar-2026 18:25:23 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[10-Mar-2026 18:25:29 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[11-Mar-2026 19:50:31 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[12-Mar-2026 17:47:36 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[12-Mar-2026 19:19:15 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[12-Mar-2026 19:19:20 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[12-Mar-2026 19:19:42 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[13-Mar-2026 18:27:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:06:58 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:07:05 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:07:13 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:07:16 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:07:41 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:15:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:15:25 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:15:32 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:15:51 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:16:07 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Mar-2026 14:17:05 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 12:48:51 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 15:51:50 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 17:44:50 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 17:50:28 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 18:03:10 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 18:15:32 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 18:16:53 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 18:20:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[18-Mar-2026 18:58:23 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[19-Mar-2026 18:11:36 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[20-Mar-2026 14:13:44 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[20-Mar-2026 14:37:00 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[20-Mar-2026 17:56:56 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[23-Mar-2026 22:07:49 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[24-Mar-2026 19:33:45 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 13:52:28 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 16:10:05 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 16:10:22 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 19:22:30 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 19:24:39 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[25-Mar-2026 19:38:45 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[03-Apr-2026 15:01:37 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 14:19:43 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 14:19:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 15:41:37 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 15:49:12 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 15:49:30 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 21:41:30 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[06-Apr-2026 21:48:45 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[07-Apr-2026 13:56:04 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[07-Apr-2026 14:04:17 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[07-Apr-2026 14:07:55 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * string in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/crud.php on line 165
+[17-Jun-2026 12:51:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:38
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(38): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 38
+[17-Jun-2026 12:56:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:38
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(38): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 38
+[17-Jun-2026 13:00:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:39
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(39): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 39
+[17-Jun-2026 13:01:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:39
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(39): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 39
+[17-Jun-2026 13:02:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:32
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(32): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 32
+[17-Jun-2026 13:02:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:38
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(38): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 38
+[17-Jun-2026 13:02:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:38
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(38): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 38
+[17-Jun-2026 13:02:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php:38
+Stack trace:
+#0 /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php(38): mysqli->query('SELECT u.email,...')
+#1 {main}
+  thrown in /home/customer/www/webfiltros.com/public_html/jetfilter/user/sistemas/pedidos/pedido_enviado.php on line 38

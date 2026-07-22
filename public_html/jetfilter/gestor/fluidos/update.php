@@ -71,6 +71,15 @@
                 $id_tipo = $seleccionado_tipo['id'];
             }
 
+             $etilenglicol = 0; 
+            switch (strtoupper($tipo)) {
+                case 'STANDARD':   $etilenglicol = 3;  break;
+                case 'PREMIUM':    $etilenglicol = 15; break;
+                case 'HEAVY DUTY': $etilenglicol = 33; break;
+                case 'GOLD':       $etilenglicol = 50; break;
+                default:           $etilenglicol = 0;  break;
+            }
+
             // Se guardan los elementos enviados por el formulario
             $codigo = $_POST['codigo'];
             $detalle1 = ( $_POST['detalle1'] == '' ) ? 'N/D' : $_POST['detalle1'];
@@ -87,7 +96,7 @@
             include_once('./../componentes/galeria_update.php');
 
             //Datos a guardar en la tabla de fluidos
-            $argumentos = [$codigo, $codigo_buscar, $tipo, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $fecha_updated, $id];
+            $argumentos = [$codigo, $codigo_buscar, $tipo, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $fecha_updated, $etilenglicol, $id];
             //Datos a guardar en la tabla de filtro codificación
             $argumentos_filtro_codificacion = [$codigo, $codigo_buscar, $codigo_barra, $id_tipo, $und_empaque, $fecha_actualiza, $sincronizado, $fecha_updated, $id_codigo];
 
@@ -110,7 +119,7 @@
                     $equivalencia_update->execute();
                 }
 
-                $actualizando = $base_de_datos->prepare("UPDATE espec_fluidos SET codigo = ?, codigo_buscar = ?, tipo = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?, imagen3 = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");
+                $actualizando = $base_de_datos->prepare("UPDATE espec_fluidos SET codigo = ?, codigo_buscar = ?, tipo = ?, detalle1 = ?, detalle2 = ?, sincronizado = ?, imagen = ?, imagen1 = ?, imagen2 = ?, imagen3 = ?, updated_at = ?, etilenglicol = ?  WHERE id = ?") or die("Error al actualizar");
                 $actualizando->execute($argumentos);
                 
                 $actualizando = $base_de_datos->prepare("UPDATE filtro_codificacion SET codigo = ?, codigo_buscar = ?, codigo_barra = ?, id_tipo = ?,und_empaque = ?, fecha_actualiza = ?, sincronizado = ?, updated_at = ?  WHERE id = ?") or die("Error al actualizar");

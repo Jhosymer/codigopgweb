@@ -91,19 +91,19 @@
                   <tr>
                      <th>Diámetro Externo 1:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametro_ext" name="diametro_ext" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametro_ext" name="diametro_ext" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Diámetro Interno 1:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametro_int" name="diametro_int" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametro_int" name="diametro_int" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Diámetro Interno 2:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametro_int2" name="diametro_int2" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametro_int2" name="diametro_int2" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
@@ -115,7 +115,7 @@
                   <tr>
                      <th>Altura:</th>
                      <td>
-                        <input type="number" class="form-control" id="altura" name="altura" min="0" step=".01" required>
+                        <input type="number" class="form-control" id="altura" name="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>

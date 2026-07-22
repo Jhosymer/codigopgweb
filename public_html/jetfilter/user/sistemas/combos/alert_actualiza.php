@@ -102,36 +102,50 @@ function alerta_pedido_abierto() {
     }
 
     // Lógica para el botón "Enviar"
-   const btnEnviar = document.getElementById('btn_enviar');
-    if (btnEnviar) {
-        btnEnviar.addEventListener('click', function() {
-            Swal.fire({
-                title: '¿Quieres Enviar el pedido?',
-                html: `<div class="alert alert-primary small mt-2">
-                Al enviar, el pedido pasará a ser procesado y <b> no podrás hacer más cambios.</b>
-                   </div>`,
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#E2001A',
-                cancelButtonColor: '#808080',
-                confirmButtonText: 'Enviar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                   
-                    const modoInput = document.createElement('input');
-                    modoInput.type = 'hidden';
-                    modoInput.name = 'modo';
-                    modoInput.value = 'cerrar';
-                    formulario.appendChild(modoInput);
+  const btnEnviar = document.getElementById('btn_enviar');
+if (btnEnviar) {
+    btnEnviar.addEventListener('click', function() {
+        
+        // Buscamos filas que tengan la clase 'item-row' y que NO sean la fila de entrada de datos
+        const itemsEnTabla = document.querySelectorAll('#invoiceItem tbody tr.item-row:not(.gris)');
 
-                    // Enviar el formulario con el modo "cerrar"
-                    formulario.submit();
-                    
-                }
+        if (itemsEnTabla.length === 0) {
+            Swal.fire({
+                title: '¡Pedido Vacío!',
+                text: 'No puedes enviar un pedido que no tiene artículos. Por favor, agrega al menos uno.',
+                icon: 'error',
+                confirmButtonColor: '#E2001A',
+                confirmButtonText: 'Entendido'
             });
+            return; // Detiene la ejecución aquí mismo
+        }
+        // --- FIN DE VALIDACIÓN ---
+
+        // Si pasó la validación, mostramos la confirmación de envío
+        Swal.fire({
+            title: '¿Quieres Enviar el pedido?',
+            html: `<div class="alert alert-primary small mt-2">
+            Al enviar, el pedido pasará a ser procesado y <b> no podrás hacer más cambios.</b>
+                </div>`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#E2001A',
+            cancelButtonColor: '#808080',
+            confirmButtonText: 'Enviar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const modoInput = document.createElement('input');
+                modoInput.type = 'hidden';
+                modoInput.name = 'modo';
+                modoInput.value = 'cerrar';
+                formulario.appendChild(modoInput);
+                formulario.submit();
+            }
         });
-    }
+    });
+}
+    
     
     // Lógica para el botón de borrar un pedido completo
     const botonesBorrarPedido = document.querySelectorAll('.borrar-pedido');
@@ -144,7 +158,7 @@ function alerta_pedido_abierto() {
             Swal.fire({
                 title: '¿Seguro que quieres eliminar el pedido?',
                  html: `<div class="alert alert-primary small mt-2">
-               i lo eliminas, no podrás recuperarlo. <b>Esta acción es permanente.</b>
+               Si lo eliminas, no podrás recuperarlo. <b>Esta acción es permanente.</b>
                    </div>`,
               
                 icon: 'warning',
@@ -275,3 +289,5 @@ function alerta_pedido_abierto() {
  
 });
 </script>
+
+

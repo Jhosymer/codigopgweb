@@ -1,54 +1,41 @@
 <?php
-
-
 require_once __DIR__ . '/clases/conexion/conexion.php';
 require_once __DIR__ . '/clases/pedidos.clases.php';
 
 header('Access-Control-Allow-Origin: *');
-// Desactivar la caché
-header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
-header("Pragma: no-cache"); // HTTP 1.0
-header("Expires: 0"); // Proxies
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
 
-$_respuestas = new respuestas;
-$_pedidos = new pedidos;
+$lockFile = $_SERVER['DOCUMENT_ROOT'] . '/ftp/pedidos.lock';
 
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-    if (empty($_GET)) {
-        // Obtener los datos
-        $listaDepedidos = $_pedidos->listarPedidosConDetalles();
-        $json_data = json_encode($listaDepedidos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    // --- BLOQUEO DE SEGURIDAD ---
+    if (file_exists($lockFile)) {
+        die(json_encode(["error" => "Proceso de generación en curso, intente más tarde."]));
+    }
+    file_put_contents($lockFile, getmypid());
 
-        // Ruta donde se guardará el archivo JSON
-        $nombreArchivo = 'pedidos.json'; // Puedes agregar timestamp si lo deseas
-        $rutaArchivo = $_SERVER['DOCUMENT_ROOT'] . '/ftp/' . $nombreArchivo;
+    $_pedidos = new pedidos;
+    $listaDepedidos = $_pedidos->listarPedidosConDetalles();
+    $json_data = json_encode($listaDepedidos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-        // Guardar el archivo en la carpeta FTP
-        $resultado = file_put_contents($rutaArchivo, $json_data);
+    $rutaArchivo = $_SERVER['DOCUMENT_ROOT'] . '/ftp/pedidos.json';
 
-        // Verificar si se guardó correctamente
-        if ($resultado !== false) {
-            header('Content-Type: application/json');
-            echo json_encode([
-                "mensaje" => "Archivo JSON creado exitosamente",
-                "ruta" => "/ftp/" . $nombreArchivo,
-                "url" => "https://" . $_SERVER['HTTP_HOST'] . "/ftp/" . $nombreArchivo
-            ], JSON_UNESCAPED_UNICODE);
-            http_response_code(200);
-        } else {
-            header('Content-Type: application/json');
-            echo json_encode(["error" => "No se pudo crear el archivo JSON"], JSON_UNESCAPED_UNICODE);
-            http_response_code(500);
-        }
-
-    } else {
+    if (file_put_contents($rutaArchivo, $json_data, LOCK_EX) !== false) {
+        unlink($lockFile); // Liberamos el candado
         header('Content-Type: application/json');
-        echo json_encode(["error" => "Parámetros GET no soportados"], JSON_UNESCAPED_UNICODE);
-        http_response_code(400);
+        echo json_encode([
+            "mensaje" => "Archivo JSON creado",
+            "url" => "https://" . $_SERVER['HTTP_HOST'] . "/ftp/pedidos.json"
+        ], JSON_UNESCAPED_UNICODE);
+    } else {
+        unlink($lockFile);
+        http_response_code(500);
+        echo json_encode(["error" => "No se pudo escribir el archivo"]);
     }
 } else {
-    header('Content-Type: application/json');
-    $datosArray = $_respuestas->error_405();
-    echo json_encode($datosArray);
+    http_response_code(405);
+    echo json_encode(["error" => "Método no soportado"]);
 }
 ?>

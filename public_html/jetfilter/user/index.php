@@ -4,7 +4,7 @@ session_start();
 
 // Si no hay sesión de 'email', no hay usuario logueado
 if( !isset($_SESSION['email']) ){
-    header("location: ./../index.html");
+      header("location: ./../login");
     exit();
 }
 
@@ -66,17 +66,25 @@ if ($pag !== 'pedido' && (isset($_SESSION['id_pedido']) || isset($_SESSION['idGe
 
 }
            if (!isset($_GET['pag']) or $pag=='' ){
-			
-			echo '<h1 class=" titulo text-center">Bienvenidos '. $_SESSION['name'].'</h1>';
 		
 			require_once("./sistemas/bienvenido.php");
 		   } else{
 
 			if($pag =='pedido')require_once("sistemas/pedidos/index.php");
-			if($pag =='soporte')require_once("sistemas/soporte/index.php");
+            //if($pag =='pedido')require_once("sistemas/construccion.php");
+            if($pag =='soportes')require_once("sistemas/construccion.php");
+            if($pag =='soporte')require_once("sistemas/soporte/index.php");
+			if($pag =='soporteact')require_once("sistemas/soporte/index.php");
+            if($pag =='perfil')require_once("sistemas/perfil/index.php");
+            if($pag =='factura')require_once("sistemas/factura/index.php");
+            if($pag =='disponibilidad')require_once("sistemas/disponibilidad/index.php");
+            if($pag =='backorders')require_once("sistemas/backorders/index.php");
+            if($pag =='pagos')require_once("sistemas/pagos/index.php");
+            //if($pag =='pago')require_once("sistemas/construccion.php");
+            if($pag =='estado_cuenta')require_once("sistemas/estado_cuenta/index.php");
+              
 		
 						
-			
 
 		   }
 

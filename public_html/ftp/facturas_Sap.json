@@ -1,0 +1,233 @@
+[
+    {
+        "id_relacion_factura": "7322",
+        "rif": "C-J305862850",
+        "Num_fact": "18091",
+        "documento_tipo": "I",
+        "num_control": "33302",
+        "fecha_contab": "2026-04-15",
+        "fecha_venc": "2026-04-15",
+        "valor_Moneda": "478.58110000",
+        "Moneda": "USD",
+        "iva": "1411.47394600",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": "11.65000000",
+        "descuento": "1163.24784000",
+        "total_apli_retenciones": "9174.58064600",
+        "retencion": "1058.60546000",
+        "total_fact": "10233.18610600",
+        "sub_total": "9984.96000000",
+        "DocumentLines": [
+            {
+                "codigo": "3000472",
+                "cantidad": 991,
+                "referencia_pedido": "2682",
+                "precio_und": 7.2,
+                "total_item": 7135.2
+            },
+            {
+                "codigo": "1012010-H01 I",
+                "cantidad": 528,
+                "referencia_pedido": "2682",
+                "precio_und": 1.92,
+                "total_item": 1013.76
+            },
+            {
+                "codigo": "1012100RAA I",
+                "cantidad": 480,
+                "referencia_pedido": "2682",
+                "precio_und": 2.6,
+                "total_item": 1248
+            },
+            {
+                "codigo": "1109190-BQ03 I",
+                "cantidad": 150,
+                "referencia_pedido": "2682",
+                "precio_und": 3.92,
+                "total_item": 588
+            }
+        ]
+    },
+    {
+        "id_relacion_factura": "7390",
+        "rif": "C-J305862850",
+        "Num_fact": "18159",
+        "documento_tipo": "I",
+        "num_control": "33375",
+        "fecha_contab": "2026-04-22",
+        "fecha_venc": "2026-04-22",
+        "valor_Moneda": "482.75860000",
+        "Moneda": "USD",
+        "iva": "785.23104000",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": ".00000000",
+        "descuento": ".00000000",
+        "total_apli_retenciones": "5104.00176000",
+        "retencion": "588.92328000",
+        "total_fact": "5692.92504000",
+        "sub_total": "4907.69400000",
+        "DocumentLines": [
+            {
+                "codigo": "W-3593A I S\/I",
+                "cantidad": 599,
+                "referencia_pedido": "3075",
+                "precio_und": 1.41,
+                "total_item": 844.59
+            },
+            {
+                "codigo": "W-4967 I S\/I",
+                "cantidad": 1512,
+                "referencia_pedido": "3075",
+                "precio_und": 1.152,
+                "total_item": 1741.824
+            },
+            {
+                "codigo": "465Q-1017950 I",
+                "cantidad": 2015,
+                "referencia_pedido": "3075",
+                "precio_und": 1.152,
+                "total_item": 2321.28
+            }
+        ]
+    },
+    {
+        "id_relacion_factura": "7412",
+        "rif": "C-J305862850",
+        "Num_fact": "18181",
+        "documento_tipo": "I",
+        "num_control": "33397",
+        "fecha_contab": "2026-04-23",
+        "fecha_venc": "2026-04-23",
+        "valor_Moneda": "483.33790000",
+        "Moneda": "USD",
+        "iva": "431.30880000",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": ".00000000",
+        "descuento": ".00000000",
+        "total_apli_retenciones": "2803.50720000",
+        "retencion": "323.48160000",
+        "total_fact": "3126.98880000",
+        "sub_total": "2695.68000000",
+        "DocumentLines": [
+            {
+                "codigo": "1012100RAA I",
+                "cantidad": 1728,
+                "referencia_pedido": "3075",
+                "precio_und": 1.56,
+                "total_item": 2695.68
+            }
+        ]
+    },
+    {
+        "id_relacion_factura": "7451",
+        "rif": "C-J305862850",
+        "Num_fact": "18220",
+        "documento_tipo": "I",
+        "num_control": "33440",
+        "fecha_contab": "2026-04-27",
+        "fecha_venc": "2026-04-27",
+        "valor_Moneda": "484.74040000",
+        "Moneda": "USD",
+        "iva": "1097.38333400",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": "11.65000000",
+        "descuento": "904.39416000",
+        "total_apli_retenciones": "7132.99167300",
+        "retencion": "823.03750100",
+        "total_fact": "7956.02917400",
+        "sub_total": "7763.04000000",
+        "DocumentLines": [
+            {
+                "codigo": "1109190-AW02",
+                "cantidad": 1296,
+                "referencia_pedido": "2682",
+                "precio_und": 5.99,
+                "total_item": 7763.04
+            }
+        ]
+    },
+    {
+        "id_relacion_factura": "8064",
+        "rif": "C-J305862850",
+        "Num_fact": "18828",
+        "documento_tipo": "I",
+        "num_control": "34172",
+        "fecha_contab": "2026-07-02",
+        "fecha_venc": "2026-07-02",
+        "valor_Moneda": "639.70290000",
+        "Moneda": "USD",
+        "iva": "1175.33440000",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": ".00000000",
+        "descuento": ".00000000",
+        "total_apli_retenciones": "7639.67360000",
+        "retencion": "881.50080000",
+        "total_fact": "8521.17440000",
+        "sub_total": "7345.84000000",
+        "DocumentLines": [
+            {
+                "codigo": "1109108-BU101 I",
+                "cantidad": 200,
+                "referencia_pedido": "3358",
+                "precio_und": 2.97,
+                "total_item": 594
+            },
+            {
+                "codigo": "1109190-BQ03 I",
+                "cantidad": 400,
+                "referencia_pedido": "3358",
+                "precio_und": 2.35,
+                "total_item": 940
+            },
+            {
+                "codigo": "1012100RAA I",
+                "cantidad": 700,
+                "referencia_pedido": "3358",
+                "precio_und": 1.56,
+                "total_item": 1092
+            },
+            {
+                "codigo": "1012010-H01 I",
+                "cantidad": 1600,
+                "referencia_pedido": "3358",
+                "precio_und": 1.152,
+                "total_item": 1843.2
+            },
+            {
+                "codigo": "1012100RAA I",
+                "cantidad": 1844,
+                "referencia_pedido": "3477",
+                "precio_und": 1.56,
+                "total_item": 2876.64
+            }
+        ]
+    },
+    {
+        "id_relacion_factura": "8217",
+        "rif": "C-J305862850",
+        "Num_fact": "18979",
+        "documento_tipo": "I",
+        "num_control": "34374",
+        "fecha_contab": "2026-07-21",
+        "fecha_venc": "2026-07-21",
+        "valor_Moneda": "737.23210000",
+        "Moneda": "USD",
+        "iva": "544.23600000",
+        "porcentaje_iva": "16.00000000",
+        "porcentaje_descuento": "11.65000000",
+        "descuento": "448.52500000",
+        "total_apli_retenciones": "3537.53400000",
+        "retencion": "408.17700000",
+        "total_fact": "3945.71100000",
+        "sub_total": "3850.00000000",
+        "DocumentLines": [
+            {
+                "codigo": "K203020",
+                "cantidad": 200,
+                "referencia_pedido": "3359",
+                "precio_und": 19.25,
+                "total_item": 3850
+            }
+        ]
+    }
+]

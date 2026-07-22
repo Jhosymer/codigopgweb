@@ -1,3 +1,11 @@
+
+<?php
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+date_default_timezone_set('America/Caracas');
+    $rann = date('H:i:s');
+
+?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,14 +27,15 @@ if (!isset($_GET['pag']) || $_GET['pag'] == '') {
     
 }
 ?>
-	<link href="./../../css/css_vende/styles.css" rel="stylesheet">
-    <link href="./../../css/estilos.css" rel="stylesheet">
+	<link href="./../../css/css_vende/styles.css?t=<?php echo $rann?>" rel="stylesheet">
+    <link href="./../../css/estilos.css?t=<?php echo $rann?>" rel="stylesheet">
 	<link rel="stylesheet" href="./../../vendor/bootstrap/css/bootstrap.min.css">
-	<link href="./../../css/css_vende/app.css" rel="stylesheet">
-    <link href="./../../css/css_vende/pagina.css" rel="stylesheet">
+	<link href="./../../css/css_vende/app.css?t=<?php echo $rann?>" rel="stylesheet">
+    <link href="./../../css/css_vende/pagina.css?t=<?php echo $rann?>" rel="stylesheet">
     <link rel="stylesheet" href="./../../vendor/boxicons/css/boxicons.min.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="./../gestor/js/sweetAlerta.js"></script> 
+	  <link href="./../../css/css_vende/moda_jetfilter.css?t=<?php echo $rann?>">
 	
 	<link rel="stylesheet" href="./../../css/css_vende/dataTables.bootstrap51.css">
 

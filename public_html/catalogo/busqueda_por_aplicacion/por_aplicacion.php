@@ -219,23 +219,23 @@
 <?php 
 if( isset($_GET['aplicacion']) ){
 ?>
-    <script>
-        document.getElementById('lista1').value = <?php echo $_GET['aplicacion']; ?>;
-        var valorCambiado = "id="+document.getElementById('lista1').value;
-            $.ajax({
-                data: valorCambiado,
-                url: './../../ajax_busquedas/ajax_aplicacion.php',
-                type: 'POST', // This is correct for the AJAX call
-                success: function(response){
-                    $('#lista2').css("display", "block");
-                    $('#label_lista2').css("display", "block");
-                    document.getElementById('lista2').innerHTML = response;
-                },
-                error: function(){
-                    alert("Error");
-                }
-            });
-    </script>
+  <script>
+    document.getElementById('lista1').value = <?php echo $_GET['aplicacion']; ?>;
+    var valorCambiado = "id="+document.getElementById('lista1').value;
+      $.ajax({
+        data: valorCambiado,
+        url: './../../ajax_busquedas/ajax_aplicacion.php',
+        type: 'POST', // This is correct for the AJAX call
+        success: function(response){
+          $('#lista2').css("display", "block");
+          $('#label_lista2').css("display", "block");
+          document.getElementById('lista2').innerHTML = response;
+        },
+        error: function(){
+          alert("Error");
+        }
+      });
+  </script>
 
 
 <?php

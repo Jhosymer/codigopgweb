@@ -37,10 +37,12 @@
     <th scope="col">#</th>
     <th scope="col">Nombre de Cliente</th>
     <th scope="col">Nro. de Pedido</th>
-    <th scope="col">fecha</th>
-    
+    <th scope="col">Fecha de Creación</th>
     <th scope="col">Nro de Pedido en  SAP</th>
-     <th scope="col">status</th>
+    <th scope="col">status</th>
+    <th scope="col">Fecha de Contabilización</th>
+    <th scope="col">Origen</th>
+    <th scope="col" >Nro. OC</th>
      <th scope="col">Total</th>
       
       
@@ -60,13 +62,13 @@
    
   // $wsqli = "SELECT * FROM pedidos";
   if(isset($_POST['Por_Procesar']) ){
-    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.total_pedido as 'totalpedido' , users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where  na_pedido = '' OR na_pedido IS NULL";
+    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.origen as origen, pedidos.fecha_sap as fecha_sap, pedidos.total_pedido as 'totalpedido' ,pedidos.stat as 'stat' , pedidos.numero_oc, users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where  na_pedido = '' OR na_pedido IS NULL ORDER BY pedidos.id  DESC";
   } else if(isset($_POST['Procesado']) ){
-    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.total_pedido as 'totalpedido' , users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where   na_pedido IS NOT NULL AND na_pedido != ''";
+    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.origen as origen, pedidos.fecha_sap as fecha_sap, pedidos.total_pedido as 'totalpedido' ,pedidos.stat as 'stat' , pedidos.numero_oc,  users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where   na_pedido IS NOT NULL AND na_pedido != '' AND stat != 'FB' ORDER BY pedidos.id  DESC";
   } else if(isset($_POST['Todos']) ){
-    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.total_pedido as 'totalpedido' , users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users";
+    $wsqli = "SELECT pedidos.id as id_pedido, pedidos.origen as origen, pedidos.fecha_sap as fecha_sap, pedidos.total_pedido as 'totalpedido' ,pedidos.stat as 'stat' , pedidos.numero_oc, users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users AND stat != 'FB' ORDER BY pedidos.id  DESC";
   } else {
-     $wsqli = "SELECT pedidos.id as id_pedido, pedidos.total_pedido as 'totalpedido' , users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where  na_pedido = '' OR na_pedido IS NULL ";
+     $wsqli = "SELECT pedidos.id as id_pedido,  pedidos.origen as origen, pedidos.fecha_sap as fecha_sap, pedidos.total_pedido as 'totalpedido' ,pedidos.stat as 'stat' , pedidos.numero_oc, users.name as 'name', pedidos.id_users as id_users, pedidos.na_pedido as na_pedido, pedidos.fecha as fecha FROM pedidos INNER JOIN users ON users.id = pedidos.id_users where  na_pedido = '' OR na_pedido IS NULL ORDER BY pedidos.id  DESC ";
 
   }
   
@@ -81,8 +83,10 @@
    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
        $id = $row['id_pedido'];
        $cliente = $row['name'];
-      $total= $row['totalpedido'];
-      $total_pedido_p = number_format($total, 2, ',', '.') . '$';
+       $total= $row['totalpedido'];
+       $total_pedido_p = number_format($total, 2, ',', '.') . '$';
+       $stat = $row['stat'];
+      $numero_oc = $row['numero_oc'];
        // Process the retrieved data here
        
     ?>
@@ -98,13 +102,51 @@
     
       <?php if ($row['na_pedido'] =='' or  $row['na_pedido'] == NUll) {
         echo "<td> Por Asignar </td>";
-        echo "<td> Por Procesar  </td>";
+         echo "<td> Por Procesar  </br> ";
+         if ($stat == 'C') {
+            echo '<span class="badge rounded-pill text-bg-success">Enviado</span>';
+        } else {
+            echo '<span class="badge rounded-pill text-bg-danger">Sin enviar</span>';
+        };
+        echo "</td>";
       
 
       } else { 
         echo "<td>".$row['na_pedido']."</td>";  
         echo "<td> Procesado </td>";
        
+      } ?>
+      <td><?php echo $row['fecha_sap'];   ?></td>
+    <?php 
+    
+
+$claseBadge = '';
+switch ($row['origen']) {
+    case 'sap':
+        $claseBadge = 'bg-info';
+        break;
+    case 'pag_web':
+        $claseBadge = 'bg-primary'; 
+        break;
+    case 'app':
+        $claseBadge = 'bg-dark'; 
+        break;
+    default:
+        $claseBadge = 'bg-secondary'; // Gris por defecto
+}?>
+
+<td>
+    <span class="badge <?php echo $claseBadge; ?> rounded-0 font-monospace px-3 py-2 text-uppercase fw-bold" style="letter-spacing: 1px;">
+        <?php echo $row['origen']; ?>
+    </span>
+</td>
+<?php
+    
+     if (empty($numero_oc)) {
+          echo "<td> </td>"; 
+      } else {
+        
+          echo "<td>" . $numero_oc. "</td>";
       }
       
        ?> 
@@ -138,6 +180,9 @@ $contador++;
         <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+          <th scope="col"></th>
     </tr>
   </tfoot>
 </table>

@@ -10,3 +10,27 @@ Stack trace:
 [08-Oct-2025 11:52:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/validar.php on line 39
 [08-Oct-2025 11:53:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/validar.php on line 39
 [08-Oct-2025 11:53:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webtest.webfiltros.com/public_html/config/conexion.php:10) in /home/customer/www/webtest.webfiltros.com/public_html/jetfilter/validar.php on line 39
+[30-Oct-2025 17:16:50 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[30-Oct-2025 17:16:50 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[30-Oct-2025 17:16:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[10-Nov-2025 19:02:25 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[10-Nov-2025 19:02:25 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[10-Nov-2025 19:02:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[10-Nov-2025 19:02:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[10-Nov-2025 19:02:50 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[10-Nov-2025 19:02:50 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[10-Nov-2025 19:02:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[12-Nov-2025 04:13:39 UTC] PHP Warning:  Undefined array key "email" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[12-Nov-2025 04:13:39 UTC] PHP Warning:  Undefined array key "password" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 13
+[12-Nov-2025 04:13:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 44
+[04-Mar-2026 17:03:12 UTC] PHP Warning:  Undefined array key "g-recaptcha-response" in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 12
+[04-Mar-2026 17:03:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php:12) in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 20
+[04-Mar-2026 17:10:55 UTC] PHP Parse error:  Unmatched '}' in /home/customer/www/webfiltros.com/public_html/jetfilter/validar.php on line 77

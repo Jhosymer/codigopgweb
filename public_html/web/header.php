@@ -160,6 +160,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <a href="#" class="menu__link">Soporte</a>
                     
                                     <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="<?php echo $loc; ?>jetfilter/gestor/PDF/GARANTIA_WEBFILTROS.pdf" class="menu__link menu__link--inside">Garantía</a>
+                            </li>
+                                    
 
                                       <li class="menu__inside">
                                            <a href="<?php echo $loc; ?>soporte/instrucciones/" class="menu__link menu__link--inside">Instrucciones</a>
@@ -167,6 +171,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                          <li class="menu__inside">
                                  <a href="<?php echo $loc; ?>soporte/Filtro_Elemento_Colapsado/" class="menu__link  menu__linka  menu__link--inside">Filtro Colapsado</a>
                             </li>
+
+                            
                             <li class="menu__inside">
                                 <a href="<?php echo $loc; ?>soporte/Luz_de_Presion_de_Aceite/" class="menu__link menu__link--inside">Luz de Presión de Aceite</a>
                             </li>
@@ -180,9 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <a href="<?php echo $loc; ?>soporte/Presion_aceite/" class="menu__link menu__link--inside">Presión de Aceite</a>
                             </li>
 
-                             <li class="menu__inside">
-                                <a href="<?php echo $loc; ?>soporte/Politica_privacidad_WebCat/" class="menu__link menu__link--inside">Política de privacidad de WebCat</a>
-                            </li>
+                             
                                     </ul>
                 </li>
 

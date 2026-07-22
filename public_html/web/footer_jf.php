@@ -1,5 +1,14 @@
 
 </main>
+<footer class="bg-transparent">
+    <div class="container py-3">
+        <div class="text-center pt-3 pb-2 border-top border-secondary-subtle">
+            <p class="text-secondary small mb-0">
+                © <?php echo date('Y'); ?> <strong class="text-dark">Jet-Filter, C.A.</strong> Todos los derechos reservados. | RIF: J-00059322-1
+            </p>
+        </div>
+    </div>
+</footer>
 <script src="<?php echo $loc; ?>js/menu.js"></script>
 
 

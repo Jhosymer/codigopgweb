@@ -44,7 +44,7 @@ if(isset($_POST['modo'])){
 
         try {
             $result = $linki->query($wsqli);
-            $wqsuma = "SELECT SUM(total) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
+            $wqsuma = "SELECT COALESCE(SUM(total), 0) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
             $resultado_suma = mysqli_query($linki, $wqsuma);
             $row = mysqli_fetch_assoc($resultado_suma);
             $suma_precios = $row['suma_precios'];
@@ -133,85 +133,132 @@ if(isset($_POST['modo'])){
         echo 'window.location.href = "./../../index.php?pag=pedido";';
         echo '</script>';
         exit();
-    } else   if($modo == "agregarmas"){
+    } else if($modo == "agregarmas"){
 
     $id_pedido = mysqli_real_escape_string($linki, $_POST['id_pedido']);
     $id_pro = mysqli_real_escape_string($linki, $_POST['id_pro']);
     $cantidad = mysqli_real_escape_string($linki, $_POST['cantidad']);
     $precio = mysqli_real_escape_string($linki, $_POST['precio_u']);
     
-    // Buscar si el producto ya existe en el pedido
-    $query = "SELECT * FROM lista_pedidos WHERE id_producto = '$id_pro' and id_pedido = '$id_pedido'";
-    $resultado = mysqli_query($linki, $query);
+    // 1. BUSCAR SI YA EXISTE
+   $query = "SELECT lp.*, f.codigo 
+          FROM lista_pedidos lp 
+          LEFT JOIN filtro_codificacion f ON lp.id_producto = f.id 
+          WHERE lp.id_producto = '$id_pro' AND lp.id_pedido = '$id_pedido'";
+$resultado = mysqli_query($linki, $query);
 
-    if (mysqli_num_rows($resultado) > 0) {
-        // Si el producto existe, actualizamos la cantidad y el total
-        $row = mysqli_fetch_assoc($resultado);
-        $cantidad_existente = $row['cantidad'];
-        $id_lista_pedido_existente = $row['id'];
-        $nueva_cantidad = $cantidad_existente + $cantidad;
-        $nuevo_total = $nueva_cantidad * $precio;
+if (mysqli_num_rows($resultado) > 0) {
+    $row = mysqli_fetch_assoc($resultado);
+    // Tomamos el código del campo 'codigo' de la tabla 'filtro_codificacion'
+    $codigo = $row['codigo'];
 
-        $wsqli = "UPDATE lista_pedidos SET cantidad = '$nueva_cantidad', total = '$nuevo_total' WHERE id = '$id_lista_pedido_existente'";
+    $_SESSION['mensajeLista'] = "El producto <b>" . $codigo . "</b> ya existe en este pedido. Por favor, edítalo desde la lista si deseas cambiar la cantidad.";
+    $_SESSION['tm'] = "alert-danger"; // Mantenemos el color rojo (alert-danger) que tenías originalmente
+    
+    echo '<script type="text/javascript">';
+    echo 'window.location.href = "./../../index.php?pag=pedido&id=' . $id_pedido . '";';
+    echo '</script>';
+    exit();
+}
+
+    // 2. SI NO EXISTE, INSERTAR
+    $total_linea = $cantidad * $precio;
+    $wsqli = "INSERT INTO lista_pedidos (id_pedido, id_producto, cantidad, precio_u, total) VALUES ('$id_pedido', '$id_pro', '$cantidad', '$precio', '$total_linea')";
+    
+    try {
+        $linki->query($wsqli);
         
-        try {
-            $linki->query($wsqli);
-        } catch(\Throwable $e) {
-            $_SESSION['mensajeLista'] = "No se pudo actualizar la cantidad: " . $linki->error;
-            $_SESSION['tm'] = "alert-danger";
-        }
-    } else {
-        // Si el producto no existe, lo insertamos como una nueva línea
-        $total_linea = $cantidad * $precio; // Calcular el total de la nueva línea
-        $wsqli = "INSERT INTO lista_pedidos (id_pedido, id_producto, cantidad, precio_u, total) VALUES ($id_pedido, $id_pro, $cantidad, $precio, $total_linea)";
+        // Actualizar total general
+        $wqsuma = "SELECT COALESCE(SUM(total), 0) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
+        $resultado_suma = mysqli_query($linki, $wqsuma);
+        $row = mysqli_fetch_assoc($resultado_suma);
+        $suma_precios = $row['suma_precios'];
+        $wqupdate = "UPDATE pedidos SET total_pedido = '$suma_precios' WHERE id = '$id_pedido'";
+        $linki->query($wqupdate);
         
-        try {
-            $linki->query($wsqli);
-            $_SESSION['id_pedido'] = $id_pedido;
-        } catch(\Throwable $e) {
-            $_SESSION['mensajeLista'] = "No se pudo agregar el producto: " . $linki->error;
-            $_SESSION['tm'] = "alert-danger";
-        }
+        $_SESSION['id_pedido'] = $id_pedido;
+    } catch(\Throwable $e) {
+        $_SESSION['mensajeLista'] = "Error al agregar: " . $linki->error;
+        $_SESSION['tm'] = "alert-danger";
     }
 
-    // Siempre actualiza el total general del pedido después de insertar o actualizar
-    $wqsuma = "SELECT SUM(total) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
-    $resultado_suma = mysqli_query($linki, $wqsuma);
-    $row = mysqli_fetch_assoc($resultado_suma);
-    $suma_precios = $row['suma_precios'];
-    $wqupdate = "UPDATE pedidos SET total_pedido = '$suma_precios' WHERE id = '$id_pedido'";
-    $linki->query($wqupdate);
-    $_SESSION['id_pedido'] = $id_pedido; // Esto asegura que la variable de sesión esté actualizada
-
-    // Aquí está la parte clave: descomentar y corregir el redireccionamiento
     echo '<script type="text/javascript">';
-echo 'window.location.href = "./../../index.php?pag=pedido&id=' . $id_pedido . '&accion=agregar-item";';
-echo '</script>';
-exit();
+    echo 'window.location.href = "./../../index.php?pag=pedido&id=' . $id_pedido . '&accion=agregar-item";';
+    echo '</script>';
+    exit();
+}
+else if ($modo == "update_oc") {
+    $id_pedido = mysqli_real_escape_string($linki, $_POST['id']);
+    $oc_post = trim($_POST['oc']);
+    
+    $numero_oc = ($oc_post !== "") ? "'" . mysqli_real_escape_string($linki, $oc_post) . "'" : "NULL";
 
+    $wsqli = "UPDATE pedidos SET numero_oc = $numero_oc WHERE id = '$id_pedido'";
 
+    try {
+        if ($linki->query($wsqli)) {
+            // CONFIGURACIÓN PARA SWEETALERT2 (Imagen 2)
+            $_SESSION['alerta_activa'] = true;
+            $_SESSION['icono_alerta'] = 'success';
+            $_SESSION['title'] = '¡Operación Exitosa!';
+            $_SESSION['mensaje_alerta'] = "Nro. Orden de Compra actualizada correctamente.";
+        } else {
+            throw new Exception($linki->error);
+        }
+    } catch (\Throwable $e) {
+        $_SESSION['alerta_activa'] = true;
+        $_SESSION['icono_alerta'] = 'error';
+        $_SESSION['title'] = 'Error';
+        $_SESSION['mensaje_alerta'] = "Error al actualizar: " . $e->getMessage();
+    }
 
+    $_SESSION['idGenerado'] = $id_pedido;
 
-}} else { // Manejo de peticiones GET
-    if(isset($_GET['id'])){
-        $id = mysqli_real_escape_string($linki, $_GET['id']);
-        $wsqli = "DELETE pedidos, lista_pedidos FROM pedidos JOIN lista_pedidos ON pedidos.id = lista_pedidos.id_pedido WHERE pedidos.id ='$id' and lista_pedidos.id_pedido = '$id' ";
-        try {
-            $linki->query($wsqli);
+    echo '<script type="text/javascript">';
+    echo 'window.location.href = "./../../index.php?pag=pedido&id=' . $id_pedido . '";';
+    echo '</script>';
+    exit();
+}
+
+} else { // Manejo de peticiones GET
+   if(isset($_GET['id'])){
+    $id = mysqli_real_escape_string($linki, $_GET['id']);
+    
+    // Iniciamos una transacción
+    $linki->begin_transaction();
+
+    try {
+        // 1. Borramos primero los hijos (ítems del pedido)
+        // Usamos una consulta simple que siempre se ejecutará
+        $linki->query("DELETE FROM lista_pedidos WHERE id_pedido = '$id'");
+
+        // 2. Borramos el padre (el pedido principal)
+        $linki->query("DELETE FROM pedidos WHERE id = '$id'");
+
+        // Verificamos si realmente se borró algo en la tabla principal
+        if ($linki->affected_rows > 0) {
+            $linki->commit(); // Guardamos cambios
             $_SESSION['alerta_activa'] = true; 
             $_SESSION['icono_alerta'] = 'success';
-            $_SESSION['mensaje_alerta'] = "Se eliminó con éxito el pedido.!!!";
-        } catch (\Throwable $e) {
+            $_SESSION['mensaje_alerta'] = "Se eliminó con éxito el pedido.";
+        } else {
+            // Si no se borró nada (quizás el ID no existe), hacemos rollback por seguridad
+            $linki->rollback();
             $_SESSION['alerta_activa'] = true;
-            $_SESSION['icono_alerta'] = 'error';
-            $_SESSION['mensaje_alerta'] = "No se pudo eliminar: " . $linki->error;
+            $_SESSION['icono_alerta'] = 'info';
+            $_SESSION['mensaje_alerta'] = "No se encontró el pedido para eliminar.";
         }
-    
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "./../../index.php?pag=pedido";';
-        echo '</script>';
-        exit();
-    } else if (isset($_GET['id_lista_pedido'])){
+
+    } catch (\Throwable $e) {
+        $linki->rollback(); // Si algo falla, revertimos
+        $_SESSION['alerta_activa'] = true;
+        $_SESSION['icono_alerta'] = 'error';
+        $_SESSION['mensaje_alerta'] = "Error del sistema: " . $e->getMessage();
+    }
+
+    echo '<script type="text/javascript">window.location.href = "./../../index.php?pag=pedido";</script>';
+    exit();
+} else if (isset($_GET['id_lista_pedido'])){
         $id = mysqli_real_escape_string($linki, $_GET['id_lista_pedido']);
         $wsqli1 = "SELECT * from lista_pedidos WHERE id ='$id'";
         $result1 = $linki->query($wsqli1);
@@ -222,7 +269,7 @@ exit();
         $wsqli = "DELETE FROM lista_pedidos WHERE id ='$id'";
         try {
             $linki->query($wsqli);
-            $wqsuma = "SELECT SUM(total) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
+            $wqsuma = "SELECT COALESCE(SUM(total), 0) AS suma_precios FROM lista_pedidos WHERE id_pedido = '$id_pedido'";
             $resultado_suma = mysqli_query($linki, $wqsuma);
             $row = mysqli_fetch_assoc($resultado_suma);
             $suma_precios = $row['suma_precios'];

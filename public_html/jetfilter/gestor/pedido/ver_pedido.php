@@ -61,6 +61,7 @@ $contador = 1;
        $id_pedido=$row2['id_pedido'];
        $precio =$row2['precio'];
        $total_linea=$row2['totallinea'];
+       
 
        if ($row2['cancel'] =='1' ) { ?>
         <tr class='gris'><?php

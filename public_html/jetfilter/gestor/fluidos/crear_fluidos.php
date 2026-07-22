@@ -38,7 +38,15 @@
                 $tipo = $seleccionado_tipo['tipo'];
                 $id_tipo = $seleccionado_tipo['id'];
             }
-
+            
+             $etilenglicol = 0; // Valor por defecto
+            switch (strtoupper($tipo)) {
+                case 'STANDARD':   $etilenglicol = 3;  break;
+                case 'PREMIUM':    $etilenglicol = 15; break;
+                case 'HEAVY DUTY': $etilenglicol = 33; break;
+                case 'GOLD':       $etilenglicol = 50; break;
+                default:           $etilenglicol = 0;  break;
+            }
             // Se guardan los elementos enviados por el formulario
             $codigo = $_POST['codigo'];
             $detalle1 = ( $_POST['detalle1'] == '' ) ? 'N/D' : $_POST['detalle1'];
@@ -63,7 +71,7 @@
             $max_id_codigo = $id_codigo['MAX(id)'] + 1;
 
             //Datos a guardar en la tabla de fluidos
-            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3]];
+            $argumentos = [$max_id_codigo, $codigo, $codigo_buscar, $tipo, $detalle1, $detalle2, $sincronizado, $imagen[0], $imagen[1], $imagen[2], $imagen[3], $etilenglicol];
             //Datos a guardar en la tabla de filtro codificación
             $argumentos_filtro_codificacion = [$max_id_codigo, $codigo, $codigo_buscar, $id_tipo, $descripcion, $und_empaque, $fecha,  $codigobarra,  $sincronizado];
 
@@ -72,7 +80,7 @@
                 //En caso de que falle alguna subida, se cancelara todo
                 $base_de_datos->beginTransaction();
 
-                $sql = "INSERT INTO espec_fluidos (id_codigo, codigo, codigo_buscar, tipo, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                $sql = "INSERT INTO espec_fluidos (id_codigo, codigo, codigo_buscar, tipo, detalle1, detalle2, sincronizado, imagen, imagen1, imagen2, imagen3, etilenglicol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                 $seleccionado = $base_de_datos->prepare($sql);
                 $seleccionado->execute($argumentos);
 

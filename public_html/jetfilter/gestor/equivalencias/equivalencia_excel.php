@@ -48,8 +48,8 @@
             <tr>
                 <td style="border: 1px solid #000; "><?php echo $equivalencia['codigo']; ?></td>
                 <td style="border: 1px solid #000; "><?php echo $equivalencia['marca']; ?></td>
-                <td style="border: 1px solid #000; "><?php echo $equivalencia['codigo_marca']; ?></td>
-            </tr>
+                <td style="border: 1px solid #000; mso-number-format:'\@';"><?php echo $equivalencia['codigo_marca']; ?></td>            
+                </tr>
         <?php 
             }
         ?>

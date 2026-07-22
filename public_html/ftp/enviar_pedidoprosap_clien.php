@@ -128,14 +128,14 @@ if (!empty($order_ids)) {
 // 3. CONFIGURACIÓN Y ENVÍO DEL EMAIL (Bucle por Pedido)
 // ----------------------------------------------------
 
-$email_remitente = 'jhoselynmercado@webfiltros.com'; 
+$email_remitente = 'pedidosweb@webfiltros.com'; 
 $mail = new PHPMailer(true);
 
 try {
     // Configuración del servidor SMTP 
     $mail->SMTPDebug = 0; $mail->isSMTP(); $mail->Host = 'mail.webfiltros.com';
     $mail->SMTPAuth  = true; $mail->Username  = $email_remitente; 
-    $mail->Password  = 'jhsmer2022*'; $mail->SMTPSecure = 'ssl'; $mail->Port = 465; 
+    $mail->Password  = '1234facil'; $mail->SMTPSecure = 'ssl'; $mail->Port = 465; 
     $mail->setFrom($email_remitente, 'WebFiltros Pedidos'); 
 
     // Adjuntar y embeber imágenes para el logo 
@@ -212,7 +212,7 @@ try {
                                     
                                     <p style="margin: 0 0 20px 0;">Le confirmamos que su pedido  ha sido registrado exitosamente en nuestro sistema administrativo  con la siguiente información:</p>
 
-                                    <p style="margin: 0 0 20px 0;">Número de Pedido' . $numero_sap_display . ' </p>
+                                    <p style="margin: 0 0 20px 0; color: #E2001A; font-weight: bold;">Número de Pedido' . $numero_sap_display . ' </p>
                                 
                                     
                                     <h3 style="color: #007bff; margin-top: 0; margin-bottom: 10px;">Detalle de Productos</h3> 
@@ -241,9 +241,25 @@ try {
                                         </tr>
                                     </table>
 
+                                    <p style="font-weight: bold; color: #E2001a; font-size: 80%; float: right; text-align: right;">
+                                        ⚠️ Nota: 
+                                        El total mostrado NO incluye descuentos ni impuestos.
+                                    </p>
+
                                     <div style="border-left: 5px solid #E2001A; padding: 10px; background-color: #ffe9ea; margin-top: 30px; font-size: 13px;">
                                         <p style="margin: 0; font-weight: bold; color: #E2001A;">Nota Importante:</p>
                                         <p style="margin: 5px 0 0 0;">Esta confirmación indica que su pedido ya está en nuestro sistema administrativo para su revisión final y posterior procesamiento. Nuestro equipo le contactará para coordinar el despacho. Gracias por su confianza.</p>
+                                    </div>
+
+                                     <div style="border-left: 5px solid #ffc107; padding: 10px; background-color: #fff3cd; margin-top: 30px; font-size: 13px;">
+                                        <p style="margin: 0; color: #856404;">
+                                            <span style="font-weight: bold; color: #856404;">⚠️ ATENCIÓN: </span> 
+                                            Este es un correo electrónico de notificación automática. 
+                                            <span style="font-weight: bold; color: #856404;">Por favor, no lo responda. </span>
+                                        </p>
+                                        <p style="margin: 5px 0 0 0; color: #856404;">
+                                            Este buzón no es monitoreado y su mensaje no será leído.
+                                        </p>
                                     </div>
 
                                     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">

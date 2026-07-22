@@ -223,8 +223,12 @@
 
         }
         else if( $resultado == 'combustiblelinea' ){
-            $sql = "SELECT e_c.tipo, f_c.filtracion, f_c.und_empaque, e_c.diametroext, e_c.altura, e_c.entrada, e_c.salida, e_c.detalle1, e_c.detalle2, e_c.imagen, e_c.imagen1, e_c.imagen2 FROM espec_combustiblelinea as e_c
+          $sql = "SELECT e_c.tipo, f_c.filtracion, f_c.und_empaque, e_c.diametroext, r_e.codigo as nombre_rosca_entrada, r_s.codigo as nombre_rosca_salida, p_e.codigo as nombre_pulgada_entrada, p_s.codigo as nombre_pulgada_salida, e_c.altura, e_c.entrada, e_c.salida, e_c.detalle1, e_c.detalle2, e_c.imagen, e_c.imagen1, e_c.imagen2 FROM espec_combustiblelinea as e_c
                             JOIN filtro_codificacion as f_c ON f_c.id = e_c.id_codigo
+                            LEFT JOIN roscas as r_e ON e_c.id_rosca_entrada = r_e.id
+                            LEFT JOIN roscas as r_s ON e_c.id_rosca_salida = r_s.id
+                            LEFT JOIN pulgadas as p_e ON e_c.id_pulgada_entrada = p_e.id
+                            LEFT JOIN pulgadas as p_s ON e_c.id_pulgada_salida = p_s.id
                             WHERE ( e_c.codigo = :codigo ) and ( e_c.deleted_at is null ) and ( f_c.deleted_at is null )";
             $seleccionado = $base_de_datos->prepare($sql);
             $seleccionado->bindParam(":codigo", $codigo, PDO::PARAM_STR);
@@ -262,13 +266,34 @@
             $output['especificaciones'] .= "<td>ø Altura:</td>";
             $output['especificaciones'] .= "<td>" . number_format($reg_aire_industrial['altura'],2,",",".") . " mm</td>";
             $output['especificaciones'] .= "</tr>";
-            $output['especificaciones'] .= "<tr>";
+           $output['especificaciones'] .= "<tr>";
             $output['especificaciones'] .= "<td>Entrada:</td>";
-            $output['especificaciones'] .= "<td>" .number_format( $reg_aire_industrial['entrada'],2,",",".") . " mm</td>";
+           if (!empty($reg_aire_industrial['nombre_rosca_entrada'])) {
+                $mostrar_entrada = $reg_aire_industrial['nombre_rosca_entrada'];
+            }
+            else if (!empty($reg_aire_industrial['nombre_pulgada_entrada'])) {
+                $mostrar_entrada = $reg_aire_industrial['nombre_pulgada_entrada'];
+            }
+             else {
+                $mostrar_entrada = number_format($reg_aire_industrial['entrada'], 2, ",", ".") . " mm";
+            }
+            
+            $output['especificaciones'] .= "<td>" . $mostrar_entrada . "</td>";
             $output['especificaciones'] .= "</tr>";
+
+            // --- SALIDA ---
             $output['especificaciones'] .= "<tr>";
             $output['especificaciones'] .= "<td>Salida:</td>";
-            $output['especificaciones'] .= "<td>" . number_format($reg_aire_industrial['salida'],2,",",".") . " mm</td>";
+            
+            if (!empty($reg_aire_industrial['nombre_rosca_salida'])) {
+                $mostrar_salida = $reg_aire_industrial['nombre_rosca_salida'];
+            } else  if (!empty($reg_aire_industrial['nombre_pulgada_salida'])) {
+                $mostrar_salida = $reg_aire_industrial['nombre_pulgada_salida'];
+            } else {
+                $mostrar_salida = number_format($reg_aire_industrial['salida'], 2, ",", ".") . " mm";
+            }
+            
+            $output['especificaciones'] .= "<td>" . $mostrar_salida . "</td>";
             $output['especificaciones'] .= "</tr>";
              if ($reg_aire_industrial['detalle1'] != null && $reg_aire_industrial['detalle1']!= "N/D") { 
             $output['especificaciones'] .= "<tr>";
@@ -570,9 +595,13 @@
        
 
         else if( $resultado == 'sellado' ){
-            $sql = "SELECT e_s.tipo, f_c.filtracion, f_c.und_empaque, e_s.diametroext, e_s.diametroint, e_s.altura, e_s.diametroempext, e_s.diametroempint, e_s.espesoremp, e_s.valvulaal, e_s.apertura, e_s.valvulaad, e_s.detalle1, e_s.detalle2, e_s.imagen, e_s.imagen1, e_s.imagen2 FROM espec_sellado as e_s
-                                    JOIN filtro_codificacion as f_c ON f_c.id = e_s.id_codigo
-                                    WHERE ( e_s.codigo = :codigo ) and ( e_s.deleted_at is null ) and ( f_c.deleted_at is null )";
+            $sql = "SELECT e_s.*, f_c.filtracion, f_c.und_empaque, r.codigo as nombre_rosca 
+            FROM espec_sellado as e_s
+            JOIN filtro_codificacion as f_c ON f_c.id = e_s.id_codigo
+            LEFT JOIN roscas as r ON e_s.id_rosca = r.id
+            WHERE ( e_s.codigo = :codigo ) 
+              AND ( e_s.deleted_at is null ) 
+              AND ( f_c.deleted_at is null )";
             $seleccionado = $base_de_datos->prepare($sql);
             $seleccionado->bindParam(":codigo", $codigo, PDO::PARAM_STR);
             $seleccionado->setFetchMode(PDO::FETCH_ASSOC); 
@@ -606,8 +635,19 @@
             $output['especificaciones'] .= "<td>" . number_format($reg_aire_industrial['diametroext'],2,",",".") . " mm</td>";
             $output['especificaciones'] .= "</tr>";
             $output['especificaciones'] .= "<tr>";
-            $output['especificaciones'] .= "<td>Rosca:</td>";
-            $output['especificaciones'] .= "<td>" . $reg_aire_industrial['diametroint'] . "</td>";
+            
+            if (!empty($reg_aire_industrial['nombre_rosca'])) {
+                $etiqueta_dinamica = "Rosca:";
+                $valor_dinamico = $reg_aire_industrial['nombre_rosca'];
+            } else {
+                $etiqueta_dinamica = "ø int1:";
+                $valor_dinamico = $reg_aire_industrial['diametroint'] . " mm";
+            }
+
+            // Ahora lo metemos en tu tabla
+            $output['especificaciones'] .= "<tr>";
+            $output['especificaciones'] .= "<td>" . $etiqueta_dinamica . "</td>";
+            $output['especificaciones'] .= "<td>" . $valor_dinamico . "</td>";
             $output['especificaciones'] .= "</tr>";
             $output['especificaciones'] .= "<tr>";
             $output['especificaciones'] .= "<td>Altura:</td>";
@@ -721,6 +761,13 @@
             $output['especificaciones'] .= "<tr>";
             $output['especificaciones'] .= "<td>Detalle 2:</td>";
             $output['especificaciones'] .= "<td>" . $reg_aire_industrial['detalle2'] . "</td>";
+            $output['especificaciones'] .= "</tr>";
+             }
+
+              if ($reg_aire_industrial['etilenglicol'] != null) {  
+            $output['especificaciones'] .= "<tr>";
+            $output['especificaciones'] .= "<td>Etilenglicol:</td>";
+            $output['especificaciones'] .= "<td>" . $reg_aire_industrial['etilenglicol'] . " %</td>";
             $output['especificaciones'] .= "</tr>";
              }
              

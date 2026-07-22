@@ -23,6 +23,10 @@
    //Primer Parametro el Nombre de la Clase
    //Segundo Parametro la variable de conexion a la base de datos
    $categorias = categoriaDeUnProducto('Sellado', $base_de_datos);
+
+   $query_roscas = $base_de_datos->prepare("SELECT id, codigo FROM roscas WHERE deleted_at IS NULL ORDER BY codigo ASC");
+   $query_roscas->execute();
+   $lista_roscas = $query_roscas->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
    
@@ -94,37 +98,61 @@
                   <tr>
                      <th>Diámetro Externo:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametroext" name="diametroext" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametroext" name="diametroext" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
-                     <th>Diámetro Interno:</th>
-                     <td>
-                        <input type="text"  class="form-control" id="diametroint" name="diametroint" min="0" step=".01" required>
-                     </td>
-                  </tr>
+    <th>¿Tiene Rosca?</th>
+    <td>
+        <select id="sw_rosca" class="form-select" onchange="toggleRoscaSellado()" required>
+            <option value="" selected disabled>Seleccione una opción...</option>
+            <option value="si">Con Rosca</option>
+            <option value="no">Sin Rosca</option>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_rosca_select" style="display:none;">
+    <th>Rosca:</th>
+    <td>
+        <select name="id_rosca" id="id_rosca" class="form-select">
+            <option value="" selected disabled>Seleccione una rosca</option>
+            <?php foreach($lista_roscas as $rosca): ?>
+                <option value="<?php echo $rosca['id']; ?>"><?php echo $rosca['codigo']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_diametroint" style="display:none;">
+    <th>Diámetro Interno:</th>
+    <td>
+        <input type="number" class="form-control" id="diametroint" name="diametroint" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)">
+    </td>
+</tr>
+                  
                   <tr>
                      <th>Altura:</th>
                      <td>
-                        <input type="number"  class="form-control" id="altura" name="altura" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="altura" name="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Diámetro Emp Ext:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametroempext" name="diametroempext" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametroempext" name="diametroempext" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Diámetro Emp Int:</th>
                      <td>
-                        <input type="number"  class="form-control" id="diametroempint" name="diametroempint" min="0" step=".01" required>
+                        <input type="number"  class="form-control" id="diametroempint" name="diametroempint" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
                      <th>Espesor Emp:</th>
                      <td>
-                        <input type="number"   class="form-control"id="espesoremp" name="espesoremp" min="0" step=".01" required>
+                        <input type="number"   class="form-control"id="espesoremp" name="espesoremp" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required>
                      </td>
                   </tr>
                   <tr>
@@ -132,7 +160,7 @@
                      <td>
                         <select name="valvulaal" id="valvulal" class="form-select" required>
                            <option value="" selected disabled>¿Existe una Valvula AL?</option>
-                           <option value="1" >Si</option>
+                           <option value="1" >Sí </option>
                            <option value="0" >No</option>
                         </select>
                      </td>
@@ -148,18 +176,12 @@
                      <td>
                         <select name="valvulaad" id="valvulaad" class="form-select" required>
                            <option value="" selected disabled>¿Existe una Valvula AD?</option>
-                           <option value="1" >Si</option>
+                           <option value="1" >Sí </option>
                            <option value="0" >No</option>
                         </select>
                      </td>
                   </tr>
                   <tr>
-                     <th>Unidades de Empaque: (Opcional)</th>
-                     <td>
-                        <input type="number"  class="form-control" id="und_empaque" name="und_empaque" min="0" >
-                     </td>
-                  </tr>
-                   <tr>
                      <th>Unidades de Empaque: (Opcional)</th>
                      <td>
                         <input type="number"  class="form-control" id="und_empaque" name="und_empaque" min="0" >
@@ -205,6 +227,37 @@
         </div>
    
 </div>
+<script>
+function toggleRoscaSellado() {
+    let seleccion = document.getElementById('sw_rosca').value;
+    let filaRosca = document.getElementById('fila_rosca_select');
+    let filaDiametro = document.getElementById('fila_diametroint');
+    
+    // Inputs reales
+    let inputRosca = document.getElementById('id_rosca');
+    let inputDiametro = document.getElementById('diametroint');
+
+    if (seleccion === 'si') {
+        // Mostrar Rosca, Ocultar Diámetro
+        filaRosca.style.display = 'table-row';
+        filaDiametro.style.display = 'none';
+        
+        // Limpiar el valor que no se usa para que viaje nulo
+        inputDiametro.value = ""; 
+        inputRosca.setAttribute('required', 'required');
+        inputDiametro.removeAttribute('required');
+    } else if (seleccion === 'no') {
+        // Mostrar Diámetro, Ocultar Rosca
+        filaRosca.style.display = 'none';
+        filaDiametro.style.display = 'table-row';
+        
+        // Limpiar el valor que no se usa
+        inputRosca.value = "";
+        inputDiametro.setAttribute('required', 'required');
+        inputRosca.removeAttribute('required');
+    }
+}
+</script>
 
 <?php 
      include('../index/footer.php');

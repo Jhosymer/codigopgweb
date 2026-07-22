@@ -142,41 +142,83 @@ document.addEventListener("DOMContentLoaded", function() {
     configurarBuscador(inputCP, lista_CP, lista_NP, 'sistemas/combos/busqueda_codigo.php', 'codigo_pr');
     configurarBuscador(inputNP, lista_NP, lista_CP, 'sistemas/combos/busquedas_nombre.php', 'nombre_p');
     
-    window.mostrar = function(id, codigo, descripcion, und_empaque, precio, disponibilidad) {
-        const fila = agregarItemRow;
-        const cantidadEl = fila.querySelector(".quantity");
-        
-        lista_CP.style.display = 'none';
-        lista_NP.style.display = 'none';
+   window.mostrar = function(id, codigo, descripcion, und_empaque, precio, claseColor, mensaje) {
+    // Buscamos el elemento de forma segura
+    const elInput = document.getElementById('usuario_logueado');
+    const idUsuario = elInput ? elInput.value : '0'; 
 
-        const codigosExistentes = Array.from(document.querySelectorAll('#invoiceItem tbody tr:not(.editing-row, #agregar-item-row)')).map(row => {
-            const cells = row.querySelectorAll('td, th');
-            if (cells.length > 1) {
-                return cells[1].textContent.trim();
-            }
-            return null;
-        }).filter(code => code !== null);
+    const formData = new FormData();
+    formData.append('id_pro', id);
+    formData.append('id_user', idUsuario);
 
-        if (codigosExistentes.includes(codigo)) {
-            alertContainer.innerHTML = `<div class="alert alert-danger" role="alert">
-                <b>¡Atención!</b><br> El producto con código "${codigo}" ya se encuentra en la lista.
-            </div>`;
-            cantidadEl.disabled = true;
-        } else {
-            alertContainer.innerHTML = '';
-            cantidadEl.disabled = false;
+    // 3. Llamada al servidor
+      fetch('sistemas/combos/verificar_producto.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'alerta') {
+    const textoPedido = data.pendiente > 1 ? "en uno o más pedidos abiertos" : "en un pedido abierto";
+
+    Swal.fire({
+        title: '<strong>Producto en Pedido Abierto</strong>',
+        icon: 'warning',
+        html: `El producto <b>${data.codigo}</b> ya tiene <b>${data.pendiente}</b> unidades pendientes ${textoPedido}.<br>` +
+              data.html + // <-- Aquí inyectamos el HTML del desplegable
+              `<br><div style="text-align: left; border-top: 1px solid #ccc; padding-top: 10px; font-size: 0.9em;">` +
+             `<b>Continuar:</b> Agregará este Producto en este nuevo pedido.<br>` +
+                      `<b>Cancelar:</b> No agregará el Producto en este nuevo pedido.` +
+                      `</div><br><b>EN AMBOS CASOS SE SEGUIRÁ TRABAJANDO.</b>`,
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Continuar',
+        cancelButtonText: 'Cancelar',
+        didOpen: () => {
+            if (typeof feather !== 'undefined') feather.replace();
         }
+    }).then((result) => {
+        if (result.isConfirmed) llenarCampos(id, codigo, descripcion, und_empaque, precio, claseColor, mensaje);
+    });
+}
+         else {
+            llenarCampos(id, codigo, descripcion, und_empaque, precio, claseColor, mensaje);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Función auxiliar para centralizar el llenado de datos
+function llenarCampos(id, codigo, descripcion, und_empaque, precio, claseColor, mensaje) {
+    $(".id_pro").val(id);
+    $(".item_code").val(codigo);
+    $(".item_name").val(descripcion);
+    $(".und_empaque").val(und_empaque);
+    $(".precio_u").val(precio);
+    
+    const punto = document.getElementById('stock_visual_input');
+    if (punto) {
+        punto.classList.remove('dot-success', 'dot-warning', 'dot-danger', 'dot-info');
+        if (claseColor) punto.classList.add(claseColor);
+        punto.setAttribute('title', mensaje);
+        punto.setAttribute('data-bs-original-title', mensaje);
         
-        fila.querySelector(".id_pro").value = id;
-        fila.querySelector(".item_code").value = codigo;
-        fila.querySelector(".item_name").value = descripcion;
-        fila.querySelector(".stock").value = disponibilidad;
-        fila.querySelector(".precio_u").value = precio;
-        fila.querySelector(".und_empaque").value = und_empaque;
-        
-        const event = new Event('input');
-        fila.querySelector(".quantity").dispatchEvent(event);
+        if (typeof bootstrap !== 'undefined') {
+            const instanciaExistente = bootstrap.Tooltip.getInstance(punto);
+            if (instanciaExistente) instanciaExistente.dispose();
+            new bootstrap.Tooltip(punto);
+        }
     }
+    
+    $(".item_code_list").empty().hide();
+    $(".item_name_list").empty().hide();
+    
+    setTimeout(function() {
+        $(".quantity").focus().select();
+    }, 100);
+}
+
 
     // Lógica para el manejo de clics en la tabla
     table.addEventListener('click', function(event) {
@@ -205,42 +247,55 @@ document.addEventListener("DOMContentLoaded", function() {
             cancelarEdicion(row);
         } else if (agregarBtn) {
             event.preventDefault();
-            const fila = agregarItemRow;
-            const id_pro = fila.querySelector(".id_pro").value;
-            const codigoProductoNuevo = fila.querySelector(".item_code").value;
-            const cantidad = fila.querySelector(".quantity").value;
-            const precio_u = fila.querySelector(".precio_u").value;
-            const total_pp = fila.querySelector(".total_pp").value;
-            const undEmpaque = parseFloat(fila.querySelector(".und_empaque").value);
-            // El modo ahora es "agregarmas"
-            const modo = "agregarmas";
             
-            if (!id_pro || !cantidad || !precio_u || !total_pp || parseFloat(cantidad) % undEmpaque !== 0 || parseFloat(cantidad) <= 0) {
-                 alertContainer.innerHTML = `<div class="alert alert-danger" role="alert">Debe seleccionar un producto y completar todos los campos de la fila correctamente. La cantidad debe ser un múltiplo de la unidad de empaque.</div>`;
+            const fila = agregarItemRow; // El tr id="agregar-item-row"
+            
+            // 1. Capturar datos del formulario de entrada
+            const idProNuevo = fila.querySelector(".id_pro").value;
+            const codigoNuevo = fila.querySelector(".item_code").value.trim();
+            const cantidad = parseFloat(fila.querySelector(".quantity").value);
+            const precioU = fila.querySelector(".precio_u").value;
+            const totalPP = fila.querySelector(".total_pp").value;
+            const undEmpaque = parseFloat(fila.querySelector(".und_empaque").value);
+
+            // 2. Validación básica de campos
+            if (!idProNuevo || isNaN(cantidad) || cantidad <= 0) {
+                 alertContainer.innerHTML = `<div class="alert alert-danger">Seleccione un producto y una cantidad válida.</div>`;
                  return;
             }
 
-            const codigosExistentes = Array.from(document.querySelectorAll('#invoiceItem tbody tr:not(.input-row, .editing-row)')).map(row => {
-                const cells = row.querySelectorAll('td, th');
-                if (cells.length > 1) {
-                    return cells[1].textContent.trim();
-                }
-                return null;
-            }).filter(code => code !== null);
+            // 3. DETECCIÓN DE DUPLICADOS (Usando el data-id-pro de tu PHP)
+            // Buscamos en todas las filas de la tabla que tengan el atributo data-id-pro
+            const filasExistentes = document.querySelectorAll('#invoiceItem tbody tr[data-id-pro]');
+            let yaExiste = false;
 
-            if (codigosExistentes.includes(codigoProductoNuevo)) {
-                alertContainer.innerHTML = `<div class="alert alert-danger" role="alert"><b>¡Atención!</b><br> El producto con código "${codigoProductoNuevo}" ya se encuentra en la lista.</div>`;
-                return;
+            filasExistentes.forEach(tr => {
+                const idEnTabla = tr.getAttribute('data-id-pro');
+                if (idEnTabla == idProNuevo) {
+                    yaExiste = true;
+                }
+            });
+
+            if (yaExiste) {
+                // Si el producto ya existe, mostramos el error y DETENEMOS TODO
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>¡Atención!</strong> El producto con código <b>${codigoNuevo}</b> ya está en la lista de su pedido.
+                       
+                    </div>`;
+                
+                alertContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return; // IMPORTANTE: Esto evita que se ejecute el fetch
             }
-            
+
+            // 4. Si NO existe, procedemos al envío por AJAX
             const id_pedido = document.getElementById("id_pedido").value;
-            
             const formData = new FormData();
-            formData.append('modo', modo);
-            formData.append('id_pro', id_pro);
+            formData.append('modo', 'agregarmas');
+            formData.append('id_pro', idProNuevo);
             formData.append('cantidad', cantidad);
-            formData.append('precio_u', precio_u);
-            formData.append('total_pp', total_pp);
+            formData.append('precio_u', precioU);
+            formData.append('total_pp', totalPP);
             formData.append('id_pedido', id_pedido);
 
             fetch('sistemas/pedidos/crud.php', {
@@ -249,12 +304,15 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.text())
             .then(data => {
+                // Recargamos la página para ver el nuevo item
                 window.location.reload(); 
             })
             .catch(error => {
-                alertContainer.innerHTML = `<div class="alert alert-danger" role="alert">Hubo un problema al agregar el producto.</div>`;
+                console.error("Error:", error);
+                alertContainer.innerHTML = `<div class="alert alert-danger">Error al procesar la solicitud.</div>`;
             });
-        } if (borrarBtn) { 
+        }
+         if (borrarBtn) { 
             event.preventDefault();
 
             const idItem = borrarBtn.getAttribute('data-id');
@@ -420,4 +478,25 @@ document.addEventListener("DOMContentLoaded", function() {
         filaEditando = null;
         row.classList.remove('editing-row');
     }
+});  
+
+// Al final de calculoporprecios.js
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Forzar el foco en móviles al tocar
+    document.querySelectorAll('.item_code, .item_name, .quantity').forEach(input => {
+        input.addEventListener('touchstart', function() {
+            this.focus(); 
+        });
+    });
+
+    // 2. Cerrar el buscador si tocas fuera (Mejorado)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.li_busqueda') && !e.target.closest('.item_code') && !e.target.closest('.item_name')) {
+            document.querySelectorAll('.li_busqueda').forEach(ul => {
+                ul.style.display = 'none';
+                ul.innerHTML = '';
+            });
+        }
+    });
 });

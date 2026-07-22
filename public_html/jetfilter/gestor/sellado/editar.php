@@ -3,7 +3,7 @@
      $locj = "../../";
      $title = "Editar - Sellado";
      require_once("../index/header.php");
-    //Si no existe id te redirigirá a otra ventana
+    //sí no existe id te redirigirá a otra ventana
     if( !isset( $_REQUEST['id'] ) ){
         header("location: espec_aireautomotriz.php");
     }
@@ -19,13 +19,13 @@
     include_once('./../alertas/alerta_error.php');
     include_once('./../alertas/alerta_codigo_existe.php');
 
-    //Si hubo algún error al hacer una edición del filtro o al eliminar la imagen
+    //sí hubo algún error al hacer una edición del filtro o al eliminar la imagen
     alerta_error();
-    //Si el código de filtro que se intento subir ya existe
+    //sí el código de filtro que se intento subir ya existe
     alerta_codigo_existe();
 
     //Guarda los datos del filtro
-    $seleccionado = $base_de_datos->prepare("SELECT e_s.id_codigo, e_s.codigo, e_s.tipo, f_c.id_tipo, f_c.filtracion, e_s.diametroext, e_s.diametroint, e_s.altura, e_s.diametroempext, e_s.diametroempint, e_s.espesoremp, e_s.valvulaal, e_s.apertura, e_s.valvulaad, f_c.und_empaque, e_s.detalle1, e_s.detalle2
+    $seleccionado = $base_de_datos->prepare("SELECT e_s.id_codigo, e_s.codigo, e_s.tipo, f_c.id_tipo, f_c.filtracion, e_s.diametroext, e_s.diametroint, e_s.id_rosca, e_s.altura, e_s.diametroempext, e_s.diametroempint, e_s.espesoremp, e_s.valvulaal, e_s.apertura, e_s.valvulaad, f_c.und_empaque, e_s.detalle1, e_s.detalle2
                                             FROM espec_sellado as e_s
                                             JOIN filtro_codificacion as f_c ON f_c.id = e_s.id_codigo
                                                 WHERE e_s.id = :id");
@@ -53,7 +53,7 @@
         $id_tipo = $sell['id_tipo'];
         $filtracion_seleccionada = $sell['filtracion'];
         $diametro_exterior = $sell['diametroext'];
-        $diametro_int = $sell['diametroint'];
+        $diametro_int = $sell['diametroint'] ?? '';
         $altura = $sell['altura'];
         $diametro_emp_ext = $sell['diametroempext'];
         $diametro_emp_int = $sell['diametroempint'];
@@ -64,9 +64,12 @@
         $und_empaque = $sell['und_empaque'];
         $detalle1 = ( $sell['detalle1'] == '' ) ? 'N/D' : $sell['detalle1'];
         $detalle2 = ( $sell['detalle2'] == '' ) ? 'N/D' : $sell['detalle2'];
+        $id_rosca_actual = $sell['id_rosca'];
     }
     
-   
+   $query_roscas = $base_de_datos->prepare("SELECT id, codigo FROM roscas WHERE deleted_at IS NULL ORDER BY valor_nominal ASC");
+        $query_roscas->execute();
+        $lista_roscas = $query_roscas->fetchAll(PDO::FETCH_ASSOC);
     
     $codigoActual = htmlspecialchars($codigo);
 
@@ -84,7 +87,7 @@
 
     //En base al id del tipo, se busca la categoria a la que pertenece
     //Y todos los tipos de esa categoria
-    //Si el id del tipo es N/D no devolvera nada
+    //sí el id del tipo es N/D no devolvera nada
     include_once('./../componentes/consultaTipoYCategoria.php');
 
     /* Se incluye una funcion que busca todos las categorias de la clase */
@@ -95,6 +98,10 @@
 
     //Todos los tipos de filtraciones
     $filtraciones = ['Ultrafino', 'Fino', 'Estándar', 'Grueso'];
+
+    $query_roscas = $base_de_datos->prepare("SELECT id, codigo FROM roscas WHERE deleted_at IS NULL ORDER BY valor_nominal ASC");
+    $query_roscas->execute();
+    $lista_roscas = $query_roscas->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
   
@@ -200,37 +207,62 @@
                         <tr>
                             <th>Diámetro Exterior: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $diametro_exterior ?>" name="diametro_ext" id="diametro_ext1" min="0" step=".01" required />
+                                <input class="form-control" type="number" value="<?php echo $diametro_exterior ?>" name="diametro_ext" id="diametro_ext1" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required />
                             </td>  
                         </tr>
                         <tr>
-                            <th>Diámetro Interior:</th>
-                            <td>
-                                <input class="form-control" type="text" value="<?php echo htmlspecialchars($diametro_int); ?>" name="diametro_int" id="diametro_int1" min="0" step=".01" required/>
-                            </td>  
-                        </tr>
+    <th>¿Tiene Rosca?</th>
+    <td>
+        <select id="sw_rosca" class="form-select" onchange="toggleRoscaSellado()" required>
+            <option value="si" <?php echo ($id_rosca_actual > 0) ? 'selected' : ''; ?>>Con Rosca</option>
+            <option value="no" <?php echo (empty($id_rosca_actual) || $id_rosca_actual == 0) ? 'selected' : ''; ?>>Sin Rosca</option>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_rosca_select">
+    <th>Rosca:</th>
+    <td>
+        <select name="id_rosca" id="id_rosca" class="form-control">
+            <option value="" <?php echo (empty($id_rosca_actual)) ? 'selected' : ''; ?> disabled>Seleccione una rosca</option>
+            
+            <?php foreach($lista_roscas as $rosca): ?>
+                <option value="<?php echo $rosca['id']; ?>" <?php echo ($rosca['id'] == $id_rosca_actual) ? 'selected' : ''; ?>>
+                    <?php echo $rosca['codigo']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </td>
+</tr>
+
+<tr id="fila_diametroint">
+    <th>Diámetro Interno:</th>
+    <td>
+        <input type="number" class="form-control" id="diametroint" name="diametro_int" value="<?php echo $diametro_int; ?>" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)">
+    </td>
+</tr>
                         <tr>
                             <th>Altura: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $altura ?>" name="altura" id="altura" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
                             <th>Diámetro Emp Ext: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $diametro_emp_ext ?>" name="diametroempext" id="diametroempext" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $diametro_emp_ext ?>" name="diametroempext" id="diametroempext" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
                             <th>Diámetro Emp Int: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $diametro_emp_int ?>" name="diametroempint" id="diametroempint" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $diametro_emp_int ?>" name="diametroempint" id="diametroempint" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
                             <th>Espesor Emp: </th>
                             <td>
-                                <input class="form-control" type="number" value="<?php echo $espesor_emp ?>" name="espesoremp" id="espesoremp" min="0" step=".01" required/>
+                                <input class="form-control" type="number" value="<?php echo $espesor_emp ?>" name="espesoremp" id="espesoremp" min="0" step=".01" onblur="this.value = parseFloat(this.value).toFixed(2)" required/>
                             </td>  
                         </tr>
                         <tr>
@@ -240,7 +272,7 @@
                                 <?php
                                     // Definir las opciones y sus valores
                                     $opciones = [
-                                        '1' => 'SI',
+                                        '1' => 'sí',
                                         '0' => 'NO'
                                     ];
 
@@ -266,7 +298,7 @@
                                 <?php
                                     // Definir las opciones y sus valores
                                     $opciones = [
-                                        '1' => 'SI',
+                                        '1' => 'sí',
                                         '0' => 'NO'
                                     ];
 
@@ -325,11 +357,43 @@
         </div>
    
 </div>
+
+<script>
+function toggleRoscaSellado() {
+    let seleccion = document.getElementById('sw_rosca').value;
+    let filaRosca = document.getElementById('fila_rosca_select');
+    let filaDiametro = document.getElementById('fila_diametroint');
+    
+    let inputRosca = document.getElementById('id_rosca');
+    let inputDiametro = document.getElementById('diametroint');
+
+    if (seleccion === 'si') {
+        filaRosca.style.display = 'table-row';
+        filaDiametro.style.display = 'none';
+        
+        // Hacemos obligatoria la rosca y limpiamos el diámetro
+        inputRosca.setAttribute('required', 'required');
+        inputDiametro.removeAttribute('required');
+        inputDiametro.value = ""; 
+    } else if (seleccion === 'no') {
+        filaRosca.style.display = 'none';
+        filaDiametro.style.display = 'table-row';
+        
+        // Hacemos obligatorio el diámetro y limpiamos la rosca
+        inputDiametro.setAttribute('required', 'required');
+        inputRosca.removeAttribute('required');
+        inputRosca.value = ""; // Esto hace que vuelva a "Seleccione una rosca" internamente
+    }
+}
+
+// Ejecutar al cargar la página para inicializar el estado visual
+window.onload = function() {
+    toggleRoscaSellado();
+};
+</script>
     <?php
             include('../index/footer.php');
-    ?> include('./../abajo_carpeta.html')
     ?>
-
     <script src="./../js/comprobar_imagen.js"></script>  <!-- Función que comprueba que la imagen es del tamaño adecuado -->
     <script src="./../js/colocar_validacion.js"></script> <!-- Selecciona los input a los cuales se van a verificar el tamaño de la imagen -->
     <script src="./../js/funciones/cambiar_categoria.js" ></script> <!-- Detecta que hubo un cambio de categoria y trae los tipos de esa categoria -->

@@ -273,14 +273,16 @@
                                         <a href="#" onclick="orden({orden_codigo_ascendente: 1})" class="text-decoration-none text-danger" id="igual_codigo_sellado" style="opacity: 0.25;"><i class="bx bx-sort" style="color: white;"></i></a>
                                     </span>
                                 </th>
-                                <th scope="col" class='busqueda_apli'> 
-                                    Tipo / Rosca 
+                                <th scope="col" class='busqueda_apli' id="th_rosca_sellado"> 
+                                    <span id="texto_dinamico_sellado">Tipo / Rosca</span>
+                                    
                                     <span class="float-end">
                                         <a href="#" onclick="orden({orden_tipo_descendente: 1})" class="text-decoration-none text-danger" id="imagen_descendente_tipo_sellado" style="display: none;"><i class='bx bx-sort-a-z' style="color: white;"></i></a>
                                         <a href="#" onclick="orden({orden_tipo_ascendente: 1})" class="text-decoration-none text-danger" id="imagen_ascendente_tipo_sellado" style="display: none;"><i class='bx bx-sort-z-a' style="color: white;"></i></a>
                                         <a href="#" onclick="orden({orden_tipo_ascendente: 1})" class="text-decoration-none text-danger" id="igual_tipo_sellado" style="opacity: 0.25;"><i class="bx bx-sort" style="color: white;"></i></a>
                                     </span>
                                 </th>
+                                    
                                 <th scope="col" class='busqueda_apli'> 
                                     ø ext (mm)
                                     <span class="float-end">
@@ -415,6 +417,7 @@
                   especificacion = "combustible";
                }
                cambiarTabla(especificacion);
+               actualizarEtiquetaSellado();
             })
             .then( document.getElementById('tabla_especificaciones').style.display = "block" )
             .catch( error => alert(error) )
@@ -443,6 +446,7 @@
             .then( 
                data => {
                   document.getElementById('roscaFiltro').innerHTML = data;
+                  actualizarEtiquetaSellado();
                }, 
             )
             .then( () => {
@@ -482,6 +486,7 @@
                   }
                   document.getElementById('navegacion_especificaciones').innerHTML = response.paginacion;
                   cambiarTabla(especificacion);
+                  actualizarEtiquetaSellado();
                },
                error: function(error){
                   console.log(error.responseText);
@@ -521,6 +526,7 @@
                }
                document.getElementById('navegacion_especificaciones').innerHTML = response.paginacion;
                cambiarTabla(especificacion);
+               actualizarEtiquetaSellado();
             },
             error: function(error){
                console.log(error.responseText);
@@ -528,6 +534,30 @@
          })
       })
    });
+
+   function actualizarEtiquetaSellado() {
+    var especificacion = document.getElementById('claseFiltros').value;
+    var textoHeader = document.getElementById('texto_dinamico_sellado');
+    var roscaSelect = document.getElementById('roscaFiltro');
+    
+    if (especificacion === 'sellado' && textoHeader && roscaSelect) {
+        var valor = roscaSelect.value;
+        
+        // Si el valor NO es vacío y NO es la opción por defecto
+        if (valor !== "" && valor !== "vacio") {
+            // Si el valor es un número, es diámetro interno
+            if (!isNaN(valor)) {
+                textoHeader.innerText = "Tipo /  Rosca ";
+            } else {
+                // Si contiene letras o caracteres de rosca
+                textoHeader.innerText = "Tipo / ø int (mm)";
+            }
+        } else {
+            // Estado por defecto
+            textoHeader.innerText = "Tipo / ø int (mm)";
+        }
+    }
+}
 
    function getTabla(pagina){
       var especificacion = document.getElementById('claseFiltros').value;
@@ -582,6 +612,7 @@
             document.getElementById('navegacion_especificaciones').innerHTML = data.paginacion;
             // **Línea agregada para corregir el error**
             cambiarTabla(especificacion); 
+            actualizarEtiquetaSellado();
         },  
       )
       .catch( (error) => console.log(error) ) ;

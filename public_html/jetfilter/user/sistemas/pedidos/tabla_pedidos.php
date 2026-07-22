@@ -2,51 +2,52 @@
 <div class=' bg-white py-3  overflow-auto rounded'>
 
 <div class="container"> 
-  <form action="index.php?pag=pedido" method="post" >
-            <div class="d-flex justify-content-lg-around my-4 align-content-center" id="btnTenRec">
-                <button type="submit" class="btn btn-info m-2 w-100" name="Por_Procesar" id="">Por Procesar</button>
-                <button type="submit" class="btn btn-info m-2 w-100" name="Procesado" id="">Procesado</button>
-                <button type="submit" class="btn btn-info m-2 w-100" name="Todos" id="">Todos</button>
-            
-                
-              </div> 
-              </form>
+  <div class="container"> 
+  <form action="index.php" method="get">
+    <input type="hidden" name="pag" value="pedido"> <div class="d-flex justify-content-lg-around my-4 align-content-center" id="btnTenRec">
+        <button type="submit" class="btn btn-info m-2 w-100" name="status" value="Por_Procesar">Por Procesar</button>
+        <button type="submit" class="btn btn-info m-2 w-100" name="status" value="Procesado">Procesado</button>
+        <button type="submit" class="btn btn-info m-2 w-100" name="status" value="Todos">Todos</button>
+    </div> 
+  </form>
+</div>
 
 </div>
 <div class="col-12 content">
 
 
-<table class="table table-striped table-hover color_blanco table-responsive table-bordered dataTable"  id="example">
-  <thead>
+<table class="table  table-hover  table-responsive table-bordered dataTable"  id="example">
+  <thead >
     <tr>
     <th scope="col">#</th>
  
     <th scope="col">Fecha</th>
     <th scope="col">Nro. de Pedido</th>
     <th scope="col">Status</th>
+    <th scope="col" >Nro. OC</th>
     <th scope="col">Total</th>
     <th scope="col">Operaciones</th>
      
      
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-group-divider">
 
     <?php
 
 $contador = 1;
 
-if(isset($_POST['Por_Procesar']) ){
+$filtro = $_GET['status'] ?? 'Por_Procesar'; 
 
-      $wsqli = "SELECT * FROM pedidos where id_users= '$id_users' and (na_pedido = '' OR na_pedido IS NULL) ORDER BY `pedidos`.`id` DESC";
-  } else if(isset($_POST['Procesado']) ){
-      $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' and na_pedido IS NOT NULL AND na_pedido != '' ORDER BY `pedidos`.`id` DESC ";
-  } else if(isset($_POST['Todos']) ){
-      $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' ";
-  } else {
-    
-      $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' and (na_pedido = '' OR na_pedido IS NULL) ORDER BY `pedidos`.`id` DESC";
-  }
+if($filtro == 'Por_Procesar'){
+    $wsqli = "SELECT * FROM pedidos where id_users= '$id_users' and (na_pedido = '' OR na_pedido IS NULL) ORDER BY id DESC";
+} else if($filtro == 'Procesado'){
+   $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' and na_pedido IS NOT NULL AND na_pedido != '' AND stat != 'FB' ORDER BY id DESC";
+} else if($filtro == 'Todos'){
+    $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' AND stat != 'FB' ORDER BY id DESC";
+} else {
+    $wsqli = "SELECT * FROM pedidos where id_users = '$id_users' and (na_pedido = '' OR na_pedido IS NULL) ORDER BY id DESC";
+}
 
             
             $result=$linki->query($wsqli);
@@ -55,6 +56,7 @@ if(isset($_POST['Por_Procesar']) ){
                $id=$row['id']; 
                $preciototal=$row['total_pedido'];   
                $total_pedido_p = number_format($preciototal, 2, ',', '.') . '$';
+                $stat = $row['stat'];
                  
     ?>
 
@@ -66,11 +68,23 @@ if(isset($_POST['Por_Procesar']) ){
       <td><?php echo $row['fecha'];   ?></td>
      <?php if ($row['na_pedido'] =='' or  $row['na_pedido'] == NUll) {
        echo "<td> Por Asignar </td>";
-        echo "<td> Por Procesar  </td>";
+         echo "<td> Por Procesar </br>";
+          if ($stat == 'C') {
+            echo '<span class="badge rounded-pill text-bg-success text-white">Enviado</span>';
+        } else {
+            echo '<span class="badge rounded-pill text-bg-danger ">Sin Enviar</span>';
+        };
+            echo "</td>";
       } else { ?>
      <td> <?php echo $row['na_pedido']; ?></td>
      <?php 
        echo "<td> Procesado </td>";
+      }
+      if (empty($row['numero_oc'])) {
+          echo "<td> </td>"; 
+      } else {
+        
+          echo "<td>" . $row['numero_oc'] . "</td>";
       }
        ?>
     

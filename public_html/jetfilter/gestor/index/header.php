@@ -44,6 +44,7 @@ include("permisos_user.php");
     
     <link rel="stylesheet" href="<?php echo $loc; ?>vendor/bootstrap/css/bootstrap.min.css?t=<?php echo $rann?>">
     <link rel="stylesheet" href="<?php echo $loc; ?>vendor/boxicons/css/boxicons.min.css?t=<?php echo $rann?>">
+     <link rel="stylesheet" href="<?php echo $loc; ?>css/css_vende/moda_jetfilter.css?t=<?php echo $rann?>">
      <?php 
 
     $current_page = $_SERVER['REQUEST_URI'];
@@ -122,10 +123,36 @@ else {
                     </ul>
                 </li>
                 <?php
-                } if (in_array(3, $permisos_usuario)) { ?>
-                <li class="menu__item ">
-                    <a href="<?php echo $locj; ?>gestor/pedido/" class="menu__link">Pedidos</a>
-                </li>
+                } if (in_array(3, $permisos_usuario) || in_array(10, $permisos_usuario)) { ?>
+              
+
+                <li class="menu__item  menu__item--show">
+                    <a href="#" class="menu__link"> Ventas</a>
+    
+                    <ul class="menu__nesting">
+                         <?php
+                         if (in_array(3, $permisos_usuario)) { ?>
+                        <li class="menu__inside">
+                            <a href="<?php echo $locj; ?>gestor/pedido/" class="menu__link menu__link--inside">Pedidos</a>
+                        </li>
+                        <?php
+                         }if (in_array(10, $permisos_usuario)) { ?>
+
+                        <li class="menu__inside">
+                            <a href="<?php echo $locj; ?>gestor/factura/" class="menu__link  menu__linka  menu__link--inside">Facturas</a>
+                        </li>
+                        <?php
+                       } if (in_array(3, $permisos_usuario) || in_array(10, $permisos_usuario)) { ?>
+
+                       <li class="menu__inside">
+                            <a href="<?php echo $locj; ?>gestor/backorder/" class="menu__link  menu__linka  menu__link--inside">Backorders</a>
+                        </li>
+                        <?php }?>
+
+
+                    </ul>
+                </li>  
+
                  <?php
                  } if (in_array(4, $permisos_usuario)) { ?>
                 <li class="menu__item ">

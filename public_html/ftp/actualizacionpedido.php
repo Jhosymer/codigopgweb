@@ -69,14 +69,18 @@ foreach ($data as $index => $pedido) {
     echo "\n🔧 Procesando pedido #$index\n";
     var_dump($pedido);
 
-    if (isset($pedido['id']) && isset($pedido['doc_entry'])) {
+    if (isset($pedido['id']) && isset($pedido['doc_entry']) && isset($pedido['doc_date'])) {
+        $fechaSap = substr($pedido['doc_date'], 0, 10);
         echo "🔄 Actualizando ID: {$pedido['id']} con doc_entry: {$pedido['doc_entry']}\n";
 
-        $stmt = $pdo->prepare("UPDATE pedidos SET na_pedido = :doc_entry WHERE id = :id");
+        $stmt = $pdo->prepare("UPDATE pedidos SET na_pedido = :doc_entry, fecha_sap = :fecha_sap WHERE id = :id");
+
         $stmt->execute([
             ':doc_entry' => $pedido['doc_entry'],
-            ':id' => $pedido['id']
+            ':fecha_sap' => $fechaSap,
+            ':id'        => $pedido['id']
         ]);
+       
 
         $filas = $stmt->rowCount();
         echo "✅ Filas afectadas: $filas\n";
